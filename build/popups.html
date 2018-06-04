@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Попап окна на сайте</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+    <meta name="theme-color" content="#a3467d">
+    <meta name="msapplication-navbutton-color" content="#a3467d">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#a3467d">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon/favicon.ico" sizes="16x16">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/android-chrome-76x76.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/android-chrome-icon-144x144.png">
+    <link rel="stylesheet" media="all" href="css/app.css"> </head>
+  <body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+    <div class="wrapper ">
+      <!-- begin header -->
+      <header class="header bg--dark" itemscope itemtype="http://schema.org/WPHeader">
+        <div class="container">
+          <div class="logo" itemscope itemprop="logo" itemtype="http://schema.org/Organization">
+            <a href="home.html" class="logo__link" itemprop="url">LOGO</a>
+          </div>
+        </div>
+      </header>
+      <!-- end header -->
+      <style>
+        main {
+          padding: 100px;
+        }
+
+        h1 {
+          margin-bottom: 50px;
+        }
+
+        .popup__list a {
+          display: inline-block;
+          margin-right: 30px;
+          margin-bottom: 15px;
+          color: #2d6cb4;
+        }
+
+        .popup__list a:hover {
+          color: #2d6cb4;
+          text-decoration: underline;
+        }
+
+        @media screen and (max-width: 480px) {
+          main {
+            margin: 10px;
+          }
+        }
+
+      </style>
+      <!-- begin home -->
+      <main class="main">
+        <h1>Попап окна на сайте</h1>
+        <div class="container popup__list">
+          <a href="#auth-form" class="js-whois" data-fancybox data-whois="master">Регистрация</a>
+          <a href="#password-recovery" data-fancybox>Востановить пароль</a>
+          <a href="#phone-confirm" data-fancybox>Подтверждение телефона</a>
+          <a href="#avatar-add" data-fancybox>Личный кабинет аватар</a>
+          <a href="#disable-category" data-fancybox>Отключение услуги</a>
+          <a href="#become-master" data-fancybox>Стать мастером</a>
+          <a href="#album-empty" data-fancybox>Клик на создать альбом, если услуга не выбрана</a>
+          <a href="#album-create" data-fancybox>Создать альбом</a>
+          <a href="#album-edit" data-fancybox>Переместиь фото</a>
+          <a href="#review-add" data-fancybox>Отставить отзыв</a>
+          <a href="#triumph-reg" data-fancybox-no-close>Триумф регистрация</a>
+        </div>
+      </main>
+      <!-- end home -->
+      <!-- begin footer -->
+      <footer class="footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+        <div class="container"> </div>
+      </footer>
+      <!-- end footer -->
+    </div>
+    <!-- begin windows -->
+    <div class="windows">
+      <!-- begin auth-form -->
+      <div class="modal-window" id="auth-form">
+        <div class="modal-window__header"></div>
+        <div class="modal-window__body"></div>
+        <div class="modal-window__footer"></div>
+      </div>
+      <!-- end auth-form -->
+    </div>
+    <!-- end windows -->
+    <!-- begin scripts -->
+    <script type="text/javascript" src="js/libs.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <!-- end scripts -->
+  </body>
+</html>

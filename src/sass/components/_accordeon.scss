@@ -1,0 +1,151 @@
+.bb-accordeon{
+	@include nosel;
+
+	&--other{
+		.bb-accordeon{
+			&__item{
+				&.is-open{
+					.bb-accordeon{
+						&__title{
+							&::before{
+								content: '';
+								transform: rotate(90deg);
+							}
+							&::after{
+								transform: rotate(90deg);
+								opacity: 0;
+							}
+						}
+					}
+				}
+			}
+			&__title{
+				padding: 15px 50px 15px 15px;
+				margin: 0;
+				&::after{
+					content: '';
+					display: block;
+					position: absolute;
+					top: 50%;
+					right: 20px;
+					width: 11px;
+					height: 1px;
+					background-color: $color-main;
+					transform-origin: 50% 50%;
+					will-change: transform;
+					@include tr;
+				}
+				&::before{
+					content: '';
+					display: block;
+					position: absolute;
+					top: 50%;
+					margin-top: -5px;
+					right: 10px;
+					width: 1px;
+					height: 11px;
+					background-color: $color-main;
+					transform-origin: 50% 50%;
+					will-change: transform;
+					@include tr;
+				}
+			}
+			&__content{
+				width: 100%;
+			}
+		}
+	}//bb-accordeon--other
+
+	&__item{
+		@extend %box;
+		& + .bb-accordeon__item{
+			margin-top: 10px;
+		}
+		@include max-screen(480) {
+			box-shadow: none;
+		}
+		&.is-open{
+			.bb-accordeon{
+				&__title{
+					&:hover{
+						box-shadow: none;
+					}
+					&::before{
+						content: '\f106';
+					}
+				}
+			}
+		}
+	}//bb-accordeon__item
+
+	&__title{
+		padding: 18px 20px;
+		font-family: $f-light;
+		font-size: 15px;
+		color: #000;
+		border-radius: $border-radius;
+		cursor: pointer;
+		position: relative;
+		&::before{
+			margin-right: 15px;
+			content: '\f107';
+			font-family: fontawesome;
+			font-size: 20px;
+			color: $color-main;
+		}
+		&:hover{
+			box-shadow: $bxs-hover;
+		}
+		@include max-screen(768) {
+			&:hover{
+				box-shadow: none;
+			}
+		}
+	}//bb-accordeon__title
+
+	&--mobile{
+		.bb-accordeon{
+			&__item{
+				border-bottom: 1px solid $color-border;
+				&:first-child{
+					border-top: 1px solid $color-border;
+				}
+				& + .bb-accordeon__item{margin-top: 0;}
+			}
+			&__title{
+				display: block;
+				width: 100%;
+				padding: 10px 0 9px;
+				&::before{
+					margin-right: 0;
+					@include vy;
+					right: 10px;
+				}
+			}
+			&__content{
+				padding: 0 10px 7px;
+				font-size: 14px;
+				a{
+					padding: 5px 0;
+				}
+			}
+		}
+	}
+
+	&--dark{
+		.bb-accordeon{
+			&__item{
+				background-color: $gray--darken;
+			}
+			&__title{
+				color: rgba(#fff, 0.6);
+				&::before{
+					color: rgba(#fff, 0.6);
+				}
+			}
+			&__content{
+			}
+		}
+	}
+
+}//bb-accordeon

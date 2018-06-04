@@ -1,0 +1,22 @@
+//Fonts
+
+//Font-Family FontAwesome
+@include font(faS, fontawesome5, fa-solid-900);
+@include font(faR, fontawesome5, fa-regular-400);
+@include font(faL, fontawesome5, fa-light-300);
+@include font(faB, fontawesome5, fa-brands-400);
+
+//Font-Family roboto
+@include font(roboto-600c, roboto, robotocondensedbold);
+@include font(roboto-600, roboto, robotobold);
+@include font(roboto-500, roboto, robotomedium);
+@include font(roboto-400, roboto, robotoregular);
+@include font(roboto-400c, roboto, robotocondensedregular);
+@include font(roboto-300, roboto, robotolight);
+@include font(roboto-300c, roboto, robotocondensedlight);
+
+//Font-Family robotoSlab
+@include font(robotoslab-600, robotoslab, robotoslab-bold);
+@include font(robotoslab-400, robotoslab, robotoslab-regular);
+@include font(robotoslab-300, robotoslab, robotoslab-light);
+@include font(robotoslab-100, robotoslab, robotoslab-thin);

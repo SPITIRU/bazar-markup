@@ -1,0 +1,87 @@
+//Custom Webkit Scroll
+@mixin bb-scroll {
+	@include scroll;
+	@include scrollbar {width: 5px;}
+	@include scrollbar-track {width: 5px;}
+	@include scrollbar-thumb {background-color: $color-bg--dark; border-radius: 100px;}
+}
+
+@mixin container{
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	@include max-screen(1200){
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+%flex{
+	display: flex;
+	justify-content: space-between;
+}
+
+%flexCenter{
+	display: flex;
+	align-items: center;
+}
+
+%flexColumn{
+	display: flex;
+	flex-direction: column;
+}
+
+%box{
+	border-radius: $border-radius;
+	background-color: #fff;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,.1), 0 0 4px 0 rgba(0,0,0,.1);
+}
+
+@mixin overlay{
+	position: relative;
+	&::before{
+		display: block;
+		content: '';
+		background-color: rgba(#000, .45);
+		@include tr;
+		@include coverdiv;
+	}
+	& > * {
+		z-index: z(default);
+	}
+	.container{
+		position: relative;
+	}
+}
+
+@mixin borderTop{
+	border-top: 1px solid $color-border--lightest;
+	&:first-child{
+		border-top: none;
+	}
+}
+
+%img {
+	display: block;
+	width: 100%;
+	margin: 0;
+}
+
+%textLight{
+	font-family: $f-light;
+	font-weight: 300;
+}
+
+//style input
+%styleInput {
+	padding: 9px 35px 9px 15px;
+	font-family: $f;
+	font-size: 16px;
+	line-height: 1;
+	color: $color-text;
+	border-radius: $border-radius;
+	border: 1px solid $gray--lighten;
+	&:focus{
+		border-color: $gray--light;
+	}
+}

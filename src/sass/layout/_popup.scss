@@ -1,0 +1,65 @@
+//Modal Window
+.fancybox-slide--html{padding: 5px 5px 0;}
+.fancybox-container{z-index: z(modal);}
+.compensate-for-scrollbar{margin-right: 0px !important;}
+.fancybox-slide--html .fancybox-content{margin-bottom: 0;}
+.fancybox-show-caption .fancybox-caption, .fancybox-show-infobar .fancybox-infobar, .fancybox-show-toolbar .fancybox-toolbar{display: none;}
+.fancybox-can-drag .fancybox-content{cursor: default;}
+.fancybox-slide{@include bb-scroll;}
+
+//Custom Modal Winfow
+.modal-window{
+	min-width: 320px;
+	margin-right: -3px;
+	padding: 0 !important;
+	border-radius: $border-radius;
+	box-shadow: 0 1px 60px rgba(0,0,0, .5);
+	overflow: hidden;
+	@include max-screen(320) {
+		min-width: 300px;
+	}
+
+	&--mobile{
+		max-width: 425px;
+		width: 100%;
+		padding: 0;
+		@include max-screen(425) {
+			width: 414px;
+		}
+		@include max-screen(375) {
+			width: 355px;
+		}
+		@include max-screen(320) {
+			width: 320px;
+		}
+	}//bb-window_mobile
+
+	&__wrap{
+		.fancybox-close-small{
+			&:hover{
+				&::after{
+					color: #000;
+					background-color: transparent;
+				}
+			}
+			&::after{
+				font-size: 24px;
+				color: $gray--lighten;
+				background-color: transparent;
+				top: 7px;
+				right: 4px;
+			}
+		}
+	}//bb-window__wrap
+
+	&__header{
+	}//bb-window__header
+
+	&__body{padding: 20px 20px;}//bb-window__body
+
+	&__footer{
+	}//bb-window__footer
+
+	&__title{
+	}//bb-window__title
+}//bb-window

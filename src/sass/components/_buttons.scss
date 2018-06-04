@@ -1,0 +1,33 @@
+%button{
+	display: inline-block;
+	padding: 7.5px 35px;
+	font-family: $f;
+	font-size: 16px;
+	text-align: center;
+	color: #fff;
+	text-decoration: none;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	overflow: hidden;
+	position: relative;
+	z-index: z(default);
+	@include tr;
+}
+
+.button {
+	@each $theme, $color in $button-colors{
+		&--#{$theme} {
+			background-color: $color;
+			color: #fff;
+		}
+		&--#{$theme}:hover,
+		&--#{$theme}:focus{
+			background-color: lighten($color, 10%);
+			color: #fff;
+		}
+		&--#{$theme}:active, {
+			background-color: lighten($color, 7%);
+		}
+	}
+}

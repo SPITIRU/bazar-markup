@@ -1,0 +1,46 @@
+{% import "partials/assets/_mixins.html" as mixin %}
+{% import "partials/_items.html" as item %}
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>{% if title %}{{ title }}{% else %}Template{% endif %}</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+
+	<meta name="theme-color" content="#a3467d">
+	<meta name="msapplication-navbutton-color" content="#a3467d">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#a3467d">
+
+	<link rel="shortcut icon" type="image/x-icon" href="img/favicon/favicon.ico" sizes="16x16">
+	<link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="img/favicon/android-chrome-76x76.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="img/favicon/android-chrome-icon-144x144.png">
+
+	{#{% include "../partials/assets/_media-tags.html" %}#}
+
+	<link rel="stylesheet" media="all" href="css/app.css">
+</head>
+<body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+	
+	<div class="wrapper {{ wrapperClass }}">
+		{% include "partials/_header.html" %}
+		{% block content %}{% endblock %}
+		{% include "partials/_footer.html" %}
+	</div>
+
+	<!-- begin windows -->
+	<div class="windows">
+		{% include "partials/_popup.html" %}
+	</div>
+	<!-- end windows -->
+	<!-- begin scripts -->
+	<script type="text/javascript" src="js/libs.min.js"></script>
+	{% block scripts %}{% endblock %}
+	<script type="text/javascript" src="js/main.js"></script>
+	<!-- end scripts -->
+</body>
+</html>

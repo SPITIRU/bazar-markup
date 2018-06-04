@@ -1,0 +1,57 @@
+//border-radius
+@mixin br($radius){
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	-o-border-radius: $radius;
+	border-radius: $radius;
+}
+	
+//transform rotate
+@mixin rotate($var){
+	transform: rotate($var+deg);
+}
+
+//transform scale
+@mixin scale($var){
+	-ms-transform: scale($var);
+	-webkit-transform: scale($var);
+	transform: scale($var);
+}
+	
+
+@mixin blur($var){
+	-webkit-filter: blur($var);
+	filter: blur($var);
+}
+
+@mixin smooth-scroll{
+	-webkit-overflow-scrolling: touch;
+}	
+
+@mixin smooth-font{
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@mixin gpu{
+	transform: translate3d(0,0,0);
+}
+
+@mixin tY($var){
+	transform: translateY($var);
+}
+
+@mixin tX($var){
+	transform: translateX($var);
+}
+
+//Clearfix
+@mixin clr {
+	&:after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+	*zoom: 1;
+}

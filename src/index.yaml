@@ -1,0 +1,28 @@
+ProjectTitle: 
+
+PageList:
+- file: home.html
+  ready: 50
+  desc : Главная
+
+- file: catalog.html
+  ready: 50
+  desc : Каталог
+  
+- file: card.html
+  ready: 50
+  desc : Подробная карточа
+
+- file: contacts.html
+  ready: 50
+  desc : Контакты
+
+  #404
+- file: 404.html
+  ready: 50
+  desc : Error Page
+
+  #Попап окна
+- file: popups.html
+  ready: 50
+  desc : Попап окна

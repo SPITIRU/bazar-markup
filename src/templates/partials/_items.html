@@ -1,0 +1,138 @@
+{% import "partials/assets/_mixins.html" as mixin %}
+
+<!-- 
+<div class="bb-dropdown js-bb-dropdown">
+	наведи сюда
+	<div class="bb-dropdown__list">это появится</div>
+</div>
+-->
+
+{% macro checkbox(title, class) %}
+<label class="bb-checkbox {{class}}">
+	<input type="checkbox">
+	<span class="bb-checkbox__box"></span>
+	<span class="bb-checkbox__title">{{title}}</span>
+</label>
+{% endmacro %}
+<!-- item.checkbox('мужской', 'bb-checkbox--radio, profile-editor__checkbox') -->
+
+{% macro radio(title, name, class) %}
+<label class="bb-checkbox bb-checkbox--radio {{class}}">
+	<input type="radio" name="{{name}}">
+	<span class="bb-checkbox__box"></span>
+	<span class="bb-checkbox__title">{{title}}</span>
+</label>
+{% endmacro %}
+<!-- item.checkbox('мужской', 'bb-checkbox--radio, profile-editor__checkbox') -->
+
+{% macro button(title, class) %}
+<button class="button-animate js-btn-animate {{class}}">
+	{{title}}
+	<span class="button-animate__hover"></span>
+</button>
+{% endmacro %}
+<!-- item.button('Пригласить', 'invite__btn') -->
+
+{% macro policy(class) %}
+<div class="policy js-policy {{class}}">
+	Нажимая на кнопку "Какая-то кнопка" Вы автоматически  <a href="agreement.html" target="_blank">персональных данных</a> и принимаете условия <a href="rules.html" target="_blank">пользовательского соглашения</a>
+</div>
+{% endmacro %}
+
+{% macro social() %}
+<div class="social">
+	<ul class="social__list">
+		<li class="social__item social__item_instagram"><a href="#" class="social__link"></a></li>
+		<li class="social__item social__item_vk"><a href="#" class="social__link"></a></li>
+		<li class="social__item social__item_fb"><a href="#" class="social__link"></a></li>
+	</ul>
+</div>
+{% endmacro %}
+
+{% macro starRating() %}
+<div class="star-rating">
+	<div class="star-rating__wrap">
+		<input class="star-rating__input" id="star-rating-5" type="radio" name="rating" value="5">
+		<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-5" title="5 из 5"></label>
+		<input class="star-rating__input" id="star-rating-4" type="radio" name="rating" value="4">
+		<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-4" title="4 из 5"></label>
+		<input class="star-rating__input" id="star-rating-3" type="radio" name="rating" value="3">
+		<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-3" title="3 из 5"></label>
+		<input class="star-rating__input" id="star-rating-2" type="radio" name="rating" value="2">
+		<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-2" title="2 из 5"></label>
+		<input class="star-rating__input" id="star-rating-1" type="radio" name="rating" value="1">
+		<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-1" title="1 из 5"></label>
+	</div>
+</div>
+{% endmacro %}
+
+{% macro catalogItem(class) %}
+<a href="card.html" class="catalog-item js-catalog-item{{class}}">
+
+	<div class="catalog-item__inner">
+		<div class="catalog-item__img bb-slider js-ss-slider image-wrapper" 
+		data-ss-images="img/examples/user/catalog/catalog-0.jpg;img/examples/user/catalog/catalog-1.jpg;img/examples/user/catalog/catalog-2.jpg;img/examples/user/catalog/catalog-3.jpg;img/examples/user/catalog/catalog-4.jpg"></div>
+
+		<div class="catalog-item__text">
+			<div class="catalog-item__header">
+				<div class="catalog-item__header-text">
+					<h3 class="catalog-item__title">Студия "Слеза дракона"</h3>	
+					<div class="catalog-item__address place-text" itemprop="address" itemtype="http://schema.org/PostalAddress">
+						<div class="place-text__address"  itemprop="addressLocality">
+							<span itemprop="addressLocality">Москва</span>, 	<span itemprop="streetAddress">ул. Гагарина, 28/2</span>
+							<span class="place-text__metro">м. Лубянка</span>
+						</div>
+					</div>
+				</div>	
+
+				<button class="catalog-item__fav js-btn-fav"></button>			
+			</div>
+
+			<div class="catalog-item__info">
+
+				<div class="rating catalog-item__rating" itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating">
+					<meta itemprop="reviewCount" content="Отзывов: 6">
+					<meta itemprop="ratingValue" content="3.5">
+					<meta itemprop="bestRating" content="5">
+					<div class="rating__inner" style="width: 70%"></div>
+					<span class="rating__rev-count">(77)</span>
+				</div>
+
+				<div class="catalog-item__properties properties">
+					<ul class="properties__list">
+						<li class="properties__item properties__item_procent bb-tolltip bb-tolltip--top bb-tolltip--right js-bb-tolltip" data-tolltip="скидки">
+							{{mixin.icon('procent')}}
+						</li>
+						<li class="properties__item properties__item_car bb-tolltip bb-tolltip--top bb-tolltip--right js-bb-tolltip" data-tolltip="могу приехать">
+							{{mixin.icon('car')}}
+						</li>
+					</ul>
+				</div>
+
+				<!-- <button class="button catalog-item__btn-subscribe">Подписаться</button> -->
+
+			</div>
+
+			<div class="catalog-item__desc" style="height: 48px;">Conveniently located inside Hair By Mi on King St in Newtown, Shura Nail & Beauty specialists in professional manicures and pedicures. Nail Art is at its best with high qualified Nail Artists. you'll also find services including Eyelash Extensions, Waxing & Eyebrow Tinting.<span class="button-link">...Еще</span></div>
+
+		</div>
+	</div>
+
+	<div class="catalog-item__price price">
+		<ul class="price__list">
+			<li class="price__item">
+				<div class="price__inner">
+					<span class="price__text" itemprop="name">Маникюр</span>
+					<span class="price__time"><i class="fa fa-clock-o"></i>30 мин</span>
+				</div>
+				<div class="price__inner">
+					<div class="price__num_wrap">
+						<span class="price__num price__num_old"><span>от</span> 700 <i class="fa fa-rub"></i></span>
+						<span class="price__num"><span>от</span> 588 <i class="fa fa-rub"></i></span>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</a>
+{% endmacro %}

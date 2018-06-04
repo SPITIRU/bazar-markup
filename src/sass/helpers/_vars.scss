@@ -1,0 +1,126 @@
+//prefix
+
+//FONT
+$f        :roboto-400, sans-serif;
+$f-light  :roboto-300, sans-serif;
+$f-medium :roboto-500, sans-serif;
+$f-bold   :roboto-600, sans-serif;
+//font for num
+$f-num    :oswald-400, sans-serif;
+
+$font-size-base   : 16px;
+$font-family-base : $f;
+$line-height-base : 1.5;
+$font-weight-base : 400;
+
+//Отступы
+$base-indent    : 20px;
+$half-indent    : $base-indent / 2;
+$section-indent : 50px;
+
+$gutter         : $base-indent;
+
+//Base Variebles
+$color-accent           :#a3467d;
+$color-main       		:#95d6c9;
+$color-third            :#ffe51c;
+
+//gray
+// $gray--darkest          :;
+$gray--darken           :#565656;
+$gray--dark             :#808080;
+$gray                   :#aeaeae;
+$gray--light            :#e1e1e1;
+$gray--lighten          :#e6e6e6;
+$gray--lightest         :#f6f6f6;
+
+//clolors
+$color-muted            :#d6d6d6;
+$color-primary			:$color-main;
+$color-success			:#8cc152;
+$color-info             :#2386dc;
+$color-danger           :#c9302c;
+
+$color-link             :$color-info;
+
+//text
+$color-text              :$gray--darken;
+$color-text--light       :$gray--dark;
+
+//bg
+// $color-bg--darkest       :;
+// $color-bg--darken        :;
+$color-bg--dark          :$gray--darken;
+$color-bg--light         :$gray--lighten;
+$color-bg--lighten       :$gray--lightest;
+// $color-bg--lightest      :;
+
+//Icon
+$color-icon         :$gray--dark;
+$color-icon--light  :#a2a2a2;
+
+//border
+// $color-border--darkest   :;
+// $color-border--darken    :;
+// $color-border--dark      :;
+$color-border            :$gray;
+$color-border--light     :$gray--light;
+// $color-border--lighten   :;
+// $color-border--lightest  :;
+
+$border-radius           :2px;
+
+
+$color-placeholder       :$gray--dark;
+
+//Тень
+$bxs: 1px 1px 10px #ddd;
+$bxs-hover: 1px 1px 10px rgba($color-main ,0.6);
+$bxs-i: inset 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+
+//button colors
+$button-colors: (
+	accent         : $color-accent,
+	default        : $color-main ,
+	success        : $color-success,
+	error          : $color-danger,
+	info           : $color-info,
+	muted          : $color-muted
+);
+
+//z-index
+$z-index: (
+	bottom         : -9999,
+	down           : -1,
+	default        : 1,
+	success        : 50,
+	successBtnClose: 51,
+	dropdown       : 333,
+	overlay        : 999,
+	modal          : 1001
+);
+
+//Icons
+$icon-enter        : '\f090';
+$icon-home         : '\f015';
+$icon-lk           : '\f007';
+$icon-request      : '\f0e6';
+$icon-favorites    : '\f08a';
+$icon-profile      : '\f015';
+$icon-masters      : '\f0c0';
+$icon-works        : '\f03e';
+$icon-services     : '\f2b5';
+$icon-stock        : '\f295';
+$icon-balance      : '\f0d6';
+$icon-statistica   : '\f201';
+$icon-options      : '\f013';
+$icon-link         : '\f0c1';
+
+$nav-icons: (
+	enter          : $icon-enter,
+	home           : $icon-home,
+	lk             : $icon-lk,
+	request        : $icon-request,
+	fav            : $icon-favorites,
+	link           : $icon-link
+);

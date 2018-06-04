@@ -1,0 +1,21 @@
+<!-- begin nav -->
+<nav class="nav js-main-nav" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+	<ul class="nav__list">
+		{% import "data/data.html" as mainMenu %}		
+		{% for item in mainMenu.mainMenu %}
+		<li class="nav__item" itemprop="name">
+			<a href="#" class="nav__link" itemprop="url">{{ item.title }}</a>
+			<div class="nav-dropdown nav-dropdown--{{ item.direction }}">
+				<ul class="nav-dropdown__list">
+					<li class="nav-dropdown__item"><a href="#" class="nav-dropdown__link">Some text</a></li>
+					<li class="nav-dropdown__item"><a href="#" class="nav-dropdown__link">Some text</a></li>
+					<li class="nav-dropdown__item"><a href="#" class="nav-dropdown__link">Some text</a></li>
+					<li class="nav-dropdown__item"><a href="#" class="nav-dropdown__link">Some text</a></li>
+					<li class="nav-dropdown__item"><a href="#" class="nav-dropdown__link">Some text</a></li>
+				</ul>
+			</div>
+		</li>
+		{% endfor %}
+	</ul>
+</nav>
+<!-- end nav -->
