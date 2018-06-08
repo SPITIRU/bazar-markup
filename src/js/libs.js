@@ -9,6 +9,8 @@
 //=include ../libs/stickyBlock/stickyBlock.js
 
 //=include ../libs/slick/slick.js
+//=include ../libs/modal/util.js
+//=include ../libs/modal/modal.js
 
 //=include assets/svg-sprite.js
 //=include ../libs/svg4everybody.js

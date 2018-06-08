@@ -1,0 +1,134 @@
+.promo{
+	margin-top: 10px;
+}//.promo
+
+.advantages{
+	padding-top: 0;
+	@include respond-to(xs) {
+		padding-bottom: 10px;
+	}
+
+	.h2{
+		margin: 70px 0 60px;
+		@include respond-to(xs) {
+			margin: 50px 0 50px;
+		}
+	}
+}//.advantages
+
+.new{
+	padding-top: 0;
+
+	@include respond-to(i5) {
+		padding: 0;
+	}
+	
+}//.home
+
+.advantages-item{
+	margin-bottom: $base-indent*2;
+	@extend %flexCenter;
+
+	@include col;
+	@include size(4);
+	@include size-md(6);
+	@include size-xs(12);
+		
+	@include respond-to(sm) {
+		justify-content: center;
+	}
+		
+	@include respond-to(xs) {
+		justify-content: flex-start;
+	}
+
+	&__wrap{
+		@include row-flex;
+		
+		@include respond-to(sm) {
+			justify-content: center;
+			align-items: center;
+		}
+	}//.advantages-item__wrap
+
+	&__icon{
+		width: 90px;
+		height: 90px;
+		margin-right: 10px;
+		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+		border: 1px solid $color-accent;
+		border-radius: 50%;
+		background-color: $color-accent;
+		display: inline-flex;
+
+		.icon, .fal{margin: auto;}
+
+		.icon{fill: #fff;}
+
+		.fal{
+			font-size: 30px;
+			color: #fff;
+		}
+	}//.advantages-item__icon
+
+	&__desc{
+		@extend %flexColumn;
+		align-items: center;
+		justify-content: center;
+	}//.advantages-item__desc
+
+	&__num{
+		font-family: $f2-bold;
+		font-size: 35px;
+		letter-spacing: 0.7px;
+		span{
+			font-size: 22px;
+		}
+	}//.advantages-item__num
+
+	&__text{
+		font-size: 14px;
+	}//.advantages-item__text	
+}//.advantages-item
+
+.why-we{
+	padding: 50px 0;
+	background-color: $color-bg--lighten;
+	@include respond-to(xs) {
+		padding-top: 30px;
+	}
+
+	&__title{
+		display: block;
+		margin-bottom: $base-indent/2;
+		font-family: $f2-bold;
+		font-size: 22px;
+	}
+}//.why-we
+
+.bz-grid{
+	max-height: 630px;
+	@include row-flex;
+	&-col-3{
+		max-height: 630px;
+		@include col;
+		@include size(4);
+	}
+	&-row{
+		height: 100%;
+		@extend %flexColumn;
+		& + &{
+			margin-top: $gutter;
+		}
+
+		&-2{
+			height: calc(60% - 20px);
+		}
+		&-3{
+			height: 40%;			
+		}
+	}
+	img{
+		height: 100%;
+	}
+}//.bz-grid

@@ -1,5 +1,6 @@
 .bz-slider{
 	position: relative;
+
 	&__arrow{
 		display: inline-block;
 		position: absolute;
@@ -11,9 +12,9 @@
 			display: none !important;
 		}
 		&::before{
-			font-family: fontawesome;
+			font-family: faL;
 			font-size: 28px;
-			color: $color-main;
+			color: $color-icon;
 			opacity: .3;
 		}
 		&:hover{
@@ -40,55 +41,62 @@
 			}
 		}//bb-slider__arrow--next
 	}//bb-slider__arrow
-	&_two{
-		.bz-slider__arrow{
-			display: block;
-			width: 50px;
-			height: 50px;
-			background-color: #fff;
-			box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
-			border-radius: 50%;
-			bottom: auto;
-			top: 50%;
-			transform: translateY(-50%);
-			@include max-screen(1024) {
-				width: 40px;
-				height: 40px;
-				border-radius: 0;
-			}
-			&::before{
-				line-height: 28px;
-				font-size: 22px;
-				color: $color-main;
-				opacity: 1;
-				@include vy;
-			}
-			&:hover{
-				background-color: $color-main;
+
+	&--promo{
+
+		.bz-slider{
+			&__arrow{
+				bottom: 8px;
+				@include respond-to(xs) {
+					display: none !important;
+				}
+
 				&::before{
 					color: #fff;
+					font-size: 35px;
+					opacity: 1;
 				}
-			}
-			&--prev{
-				left: -25px;
-				@include max-screen(1024) {
-					left: 5px;
+
+				&--prev{
+					right: 60px;
+					left: auto;
 				}
-				&::before{
-					content: '\f104';
-					left: 40%;
-				}
-			}//bb-slider__arrow--prev
-			&--next{
-				right: -25px;
-				@include max-screen(1024) {
-					right: 5px;
-				}
-				&::before{
-					content: '\f105';
-					left: 45%;
-				}
+				&--next{right: 30px;}				
 			}
 		}
-	}
+
+		.slick-slide{
+			margin: 0;
+		}
+	}//bb-slider--promo
+
+	&--new{
+		max-width: 1070px;
+		margin: 0 auto;
+
+		@include respond-to(md) {
+			max-width: 848px;
+		}
+
+		@include respond-to(sm) {
+			max-width: 626px;
+		}
+
+		.bz-slider{
+			&__arrow{
+				bottom: auto;
+				top: 40%;
+				transform: translateY(-50%);
+				&--prev{left: -30px;}
+				&--next{right: -30px;}
+			}
+		}
+
+		.slick-slide{
+			margin: 0 $gutter;
+			@include respond-to(i7) {
+				margin: 0 7.5px;
+			}
+		}
+	}//bb-slider--new
 }//bb-slider

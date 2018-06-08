@@ -1,65 +1,121 @@
-//Modal Window
-.fancybox-slide--html{padding: 5px 5px 0;}
-.fancybox-container{z-index: z(modal);}
-.compensate-for-scrollbar{margin-right: 0px !important;}
-.fancybox-slide--html .fancybox-content{margin-bottom: 0;}
-.fancybox-show-caption .fancybox-caption, .fancybox-show-infobar .fancybox-infobar, .fancybox-show-toolbar .fancybox-toolbar{display: none;}
-.fancybox-can-drag .fancybox-content{cursor: default;}
-.fancybox-slide{@include bb-scroll;}
+.modal{
 
-//Custom Modal Winfow
-.modal-window{
-	min-width: 320px;
-	margin-right: -3px;
-	padding: 0 !important;
-	border-radius: $border-radius;
-	box-shadow: 0 1px 60px rgba(0,0,0, .5);
-	overflow: hidden;
-	@include max-screen(320) {
-		min-width: 300px;
+	&-dialog{
+
+		@include respond-to(xs) {
+			margin-top: $base-indent*3;
+		}
+
+		&--md{
+			max-width: 768px;
+			margin: $base-indent auto;
+		}
+
+		&--sm{
+			max-width: 425px;
+			margin: $base-indent auto;
+		}
+
 	}
 
-	&--mobile{
-		max-width: 425px;
-		width: 100%;
-		padding: 0;
-		@include max-screen(425) {
-			width: 414px;
-		}
-		@include max-screen(375) {
-			width: 355px;
-		}
-		@include max-screen(320) {
-			width: 320px;
-		}
-	}//bb-window_mobile
+	&-header{
+		position: relative;
 
-	&__wrap{
-		.fancybox-close-small{
-			&:hover{
-				&::after{
-					color: #000;
-					background-color: transparent;
-				}
+		.modal__btn--close{
+			top: 8px;
+			right: 5px;
+		}
+	}
+
+	&-title{
+		margin: auto 0;
+		font-family: $f-medium;
+		font-weight: 500;
+		font-size: 18px;
+		letter-spacing: 0;
+		text-transform: initial;
+		line-height: 1;
+	}
+
+	&__btn{
+		
+		&--close{		
+			padding: 5px 10px;	
+			font-size: 21px;
+			font-weight: 700;
+			line-height: 1;
+			color: #000;
+			text-shadow: 0 1px 0 #fff;
+			opacity: .3;
+			background-color: transparent;
+			border: 0;
+			cursor: pointer;
+			outline: none;
+			position: absolute;
+			top: 3px;
+			right: 10px;
+			z-index: z(default);
+
+			&:hover {
+				text-decoration: none;
+				opacity: .75;
 			}
-			&::after{
-				font-size: 24px;
-				color: $gray--lighten;
-				background-color: transparent;
-				top: 7px;
-				right: 4px;
+
+			&:not(:disabled):not(.disabled) {
+				cursor: pointer;
 			}
-		}
-	}//bb-window__wrap
+		}	    
+	}
+}//.modal
 
-	&__header{
-	}//bb-window__header
-
-	&__body{padding: 20px 20px;}//bb-window__body
-
-	&__footer{
-	}//bb-window__footer
+.change-city{
 
 	&__title{
-	}//bb-window__title
-}//bb-window
+		display: block;
+		margin-bottom: 10px;
+		font-family: $f-bold;
+		font-size: 20px;
+	}//.change-city__title
+
+	&__in{
+		@extend %flex;
+		flex-wrap: wrap;
+	}//.change-city__in
+
+	&__list{
+		&_country{
+			display: inline-block;
+			padding-top: $base-indent;
+			padding-right: 70px;
+			margin-top: $base-indent;
+			border-top: 1px solid $color-border--light;
+		}
+	}//.change-city__list
+
+	&__item{
+		font-size: 14px;
+		cursor: pointer;
+		position: relative;
+
+		& + &{
+			margin-top: 5px;
+		}
+
+		&::before{
+			content: '';
+			display: block;
+			@include vy;
+			left: 0;
+		}
+
+		@each $item in belarus ukraine kaz{
+			&--#{$item}{
+				padding-left: 34px;
+				font-size: 15px;
+				&::before{					
+					@include sprite(flag--#{$item});
+				}				
+			}
+		}
+	}//.change-city__item
+}//.change-city

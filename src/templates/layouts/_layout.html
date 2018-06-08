@@ -26,17 +26,24 @@
 </head>
 <body itemscope="itemscope" itemtype="http://schema.org/WebPage">
 	
+	<!-- begin wrapper -->
 	<div class="wrapper {{ wrapperClass }}">
 		{% include "partials/_header.html" %}
 		{% block content %}{% endblock %}
 		{% include "partials/_footer.html" %}
 	</div>
+	<!-- end wrapper -->
 
 	<!-- begin windows -->
 	<div class="windows">
 		{% include "partials/_popup.html" %}
 	</div>
 	<!-- end windows -->
+
+	<!-- begin overlay -->
+	<div class="overlay js-overlay"></div>
+	<!-- end overlay -->
+
 	<!-- begin scripts -->
 	<script type="text/javascript" src="js/libs.min.js"></script>
 	{% block scripts %}{% endblock %}

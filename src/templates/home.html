@@ -1,5 +1,17 @@
 ---
 title: BAZAR-TEX | Ткани и Фурнитура
+
+advantages:
+ - icon: 'fa-percentage'
+   num: '300'
+   text: 'позиций в наличии'
+ - icon: 'fa-truck'
+   num: '1200'
+   text: 'отправленных заказов'
+ - icon: 'fa-thumbs-up'
+   num: '3'
+   numText: 'года'
+   text: 'большой опыт работы'
 ---
 {% extends "layouts/_layout.html" %}
 
@@ -7,8 +19,99 @@ title: BAZAR-TEX | Ткани и Фурнитура
 
 <!-- begin home -->
 <main class="main home">
-	{{ mixin.icon('Instagram') }}
-	<img src="img/general/logo.svg" alt="" style="width: 150px">
+
+	<!-- begin home-slider -->
+	<section class="promo">
+		<div class="container">
+
+			<div class="bz-slider bz-slider--promo">
+				<div class="bz-slider__arrow bz-slider__arrow--prev"></div>
+				<div class="bz-slider__arrow bz-slider__arrow--next"></div>
+				<div class="bz-slider__slides js-bz-slider--promo">
+					{% for i in range(1, 4) %}
+						<div class="promo-gallery__item">
+							<div class="promo-gallery__img">
+								<img src="img/promo/{{i}}.jpg" alt="alt">
+							</div>
+						</div>
+					{% endfor %}﻿
+				</div>
+			</div>
+		
+		</div>
+	</section><!-- end home-slider -->
+	
+	<!-- begin new -->
+	<section class="bz-section new">
+		<div class="container">
+
+			<div class="section-header">
+				<h2 class="h2">Новинки</h2>
+			</div>
+
+			<div class="bz-slider bz-slider--new">
+				<div class="bz-slider__arrow bz-slider__arrow--prev"></div>
+				<div class="bz-slider__arrow bz-slider__arrow--next"></div>
+				<div class="bz-slider__slides js-bz-slider--new">
+					{% for i in range(0, 6) %}
+						{{ item.productItemSmall() }}
+					{% endfor %}﻿
+				</div>
+			</div>
+
+			<div class="bz-grid">
+				<div class="bz-grid-col-3">
+					<div class="bz-grid-row"><img src="img/exampel/1.jpg" alt=""></div>
+				</div>
+				<div class="bz-grid-col-3">
+					<div class="bz-grid-row bz-grid-row-3"><img src="img/exampel/3.jpg" alt=""></div>
+					<div class="bz-grid-row bz-grid-row-2"><img src="img/exampel/2.jpg" alt=""></div>
+				</div>
+				<div class="bz-grid-col-3">
+					<div class="bz-grid-row bz-grid-row-2"><img src="img/exampel/2.jpg" alt=""></div>
+					<div class="bz-grid-row bz-grid-row-3"><img src="img/exampel/3.jpg" alt=""></div>
+				</div>
+			</div>
+			
+
+		</div>
+	</section><!-- end new -->
+
+	<!-- begin why-we -->
+	<section class="bz-section why-we">
+		<div class="container">
+
+			<div class="why-we__title">Почему выбирают нас?</div>
+			<p class="why-we__text">BAZAAR-TEX — это интернет-магазин тканей и фурнитуры. Всегда в наличии -  фатин более 200 оттенков, атлас, бархат, пайетки, бифлекс. На нашем сайте представлен широкий выбор фатина разной жесткости и оттенков.  Доставка заказов осуществляется по всей территории России и странам мира.</p>
+
+		</div>
+	</section><!-- end why-we -->
+
+	<!-- begin advantages -->
+	<section class="bz-section advantages">
+		<div class="container">
+
+			<div class="section-header">
+				<h2 class="h2">Наши преимущества</h2>
+			</div>
+
+			<div class="advantages-item__wrap">
+				{% for item in advantages %}
+				<div class="advantages-item">
+					<div class="advantages-item__icon">
+						<i class="fal {{ item.icon }}"></i>
+					</div>
+					<div class="advantages-item__desc">
+						<span class="advantages-item__num">{{ item.num }} <span>{{ item.numText }}</span></span>
+						<span class="advantages-item__text">{{ item.text }}</span>
+					</div>
+				</div>
+				{% endfor %}﻿
+			</div>
+
+		</div>
+	</section><!-- end advantages -->
+
 </main>	
 <!-- end home -->
 

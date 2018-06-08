@@ -9,12 +9,12 @@ img{@extend %img;}
 
 // Стили  ссылок
 a {
-	color: $color-main;
+	color: $color-text;
 	text-decoration: none;
 	outline: none;
 	@include tr;
 	&:hover{
-		color: lighten($color-main, 10%);
+		color: $color-accent;
 	}
 }
 
@@ -39,14 +39,17 @@ h1,.h1 {
 	}
 }
 h2,.h2 {
-	font-size: 36px;
+	font-size: 22px;
 	line-height: 1.25em;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 0.29px;
 	@include max-screen(1024) {
-		font-size: 32px;
+		font-size: 20px;
 		line-height: 1.25em;
 	}
 	@include max-screen(768) {
-		font-size: 26px;
+		font-size: 18px;
 		line-height: 1.15384615em;
 	}
 }
@@ -63,13 +66,22 @@ h3,.h3 {
 		line-height: 1.13636364em;
 	}
 }
-h4,.h4, h5,.h5, h6,.h6 {
-	font-size: 18px;
-	font-family: $f;
-	font-weight: 400;
-	line-height: 1.22222222em;
-	margin-bottom: $half-indent;
+h4,.h4,h5,.h5, h6,.h6{
+	font-family: $f2-bold;
+	font-weight: 600;	
+	text-transform: uppercase;
+	margin-bottom: $base-indent;
 	@include max-screen(768) {
 		line-height: 1.11111111em;	
 	}
+}
+h4,.h4{
+	font-size: 14px;
+	letter-spacing: 0.24px;
+	line-height: 1.22222222em;
+
+}
+h5,.h5, h6,.h6 {	
+	font-size: 12px;
+	letter-spacing: 0.24px;
 }

@@ -17,12 +17,13 @@ body {
 	overflow-x: hidden;
 	@include scroll;
 	@include min-screen(481) {		
-		@include bb-scroll;
+		@include bz-scroll;
 	}
 }
 
 // упразднить стили для плейсхолдера
 input, textarea, select {
+	@extend %styleInput;
 	outline: none;
 	appearance: none;
 	-webkit-appearance: none;

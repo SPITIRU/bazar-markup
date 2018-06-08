@@ -246,22 +246,16 @@
 		font-style: normal;
 	}
 }
-// to use:
-//+font(black, cytiapro-black-webfont)
 
-//Font Family
-// @mixin font-face($font-family, $file-path, $weight: normal, $style: normal, $asset-pipeline: false ){
-// 	@font-face{
-// 		font-family: $font-family;
-// 		font-weight: $weight;
-// 		font-style: $style;
+@mixin respond-to($breakpoint) { 
+	@if map-has-key($breakpoints, $breakpoint) {
+		@media (max-width: #{map-get($breakpoints, $breakpoint)}) {
+			@content;
+		}
+	}
 
-// 		@if $asset-pipeline == true{
-// 			src: font-url('#{$file-path}.eot');
-// 			src: font-url('#{$file-path}.eot?#iefix') format('embedded-opentype'), font-url('#{$file-path}.woff') format('woff'), font-url('#{$file-path}.ttf') format('truetype');
-// 		}@else{
-// 			src: url('#{$file-path}.eot');
-// 			src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'), url('#{$file-path}.woff') format('woff'), url('#{$file-path}.ttf') format('truetype');
-// 		}
-// 	}
-// }
+	@else {
+		@warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+		+ "Please make sure it is defined in `$breakpoints` map.";
+	}
+}

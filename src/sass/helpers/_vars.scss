@@ -5,8 +5,11 @@ $f        :roboto-400, sans-serif;
 $f-light  :roboto-300, sans-serif;
 $f-medium :roboto-500, sans-serif;
 $f-bold   :roboto-600, sans-serif;
-//font for num
-$f-num    :oswald-400, sans-serif;
+
+$f2        :robotoslab-400, sans-serif;
+$f2-light  :robotoslab-300, sans-serif;
+$f2-medium :robotoslab-500, sans-serif;
+$f2-bold   :robotoslab-600, sans-serif;
 
 $font-size-base   : 16px;
 $font-family-base : $f;
@@ -63,15 +66,17 @@ $color-icon--light  :#a2a2a2;
 // $color-border--darkest   :;
 // $color-border--darken    :;
 // $color-border--dark      :;
+$color-border--dark      :$gray--dark;
 $color-border            :$gray;
 $color-border--light     :$gray--light;
+$color-border--lighten   :$gray--lighten;
 // $color-border--lighten   :;
 // $color-border--lightest  :;
 
 $border-radius           :2px;
 
 
-$color-placeholder       :$gray--dark;
+$color-placeholder       :$gray;
 
 //Тень
 $bxs: 1px 1px 10px #ddd;
@@ -85,42 +90,62 @@ $button-colors: (
 	success        : $color-success,
 	error          : $color-danger,
 	info           : $color-info,
-	muted          : $color-muted
+	muted          : $gray--darken
 );
 
 //z-index
 $z-index: (
-	bottom         : -9999,
-	down           : -1,
-	default        : 1,
-	success        : 50,
-	successBtnClose: 51,
-	dropdown       : 333,
-	overlay        : 999,
-	modal          : 1001
+	bottom                 : -9999,
+	down                   : -1,
+	default                : 1,
+	fixed                  : 50,
+	absolute               : 99,
+	dropdown               : 333,
+	overlay                : 900,
+	mobileMenu             : 901,
+	modal-overlay          : 1000,
+	modal                  : 1001
 );
 
 //Icons
-$icon-enter        : '\f090';
-$icon-home         : '\f015';
-$icon-lk           : '\f007';
-$icon-request      : '\f0e6';
-$icon-favorites    : '\f08a';
-$icon-profile      : '\f015';
-$icon-masters      : '\f0c0';
-$icon-works        : '\f03e';
-$icon-services     : '\f2b5';
-$icon-stock        : '\f295';
-$icon-balance      : '\f0d6';
-$icon-statistica   : '\f201';
-$icon-options      : '\f013';
-$icon-link         : '\f0c1';
+$icon-vk        : '\f189';
+$icon-odnk      : '\f263';
+$icon-inst      : '\f16d';
 
-$nav-icons: (
-	enter          : $icon-enter,
-	home           : $icon-home,
-	lk             : $icon-lk,
-	request        : $icon-request,
-	fav            : $icon-favorites,
-	link           : $icon-link
+$soc-icons: (
+	vk          : $icon-vk,
+	ok          : $icon-odnk,
+	inst        : $icon-inst
 );
+
+
+$breakpoints: (
+  i5: 320px,
+  i7: 375px,
+  i8: 414px,
+  xs: 480px,
+  sm: 768px,
+  md: 1024px,
+  lg: 1200px
+);
+
+//Modal Variebles
+$modal-border-width:             1px;
+$modal-border-color:             $color-border--light;
+$border-radius:                  $border-radius;
+
+$modal-box-shadow:               0 .25rem .5rem rgba(#000, .5) !default;
+
+$modal-backdrop-bg:              #000 !default;
+$modal-content-bg:               #fff !default;
+$modal-backdrop-opacity:         .5 !default;
+$modal-header-padding:           1rem !default;
+$modal-inner-padding:            1rem !default;
+
+
+$modal-md:                       500px !default;
+$modal-sm:                       300px !default;
+$modal-lg:                       800px !default;
+
+$transition-collapse:            height .35s ease !default;
+$transition-fade:                opacity .15s linear !default;

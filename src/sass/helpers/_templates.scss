@@ -1,9 +1,17 @@
 //Custom Webkit Scroll
-@mixin bb-scroll {
+@mixin bz-scroll {
 	@include scroll;
 	@include scrollbar {width: 5px;}
 	@include scrollbar-track {width: 5px;}
 	@include scrollbar-thumb {background-color: $color-bg--dark; border-radius: 100px;}
+}
+
+//Custom Webkit Scroll
+@mixin bz-scroll--light {
+	@include scroll;
+	@include scrollbar {width: 5px;}
+	@include scrollbar-track {width: 5px;}
+	@include scrollbar-thumb {background-color: $color-bg--light; border-radius: 100px;}
 }
 
 @mixin container{
@@ -14,6 +22,20 @@
 		padding-left: 10px;
 		padding-right: 10px;
 	}
+}
+
+@mixin badge{	
+	min-width: 20px;
+	height: 20px;
+	color: $color-text;
+	font-family: $f-light;
+	font-size: 11px;
+	vertical-align: middle;
+	border-radius: 500px;
+	background: $color-main;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
 }
 
 %flex{
@@ -74,14 +96,15 @@
 
 //style input
 %styleInput {
-	padding: 9px 35px 9px 15px;
+	width: 100%;
+	padding: 10px 15px;
 	font-family: $f;
 	font-size: 16px;
 	line-height: 1;
 	color: $color-text;
+	border: 1px solid #d9d9d9;
 	border-radius: $border-radius;
-	border: 1px solid $gray--lighten;
 	&:focus{
-		border-color: $gray--light;
+		border-color: $color-border;
 	}
 }

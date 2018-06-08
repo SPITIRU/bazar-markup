@@ -121,7 +121,7 @@
 	}
 }
 
-.select2-container--default .select2-results>.select2-results__options{@include bb-scroll;}
+.select2-container--default .select2-results>.select2-results__options{@include bz-scroll;}
 
 .select2-container--default .select2-results__option[aria-disabled=true]{color: $gray--light;}
 
@@ -153,7 +153,7 @@
 	max-height: 170px;
 	line-height: 1;
 	padding: 0 10px;
-	@include bb-scroll;
+	@include bz-scroll;
 }
 
 .select2-container--default .select2-search--inline .select2-search__field{

@@ -1,7 +1,136 @@
 <!-- begin auth-form -->
-<div class="modal-window" id="auth-form">
+<div class="modal-window is-hidden">
 	<div class="modal-window__header"></div>
 	<div class="modal-window__body"></div>
 	<div class="modal-window__footer"></div>
+</div>
+<!-- end auth-form -->
+
+<div class="modal fade" id="exampleModal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Modal title</h5>
+				<button type="button modal__btn--close" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				...
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save changes</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade change-city" id="change-city">
+	<div class="modal-dialog modal-dialog--md">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Выберите город</h5>
+				<button class="close modal__btn--close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="change-city__title">Россия</div>
+				<div class="change-city__in">
+					<ul class="change-city__list">
+						{% import "data/data.html" as cities %}		
+						{% for item in cities.cityList1 %}					
+							<li class="change-city__item">{{ item.city }}</li>										
+						{% endfor %}
+					</ul>	
+					<ul class="change-city__list">
+						{% import "data/data.html" as cities %}		
+						{% for item in cities.cityList2 %}					
+							<li class="change-city__item">{{ item.city }}</li>										
+						{% endfor %}
+					</ul>	
+					<ul class="change-city__list">
+						{% import "data/data.html" as cities %}		
+						{% for item in cities.cityList3 %}					
+							<li class="change-city__item">{{ item.city }}</li>										
+						{% endfor %}
+					</ul>	
+					<ul class="change-city__list">
+						{% import "data/data.html" as cities %}		
+						{% for item in cities.cityList4 %}					
+							<li class="change-city__item">{{ item.city }}</li>										
+						{% endfor %}
+					</ul>
+				</div>
+				<ul class="change-city__list change-city__list_country">			
+					<li class="change-city__item change-city__item--belarus">Белоруссия</li>	
+					<li class="change-city__item change-city__item--ukraine">Украина</li>	
+					<li class="change-city__item change-city__item--kaz">Казахстан</li>	
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- begin auth-form -->
+<div class="modal fade" id="auth-form">
+	<div class="modal-dialog modal-dialog--sm" role="document">
+		<div class="modal-content">
+		<button class="close modal__btn--close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+			<div class="modal-body">
+				<div class="form">
+					<div class="form__header">
+						<div class="form__title">Вход или регистрация</div>
+					</div>
+
+					<div class="form__inner">
+						<form class="auth-form">
+							<div class="input input--email form__input">
+								<input 
+									type='email'
+									class="input__field"
+									placeholder="Введите e-mail"
+									pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+								<span class="input__error">*Какая-то ошибочка вышла</span>
+							</div>
+
+							<div class="input input--password form__input">
+								<input
+									type='password'
+									class="input__field"
+									placeholder="Введите пароль">
+								<i class="input__icon fal fa-eye-slash js-input-password--show"></i>
+								<i class="input__icon fal fa-eye js-input-password--hide" style="display: none;"></i>
+								<span class="input__error">*Какая-то ошибочка вышла</span>
+							</div>
+
+							<div class="form__box">
+								{{item.checkbox('Запомнить меня' ,'auth-form__rememberme')}}
+								<a href="recover-password.html" class="form__link form__link--recover">Забыли пароль?</a>
+							</div>
+
+							<div class="form__buttons">
+								{{item.btn('Войти', 'button--default form__btn')}}
+							</div>
+
+							<div class="section-header form__devider"><span class="section-header__text">или войдите через</span></div>
+
+							{{item.social('form__social')}}
+
+							<div class="form-success">
+								<div class="form-success__center">
+									<h3 class="form-success__title">Спасибо за регистрацию!</h3>
+								</div>
+							</div>
+
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 <!-- end auth-form -->

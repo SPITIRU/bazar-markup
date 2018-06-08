@@ -1,33 +1,92 @@
 %button{
 	display: inline-block;
-	padding: 7.5px 35px;
-	font-family: $f;
-	font-size: 16px;
+	min-width: 200px;
+	height: 40px;
+	line-height: 38px;
+	font-family: $f-medium;
+	text-transform: uppercase;
 	text-align: center;
-	color: #fff;
+	font-size: 14px;
+	letter-spacing: 0.3px;
+	color: $color-text;
 	text-decoration: none;
 	border: none;
-	cursor: pointer;
+	border-radius: $border-radius;
 	outline: none;
-	overflow: hidden;
-	position: relative;
-	z-index: z(default);
+	cursor: pointer;
 	@include tr;
 }
 
 .button {
+	@extend %button;
 	@each $theme, $color in $button-colors{
 		&--#{$theme} {
 			background-color: $color;
-			color: #fff;
 		}
 		&--#{$theme}:hover,
 		&--#{$theme}:focus{
-			background-color: lighten($color, 10%);
-			color: #fff;
+			background-color: lighten($color, 6%);
 		}
 		&--#{$theme}:active, {
-			background-color: lighten($color, 7%);
+			background-color: lighten($color, 3%);
 		}
 	}
+
+	&--transparent{
+		background-color: transparent;
+
+		@each $theme, $color in $button-colors{
+			&.button--#{$theme}{
+				background-color: transparent;
+				border: 1px solid $color;
+			}
+			&.button--#{$theme}:hover,
+			&.button--#{$theme}:focus,
+			&.button--#{$theme}:active{
+				background-color: $color;
+				font-size: 14px;
+			}
+		}
+	}//..button--transparent
+
+	&--accent{
+		color: #fff;
+	}//..button--accent
+
+	&--muted{
+		&:hover{
+			color: #fff;
+		}
+	}//..button--muted
 }
+
+.button-icon{
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	padding: 0;
+	border: 0;
+	background-color: transparent;
+	outline: none;
+	position: relative;
+
+	&--fav{
+		&::before{
+			content: '\f004';
+			font-family: faL;
+			font-size: 25px;
+			@include vcenter;
+		}
+		&:hover{
+			&::before{
+				color: $color-third;
+			}
+		}
+		&.is-checked{
+			&::before{
+				font-family: faS;
+				color: $color-third;
+			}
+		}
+	}
+}//.button-icon
