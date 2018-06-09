@@ -21,61 +21,64 @@
 		</div>
 	</div>
 	<!-- end header__top-line -->
-	<!-- begin header__bottom -->
-	<div class="header__bottom">
-		<div class="header__in">
-			<!-- begin logo -->
-			<div class="logo header__logo" itemscope itemprop="logo" itemtype="http://schema.org/Organization">
-				<a href="home.html" class="logo__link" itemprop="url">
-					<img src="img/general/logo.svg" alt="Bazar-TEX Ткани и фурнитура">
-				</a>
-			</div>
-			<!-- end logo -->
-			<!-- begin search -->
-			<div class="search header__search js-search">
-				<form class="search__form">
-					<input type="text" class="search__field" placeholder="Поиск...">
-					<button type="submit" class="search__btn">
-						{{mixin.icon('search', 'search__icon')}}
-					</button>
-				</form>
-			</div>
-			<!-- end search -->
-			<!-- begin user-nav -->
-			<div class="user-nav header__user-nav">
-				<ul class="user-nav__list">
-					<li class="user-nav__item">
-						<a href="#" class="user-nav__link xs-hide">
-							<i class="fal fa-user user-nav__icon"></i>
-							<span class="user-nav__text">Войти</span>
-						</a>
-					</li>
-					<li class="user-nav__item xs-only">
-						<a href="javascript:void(0);" class="user-nav__link js-mobile-search--show">
-							<i class="fal fa-search user-nav__icon"></i>
-							<span class="user-nav__text">Поиск</span>
-						</a>
-					</li>
-					<li class="user-nav__item">
-						<a href="#" class="user-nav__link">
-							<i class="fal fa-heart user-nav__icon"></i>
-							<span class="user-nav__text">Избранное</span>
-						</a>
-					</li>
-					<li class="user-nav__item user-nav__item--cart" data-cart-counter="8">
-						<a href="#" class="user-nav__link">
-							<i class="fal fa-shopping-cart user-nav__icon"></i>
-							<span class="user-nav__text">Корзина</span>
-						</a>
-					</li>
-				</ul>
-			</div>
-			<!-- end user-nav -->
-		</div>
-	</div>
-	<!-- end header__bottom -->
 
-	{% include "partials/_nav-main.html" %}
+	<div class="header-main">
+		<!-- begin header__bottom -->
+		<div class="header__bottom">
+			<div class="header__in">
+				<!-- begin logo -->
+				<div class="logo header__logo" itemscope itemprop="logo" itemtype="http://schema.org/Organization">
+					<a href="home.html" class="logo__link" itemprop="url">
+						<img src="img/general/logo.svg" alt="Bazar-TEX Ткани и фурнитура">
+					</a>
+				</div>
+				<!-- end logo -->
+				<!-- begin search -->
+				<div class="search header__search js-search">
+					<form class="search__form">
+						<input type="text" class="search__field" placeholder="Поиск...">
+						<button type="submit" class="search__btn">
+							{{mixin.icon('search', 'search__icon')}}
+						</button>
+					</form>
+				</div>
+				<!-- end search -->
+				<!-- begin user-nav -->
+				<div class="user-nav header__user-nav">
+					<ul class="user-nav__list">
+						<li class="user-nav__item">
+							<a href="#" class="user-nav__link xs-hide">
+								<i class="fal fa-user user-nav__icon"></i>
+								<span class="user-nav__text">Войти</span>
+							</a>
+						</li>
+						<li class="user-nav__item xs-only">
+							<a href="javascript:void(0);" class="user-nav__link js-mobile-search--show">
+								<i class="fal fa-search user-nav__icon"></i>
+								<span class="user-nav__text">Поиск</span>
+							</a>
+						</li>
+						<li class="user-nav__item">
+							<a href="#" class="user-nav__link">
+								<i class="fal fa-heart user-nav__icon"></i>
+								<span class="user-nav__text">Избранное</span>
+							</a>
+						</li>
+						<li class="user-nav__item user-nav__item--cart" data-cart-counter="8">
+							<a href="#" class="user-nav__link">
+								<i class="fal fa-shopping-cart user-nav__icon"></i>
+								<span class="user-nav__text">Корзина</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!-- end user-nav -->
+			</div>
+		</div>
+		<!-- end header__bottom -->
+		
+		{% include "partials/_nav-main.html" %}
+	</div>
 
 </header>
 <!-- end header -->

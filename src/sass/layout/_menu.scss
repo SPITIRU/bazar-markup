@@ -11,7 +11,9 @@
 }
 
 .nav-main{
+	background-color: #fff;
 	position: relative;
+	@include tr;
 
 	@include respond-to(xs) {
 		background-color: #949494;		
@@ -52,6 +54,7 @@
 	&__list{
 		height: 95px;
 		@include container;
+		transition: height .5s linear;
 		@extend %flex;
 
 		@include respond-to(xs) {
@@ -173,7 +176,7 @@
 		width: 45px;
 		height: 45px;
 		margin-bottom: 5px;
-		@include tr;
+		transition: fill .35s ease, opacity .35s linear, visibility .35s linear;
 
 		@include respond-to(xs) {
 			width: 30px;

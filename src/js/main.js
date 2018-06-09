@@ -143,6 +143,18 @@ $(document).ready(function () {
             search.removeClass('is-visible');
             event.stopPropagation();
         });  
+    } else {
+        let headerMain = $('.header-main');
+        let headerMainClone = $('<div class="header-main--clone">').css('height', 85).insertAfter('.header-main').hide();
+        $(window).scroll(function() {
+            if ($(this).scrollTop() >= $('.header__top-line').outerHeight()) {
+                headerMain.addClass('header--fixed');
+                headerMainClone.show();
+            } else {
+                headerMain.removeClass('header--fixed');
+                headerMainClone.hide();
+            }
+        });
     }
 
     //Show Password

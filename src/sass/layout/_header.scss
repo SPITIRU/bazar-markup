@@ -27,6 +27,7 @@
 	&__bottom{
 		height: 80px;
 		background-color: $color-bg--lighten;
+		@include tr;
 
 		@include respond-to(xs) {
 			height: 50px;
@@ -76,6 +77,56 @@
 
 	&__user-nav{}//.header__user-nav
 }//header
+
+.header-main{
+	&.header--fixed{
+		border-bottom: 1px solid $color-border--light;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: z(dropdown);
+		.header__bottom{
+			height: 55px;
+		}
+		.user-nav__icon{font-size: 18px;margin-bottom: 0;}
+		.user-nav__item--cart{
+			&::before{
+				min-width: 18px;
+				height: 18px;
+				top: -7px;
+				right: 3px;
+			}
+		}
+		.search__field{padding: 5px 15px;}
+		.search{
+			&__btn{
+				width: 55px;
+				height: 33px;
+				&::before{
+					@include arr(11, 33, #fff, r);
+				}
+			}
+			&__icon{
+				width: 20px;
+				height: 20px;
+			}
+		}
+		.nav-main{
+			&__list{
+				height: 30px;
+			}
+			&__icon{
+				opacity: 0;
+				visibility: hidden;
+			}
+			&__text{
+				position: relative;
+				top: -5px;
+			}
+		}
+	}
+}//.header-content
 
 .city{
 	color: #fff;
@@ -132,7 +183,6 @@
 
 	&__form{
 		width: 350px;
-		background-color: #fff;
 		@extend %flexCenter;
 		@include respond-to(xs) {
 			width: 100%;
@@ -143,6 +193,7 @@
 	&__field{
 		width: 100%;
 		border-right: 0;
+		background-color: #fff;
 		@include respond-to(xs) {
 			border-left: 0;
 			border-top: 0;
@@ -171,6 +222,7 @@
 		height: 23px;
 	    margin: auto auto auto 14px;
 		fill: #fff;
+		@include tr;
 	}//.search__icon
 }//.search
 
@@ -192,6 +244,7 @@
 			&::before{
 				content: attr(data-cart-counter);
 				@include badge;
+				@include tr;
 				position: absolute;
 				top: -10px;
 				right: 0;

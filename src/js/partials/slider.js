@@ -58,8 +58,8 @@ if ($('.js-bz-slider--new').length > 0) {
 //Slider Promo
 if ($('.js-bz-slider--promo').length > 0) {
     $('.js-bz-slider--promo').slick({
-        nextArrow: '.bz-slider__arrow--next',
-        prevArrow: '.bz-slider__arrow--prev',
+        nextArrow: '.bz-slider-promo__arrow--next',
+        prevArrow: '.bz-slider-promo__arrow--prev',
         arrows: true,
         infinite: true,
         slidesToShow: 1,
