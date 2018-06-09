@@ -5,47 +5,15 @@ $(document).ready(function () {
     });
 
     // //Custom Select https://select2.org/
-    // if ($('.js-select').length > 0) {
-    //     $('.js-select').select2({
-    //         placeholder: $(this).data('placeholder')
-    //     });
+    if ($('.js-select').length > 0) {
+        $('.js-select').select2({
+            placeholder: $(this).data('placeholder')
+        });
 
-    //     $('.js-select--multiple').select2({
-    //         tags: true,
-    //         placeholder: $(this).data('placeholder')
-    //     });
-
-    //     $('.js-select--metro').select2({
-    //         placeholder: $(this).data('placeholder'),
-    //         templateResult: addUserPic
-    //     });
-    //     $('.js-select.no-search').select2({
-    //         minimumResultsForSearch: -1
-    //     });
-
-    //     function addUserPic(opt) {
-    //         if (!opt.id) {
-    //             return opt.text;
-    //         }
-    //         var optimage = $(opt.element).data('image');
-    //         if (!optimage) {
-    //             return opt.text;
-    //         } else {
-    //             var $opt = $(
-    //                 '<span class="metro-icon metro-icon--' + optimage + '">' + $(opt.element).text() + '</span>'
-    //                 );
-    //             return $opt;
-    //         }
-    //     };
-    //     $(document).click(function (event) {
-    //         if ($(event.target).closest('.select2-dropdown, .select2-container').length) return;
-    //         $('.js-select').select2('close');
-    //         event.stopPropagation();
-    //     });
-    //     $(document).on("focus", '.select2-search__field', function (e) {
-    //         e.stopPropagation();
-    //     });
-    // }
+        $('.js-select.no-search').select2({
+            minimumResultsForSearch: -1
+        });
+    }
 
     // //Masked inputmask https://github.com/RobinHerbots/Inputmask
     // if ($('.js-phone-mask').length > 0) {
@@ -54,6 +22,12 @@ $(document).ready(function () {
     //         clearIncomplete: true
     //     })
     // }
+
+    function mainOffset() {
+        $('.main').css('padding-top', $('.header').outerHeight());
+    }mainOffset();
+    $(window).resize(mainOffset);
+    
 
     //Click event to scroll to top
     $('.js-go-top').on('click', function (e) {

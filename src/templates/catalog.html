@@ -1,5 +1,17 @@
 ---
 title: Каталог
+
+changer: 
+ - title: Все
+   class: is-checked
+ - title: Дюпон
+   counter: 200
+ - title: Матовый
+   counter: 350
+ - title: Тонкий
+   counter: 150
+ - title: Стрейч
+
 ---
 {% extends "layouts/_layout.html" %}
 
@@ -7,7 +19,59 @@ title: Каталог
 
 <!-- begin home -->
 <main class="main catalog">
+	<div class="container">
 
+		<div class="catalog__wrap">
+			<!-- begin catalog-filter -->
+			<div class="catalog-filter catalog__filter">
+				<hr>
+			</div>
+			<!-- end catalog-filter -->
+			<!-- begin catalog-content -->
+			<div class="catalog-content catalog__content">
+
+				<!-- begin catalog__top-line -->
+				<div class="catalog__top-line">
+					 <div class="catalog__title">
+					 	<h1 class="h1" itemprop="headline">Атлас</h1>
+					 	<span class="catalog__count">350 товаров на складе</span>
+					 </div>
+					<div class="catalog__sorting sorting">
+						<span class="sorting__title">Сортировать по:</span>
+						<select class="js-select no-search">
+							<option value="По возрастанию цены">По возрастанию цены</option>
+							<option value="По убыванию цены">По убыванию цены</option>
+							<option value="Рейтинг агенств">В начале новинки</option>
+						</select>
+					</div>
+				</div>
+				<!-- end catalog__top-line -->
+
+				<!-- begin catalog__changer -->
+				<div class="catalog__changer changer">
+					<span class="changer__title">Разделы:</span>
+					<ul class="changer__list js-changer">
+						{% for item in changer %}
+						<li class="changer__item {{ item.class }}">
+							{{ item.title }}
+							<span class="changer__counter">{{ item.counter }}</span>
+							<div class="changer__reset"><i class="fal fa-times"></i></div>
+						</li>
+						{% endfor %}﻿
+					</ul>
+				</div>
+				<!-- end catalog__changer -->
+
+				<div class="product-item__wrap">
+					{% for i in range(0, 10) %}
+						{{ item.productItem() }}
+					{% endfor %}﻿
+				</div>
+			</div>
+			<!-- end catalog-content -->
+		</div>
+
+	</div>
 </main>	
 <!-- end home -->
 
