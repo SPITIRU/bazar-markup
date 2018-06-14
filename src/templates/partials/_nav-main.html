@@ -2,7 +2,7 @@
 <nav class="nav-main js-nav-main">
 	<div class="nav-main__top-line">
 		<div class="city nav-main__city">
-			<a href="#change-city" class="city__link">Санкт-Петербург</a>
+			<a href="#change-city" data-toggle="modal" class="city__link">Санкт-Петербург</a>
 		</div>
 
 		<a href="tel:8 800 707-86-30" class="phone nav-main__phone" itemprop="telephone">8 800 707-86-30</a>
@@ -14,12 +14,12 @@
 	<ul class="nav-main__list">		
 		<li class="nav-main__item nav-main__item--lk xs-only">
 			<a href="#" class="nav-main__link" style="display: none;">
-				{{ mixin.icon('user', 'nav-main__icon') }}
+				<i class="fal fa-user nav-main__icon"></i>
 				<span class="nav-main__text">Личный кабинет</span>
 			</a>
-			<a href="#auth-form" class="nav-main__link">
-				{{ mixin.icon('user', 'nav-main__icon') }}
-				<span class="nav-main__text is-hidden">Войти/Зарегистрироваться</span>
+			<a href="#auth-form" data-toggle="modal" class="nav-main__link">
+				<i class="fal fa-user nav-main__icon"></i>
+				<span class="nav-main__text">Войти / Зарегистрироваться</span>
 			</a>
 		</li>
 		{% import "data/data.html" as mainMain %}		
@@ -38,6 +38,7 @@
 						<li class="nav-dropdown__item">
 							<a href="javascript:void(0);" class="nav-dropdown__title nav-dropdown__title--link js-main-nav-link--forward">Назад</a>
 						</li>
+						{% for i in range(0, 9) %}
 						<li class="nav-dropdown__item">
 							<a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
 							<ul class="nav-dropdown--sub">
@@ -51,32 +52,7 @@
 								<li><a href="#">Для вышевки</a></li>
 							</ul>
 						</li>
-						<li class="nav-dropdown__item">
-							<a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-							<ul class="nav-dropdown--sub">
-								<li><a href="#">Еврофатин luxe</a></li>
-								<li><a href="#">Еврофатин life</a></li>
-								<li><a href="#">Средней жесткости</a></li>
-								<li><a href="#">Матовый</a></li>
-								<li><a href="#">Набивной</a></li>
-								<li><a href="#">Стрейч-фатин</a></li>
-								<li><a href="#">Свадебный</a></li>
-								<li><a href="#">Для вышевки</a></li>
-							</ul>
-						</li>
-						<li class="nav-dropdown__item">
-							<a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
-							<ul class="nav-dropdown--sub">
-								<li><a href="#">Еврофатин luxe</a></li>
-								<li><a href="#">Еврофатин life</a></li>
-								<li><a href="#">Средней жесткости</a></li>
-								<li><a href="#">Матовый</a></li>
-								<li><a href="#">Набивной</a></li>
-								<li><a href="#">Стрейч-фатин</a></li>
-								<li><a href="#">Свадебный</a></li>
-								<li><a href="#">Для вышевки</a></li>
-							</ul>
-						</li>
+						{% endfor %}﻿
 					</div>
 				</div>
 			</ul>

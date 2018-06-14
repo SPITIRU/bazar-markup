@@ -59,6 +59,10 @@
 	box-shadow: 0 2px 4px 0 rgba(0,0,0,.1), 0 0 4px 0 rgba(0,0,0,.1);
 }
 
+@mixin trans($what: all, $time: .35s){
+	transition: $what $time cubic-bezier(.38,.22,.21,.95);
+}
+
 @mixin overlay{
 	position: relative;
 	&::before{

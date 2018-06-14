@@ -28,7 +28,11 @@
 		}
 	}//.form__link
 
-	&__btn{width: 100%;}//.form__btn
+	&__btn{
+		width: 100%;
+		font-size: 15px;
+		letter-spacing: 0.5px;
+	}//.form__btn
 
 	&__devider{
 		.section-header__text{margin: 25px 0 20px;}

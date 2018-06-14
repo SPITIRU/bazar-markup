@@ -4,7 +4,7 @@
 	height: 40px;
 	line-height: 38px;
 	font-family: $f-medium;
-	text-transform: uppercase;
+	// text-transform: uppercase;
 	text-align: center;
 	font-size: 14px;
 	letter-spacing: 0.3px;
@@ -21,6 +21,7 @@
 	@extend %button;
 	@each $theme, $color in $button-colors{
 		&--#{$theme} {
+			color: #fff;
 			background-color: $color;
 		}
 		&--#{$theme}:hover,
@@ -37,6 +38,7 @@
 
 		@each $theme, $color in $button-colors{
 			&.button--#{$theme}{
+				color: darken($color, 10%);
 				background-color: transparent;
 				border: 1px solid $color;
 			}
@@ -45,20 +47,32 @@
 			&.button--#{$theme}:active{
 				background-color: $color;
 				font-size: 14px;
+				color: #fff;
 			}
 		}
-	}//..button--transparent
+	}//.button--transparent
 
-	&--accent{
-		color: #fff;
-	}//..button--accent
+	// &--accent{
+	// 	color: #fff;
+	// }//.button--accent
 
 	&--muted{
 		&:hover{
 			color: #fff;
 		}
-	}//..button--muted
-}
+	}//.button--muted
+
+	&--link{
+		min-width: auto;
+		padding: 0;
+		letter-spacing: 0;
+		font-family: $f;
+		color: $color-accent;
+		text-transform: initial;
+		background-color: transparent;
+		border: 0;
+	}//.button--link
+}//.button
 
 .button-icon{
 	display: inline-block;

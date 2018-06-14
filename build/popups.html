@@ -10,11 +10,11 @@
     <meta name="theme-color" content="#a3467d">
     <meta name="msapplication-navbutton-color" content="#a3467d">
     <meta name="apple-mobile-web-app-status-bar-style" content="#a3467d">
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon/favicon.ico" sizes="16x16">
-    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/android-chrome-76x76.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/android-chrome-icon-144x144.png">
+    <link rel="shortcut icon" type="image/x-icon" href="img/general/favicon/favicon.ico" sizes="16x16">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/general/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/general/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/general/favicon/android-chrome-76x76.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/general/favicon/android-chrome-icon-144x144.png">
     <link rel="stylesheet" media="all" href="css/app.css"> </head>
   <body itemscope="itemscope" itemtype="http://schema.org/WebPage">
     <!-- begin wrapper -->
@@ -51,8 +51,8 @@
           <div class="header__bottom">
             <div class="header__in">
               <!-- begin logo -->
-              <div class="logo header__logo" itemscope itemprop="logo" itemtype="http://schema.org/Organization">
-                <a href="home.html" class="logo__link" itemprop="url">
+              <div class="logo header__logo">
+                <a href="home.html" class="logo__link">
                   <img src="img/general/logo.svg" alt="Bazar-TEX Ткани и фурнитура"> </a>
               </div>
               <!-- end logo -->
@@ -105,7 +105,7 @@
           <nav class="nav-main js-nav-main">
             <div class="nav-main__top-line">
               <div class="city nav-main__city">
-                <a href="#change-city" class="city__link">Санкт-Петербург</a>
+                <a href="#change-city" data-toggle="modal" class="city__link">Санкт-Петербург</a>
               </div>
               <a href="tel:8 800 707-86-30" class="phone nav-main__phone" itemprop="telephone">8 800 707-86-30</a>
               <!-- begin hamburger -->
@@ -119,16 +119,12 @@
             <ul class="nav-main__list">
               <li class="nav-main__item nav-main__item--lk xs-only">
                 <a href="#" class="nav-main__link" style="display: none;">
-                  <svg class="icon icon-user nav-main__icon">
-                    <use xlink:href="img/sprite.svg#user"></use>
-                  </svg>
+                  <i class="fal fa-user nav-main__icon"></i>
                   <span class="nav-main__text">Личный кабинет</span>
                 </a>
-                <a href="#auth-form" class="nav-main__link">
-                  <svg class="icon icon-user nav-main__icon">
-                    <use xlink:href="img/sprite.svg#user"></use>
-                  </svg>
-                  <span class="nav-main__text is-hidden">Войти/Зарегистрироваться</span>
+                <a href="#auth-form" data-toggle="modal" class="nav-main__link">
+                  <i class="fal fa-user nav-main__icon"></i>
+                  <span class="nav-main__text">Войти / Зарегистрироваться</span>
                 </a>
               </li>
               <li class="nav-main__item">
@@ -232,7 +228,180 @@
                           </li>
                         </ul>
                       </li>
-                    </div>
+                      <li class="nav-dropdown__item">
+                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
+                        <ul class="nav-dropdown--sub">
+                          <li>
+                            <a href="#">Еврофатин luxe</a>
+                          </li>
+                          <li>
+                            <a href="#">Еврофатин life</a>
+                          </li>
+                          <li>
+                            <a href="#">Средней жесткости</a>
+                          </li>
+                          <li>
+                            <a href="#">Матовый</a>
+                          </li>
+                          <li>
+                            <a href="#">Набивной</a>
+                          </li>
+                          <li>
+                            <a href="#">Стрейч-фатин</a>
+                          </li>
+                          <li>
+                            <a href="#">Свадебный</a>
+                          </li>
+                          <li>
+                            <a href="#">Для вышевки</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav-dropdown__item">
+                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
+                        <ul class="nav-dropdown--sub">
+                          <li>
+                            <a href="#">Еврофатин luxe</a>
+                          </li>
+                          <li>
+                            <a href="#">Еврофатин life</a>
+                          </li>
+                          <li>
+                            <a href="#">Средней жесткости</a>
+                          </li>
+                          <li>
+                            <a href="#">Матовый</a>
+                          </li>
+                          <li>
+                            <a href="#">Набивной</a>
+                          </li>
+                          <li>
+                            <a href="#">Стрейч-фатин</a>
+                          </li>
+                          <li>
+                            <a href="#">Свадебный</a>
+                          </li>
+                          <li>
+                            <a href="#">Для вышевки</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav-dropdown__item">
+                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
+                        <ul class="nav-dropdown--sub">
+                          <li>
+                            <a href="#">Еврофатин luxe</a>
+                          </li>
+                          <li>
+                            <a href="#">Еврофатин life</a>
+                          </li>
+                          <li>
+                            <a href="#">Средней жесткости</a>
+                          </li>
+                          <li>
+                            <a href="#">Матовый</a>
+                          </li>
+                          <li>
+                            <a href="#">Набивной</a>
+                          </li>
+                          <li>
+                            <a href="#">Стрейч-фатин</a>
+                          </li>
+                          <li>
+                            <a href="#">Свадебный</a>
+                          </li>
+                          <li>
+                            <a href="#">Для вышевки</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav-dropdown__item">
+                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
+                        <ul class="nav-dropdown--sub">
+                          <li>
+                            <a href="#">Еврофатин luxe</a>
+                          </li>
+                          <li>
+                            <a href="#">Еврофатин life</a>
+                          </li>
+                          <li>
+                            <a href="#">Средней жесткости</a>
+                          </li>
+                          <li>
+                            <a href="#">Матовый</a>
+                          </li>
+                          <li>
+                            <a href="#">Набивной</a>
+                          </li>
+                          <li>
+                            <a href="#">Стрейч-фатин</a>
+                          </li>
+                          <li>
+                            <a href="#">Свадебный</a>
+                          </li>
+                          <li>
+                            <a href="#">Для вышевки</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav-dropdown__item">
+                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
+                        <ul class="nav-dropdown--sub">
+                          <li>
+                            <a href="#">Еврофатин luxe</a>
+                          </li>
+                          <li>
+                            <a href="#">Еврофатин life</a>
+                          </li>
+                          <li>
+                            <a href="#">Средней жесткости</a>
+                          </li>
+                          <li>
+                            <a href="#">Матовый</a>
+                          </li>
+                          <li>
+                            <a href="#">Набивной</a>
+                          </li>
+                          <li>
+                            <a href="#">Стрейч-фатин</a>
+                          </li>
+                          <li>
+                            <a href="#">Свадебный</a>
+                          </li>
+                          <li>
+                            <a href="#">Для вышевки</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav-dropdown__item">
+                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
+                        <ul class="nav-dropdown--sub">
+                          <li>
+                            <a href="#">Еврофатин luxe</a>
+                          </li>
+                          <li>
+                            <a href="#">Еврофатин life</a>
+                          </li>
+                          <li>
+                            <a href="#">Средней жесткости</a>
+                          </li>
+                          <li>
+                            <a href="#">Матовый</a>
+                          </li>
+                          <li>
+                            <a href="#">Набивной</a>
+                          </li>
+                          <li>
+                            <a href="#">Стрейч-фатин</a>
+                          </li>
+                          <li>
+                            <a href="#">Свадебный</a>
+                          </li>
+                          <li>
+                            <a href="#">Для вышевки</a>
+                          </li>
+                        </ul>
+                      </li> ﻿ </div>
                   </div>
                 </ul>
               </li>
@@ -337,7 +506,180 @@
                           </li>
                         </ul>
                       </li>
-                    </div>
+                      <li class="nav-dropdown__item">
+                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
+                        <ul class="nav-dropdown--sub">
+                          <li>
+                            <a href="#">Еврофатин luxe</a>
+                          </li>
+                          <li>
+                            <a href="#">Еврофатин life</a>
+                          </li>
+                          <li>
+                            <a href="#">Средней жесткости</a>
+                          </li>
+                          <li>
+                            <a href="#">Матовый</a>
+                          </li>
+                          <li>
+                            <a href="#">Набивной</a>
+                          </li>
+                          <li>
+                            <a href="#">Стрейч-фатин</a>
+                          </li>
+                          <li>
+                            <a href="#">Свадебный</a>
+                          </li>
+                          <li>
+                            <a href="#">Для вышевки</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav-dropdown__item">
+                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
+                        <ul class="nav-dropdown--sub">
+                          <li>
+                            <a href="#">Еврофатин luxe</a>
+                          </li>
+                          <li>
+                            <a href="#">Еврофатин life</a>
+                          </li>
+                          <li>
+                            <a href="#">Средней жесткости</a>
+                          </li>
+                          <li>
+                            <a href="#">Матовый</a>
+                          </li>
+                          <li>
+                            <a href="#">Набивной</a>
+                          </li>
+                          <li>
+                            <a href="#">Стрейч-фатин</a>
+                          </li>
+                          <li>
+                            <a href="#">Свадебный</a>
+                          </li>
+                          <li>
+                            <a href="#">Для вышевки</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav-dropdown__item">
+                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
+                        <ul class="nav-dropdown--sub">
+                          <li>
+                            <a href="#">Еврофатин luxe</a>
+                          </li>
+                          <li>
+                            <a href="#">Еврофатин life</a>
+                          </li>
+                          <li>
+                            <a href="#">Средней жесткости</a>
+                          </li>
+                          <li>
+                            <a href="#">Матовый</a>
+                          </li>
+                          <li>
+                            <a href="#">Набивной</a>
+                          </li>
+                          <li>
+                            <a href="#">Стрейч-фатин</a>
+                          </li>
+                          <li>
+                            <a href="#">Свадебный</a>
+                          </li>
+                          <li>
+                            <a href="#">Для вышевки</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav-dropdown__item">
+                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
+                        <ul class="nav-dropdown--sub">
+                          <li>
+                            <a href="#">Еврофатин luxe</a>
+                          </li>
+                          <li>
+                            <a href="#">Еврофатин life</a>
+                          </li>
+                          <li>
+                            <a href="#">Средней жесткости</a>
+                          </li>
+                          <li>
+                            <a href="#">Матовый</a>
+                          </li>
+                          <li>
+                            <a href="#">Набивной</a>
+                          </li>
+                          <li>
+                            <a href="#">Стрейч-фатин</a>
+                          </li>
+                          <li>
+                            <a href="#">Свадебный</a>
+                          </li>
+                          <li>
+                            <a href="#">Для вышевки</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav-dropdown__item">
+                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
+                        <ul class="nav-dropdown--sub">
+                          <li>
+                            <a href="#">Еврофатин luxe</a>
+                          </li>
+                          <li>
+                            <a href="#">Еврофатин life</a>
+                          </li>
+                          <li>
+                            <a href="#">Средней жесткости</a>
+                          </li>
+                          <li>
+                            <a href="#">Матовый</a>
+                          </li>
+                          <li>
+                            <a href="#">Набивной</a>
+                          </li>
+                          <li>
+                            <a href="#">Стрейч-фатин</a>
+                          </li>
+                          <li>
+                            <a href="#">Свадебный</a>
+                          </li>
+                          <li>
+                            <a href="#">Для вышевки</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav-dropdown__item">
+                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
+                        <ul class="nav-dropdown--sub">
+                          <li>
+                            <a href="#">Еврофатин luxe</a>
+                          </li>
+                          <li>
+                            <a href="#">Еврофатин life</a>
+                          </li>
+                          <li>
+                            <a href="#">Средней жесткости</a>
+                          </li>
+                          <li>
+                            <a href="#">Матовый</a>
+                          </li>
+                          <li>
+                            <a href="#">Набивной</a>
+                          </li>
+                          <li>
+                            <a href="#">Стрейч-фатин</a>
+                          </li>
+                          <li>
+                            <a href="#">Свадебный</a>
+                          </li>
+                          <li>
+                            <a href="#">Для вышевки</a>
+                          </li>
+                        </ul>
+                      </li> ﻿ </div>
                   </div>
                 </ul>
               </li>
@@ -442,7 +784,180 @@
                           </li>
                         </ul>
                       </li>
-                    </div>
+                      <li class="nav-dropdown__item">
+                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
+                        <ul class="nav-dropdown--sub">
+                          <li>
+                            <a href="#">Еврофатин luxe</a>
+                          </li>
+                          <li>
+                            <a href="#">Еврофатин life</a>
+                          </li>
+                          <li>
+                            <a href="#">Средней жесткости</a>
+                          </li>
+                          <li>
+                            <a href="#">Матовый</a>
+                          </li>
+                          <li>
+                            <a href="#">Набивной</a>
+                          </li>
+                          <li>
+                            <a href="#">Стрейч-фатин</a>
+                          </li>
+                          <li>
+                            <a href="#">Свадебный</a>
+                          </li>
+                          <li>
+                            <a href="#">Для вышевки</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav-dropdown__item">
+                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
+                        <ul class="nav-dropdown--sub">
+                          <li>
+                            <a href="#">Еврофатин luxe</a>
+                          </li>
+                          <li>
+                            <a href="#">Еврофатин life</a>
+                          </li>
+                          <li>
+                            <a href="#">Средней жесткости</a>
+                          </li>
+                          <li>
+                            <a href="#">Матовый</a>
+                          </li>
+                          <li>
+                            <a href="#">Набивной</a>
+                          </li>
+                          <li>
+                            <a href="#">Стрейч-фатин</a>
+                          </li>
+                          <li>
+                            <a href="#">Свадебный</a>
+                          </li>
+                          <li>
+                            <a href="#">Для вышевки</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav-dropdown__item">
+                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
+                        <ul class="nav-dropdown--sub">
+                          <li>
+                            <a href="#">Еврофатин luxe</a>
+                          </li>
+                          <li>
+                            <a href="#">Еврофатин life</a>
+                          </li>
+                          <li>
+                            <a href="#">Средней жесткости</a>
+                          </li>
+                          <li>
+                            <a href="#">Матовый</a>
+                          </li>
+                          <li>
+                            <a href="#">Набивной</a>
+                          </li>
+                          <li>
+                            <a href="#">Стрейч-фатин</a>
+                          </li>
+                          <li>
+                            <a href="#">Свадебный</a>
+                          </li>
+                          <li>
+                            <a href="#">Для вышевки</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav-dropdown__item">
+                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
+                        <ul class="nav-dropdown--sub">
+                          <li>
+                            <a href="#">Еврофатин luxe</a>
+                          </li>
+                          <li>
+                            <a href="#">Еврофатин life</a>
+                          </li>
+                          <li>
+                            <a href="#">Средней жесткости</a>
+                          </li>
+                          <li>
+                            <a href="#">Матовый</a>
+                          </li>
+                          <li>
+                            <a href="#">Набивной</a>
+                          </li>
+                          <li>
+                            <a href="#">Стрейч-фатин</a>
+                          </li>
+                          <li>
+                            <a href="#">Свадебный</a>
+                          </li>
+                          <li>
+                            <a href="#">Для вышевки</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav-dropdown__item">
+                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
+                        <ul class="nav-dropdown--sub">
+                          <li>
+                            <a href="#">Еврофатин luxe</a>
+                          </li>
+                          <li>
+                            <a href="#">Еврофатин life</a>
+                          </li>
+                          <li>
+                            <a href="#">Средней жесткости</a>
+                          </li>
+                          <li>
+                            <a href="#">Матовый</a>
+                          </li>
+                          <li>
+                            <a href="#">Набивной</a>
+                          </li>
+                          <li>
+                            <a href="#">Стрейч-фатин</a>
+                          </li>
+                          <li>
+                            <a href="#">Свадебный</a>
+                          </li>
+                          <li>
+                            <a href="#">Для вышевки</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav-dropdown__item">
+                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
+                        <ul class="nav-dropdown--sub">
+                          <li>
+                            <a href="#">Еврофатин luxe</a>
+                          </li>
+                          <li>
+                            <a href="#">Еврофатин life</a>
+                          </li>
+                          <li>
+                            <a href="#">Средней жесткости</a>
+                          </li>
+                          <li>
+                            <a href="#">Матовый</a>
+                          </li>
+                          <li>
+                            <a href="#">Набивной</a>
+                          </li>
+                          <li>
+                            <a href="#">Стрейч-фатин</a>
+                          </li>
+                          <li>
+                            <a href="#">Свадебный</a>
+                          </li>
+                          <li>
+                            <a href="#">Для вышевки</a>
+                          </li>
+                        </ul>
+                      </li> ﻿ </div>
                   </div>
                 </ul>
               </li>
@@ -547,7 +1062,180 @@
                           </li>
                         </ul>
                       </li>
-                    </div>
+                      <li class="nav-dropdown__item">
+                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
+                        <ul class="nav-dropdown--sub">
+                          <li>
+                            <a href="#">Еврофатин luxe</a>
+                          </li>
+                          <li>
+                            <a href="#">Еврофатин life</a>
+                          </li>
+                          <li>
+                            <a href="#">Средней жесткости</a>
+                          </li>
+                          <li>
+                            <a href="#">Матовый</a>
+                          </li>
+                          <li>
+                            <a href="#">Набивной</a>
+                          </li>
+                          <li>
+                            <a href="#">Стрейч-фатин</a>
+                          </li>
+                          <li>
+                            <a href="#">Свадебный</a>
+                          </li>
+                          <li>
+                            <a href="#">Для вышевки</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav-dropdown__item">
+                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
+                        <ul class="nav-dropdown--sub">
+                          <li>
+                            <a href="#">Еврофатин luxe</a>
+                          </li>
+                          <li>
+                            <a href="#">Еврофатин life</a>
+                          </li>
+                          <li>
+                            <a href="#">Средней жесткости</a>
+                          </li>
+                          <li>
+                            <a href="#">Матовый</a>
+                          </li>
+                          <li>
+                            <a href="#">Набивной</a>
+                          </li>
+                          <li>
+                            <a href="#">Стрейч-фатин</a>
+                          </li>
+                          <li>
+                            <a href="#">Свадебный</a>
+                          </li>
+                          <li>
+                            <a href="#">Для вышевки</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav-dropdown__item">
+                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
+                        <ul class="nav-dropdown--sub">
+                          <li>
+                            <a href="#">Еврофатин luxe</a>
+                          </li>
+                          <li>
+                            <a href="#">Еврофатин life</a>
+                          </li>
+                          <li>
+                            <a href="#">Средней жесткости</a>
+                          </li>
+                          <li>
+                            <a href="#">Матовый</a>
+                          </li>
+                          <li>
+                            <a href="#">Набивной</a>
+                          </li>
+                          <li>
+                            <a href="#">Стрейч-фатин</a>
+                          </li>
+                          <li>
+                            <a href="#">Свадебный</a>
+                          </li>
+                          <li>
+                            <a href="#">Для вышевки</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav-dropdown__item">
+                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
+                        <ul class="nav-dropdown--sub">
+                          <li>
+                            <a href="#">Еврофатин luxe</a>
+                          </li>
+                          <li>
+                            <a href="#">Еврофатин life</a>
+                          </li>
+                          <li>
+                            <a href="#">Средней жесткости</a>
+                          </li>
+                          <li>
+                            <a href="#">Матовый</a>
+                          </li>
+                          <li>
+                            <a href="#">Набивной</a>
+                          </li>
+                          <li>
+                            <a href="#">Стрейч-фатин</a>
+                          </li>
+                          <li>
+                            <a href="#">Свадебный</a>
+                          </li>
+                          <li>
+                            <a href="#">Для вышевки</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav-dropdown__item">
+                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
+                        <ul class="nav-dropdown--sub">
+                          <li>
+                            <a href="#">Еврофатин luxe</a>
+                          </li>
+                          <li>
+                            <a href="#">Еврофатин life</a>
+                          </li>
+                          <li>
+                            <a href="#">Средней жесткости</a>
+                          </li>
+                          <li>
+                            <a href="#">Матовый</a>
+                          </li>
+                          <li>
+                            <a href="#">Набивной</a>
+                          </li>
+                          <li>
+                            <a href="#">Стрейч-фатин</a>
+                          </li>
+                          <li>
+                            <a href="#">Свадебный</a>
+                          </li>
+                          <li>
+                            <a href="#">Для вышевки</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav-dropdown__item">
+                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
+                        <ul class="nav-dropdown--sub">
+                          <li>
+                            <a href="#">Еврофатин luxe</a>
+                          </li>
+                          <li>
+                            <a href="#">Еврофатин life</a>
+                          </li>
+                          <li>
+                            <a href="#">Средней жесткости</a>
+                          </li>
+                          <li>
+                            <a href="#">Матовый</a>
+                          </li>
+                          <li>
+                            <a href="#">Набивной</a>
+                          </li>
+                          <li>
+                            <a href="#">Стрейч-фатин</a>
+                          </li>
+                          <li>
+                            <a href="#">Свадебный</a>
+                          </li>
+                          <li>
+                            <a href="#">Для вышевки</a>
+                          </li>
+                        </ul>
+                      </li> ﻿ </div>
                   </div>
                 </ul>
               </li>
@@ -652,7 +1340,180 @@
                           </li>
                         </ul>
                       </li>
-                    </div>
+                      <li class="nav-dropdown__item">
+                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
+                        <ul class="nav-dropdown--sub">
+                          <li>
+                            <a href="#">Еврофатин luxe</a>
+                          </li>
+                          <li>
+                            <a href="#">Еврофатин life</a>
+                          </li>
+                          <li>
+                            <a href="#">Средней жесткости</a>
+                          </li>
+                          <li>
+                            <a href="#">Матовый</a>
+                          </li>
+                          <li>
+                            <a href="#">Набивной</a>
+                          </li>
+                          <li>
+                            <a href="#">Стрейч-фатин</a>
+                          </li>
+                          <li>
+                            <a href="#">Свадебный</a>
+                          </li>
+                          <li>
+                            <a href="#">Для вышевки</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav-dropdown__item">
+                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
+                        <ul class="nav-dropdown--sub">
+                          <li>
+                            <a href="#">Еврофатин luxe</a>
+                          </li>
+                          <li>
+                            <a href="#">Еврофатин life</a>
+                          </li>
+                          <li>
+                            <a href="#">Средней жесткости</a>
+                          </li>
+                          <li>
+                            <a href="#">Матовый</a>
+                          </li>
+                          <li>
+                            <a href="#">Набивной</a>
+                          </li>
+                          <li>
+                            <a href="#">Стрейч-фатин</a>
+                          </li>
+                          <li>
+                            <a href="#">Свадебный</a>
+                          </li>
+                          <li>
+                            <a href="#">Для вышевки</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav-dropdown__item">
+                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
+                        <ul class="nav-dropdown--sub">
+                          <li>
+                            <a href="#">Еврофатин luxe</a>
+                          </li>
+                          <li>
+                            <a href="#">Еврофатин life</a>
+                          </li>
+                          <li>
+                            <a href="#">Средней жесткости</a>
+                          </li>
+                          <li>
+                            <a href="#">Матовый</a>
+                          </li>
+                          <li>
+                            <a href="#">Набивной</a>
+                          </li>
+                          <li>
+                            <a href="#">Стрейч-фатин</a>
+                          </li>
+                          <li>
+                            <a href="#">Свадебный</a>
+                          </li>
+                          <li>
+                            <a href="#">Для вышевки</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav-dropdown__item">
+                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
+                        <ul class="nav-dropdown--sub">
+                          <li>
+                            <a href="#">Еврофатин luxe</a>
+                          </li>
+                          <li>
+                            <a href="#">Еврофатин life</a>
+                          </li>
+                          <li>
+                            <a href="#">Средней жесткости</a>
+                          </li>
+                          <li>
+                            <a href="#">Матовый</a>
+                          </li>
+                          <li>
+                            <a href="#">Набивной</a>
+                          </li>
+                          <li>
+                            <a href="#">Стрейч-фатин</a>
+                          </li>
+                          <li>
+                            <a href="#">Свадебный</a>
+                          </li>
+                          <li>
+                            <a href="#">Для вышевки</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav-dropdown__item">
+                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
+                        <ul class="nav-dropdown--sub">
+                          <li>
+                            <a href="#">Еврофатин luxe</a>
+                          </li>
+                          <li>
+                            <a href="#">Еврофатин life</a>
+                          </li>
+                          <li>
+                            <a href="#">Средней жесткости</a>
+                          </li>
+                          <li>
+                            <a href="#">Матовый</a>
+                          </li>
+                          <li>
+                            <a href="#">Набивной</a>
+                          </li>
+                          <li>
+                            <a href="#">Стрейч-фатин</a>
+                          </li>
+                          <li>
+                            <a href="#">Свадебный</a>
+                          </li>
+                          <li>
+                            <a href="#">Для вышевки</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav-dropdown__item">
+                        <a href="#" class="nav-dropdown__title js-main-nav-link--forward">Атлас</a>
+                        <ul class="nav-dropdown--sub">
+                          <li>
+                            <a href="#">Еврофатин luxe</a>
+                          </li>
+                          <li>
+                            <a href="#">Еврофатин life</a>
+                          </li>
+                          <li>
+                            <a href="#">Средней жесткости</a>
+                          </li>
+                          <li>
+                            <a href="#">Матовый</a>
+                          </li>
+                          <li>
+                            <a href="#">Набивной</a>
+                          </li>
+                          <li>
+                            <a href="#">Стрейч-фатин</a>
+                          </li>
+                          <li>
+                            <a href="#">Свадебный</a>
+                          </li>
+                          <li>
+                            <a href="#">Для вышевки</a>
+                          </li>
+                        </ul>
+                      </li> ﻿ </div>
                   </div>
                 </ul>
               </li>
@@ -983,6 +1844,9 @@
       <!-- end auth-form -->
     </div>
     <!-- end windows -->
+    <!-- begin go-top -->
+    <div class="go-top js-go-top">Наверх</div>
+    <!-- end go-top -->
     <!-- begin overlay -->
     <div class="overlay js-overlay"></div>
     <!-- end overlay -->

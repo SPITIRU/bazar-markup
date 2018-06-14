@@ -2,6 +2,23 @@ $(document).ready(function () {
 
     $(window).on("load", function () {
         $('body').removeClass('loading');
+        //GetNiceScroll https://github.com/inuyaksa/jquery.nicescroll
+        let scrollBar = $('.js-scroll');
+        if (scrollBar.length > 0) {
+            scrollBar.niceScroll({
+                cursorcolor: '#2c2b2b',
+                horizrailenabled: false,
+                // autohidemode: false,
+                boxzoom: false,
+                verge: 500,
+                cursorwidth: '4px',
+                cursorborder: 'none',
+                cursorborderradius: '0'
+            });
+            scrollBar.mouseover(function () {
+                $(this).getNiceScroll().resize();
+            });
+        }
     });
 
     // //Custom Select https://select2.org/
@@ -35,7 +52,22 @@ $(document).ready(function () {
         $('html, body').animate({scrollTop: 0}, 800);
     });
 
-    //Click event to scroll to section whith id like href
+
+    $(window).scroll(function(){    
+        if ($(this).scrollTop() > $(this).height()) {
+            $('.js-go-top').addClass('is-visible');
+            if ($('.main').hasClass('catalog') && $(window).width() <= 768) {
+                $('.js-go-top').css('bottom', 70);
+            } else {
+                return false;
+            }
+        } else {
+            $('.js-go-top').removeClass('is-visible');
+            $('.js-go-top').removeAttr('style');
+        }
+    });
+
+    //Click event to scroll to section whith id like href    
     $('.js-goto').click(function () {
         var elementClick = $(this).attr("href");
         var destination = $(elementClick).offset().top;
@@ -46,7 +78,7 @@ $(document).ready(function () {
     //Stop drag
     $("img").on("dragstart", function (event) {event.preventDefault()});
 
-    //Footer media transform accordeon
+    //Footer media <= 480 transform accordeon
     if($(window).width() <= 480) {
         let footer = $('.js-footer');
         footer.find('.footer-item').addClass('accordeon__item').wrapAll('<div class="accordeon js-accordeon">');
@@ -59,14 +91,16 @@ $(document).ready(function () {
         $(this).toggleClass('on');
         $('.js-nav-main').toggleClass('is-open');
         $('.js-overlay').toggleClass('is-active');
+        document.documentElement.style.overflow = document.documentElement.style.overflow === '' ? 'hidden' : '';
         return false;
     });
-     //Mobile Search when click outside
-    $(document).click(function(event) {
-        if ($(event.target).closest('.js-hamburger, .js-nav-main').length) return;
+     //When click outside
+    $(document).click(function(e) {
+        if ($(e.target).closest('.js-hamburger, .js-nav-main, .js-catalog-filter--show').length) return;
         $('.js-hamburger').removeClass('on');
         $('.js-nav-main').removeClass('is-open');
         $('.js-overlay').removeClass('is-active');
+        document.documentElement.style = '';
         event.stopPropagation();
     });
 

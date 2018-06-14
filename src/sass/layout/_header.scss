@@ -3,11 +3,10 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	z-index: z(default);
+	z-index: z(fixed);
 
 	@include respond-to(xs) {
 		position: fixed;
-		z-index: z(fixed);
 	}
 
 	&__in{

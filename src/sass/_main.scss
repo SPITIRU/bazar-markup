@@ -15,7 +15,7 @@ body{
 .text-number{font-family: $f2;}
 
 .preloader{
-	display: none;
+	// display: none;
 	background-color: #fff;
 	position: fixed;
 	top: 0;
@@ -23,7 +23,24 @@ body{
 	bottom: 0;
 	right: 0;
 	z-index: 10000;
-	&__inner{}//preloader__inner
+	&__inner{
+		display: block;
+		width: 32px;
+		height: 32px;
+		position: relative;
+		&::before{
+			content: '';
+			display: block;
+			width: 32px;
+			height: 32px;
+			background: url('../img/general/loader.gif') center center no-repeat;
+			position: fixed;
+			top: 50%;
+			left: 60.5%;
+			margin-left: -16px;
+			margin-top: -16px;
+		}
+	}//preloader__inner
 }//preloader
 
 .wrapper {
@@ -75,7 +92,7 @@ body{
 	line-height: 1;
 	overflow: hidden;
 
-	.h2{
+	.h2, &__text{
 		display: inline-block;
 		margin: 45px 0;
 		position: relative;
@@ -98,23 +115,8 @@ body{
 	}
 
 	&__text{
-		display: inline-block;
-		margin: 45px 0;
-		position: relative;
 		&::before, &::after{
-			content: '';
-			height: 1px;
-			width: 800px;
-			@include vy;
-			background-color: $color-border--dark;
-		}
-		&::before{
-			right: 100%;
-			margin-right: 15px;
-		}
-		&::after{
-			left: 100%;
-			margin-left: 15px;
+			top: -6px;
 		}
 	}
 }
@@ -189,6 +191,44 @@ body{
 }//breadcrumbs
 
 .pagination{
+
+	&__list{
+		@extend %flexCenter;
+		justify-content: center;
+	}//.pagination__list
+
+	&__item{
+		& + &{
+			margin-left: 7px;
+		}
+		&:first-child, &:last-child{
+			.pagination__icon{
+				font-size: 18px;
+				line-height: 1;
+			}
+		}
+		&.is-active{
+			.pagination__link{
+				color: #fff;
+				background-color: $color-bg--dark;
+			}
+		}
+	}//.pagination__item
+
+	&__link{
+		font-size: 14px;
+		border-radius: $border-radius;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 30px;
+		height: 30px;
+		&:hover{
+
+		}
+	}//.pagination__link
+
+	&__icon{}//.pagination__icon	
 }//pagination
 
 .range{
@@ -247,3 +287,39 @@ body{
 .star-rating__ico:hover:before,
 .star-rating__ico:hover ~ .star-rating__ico:before,
 .star-rating__input:checked ~ .star-rating__ico:before{content: "\f005";}
+
+.go-top{
+	width: 52px;
+	height: 52px;
+	padding-top: 5px;
+	font-size: 10px;
+	text-transform: uppercase;
+	border-radius: 50%;
+	background-color: $color-bg--light;
+	cursor: pointer;
+	position: fixed;
+	bottom: 10px;
+	right: -200%;
+	@include trans(right);
+	@extend %flexCenter;
+	justify-content: center;
+	@include tr;
+	&::before{
+		content: '\f106';
+		font-family: fal;
+		font-size: 20px;
+		line-height: 1;
+		@include vx;
+		top: 4px;
+		@include tr;
+	}
+	&:hover{
+		color: #000;
+		&::before{
+			color: #000;
+		}
+	}
+	&.is-visible{
+		right: 10px;
+	}
+}//.go-top

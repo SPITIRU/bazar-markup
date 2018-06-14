@@ -1,6 +1,7 @@
 //=include ../libs/jQuery/jquery.min.js
 //=include ../libs/jQuery/jquery-migrate.min.js
 
+//=include ../libs/jquery.nicescroll.js
 //=include ../libs/jquery.inputmask.bundle.js
 //=include ../libs/nouislider/nouislider.js
 //=include ../libs/select2/select2.js

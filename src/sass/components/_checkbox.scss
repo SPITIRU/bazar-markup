@@ -216,9 +216,7 @@ $checkbox-color-border: $color-border !default;
 		&.is-checked{
 			color: #fff;
 			background-color: $checkbox-color-main;
-			// border-color: $checkbox-color-main;
 			&:hover{
-				// border: 1px solid $checkbox-color-main;
 				color: #fff;		
 			}
 			& + .checkbox--inline,
@@ -259,7 +257,7 @@ $checkbox-color-border: $color-border !default;
 					font-family: $f-light;
 					color: #fff;
 					background-color: $checkbox-color-main;
-					border: none;
+					border-color: transparent;
 				}				
 			}
 		}

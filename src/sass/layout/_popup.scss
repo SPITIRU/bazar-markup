@@ -84,6 +84,12 @@
 	}//.change-city__in
 
 	&__list{
+
+		@include respond-to(xs) {
+			margin-top: 5px;
+			width: 50%;
+		}
+
 		&_country{
 			display: inline-block;
 			padding-top: $base-indent;
