@@ -15,7 +15,6 @@ body{
 .text-number{font-family: $f2;}
 
 .preloader{
-	// display: none;
 	background-color: #fff;
 	position: fixed;
 	top: 0;
@@ -188,6 +187,52 @@ body{
 }//.social
 
 .breadcrumbs{
+	padding: 12px 0 14px;
+
+	@include max-screen(480) {
+		display: none;
+	}
+
+	&__list{display: flex;}//breadcrumbs__list
+
+	&__item{
+		position: relative;
+		&::after{
+			content: '\f105';
+			font-family: fal;
+			font-size: 14px;
+			color: #000;
+			position: relative;
+			right: -8px;
+		}
+		&:last-child{
+			&::after{
+				display: none;
+			}
+			.breadcrumbs__title{
+				color: #000;
+			}
+		}
+		& + &{
+			margin-left: 20px;
+		}
+	}//breadcrumbs__item
+
+	&__link{
+		display: inline-block;
+		color: $color-text;
+		&:hover{
+			.breadcrumbs__title{
+				color: $color-accent;
+			}
+		}
+	}//breadcrumbs__link
+
+	&__title{
+		font-family: $f-light;
+		font-size: 14px;
+		color: $color-text;
+	}//breadcrumbs__title
 }//breadcrumbs
 
 .pagination{
@@ -198,15 +243,16 @@ body{
 	}//.pagination__list
 
 	&__item{
-		& + &{
-			margin-left: 7px;
-		}
+
+		& + &{margin-left: 7px;}
+
 		&:first-child, &:last-child{
 			.pagination__icon{
 				font-size: 18px;
 				line-height: 1;
 			}
 		}
+		
 		&.is-active{
 			.pagination__link{
 				color: #fff;
@@ -258,6 +304,47 @@ body{
 	&__from{float: left;}
 	&__to{float: right;}//range__to
 }//range
+
+.tab{
+	&__titles{
+		@include clr;
+		border-bottom: 1px solid rgba(#000, .1);
+	}
+	&__title{
+		float: left;
+		padding: 5px 0;
+		text-transform: uppercase;
+		font-size: 14px;
+		border-bottom: 1px solid transparent;
+		transition: border .2s linear;
+		cursor: pointer;
+		outline: none;
+		position: relative;
+		top: 1px;
+		&:hover{
+			border-bottom: 1px solid rgba($color-accent, .4);
+		}
+		&.is-active, &.ui-tabs-active{
+			border-bottom: 1px solid $color-accent;
+		}
+		& + &{margin-left: 30px;}
+	}
+	&__contentes{
+		@include clr;
+	}
+	&__content{
+		display: none;
+		padding: 15px 0;
+		p{
+			font-size: 15px;
+			line-height: 1.6;
+		}
+	}
+	&__icon{
+		width: 40px;
+		height: 40px;
+	}
+}//.tab
 
 .star-rating{
 	font-size: 0;

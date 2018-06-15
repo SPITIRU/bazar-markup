@@ -206,6 +206,12 @@ $(document).ready(function () {
 
     //=include partials/catalog.js
 
+    /*
+    * Card.js
+    */
+
+    //=include partials/card.js
+
 });
 
     /*

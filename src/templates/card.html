@@ -1,5 +1,24 @@
 ---
-title: 
+title: Атлас дюпон «izumrud» 
+
+productDesc:
+ - title: Состав
+   desc: 100% п/э
+ - title: Плотность
+   desc: 120 гр/м.кв
+ - title: Ширина
+   desc: 1.5 м
+ - title: Цвет
+   desc: коричневый
+ - title: Производитель
+   desc: Турция
+ - title: Отпускается
+   desc: от 1 м
+ - title: Кол-во метров в рулоне
+   desc: 25
+ - title: Артикул
+   desc: ас06
+
 ---
 
 {% extends "layouts/_layout.html" %}
@@ -8,8 +27,124 @@ title:
 
 <!-- begin main card -->
 <main class="main card">
+	<div class="container">
+		
+		<!-- begin card__top-line -->
+		<div class="card__top-line">
+			{% include "partials/components/_breadcrumbs.html" %}
 
+			<a href="#" class="button button--link card__btn card__btn--back">Вернуться в каталог</a>
+		</div>
+		<!-- end card__top-line -->		
+		<!-- begin card__wrap -->
+		<div class="card__wrap"  itemscope itemtype="http://schema.org/Product">
+			<!-- begin card__image -->
+			<div class="card__image">
+				<div class="bz-slider bz-slider--card card__slider">
+					<div class="bz-slider__slides js-bz-slider--card">
+						{% for i in range(0, 4) %}
+						<div itemscope itemtype="https://schema.org/ImageObject">
+							<img itemprop="url contentUrl" src="img/products/atlas/big/{{i+1}}.png" alt="Атлас дюпон «izumrud»">
+							<meta itemprop="name" content="здесь полное описание вплоть до артикула">
+						</div>
+						{% endfor %}﻿						
+					</div>
+					<div class="card__slider--nav js-bz-slider--card-nav">
+						{% for i in range(0, 4) %}
+						<div><img src="img/products/atlas/small/{{i+1}}.png" alt="alt"></div>
+						{% endfor %}﻿	
+					</div>
+				</div>
+			</div>
+			<!-- end card__image -->
+			<!-- begin card__desc -->
+			<div class="card__desc">
+				<h1 class="h1 product-item__title card__title" itemprop="name">Атлас дюпон <span>white</span></h1>
 
+				<div class="card__price">340,00 <span>руб/м</span></div>
+				
+				<div class="button-box">
+					<button class="button button--yellow card__btn card__btn--cart">Добавить в корзину</button>
+
+					<div tooltip="в избранное">
+						<button class="button-icon button-icon--fav js-button-icon--fav card__btn card__btn--fav"></button>
+					</div>
+				</div>
+
+				<!-- begin card__info -->
+				<div class="card__info">
+					<div class="tab js-card-tab-info">
+						<ul class="tab__titles">
+							<li class="tab__title"><a class="tab__link" href="#tabs-1">Характеристики</a></li>
+							<li class="tab__title"><a class="tab__link" href="#tabs-2">Описание</a></li>
+						</ul>
+						<div class="tab__contentes">
+							<div class="tab__content" id="tabs-1">
+								
+								<div class="bz-table bz-table--dot">
+									<ul class="bz-table__list">
+										{% for item in productDesc %}
+										<li class="bz-table__item">
+											<span class="bz-table__subitem"><span>{{ item.title }}</span></span>
+											<a href="#" class="bz-table__subitem">{{ item.desc }}</a>
+										</li>
+										{% endfor %}
+									</ul>
+								</div>
+
+							</div>
+							<div class="tab__content" id="tabs-2">
+								<p>Плотная ткань с гладкокрашенной отделкой. Лицевая сторона гладкая, с мягким атласным блеском. Изнаночная - матовая, с зернистой поверхностью. Материал прочный, эластичный, хорошо драпирующийся. Атлас широко применяется для изготовления праздничных и концертных нарядов, свадебных платьев.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end card__info -->
+
+			</div>
+			<!-- end card__desc -->
+		</div>
+		<!-- end card__wrap -->
+
+		<!-- begin card__related -->
+		<div class="card__related">
+			<div class="tab js-card-tab-related">
+				<ul class="tab__titles">
+					<li class="tab__title">
+						<a class="tab__link" href="#tabs-1">
+							{{mixin.icon('cloth', 'tab__icon')}}
+							<span class="tab__text">Ткани</span>
+						</a>
+					</li>
+					<li class="tab__title">
+						<a class="tab__link" href="#tabs-2">{{mixin.icon('thread', 'tab__icon')}}</a>
+					</li>
+					<li class="tab__title">
+						<a class="tab__link" href="#tabs-3">{{mixin.icon('button', 'tab__icon')}}</a>
+					</li>
+					<li class="tab__title">
+						<a class="tab__link" href="#tabs-4">{{mixin.icon('zipper', 'tab__icon')}}</a>
+					</li>
+					<li class="tab__title">
+						<a class="tab__link" href="#tabs-5">{{mixin.icon('tapes', 'tab__icon')}}</a>
+					</li>
+					<li class="tab__title">
+						<a class="tab__link" href="#tabs-6">{{mixin.icon('tapes', 'tab__icon')}}</a>
+					</li>
+				</ul>
+				<div class="tab__contentes">
+					<div class="tab__content" id="tabs-1">
+						<p>Плотная ткань с гладкокрашенной отделкой. Лицевая сторона гладкая, с мягким атласным блеском. Изнаночная - матовая, с зернистой поверхностью. Материал прочный, эластичный, хорошо драпирующийся. Атлас широко применяется для изготовления праздничных и концертных нарядов, свадебных платьев.</p>
+					</div>
+					<div class="tab__content" id="tabs-2">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel repudiandae ipsam, obcaecati rem facere reprehenderit illum laudantium praesentium voluptate! Ratione.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end card__related -->
+
+	</div>
 </main>	
 <!-- end main card -->
 
