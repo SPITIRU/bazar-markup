@@ -16,7 +16,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="img/general/favicon/android-chrome-76x76.png">
     <link rel="apple-touch-icon" sizes="144x144" href="img/general/favicon/android-chrome-icon-144x144.png">
     <link rel="stylesheet" media="all" href="css/app.css"> </head>
-  <body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+  <body class="loading" itemscope="itemscope" itemtype="http://schema.org/WebPage">
     <!-- begin wrapper -->
     <div class="wrapper ">
       <!-- begin header -->
@@ -1721,8 +1721,6 @@
                   <li class="change-city__item">Екатеринбург</li>
                   <li class="change-city__item">Ижевск</li>
                   <li class="change-city__item">Иркутск</li>
-                </ul>
-                <ul class="change-city__list">
                   <li class="change-city__item">Казань</li>
                   <li class="change-city__item">Кемерово</li>
                   <li class="change-city__item">Киров</li>
@@ -1738,8 +1736,6 @@
                   <li class="change-city__item">Омск</li>
                   <li class="change-city__item">Оренбург</li>
                   <li class="change-city__item">Орск</li>
-                </ul>
-                <ul class="change-city__list">
                   <li class="change-city__item">Пенза</li>
                   <li class="change-city__item">Пермь</li>
                   <li class="change-city__item">Прокопьевск</li>
@@ -1755,8 +1751,6 @@
                   <li class="change-city__item">Томск</li>
                   <li class="change-city__item">Тюмень</li>
                   <li class="change-city__item">Ульяновск</li>
-                </ul>
-                <ul class="change-city__list">
                   <li class="change-city__item">Уфа</li>
                   <li class="change-city__item">Хабаровск</li>
                   <li class="change-city__item">Ханты-Мансийск</li>
@@ -1844,12 +1838,9 @@
       <!-- end auth-form -->
     </div>
     <!-- end windows -->
-    <!-- begin go-top -->
     <div class="go-top js-go-top">Наверх</div>
-    <!-- end go-top -->
-    <!-- begin overlay -->
     <div class="overlay js-overlay"></div>
-    <!-- end overlay -->
+    <div class="preloader"></div>
     <!-- begin scripts -->
     <script type="text/javascript" src="js/libs.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>

@@ -1,6 +1,46 @@
 .bz-slider{
 	position: relative;
 
+	.slick-arrow{
+		display: inline-block;
+		width: 32px;
+		height: 32px;
+		line-height: 1;
+		position: absolute;
+		top: 60px;
+		// bottom: 51px;
+		cursor: pointer;
+		outline: none;
+		z-index: z(default);
+		&.slick-disabled{
+			display: none !important;
+		}
+		&::before{
+			font-family: faL;
+			font-size: 28px;
+			color: $color-icon;
+			opacity: .3;
+		}
+		&:hover{
+			&::before{
+				opacity: 1;
+			}			
+		}
+
+		&.slick-prev{
+			left: -40px;
+			&::before{
+				content: '\f104';
+			}		
+		}
+		&.slick-next{
+			right: -40px;
+			&::before{
+				content: '\f105';
+			}		
+		}
+	}
+
 	&__arrow{
 		display: inline-block;
 		position: absolute;
@@ -99,4 +139,16 @@
 			}
 		}
 	}//bb-slider--new
+
+	&--card{
+		.bz-slider{
+			&__slides{
+				margin-bottom: 10px;
+
+				@include respond-to(xs) {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}//bb-slider--card
 }//bb-slider

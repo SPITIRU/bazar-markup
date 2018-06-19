@@ -81,7 +81,7 @@
 {% endmacro %}
 
 {% macro productItem(class) %}
-<a href="" class="product-item js-product-item" itemscope itemtype="http://schema.org/Product">
+<a href="#" class="product-item js-product-item" itemscope itemtype="http://schema.org/Product">
 	<div class="product-item__img">
 		<img class="product-item__image" src="img/products/atlas/1.png" alt="Атлас дюпон" itemprop="image">
 		<button class="button-icon button-icon--fav js-button-icon--fav product-item__fav"></button>
@@ -127,7 +127,7 @@
 {% endmacro %}
 
 {% macro productItemSmall(class) %}
-<a href="" class="product-item product-item--small" itemscope itemtype="http://schema.org/Product">
+<a href="#" class="product-item product-item--small" itemscope itemtype="http://schema.org/Product">
 	<div class="product-item__img">
 		<img src="img/products/atlas/small/1.png" alt="Атлас дюпон" itemprop="image">
 	</div>
@@ -138,6 +138,17 @@
 			<meta itemprop="priceCurrency" content="RUB" />
 			300 <i class="rub">руб.</i>
 		</div>
+	</div>
+</a>
+{% endmacro %}
+
+{% macro productItemColor(class) %}
+<a href="#" class="product-item product-item--small product-item--color" itemscope itemtype="http://schema.org/Product">
+	<div class="product-item__img">
+		<img src="img/products/atlas/small/3.png" alt="Черный цвет" itemprop="image">
+	</div>
+	<div class="product-item__desc">
+		<h5 class="h5 product-item__title" itemprop="name">Черный</h5>
 	</div>
 </a>
 {% endmacro %}

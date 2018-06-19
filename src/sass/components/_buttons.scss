@@ -14,6 +14,7 @@
 	border-radius: $border-radius;
 	outline: none;
 	cursor: pointer;
+	position: relative;
 	@include tr;
 }
 
@@ -26,10 +27,10 @@
 		}
 		&--#{$theme}:hover,
 		&--#{$theme}:focus{
-			background-color: lighten($color, 6%);
+			background-color: lighten($color, 11%);
 		}
 		&--#{$theme}:active, {
-			background-color: lighten($color, 3%);
+			background-color: lighten($color, 8%);
 		}
 	}
 

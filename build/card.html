@@ -16,7 +16,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="img/general/favicon/android-chrome-76x76.png">
     <link rel="apple-touch-icon" sizes="144x144" href="img/general/favicon/android-chrome-icon-144x144.png">
     <link rel="stylesheet" media="all" href="css/app.css"> </head>
-  <body itemscope="itemscope" itemtype="http://schema.org/WebPage">
+  <body class="loading" itemscope="itemscope" itemtype="http://schema.org/WebPage">
     <!-- begin wrapper -->
     <div class="wrapper ">
       <!-- begin header -->
@@ -1567,6 +1567,7 @@
             </div>
             <!-- end breadcrumbs -->
             <a href="#" class="button button--link card__btn card__btn--back">Вернуться в каталог</a>
+            <a href="#" class="card__back">Атлас</a>
           </div>
           <!-- end card__top-line -->
           <!-- begin card__wrap -->
@@ -1611,81 +1612,130 @@
               <div class="card__price">340,00
                 <span>руб/м</span>
               </div>
+              <!-- begin item-select -->
+              <div class="item-select__group card__item-select">
+                <div class="item-select js-item-select">
+                  <div class="item-select__caption">Цвет</div>
+                  <div class="item-select__value">
+                    <span class="item-select__color" data-item-select-color="#233e23"></span>
+                    <span class="item-select__title">Темно зеленый</span>
+                  </div>
+                  <div class="item-select__list">
+                    <div class="item-select__item">
+                      <span class="item-select__color" data-item-select-color="#233e23"></span>
+                      <span class="item-select__title">Темно зеленый</span>
+                      <span class="item-select__subtitle">в наличии</span>
+                    </div>
+                    <div class="item-select__item">
+                      <span class="item-select__color" data-item-select-color="#46358d"></span>
+                      <span class="item-select__title">Темно зеленый</span>
+                      <span class="item-select__subtitle ends">заканчивается</span>
+                    </div>
+                    <div class="item-select__item">
+                      <span class="item-select__color" data-item-select-color="#e4d8cb"></span>
+                      <span class="item-select__title">Темно зеленый</span>
+                      <span class="item-select__subtitle">в наличии</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-select item-select--count js-item-select is-hidden">
+                  <div class="item-select__caption">Количество</div>
+                  <div class="item-select__value">
+                    <div class="item-select__control item-select__control--minus"></div>
+                    <span class="item-select__title">Выбрать</span>
+                    <div class="item-select__control item-select__control--plus"></div>
+                  </div>
+                  <div class="item-select__list">
+                    <div class="item-select__item">
+                      <span class="item-select__title">5 м в нарезку</span>
+                    </div>
+                    <div class="item-select__item">
+                      <span class="item-select__title">25 м
+                        <span>(1 рулон)</span>
+                      </span>
+                    </div>
+                    <div class="item-select__item">
+                      <span class="item-select__title">Темно зеленый</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end item-select -->
               <div class="button-box">
-                <button class="button button--yellow card__btn card__btn--cart">Добавить в корзину</button>
+                <button class="button button--yellow card__btn card__btn--cart"> Добавить в корзину
+                  <span></span>
+                </button>
                 <div tooltip="в избранное">
                   <button class="button-icon button-icon--fav js-button-icon--fav card__btn card__btn--fav"></button>
                 </div>
               </div>
               <!-- begin card__info -->
               <div class="card__info">
-                <div class="tab js-card-tab-info">
-                  <ul class="tab__titles">
-                    <li class="tab__title">
-                      <a class="tab__link" href="#tabs-1">Характеристики</a>
-                    </li>
-                    <li class="tab__title">
-                      <a class="tab__link" href="#tabs-2">Описание</a>
-                    </li>
-                  </ul>
-                  <div class="tab__contentes">
-                    <div class="tab__content" id="tabs-1">
-                      <div class="bz-table bz-table--dot">
-                        <ul class="bz-table__list">
-                          <li class="bz-table__item">
-                            <span class="bz-table__subitem">
-                              <span>Состав</span>
-                            </span>
-                            <a href="#" class="bz-table__subitem">100% п/э</a>
-                          </li>
-                          <li class="bz-table__item">
-                            <span class="bz-table__subitem">
-                              <span>Плотность</span>
-                            </span>
-                            <a href="#" class="bz-table__subitem">120 гр/м.кв</a>
-                          </li>
-                          <li class="bz-table__item">
-                            <span class="bz-table__subitem">
-                              <span>Ширина</span>
-                            </span>
-                            <a href="#" class="bz-table__subitem">1.5 м</a>
-                          </li>
-                          <li class="bz-table__item">
-                            <span class="bz-table__subitem">
-                              <span>Цвет</span>
-                            </span>
-                            <a href="#" class="bz-table__subitem">коричневый</a>
-                          </li>
-                          <li class="bz-table__item">
-                            <span class="bz-table__subitem">
-                              <span>Производитель</span>
-                            </span>
-                            <a href="#" class="bz-table__subitem">Турция</a>
-                          </li>
-                          <li class="bz-table__item">
-                            <span class="bz-table__subitem">
-                              <span>Отпускается</span>
-                            </span>
-                            <a href="#" class="bz-table__subitem">от 1 м</a>
-                          </li>
-                          <li class="bz-table__item">
-                            <span class="bz-table__subitem">
-                              <span>Кол-во метров в рулоне</span>
-                            </span>
-                            <a href="#" class="bz-table__subitem">25</a>
-                          </li>
-                          <li class="bz-table__item">
-                            <span class="bz-table__subitem">
-                              <span>Артикул</span>
-                            </span>
-                            <a href="#" class="bz-table__subitem">ас06</a>
-                          </li>
-                        </ul>
-                      </div>
+                <div class="tab tab--transform js-tab--transform">
+                  <div class="tab__wrap">
+                    <div class="tab__titles js-tab">
+                      <div class="tab__title is-active" data-tab="0">Характеристики</div>
+                      <div class="tab__title" data-tab="1">Описание</div>
                     </div>
-                    <div class="tab__content" id="tabs-2">
-                      <p>Плотная ткань с гладкокрашенной отделкой. Лицевая сторона гладкая, с мягким атласным блеском. Изнаночная - матовая, с зернистой поверхностью. Материал прочный, эластичный, хорошо драпирующийся. Атлас широко применяется для изготовления
-                        праздничных и концертных нарядов, свадебных платьев.</p>
+                    <div class="tab__contentes">
+                      <div class="tab__content tab__content--car" style="display: block;" data-tab-content="0">
+                        <div class="bz-table bz-table--dot">
+                          <ul class="bz-table__list">
+                            <li class="bz-table__item">
+                              <span class="bz-table__subitem">
+                                <span>Состав</span>
+                              </span>
+                              <a href="#" class="bz-table__subitem">100% п/э</a>
+                            </li>
+                            <li class="bz-table__item">
+                              <span class="bz-table__subitem">
+                                <span>Плотность</span>
+                              </span>
+                              <a href="#" class="bz-table__subitem">120 гр/м.кв</a>
+                            </li>
+                            <li class="bz-table__item">
+                              <span class="bz-table__subitem">
+                                <span>Ширина</span>
+                              </span>
+                              <a href="#" class="bz-table__subitem">1.5 м</a>
+                            </li>
+                            <li class="bz-table__item">
+                              <span class="bz-table__subitem">
+                                <span>Цвет</span>
+                              </span>
+                              <a href="#" class="bz-table__subitem">коричневый</a>
+                            </li>
+                            <li class="bz-table__item">
+                              <span class="bz-table__subitem">
+                                <span>Производитель</span>
+                              </span>
+                              <a href="#" class="bz-table__subitem">Турция</a>
+                            </li>
+                            <li class="bz-table__item">
+                              <span class="bz-table__subitem">
+                                <span>Отпускается</span>
+                              </span>
+                              <a href="#" class="bz-table__subitem">от 1 м</a>
+                            </li>
+                            <li class="bz-table__item">
+                              <span class="bz-table__subitem">
+                                <span>Кол-во метров в рулоне</span>
+                              </span>
+                              <a href="#" class="bz-table__subitem">25</a>
+                            </li>
+                            <li class="bz-table__item">
+                              <span class="bz-table__subitem">
+                                <span>Артикул</span>
+                              </span>
+                              <a href="#" class="bz-table__subitem">ас06</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="tab__content tab__content--product" data-tab-content="1">
+                        <p>Плотная ткань с гладкокрашенной отделкой. Лицевая сторона гладкая, с мягким атласным блеском. Изнаночная - матовая, с зернистой поверхностью. Материал прочный, эластичный, хорошо драпирующийся. Атлас широко применяется для изготовления
+                          праздничных и концертных нарядов, свадебных платьев.</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1696,65 +1746,400 @@
           </div>
           <!-- end card__wrap -->
           <!-- begin card__related -->
-          <div class="card__related">
+          <div class="card__related related">
+            <h2 class="h2 page-title">Сопутствующие товары</h2>
             <div class="tab js-card-tab-related">
               <ul class="tab__titles">
                 <li class="tab__title">
-                  <a class="tab__link" href="#tabs-1">
-                    <svg class="icon icon-cloth tab__icon">
-                      <use xlink:href="img/sprite.svg#cloth"></use>
-                    </svg>
+                  <a class="tab__link" href="#related-tabs-1">
+                    <span class="tab__icon_wrap">
+                      <svg class="icon icon-tapes tab__icon">
+                        <use xlink:href="img/sprite.svg#cloth"></use>
+                      </svg>
+                    </span>
                     <span class="tab__text">Ткани</span>
                   </a>
                 </li>
                 <li class="tab__title">
-                  <a class="tab__link" href="#tabs-2">
-                    <svg class="icon icon-thread tab__icon">
-                      <use xlink:href="img/sprite.svg#thread"></use>
-                    </svg>
+                  <a class="tab__link" href="#related-tabs-2">
+                    <span class="tab__icon_wrap">
+                      <svg class="icon icon-tapes tab__icon">
+                        <use xlink:href="img/sprite.svg#thread"></use>
+                      </svg>
+                    </span>
+                    <span class="tab__text">Нитки</span>
                   </a>
                 </li>
                 <li class="tab__title">
-                  <a class="tab__link" href="#tabs-3">
-                    <svg class="icon icon-button tab__icon">
-                      <use xlink:href="img/sprite.svg#button"></use>
-                    </svg>
+                  <a class="tab__link" href="#related-tabs-3">
+                    <span class="tab__icon_wrap">
+                      <svg class="icon icon-tapes tab__icon">
+                        <use xlink:href="img/sprite.svg#zipper"></use>
+                      </svg>
+                    </span>
+                    <span class="tab__text">Молнии</span>
                   </a>
                 </li>
                 <li class="tab__title">
-                  <a class="tab__link" href="#tabs-4">
-                    <svg class="icon icon-zipper tab__icon">
-                      <use xlink:href="img/sprite.svg#zipper"></use>
-                    </svg>
+                  <a class="tab__link" href="#related-tabs-4">
+                    <span class="tab__icon_wrap">
+                      <svg class="icon icon-tapes tab__icon">
+                        <use xlink:href="img/sprite.svg#tapes"></use>
+                      </svg>
+                    </span>
+                    <span class="tab__text">Резинки</span>
+                  </a>
+                </li> 
+                <li class="tab__title">
+                  <a class="tab__link" href="#related-tabs-5">
+                    <span class="tab__icon_wrap">
+                      <svg class="icon icon-button tab__icon">
+                        <use xlink:href="img/sprite.svg#button"></use>
+                      </svg>
+                    </span>
+                    <span class="tab__text">Пуговицы
+                      <br>и кнопки</span>
                   </a>
                 </li>
                 <li class="tab__title">
-                  <a class="tab__link" href="#tabs-5">
-                    <svg class="icon icon-tapes tab__icon">
-                      <use xlink:href="img/sprite.svg#tapes"></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="tab__title">
-                  <a class="tab__link" href="#tabs-6">
-                    <svg class="icon icon-tapes tab__icon">
-                      <use xlink:href="img/sprite.svg#tapes"></use>
-                    </svg>
+                  <a class="tab__link" href="#related-tabs-6">
+                    <span class="tab__icon_wrap">
+                      <svg class="icon icon-tapes tab__icon">
+                        <use xlink:href="img/sprite.svg#tapes"></use>
+                      </svg>
+                    </span>
+                    <span class="tab__text">Ленты
+                      <br> отделочные</span>
                   </a>
                 </li>
               </ul>
               <div class="tab__contentes">
-                <div class="tab__content" id="tabs-1">
-                  <p>Плотная ткань с гладкокрашенной отделкой. Лицевая сторона гладкая, с мягким атласным блеском. Изнаночная - матовая, с зернистой поверхностью. Материал прочный, эластичный, хорошо драпирующийся. Атлас широко применяется для изготовления
-                    праздничных и концертных нарядов, свадебных платьев.</p>
+                <div class="tab__content" id="related-tabs-1">
+                  <div class="bz-slider bz-slider--related">
+                    <div class="bz-slider__slides js-bz-slider--related">
+                      <a class="related__item" href="#">
+                        <div class="related__img">
+                          <img src="http://via.placeholder.com/150x150" alt="Атлас дюпон «izumrud»"> </div>
+                        <div class="related__desc">
+                          <span class="related__title">Нитки
+                            <span>dor tak 40/2</span>
+                          </span>
+                          <span class="related__price">12,80 руб</span>
+                        </div>
+                      </a>
+                      <a class="related__item" href="#">
+                        <div class="related__img">
+                          <img src="http://via.placeholder.com/150x150" alt="Атлас дюпон «izumrud»"> </div>
+                        <div class="related__desc">
+                          <span class="related__title">Нитки
+                            <span>dor tak 40/2</span>
+                          </span>
+                          <span class="related__price">12,80 руб</span>
+                        </div>
+                      </a>
+                      <a class="related__item" href="#">
+                        <div class="related__img">
+                          <img src="http://via.placeholder.com/150x150" alt="Атлас дюпон «izumrud»"> </div>
+                        <div class="related__desc">
+                          <span class="related__title">Нитки
+                            <span>dor tak 40/2</span>
+                          </span>
+                          <span class="related__price">12,80 руб</span>
+                        </div>
+                      </a>
+                      <a class="related__item" href="#">
+                        <div class="related__img">
+                          <img src="http://via.placeholder.com/150x150" alt="Атлас дюпон «izumrud»"> </div>
+                        <div class="related__desc">
+                          <span class="related__title">Нитки
+                            <span>dor tak 40/2</span>
+                          </span>
+                          <span class="related__price">12,80 руб</span>
+                        </div>
+                      </a>
+                      <a class="related__item" href="#">
+                        <div class="related__img">
+                          <img src="http://via.placeholder.com/150x150" alt="Атлас дюпон «izumrud»"> </div>
+                        <div class="related__desc">
+                          <span class="related__title">Нитки
+                            <span>dor tak 40/2</span>
+                          </span>
+                          <span class="related__price">12,80 руб</span>
+                        </div>
+                      </a> ﻿ </div>
+                  </div>
                 </div>
-                <div class="tab__content" id="tabs-2">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel repudiandae ipsam, obcaecati rem facere reprehenderit illum laudantium praesentium voluptate! Ratione.</p>
+                <div class="tab__content" id="related-tabs-2">
+                  <div class="bz-slider bz-slider--related">
+                    <div class="bz-slider__slides js-bz-slider--related">
+                      <a class="related__item" href="#">
+                        <div class="related__img">
+                          <img src="img/products/thread/1.png" alt="Атлас дюпон «izumrud»"> </div>
+                        <div class="related__desc">
+                          <span class="related__title">Нитки
+                            <span>dor tak 40/2</span>
+                          </span>
+                          <span class="related__price">12,80 руб</span>
+                        </div>
+                      </a>
+                      <a class="related__item" href="#">
+                        <div class="related__img">
+                          <img src="img/products/thread/2.png" alt="Атлас дюпон «izumrud»"> </div>
+                        <div class="related__desc">
+                          <span class="related__title">Нитки
+                            <span>dor tak 40/2</span>
+                          </span>
+                          <span class="related__price">12,80 руб</span>
+                        </div>
+                      </a>
+                      <a class="related__item" href="#">
+                        <div class="related__img">
+                          <img src="img/products/thread/3.png" alt="Атлас дюпон «izumrud»"> </div>
+                        <div class="related__desc">
+                          <span class="related__title">Нитки
+                            <span>dor tak 40/2</span>
+                          </span>
+                          <span class="related__price">12,80 руб</span>
+                        </div>
+                      </a>
+                      <a class="related__item" href="#">
+                        <div class="related__img">
+                          <img src="img/products/thread/4.png" alt="Атлас дюпон «izumrud»"> </div>
+                        <div class="related__desc">
+                          <span class="related__title">Нитки
+                            <span>dor tak 40/2</span>
+                          </span>
+                          <span class="related__price">12,80 руб</span>
+                        </div>
+                      </a>
+                      <a class="related__item" href="#">
+                        <div class="related__img">
+                          <img src="img/products/thread/5.png" alt="Атлас дюпон «izumrud»"> </div>
+                        <div class="related__desc">
+                          <span class="related__title">Нитки
+                            <span>dor tak 40/2</span>
+                          </span>
+                          <span class="related__price">12,80 руб</span>
+                        </div>
+                      </a>
+                      <a class="related__item" href="#">
+                        <div class="related__img">
+                          <img src="img/products/thread/6.png" alt="Атлас дюпон «izumrud»"> </div>
+                        <div class="related__desc">
+                          <span class="related__title">Нитки
+                            <span>dor tak 40/2</span>
+                          </span>
+                          <span class="related__price">12,80 руб</span>
+                        </div>
+                      </a>
+                      <a class="related__item" href="#">
+                        <div class="related__img">
+                          <img src="img/products/thread/7.png" alt="Атлас дюпон «izumrud»"> </div>
+                        <div class="related__desc">
+                          <span class="related__title">Нитки
+                            <span>dor tak 40/2</span>
+                          </span>
+                          <span class="related__price">12,80 руб</span>
+                        </div>
+                      </a>
+                      <a class="related__item" href="#">
+                        <div class="related__img">
+                          <img src="img/products/thread/8.png" alt="Атлас дюпон «izumrud»"> </div>
+                        <div class="related__desc">
+                          <span class="related__title">Нитки
+                            <span>dor tak 40/2</span>
+                          </span>
+                          <span class="related__price">12,80 руб</span>
+                        </div>
+                      </a>
+                      <a class="related__item" href="#">
+                        <div class="related__img">
+                          <img src="img/products/thread/9.png" alt="Атлас дюпон «izumrud»"> </div>
+                        <div class="related__desc">
+                          <span class="related__title">Нитки
+                            <span>dor tak 40/2</span>
+                          </span>
+                          <span class="related__price">12,80 руб</span>
+                        </div>
+                      </a>
+                      <a class="related__item" href="#">
+                        <div class="related__img">
+                          <img src="img/products/thread/10.png" alt="Атлас дюпон «izumrud»"> </div>
+                        <div class="related__desc">
+                          <span class="related__title">Нитки
+                            <span>dor tak 40/2</span>
+                          </span>
+                          <span class="related__price">12,80 руб</span>
+                        </div>
+                      </a>
+                      <a class="related__item" href="#">
+                        <div class="related__img">
+                          <img src="img/products/thread/11.png" alt="Атлас дюпон «izumrud»"> </div>
+                        <div class="related__desc">
+                          <span class="related__title">Нитки
+                            <span>dor tak 40/2</span>
+                          </span>
+                          <span class="related__price">12,80 руб</span>
+                        </div>
+                      </a> ﻿ </div>
+                  </div>
+                </div>
+                <div class="tab__content" id="related-tabs-3">
+                  <div class="bz-slider bz-slider--related">
+                    <div class="bz-slider__slides js-bz-slider--related">
+                      <a class="related__item" href="#">
+                        <div class="related__img">
+                          <img src="img/products/thread/1.png" alt="Атлас дюпон «izumrud»"> </div>
+                        <div class="related__desc">
+                          <span class="related__title">Нитки
+                            <span>dor tak 40/2</span>
+                          </span>
+                          <span class="related__price">12,80 руб</span>
+                        </div>
+                      </a>
+                      <a class="related__item" href="#">
+                        <div class="related__img">
+                          <img src="img/products/thread/2.png" alt="Атлас дюпон «izumrud»"> </div>
+                        <div class="related__desc">
+                          <span class="related__title">Нитки
+                            <span>dor tak 40/2</span>
+                          </span>
+                          <span class="related__price">12,80 руб</span>
+                        </div>
+                      </a>
+                      <a class="related__item" href="#">
+                        <div class="related__img">
+                          <img src="img/products/thread/3.png" alt="Атлас дюпон «izumrud»"> </div>
+                        <div class="related__desc">
+                          <span class="related__title">Нитки
+                            <span>dor tak 40/2</span>
+                          </span>
+                          <span class="related__price">12,80 руб</span>
+                        </div>
+                      </a>
+                      <a class="related__item" href="#">
+                        <div class="related__img">
+                          <img src="img/products/thread/4.png" alt="Атлас дюпон «izumrud»"> </div>
+                        <div class="related__desc">
+                          <span class="related__title">Нитки
+                            <span>dor tak 40/2</span>
+                          </span>
+                          <span class="related__price">12,80 руб</span>
+                        </div>
+                      </a>
+                      <a class="related__item" href="#">
+                        <div class="related__img">
+                          <img src="img/products/thread/5.png" alt="Атлас дюпон «izumrud»"> </div>
+                        <div class="related__desc">
+                          <span class="related__title">Нитки
+                            <span>dor tak 40/2</span>
+                          </span>
+                          <span class="related__price">12,80 руб</span>
+                        </div>
+                      </a>
+                      <a class="related__item" href="#">
+                        <div class="related__img">
+                          <img src="img/products/thread/6.png" alt="Атлас дюпон «izumrud»"> </div>
+                        <div class="related__desc">
+                          <span class="related__title">Нитки
+                            <span>dor tak 40/2</span>
+                          </span>
+                          <span class="related__price">12,80 руб</span>
+                        </div>
+                      </a>
+                      <a class="related__item" href="#">
+                        <div class="related__img">
+                          <img src="img/products/thread/7.png" alt="Атлас дюпон «izumrud»"> </div>
+                        <div class="related__desc">
+                          <span class="related__title">Нитки
+                            <span>dor tak 40/2</span>
+                          </span>
+                          <span class="related__price">12,80 руб</span>
+                        </div>
+                      </a>
+                      <a class="related__item" href="#">
+                        <div class="related__img">
+                          <img src="img/products/thread/8.png" alt="Атлас дюпон «izumrud»"> </div>
+                        <div class="related__desc">
+                          <span class="related__title">Нитки
+                            <span>dor tak 40/2</span>
+                          </span>
+                          <span class="related__price">12,80 руб</span>
+                        </div>
+                      </a>
+                      <a class="related__item" href="#">
+                        <div class="related__img">
+                          <img src="img/products/thread/9.png" alt="Атлас дюпон «izumrud»"> </div>
+                        <div class="related__desc">
+                          <span class="related__title">Нитки
+                            <span>dor tak 40/2</span>
+                          </span>
+                          <span class="related__price">12,80 руб</span>
+                        </div>
+                      </a>
+                      <a class="related__item" href="#">
+                        <div class="related__img">
+                          <img src="img/products/thread/10.png" alt="Атлас дюпон «izumrud»"> </div>
+                        <div class="related__desc">
+                          <span class="related__title">Нитки
+                            <span>dor tak 40/2</span>
+                          </span>
+                          <span class="related__price">12,80 руб</span>
+                        </div>
+                      </a>
+                      <a class="related__item" href="#">
+                        <div class="related__img">
+                          <img src="img/products/thread/11.png" alt="Атлас дюпон «izumrud»"> </div>
+                        <div class="related__desc">
+                          <span class="related__title">Нитки
+                            <span>dor tak 40/2</span>
+                          </span>
+                          <span class="related__price">12,80 руб</span>
+                        </div>
+                      </a> ﻿ </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           <!-- end card__related -->
+          <!-- begin card__colors -->
+          <div class="card__colors">
+            <h2 class="h2 page-title">Другие цвета</h2>
+            <div class="product-item__wrap">
+              <a href="#" class="product-item product-item--small product-item--color" itemscope itemtype="http://schema.org/Product">
+                <div class="product-item__img">
+                  <img src="img/products/atlas/small/3.png" alt="Черный цвет" itemprop="image"> </div>
+                <div class="product-item__desc">
+                  <h5 class="h5 product-item__title" itemprop="name">Черный</h5>
+                </div>
+              </a>
+              <a href="#" class="product-item product-item--small product-item--color" itemscope itemtype="http://schema.org/Product">
+                <div class="product-item__img">
+                  <img src="img/products/atlas/small/3.png" alt="Черный цвет" itemprop="image"> </div>
+                <div class="product-item__desc">
+                  <h5 class="h5 product-item__title" itemprop="name">Черный</h5>
+                </div>
+              </a>
+              <a href="#" class="product-item product-item--small product-item--color" itemscope itemtype="http://schema.org/Product">
+                <div class="product-item__img">
+                  <img src="img/products/atlas/small/3.png" alt="Черный цвет" itemprop="image"> </div>
+                <div class="product-item__desc">
+                  <h5 class="h5 product-item__title" itemprop="name">Черный</h5>
+                </div>
+              </a>
+              <a href="#" class="product-item product-item--small product-item--color" itemscope itemtype="http://schema.org/Product">
+                <div class="product-item__img">
+                  <img src="img/products/atlas/small/3.png" alt="Черный цвет" itemprop="image"> </div>
+                <div class="product-item__desc">
+                  <h5 class="h5 product-item__title" itemprop="name">Черный</h5>
+                </div>
+              </a> ﻿ </div>
+          </div>
+          <!-- end card__colors -->
+          <div class="button-box">
+            <a href="#" class="button button--transparent button--info card__btn--back">Вернуться в каталог</a>
+          </div>
         </div>
       </main>
       <!-- end main card -->
@@ -1905,8 +2290,6 @@
                   <li class="change-city__item">Екатеринбург</li>
                   <li class="change-city__item">Ижевск</li>
                   <li class="change-city__item">Иркутск</li>
-                </ul>
-                <ul class="change-city__list">
                   <li class="change-city__item">Казань</li>
                   <li class="change-city__item">Кемерово</li>
                   <li class="change-city__item">Киров</li>
@@ -1922,8 +2305,6 @@
                   <li class="change-city__item">Омск</li>
                   <li class="change-city__item">Оренбург</li>
                   <li class="change-city__item">Орск</li>
-                </ul>
-                <ul class="change-city__list">
                   <li class="change-city__item">Пенза</li>
                   <li class="change-city__item">Пермь</li>
                   <li class="change-city__item">Прокопьевск</li>
@@ -1939,8 +2320,6 @@
                   <li class="change-city__item">Томск</li>
                   <li class="change-city__item">Тюмень</li>
                   <li class="change-city__item">Ульяновск</li>
-                </ul>
-                <ul class="change-city__list">
                   <li class="change-city__item">Уфа</li>
                   <li class="change-city__item">Хабаровск</li>
                   <li class="change-city__item">Ханты-Мансийск</li>
@@ -2028,12 +2407,9 @@
       <!-- end auth-form -->
     </div>
     <!-- end windows -->
-    <!-- begin go-top -->
     <div class="go-top js-go-top">Наверх</div>
-    <!-- end go-top -->
-    <!-- begin overlay -->
     <div class="overlay js-overlay"></div>
-    <!-- end overlay -->
+    <div class="preloader"></div>
     <!-- begin scripts -->
     <script type="text/javascript" src="js/libs.min.js"></script>
     <script src="js/assets/yandex.map.js" type="text/javascript"></script>

@@ -101,7 +101,7 @@ $(document).ready(function () {
         $('.js-nav-main').removeClass('is-open');
         $('.js-overlay').removeClass('is-active');
         document.documentElement.style = '';
-        event.stopPropagation();
+        e.stopPropagation();
     });
 
     
@@ -195,12 +195,6 @@ $(document).ready(function () {
     //=include partials/slider.js
 
     /*
-    * Components.js
-    */
-
-    //=include partials/components.js
-
-    /*
     * Catalog.js
     */
 
@@ -211,6 +205,12 @@ $(document).ready(function () {
     */
 
     //=include partials/card.js
+
+    /*
+    * Components.js
+    */
+
+    //=include partials/components.js
 
 });
 

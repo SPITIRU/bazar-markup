@@ -15,6 +15,7 @@ body{
 .text-number{font-family: $f2;}
 
 .preloader{
+	display: none;
 	background-color: #fff;
 	position: fixed;
 	top: 0;
@@ -22,6 +23,7 @@ body{
 	bottom: 0;
 	right: 0;
 	z-index: 10000;
+
 	&__inner{
 		display: block;
 		width: 32px;
@@ -305,13 +307,20 @@ body{
 	&__to{float: right;}//range__to
 }//range
 
+.page-title{
+	margin-bottom: $gutter;
+	font-family: $f2;
+	font-size: 19px;
+	text-transform: uppercase;
+	font-weight: 400;
+}//.page-title
+
 .tab{
 	&__titles{
-		@include clr;
 		border-bottom: 1px solid rgba(#000, .1);
+		display: flex;
 	}
 	&__title{
-		float: left;
 		padding: 5px 0;
 		text-transform: uppercase;
 		font-size: 14px;
@@ -343,6 +352,21 @@ body{
 	&__icon{
 		width: 40px;
 		height: 40px;
+		&_wrap{
+			width: 55px;
+			height: 55px;
+			margin-bottom: 10px;
+			border: 1px solid $gray--dark;
+			border-radius: 50%;	
+			@extend %flexCenter;
+			justify-content: center;				
+		}
+	}
+	&__text{
+		font-size: 12px;
+		text-align: center;
+		// @extend %flexCenter;
+
 	}
 }//.tab
 
