@@ -209,7 +209,6 @@
 		@include respond-to(xs) {
 			border-left: 0;
 			border-top: 0;
-			// box-shadow: 0 10px 20px rgba(#000, .2);
 			&:focus{
 				border-color: $color-border--light;
 			}

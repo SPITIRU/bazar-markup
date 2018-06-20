@@ -118,17 +118,7 @@
 	&-col{
 		@include respond-to(xs) {
 			margin-top: $gutter/2;
-		}	
-		// @include respond-to(sm) {
-		// 	&-sm-reverse{
-		// 		width: calc(100% - 20px);
-		// 		@include row-flex;
-		// 		.bz-grid-row-2{
-		// 			margin-top: $gutter;
-		// 			@include size(6);
-		// 		}
-		// 	}			
-		// }
+		}
 		&-sm-2{
 			@include respond-to(sm) {
 				@include size-sm(6);

@@ -104,14 +104,14 @@ if ($('.js-item-select').length > 0){
         let input = select.find('.item-select__input');
         let value = select.find('.item-select__value');
         let curentVal = parseInt(input.val());
-        var count = parseInt(input.val()) + 1 + ' ' + 'м';
+        let count = parseInt(input.val()) + 1 + ' ' + 'м';
+
+        input.removeAttr('style').val(count);
 
         if (curentVal > 0) {
-            // count = count < 1 ? 1 : count;
-            input.removeAttr('style').val(count);
             input.change();            
         } else {
-            input.val(5 + 'м');
+            input.val(1 + 'м');
         }
 
         value.children('.item-select__title').css('display', 'none');
@@ -123,15 +123,13 @@ if ($('.js-item-select').length > 0){
         let input = select.find('.item-select__input');
         let value = select.find('.item-select__value');
         let curentVal = parseInt(input.val());
-        var count = parseInt(input.val()) - 1 + ' ' + 'м';
+        let count = parseInt(input.val()) - 1 + ' ' + 'м';
 
-        if (curentVal > 6) {
+        if (curentVal > 1) {
             count = count < 1 ? 1 : count;
             input.val(count);
             input.change();    
-            select.removeClass('is-close');        
-        } else if(curentVal == 5) {
-            select.addClass('is-close');
+            select.removeClass('is-close');     
         } else {
             value.children('.item-select__title').removeAttr('style');
             input.css('display', 'none');
