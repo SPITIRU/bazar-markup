@@ -34,7 +34,7 @@ input, textarea, select {
 	}
 	@include placeholder{
 		font-family: $f-light;
-		font-size: 14px;
+		// font-size: 14px;
 		color: $color-placeholder;
 	}
 }
@@ -46,7 +46,7 @@ input, textarea, select {
 input[type='text']:focus,
 input[type='number']:focus,
 textarea:focus {
-	font-size: 16px;
+	// font-size: 16px;
 }
 
 /* disable auto-zoom on iphone input field focus */

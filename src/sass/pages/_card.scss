@@ -126,7 +126,11 @@ $card-indent: $gutter*2;
 	}//.card__title
 
 	&__item-select{
-		margin: $gutter*1.5 0;		
+		margin: $gutter*1.5 0;	
+
+		@include respond-to(xs) {
+			margin: 0 0 $gutter*1.5;	
+		}	
 	}//.card__item-select
 
 	&__price{
@@ -134,7 +138,7 @@ $card-indent: $gutter*2;
 		font-family: $f2-bold;
 		font-size: 23px;
 		@include respond-to(xs) {
-			margin-bottom: $gutter;
+			margin-bottom: $gutter/1.5;
 		}
 		span{
 			font-family: $f;
@@ -434,13 +438,17 @@ $card-indent: $gutter*2;
 }//.related
 
 .item-select{
-	height: 35px;
+	height: 36px;
 	line-height: 34px;
 	margin-top: 20px;
 	border: 1px solid $color-border;
 	border-radius: $border-radius;
 	cursor: pointer;
 	outline: none;
+
+	@include respond-to(i5) {
+		margin-top: 30px;
+	}
 
 	&:hover{
 		.item-select{
@@ -453,9 +461,26 @@ $card-indent: $gutter*2;
 	&.is-active{
 		.item-select{
 			&__value{
-				content: '\f106';
+				&::after{
+					content: '\f106';
+				}
 			}
+			&__list{display: block;}
 		}
+	}
+	&.is-close{
+		.item-select{
+			&__control{
+				&--minus{
+					color: #fff;
+					background-color: $color-accent;
+					border-color: $color-accent;
+					&::before{
+						content: '\f00d';
+					}					
+				}
+			}
+		}			
 	}
 
 	&:first-child{
@@ -463,12 +488,24 @@ $card-indent: $gutter*2;
 	}
 
 	&__group{
-		max-width: 475px;
+		max-width: 375px;
 		position: relative;
 		@extend %flexCenter;
+		@include respond-to(i5) {
+			flex-wrap: wrap;
+		}
 		.item-select{
 			width: 50%;
-			& + .item-select{margin-left: 10px;}
+			@include respond-to(i5) {
+				width: 100%;
+				position: relative;
+			}
+			& + .item-select{
+				margin-left: 10px;				
+				@include respond-to(i5) {
+					margin-left: 0;
+				}
+			}
 		}
 	}//.item-select__group
 
@@ -478,15 +515,19 @@ $card-indent: $gutter*2;
 		font-size: 13px;
 		position: absolute;
 		top: -10px;
+		@include respond-to(i5) {
+			top: -30px;
+		}
 	}//.item-select__caption
 
 	&__value{
+		height: 100%;
 		padding: 0 30px;
 		position: relative;
-		&::before{
+		&::after{
 			content: '\f107';
 			font-family: fal;
-			font-size: 20px;
+			font-size: 18px;
 			color: $gray;
 			@include vy;
 			right: 8px;
@@ -494,11 +535,26 @@ $card-indent: $gutter*2;
 		}
 	}//.item-select__value
 
+	&__input{
+		height: 36px;
+		padding: 0 10px;
+		font-size: 14px;
+		text-align: center;
+		border-top: 1px solid $color-border;
+		border-bottom: 1px solid $color-border;	
+		border-left-color: transparent;
+		border-right-color: transparent;
+		&:focus{
+			font-size: 14px;
+			border-left-color: transparent;
+			border-right-color: transparent;
+		}
+	}//.item-select__input
+
 	&__color{
 		display: block;
 		width: 15px;
 		height: 15px;
-		// border-radius: 50%;
 		@include vy;
 		left: 8px;
 	}//.item-select__color
@@ -506,65 +562,122 @@ $card-indent: $gutter*2;
 	&__title{
 		display: block;
 		width: 100%;
-		font-family: $f-medium;
+		font-family: $f;
 		font-size: 14px;
 		@include text-overflow;
+
+		&_wrap{
+			@extend %flexCenter;
+			flex: 1;
+		}
+
+		&_desc{
+			font-family: $f;
+			font-size: 13px;
+		}
 	}//.item-select__title
 
 	&__subtitle{
 		font-family: $f;
-		font-size: 13px;
-		color: #20a837;
+		font-size: 13px;		
+
+		&.stock{
+			font-family: $f-light;
+			color: #20a837;
+		}
 
 		&.ends{
+			font-family: $f-light;
 			color: #f60;
 		}
 	}//.item-select__title
 
 	&__list{
-		max-height: 250px;
+		display: none;
+		max-height: 211px;
 		background-color: #fff;
-		border: 1px solid $color-border--light;
-		// border-top-color: transparent;
+		border: 1px solid $color-border;
+		border-radius: 0 0 $border-radius $border-radius;
 		position: absolute;
 		top: 99%;
 		left: 0;
 		width: 100%;
 		z-index: z(default);
-		@include scroll;
+		@include bz-scroll;
+
+		@include respond-to(i5) {
+			left: -1px;
+			width: auto;
+			right: -1px;
+		}
 	}//.item-select__list	
 
 	&__item{
 		padding: 0 15px 0 30px;
+		border-bottom: 1px solid $color-border--light;
 		position: relative;
 		@extend %flexCenter;
+
+		&:last-child{
+			border-bottom: 0;
+		}
+
+		&:hover{
+			background-color: $color-bg--lighten;
+		}
+
+		&--header{
+			cursor: default;
+			&:hover{
+				background-color: #fff;
+			}
+			.item-select{
+				&__title{font-size: 14px;}
+				&__subtitle{
+					width: 170px;
+					font-size: 14px;
+				}
+			}
+		}
 
 		.item-select{
 			&__title{
 				width: auto;
 				flex: 1;
+
+				&_wrap{
+					.item-select__title{flex: initial;}
+				}
 			}
 		}
 	}//.item-select__item
 
 	&__control{
 		display: inline-block;
-		width: 33px;
-		height: 33px;
+		width: 36px;
+		height: 36px;
 		text-align: center;
+		border: 1px solid $color-border;
 		position: absolute;
 		top: 0;
 		bottom: 0;
 		&::before{
 			font-family: fal;
 		}
+		&:hover{
+			color: #fff;
+			background-color: $color-accent;
+			border-color: $color-accent;
+		}
 		&--minus{
+			border-radius: $border-radius 0 0 $border-radius;
 			left: 0;
 			&::before{
 				content: '\f068';
 			}
 		}
 		&--plus{
+			border-radius: 0 $border-radius $border-radius 0;
 			right: 0;		
 			&::before{
 				content: '\f067';
@@ -573,9 +686,58 @@ $card-indent: $gutter*2;
 	}//.item-select__control
 
 	&--count{
+		border: 0;
 		.item-select{
+			&__list{
+				@include respond-to(i5) {
+					left: 0;
+					right: 0;
+					top: 97%;
+				}
+			}
 			&__value{
-				&::before{display: none;}
+				padding: 0 33px;
+				text-align: center;
+				&::after{
+					right: 45px;
+				}
+				.item-select__title{
+					padding: 0 10px;
+					border-top: 1px solid $color-border;
+					border-bottom: 1px solid $color-border;					
+				}
+			}
+			&__title{
+				padding: 0 7px;
+				font-family: $f;
+				span{
+					font-size: 12px;
+				}
+			}
+			&__subtitle{
+				width: 170px;
+				font-family: $f2-bold;
+				font-size: 14px;
+				position: relative;
+
+				@include respond-to(i5) {
+					width: 130px;
+				}
+
+				span{
+					font-size: 13px;
+					color: $color-danger;
+					position: relative;
+					top: -8px;
+				}
+			}
+			&__item{
+				padding: 0 10px 0 2px;
+				&--header{
+					.item-select__subtitle{
+						font-family: $f;
+					}
+				}
 			}
 		}
 	}//.item-select--count

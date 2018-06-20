@@ -97,6 +97,9 @@ body{
 		display: inline-block;
 		margin: 45px 0;
 		position: relative;
+		@include respond-to(xs) {
+			margin: 30px 0;
+		}
 		&::before, &::after{
 			content: '';
 			height: 15px;
@@ -104,6 +107,9 @@ body{
 			position: absolute;
 			border-bottom: 1px solid $color-border--dark;
 			top: 0;
+			@include respond-to(xs) {
+				height: 12px;
+			}
 		}
 		&::before{
 			right: 100%;

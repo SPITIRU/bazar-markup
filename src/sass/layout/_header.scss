@@ -180,7 +180,10 @@
 
 .logo{
 	display: inline-block;
-	width: 150px;
+	width: 190px;
+	@include respond-to(sm) {
+		width: 165px;
+	}
 }//.logo
 
 .search{

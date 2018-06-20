@@ -112,8 +112,6 @@ if ($('.js-bz-slider--promo').length > 0) {
 //Slider Related
 if ($('.js-bz-slider--related').length > 0) {
     $('.js-bz-slider--related').slick({
-        // nextArrow: '.bz-slider-related__arrow--next',
-        // prevArrow: '.bz-slider-related__arrow--prev',
         arrows: true,
         infinite: true,
         slidesToShow: 8,

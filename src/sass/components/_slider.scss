@@ -86,9 +86,15 @@
 
 		.bz-slider{
 			&__arrow{
-				bottom: 8px;
+				bottom: 20px;
+				top: auto;
+				opacity: .6;
 				@include respond-to(xs) {
 					display: none !important;
+				}
+
+				&:hover{
+					opacity: 1;
 				}
 
 				&::before{
@@ -112,7 +118,7 @@
 
 	&--new{
 		max-width: 1070px;
-		margin: 0 auto;
+		margin: 0 auto $gutter*2;
 
 		@include respond-to(md) {
 			max-width: 848px;
@@ -120,6 +126,10 @@
 
 		@include respond-to(sm) {
 			max-width: 626px;
+		}
+
+		@include respond-to(xs) {
+			margin-bottom: $gutter;
 		}
 
 		.bz-slider{
@@ -138,6 +148,8 @@
 				margin: 0 7.5px;
 			}
 		}
+
+		.product-item--small{margin-bottom: 0;}
 	}//bb-slider--new
 
 	&--card{

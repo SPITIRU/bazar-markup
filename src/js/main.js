@@ -185,7 +185,7 @@ $(document).ready(function () {
         } else {
             $(this).removeClass('is-checked');
         } 
-        e.preventDefault()      ;
+        e.preventDefault();
     });
 
     /*
