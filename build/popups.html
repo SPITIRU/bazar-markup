@@ -59,12 +59,42 @@
               <!-- begin search -->
               <div class="search header__search js-search">
                 <form class="search__form">
-                  <input type="text" class="search__field" placeholder="Поиск...">
+                  <input type="text" class="search__field js-search-input" placeholder="Поиск по тканям..." autocomplete="off">
                   <button type="submit" class="search__btn">
                     <svg class="icon icon-search search__icon">
                       <use xlink:href="img/sprite.svg#search"></use>
                     </svg>
                   </button>
+                  <div class="search__hint" style="display: none;">
+                    <div class="search-hint search-hint--cyties">
+                      <ul class="search-hint__list">
+                        <li class="search-hint__item">
+                          <a href="#" class="search-hint__link">
+                            <span class="search-hint__bade search-hint__bade--location">Еврофатин LUXE</span>
+                            <span class="search-hint__text product-item__title">Атлас дюпон
+                              <span>white</span>
+                            </span>
+                          </a>
+                        </li>
+                        <li class="search-hint__item">
+                          <a href="#" class="search-hint__link">
+                            <span class="search-hint__bade search-hint__bade--location">Еврофатин LUXE</span>
+                            <span class="search-hint__text product-item__title">Атлас дюпон
+                              <span>white</span>
+                            </span>
+                          </a>
+                        </li>
+                        <li class="search-hint__item">
+                          <a href="#" class="search-hint__link">
+                            <span class="search-hint__bade search-hint__bade--location">Еврофатин LUXE</span>
+                            <span class="search-hint__text product-item__title">Атлас дюпон
+                              <span>white</span>
+                            </span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </form>
               </div>
               <!-- end search -->
@@ -1843,6 +1873,7 @@
     <div class="preloader"></div>
     <!-- begin scripts -->
     <script type="text/javascript" src="js/libs.min.js"></script>
+    <script type="text/javascript" src="js/del.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <!-- end scripts -->
   </body>

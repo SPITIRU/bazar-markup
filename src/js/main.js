@@ -140,6 +140,8 @@ $(document).ready(function () {
         $('.js-mobile-search--show').on('click', function() {
             if (search.hasClass('is-visible')) {
                 search.removeClass('is-visible');
+                search.find('.js-search-input').val('');
+                search.find('.search__hint').css('display', 'none');
             } else {
                search.addClass('is-visible');
             }        
@@ -149,6 +151,8 @@ $(document).ready(function () {
         $(document).click(function(event) {
             if ($(event.target).closest('.js-mobile-search--show, .js-search').length) return;
             search.removeClass('is-visible');
+            search.find('.js-search-input').val('');
+            search.find('.search__hint').css('display', 'none');
             event.stopPropagation();
         });  
     } else {
