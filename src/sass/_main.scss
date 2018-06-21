@@ -93,6 +93,14 @@ body{
 	line-height: 1;
 	overflow: hidden;
 
+	.h1{
+		margin: $gutter*2 0;
+		font-family: $f2-bold;
+		font-weight: 600;
+		font-size: 20px;
+		text-transform: uppercase;
+	}
+
 	.h2, &__text{
 		display: inline-block;
 		margin: 45px 0;

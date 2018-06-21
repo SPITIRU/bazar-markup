@@ -192,7 +192,7 @@ $card-indent: $gutter*2;
 
 			&.button--info{
 				display: inline-block;
-				margin: $card-indent auto;
+				margin: 15px auto;
 
 				@include respond-to(xs) {
 					margin: $card-indent/2 auto 0;
@@ -325,10 +325,7 @@ $card-indent: $gutter*2;
 			&__title{
 				padding-bottom: 15px;
 				&:hover{
-					.tab__icon{
-						fill: $color-accent;
-						&_wrap{border-color: $color-accent;}
-					}
+					.tab__text{color: $color-accent;}
 				}
 				&.ui-tabs-active{
 					.tab__text{color: $color-accent;}
@@ -412,9 +409,7 @@ $card-indent: $gutter*2;
 
 	&__item{}//.related__item
 
-	&__img{
-		margin-bottom: 10px;
-	}//.related__img
+	&__img{margin-bottom: 10px;}//.related__img
 
 	&__desc{}//.related__desc
 
@@ -468,6 +463,7 @@ $card-indent: $gutter*2;
 			&__list{display: block;}
 		}
 	}
+	
 	&.is-close{
 		.item-select{
 			&__control{
@@ -481,10 +477,6 @@ $card-indent: $gutter*2;
 				}
 			}
 		}			
-	}
-
-	&:first-child{
-		.item-select__caption{}
 	}
 
 	&__group{
@@ -632,7 +624,10 @@ $card-indent: $gutter*2;
 				background-color: #fff;
 			}
 			.item-select{
-				&__title{font-size: 14px;}
+				&__title{
+					font-size: 14px;
+					@include nosel;
+				}
 				&__subtitle{
 					width: 170px;
 					font-size: 14px;

@@ -27,10 +27,10 @@
 		}
 		&--#{$theme}:hover,
 		&--#{$theme}:focus{
-			background-color: lighten($color, 11%);
+			background-color: lighten($color, 6%);
 		}
 		&--#{$theme}:active, {
-			background-color: lighten($color, 8%);
+			background-color: lighten($color, 4%);
 		}
 	}
 

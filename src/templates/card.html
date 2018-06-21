@@ -19,21 +19,6 @@ productDesc:
  - title: Артикул
    desc: ас06
 
-related:
- - icon: cloth
-   title: Ткани
-   tabs: 1
-   class: active
- - icon: thread
-   title: Нитки
-   tabs: 2
- - icon: zipper
-   title: Молнии
-   tabs: 3
- - icon: tapes
-   title: Резинки
-   tabs: 4
-
 ---
 
 {% extends "layouts/_layout.html" %}
@@ -203,22 +188,40 @@ related:
 
 			<div class="tab js-card-tab-related">
 				<ul class="tab__titles">
-					{% for item in related %}
 					<li class="tab__title">
-						<a class="tab__link" href="#related-tabs-{{ item.tabs }}">
+						<a class="tab__link" href="#related-tabs-1">
 							<span class="tab__icon_wrap">
-								<svg class="icon icon-tapes tab__icon">
-									<use xlink:href="img/sprite.svg#{{ item.icon }}"></use>
-								</svg>
+								{{ mixin.icon('cloth', 'tab__icon') }}
 							</span>
-							<span class="tab__text">{{ item.title }}</span>
+							<span class="tab__text">Ткани</span>
 						</a>
 					</li>
-					{% endfor %}﻿
 					<li class="tab__title">
-						<a class="tab__link" href="#related-tabs-5">
+						<a class="tab__link" href="#related-tabs-2">
+							<span class="tab__icon_wrap">
+								<img class="tab__icon" src="img/general/thread.svg" alt="Нитки">
+							</span>
+							<span class="tab__text">Нитки</span>
+						</a>
+					</li>
+					<li class="tab__title">
+						<a class="tab__link" href="#related-tabs-3">
 							<span class="tab__icon_wrap">{{mixin.icon('button', 'tab__icon')}}</span>
 							<span class="tab__text">Пуговицы <br>и кнопки</span>
+						</a>
+					</li>
+					<li class="tab__title">
+						<a class="tab__link" href="#related-tabs-4">
+							<span class="tab__icon_wrap">{{mixin.icon('zipper', 'tab__icon')}}</span>
+							<span class="tab__text">Молнии</span>
+						</a>
+					</li>
+					<li class="tab__title">
+						<a class="tab__link" href="#related-tabs-5">
+							<span class="tab__icon_wrap">
+								<img class="tab__icon" src="img/general/elastic.svg" alt="Резинки">
+							</span>
+							<span class="tab__text">Резинки</span>
 						</a>
 					</li>
 					<li class="tab__title">

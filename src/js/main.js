@@ -52,7 +52,13 @@ $(document).ready(function () {
         $('html, body').animate({scrollTop: 0}, 800);
     });
 
-
+    //Click event to scroll to section whith id like href    
+    $('.js-goto').click(function () {
+        var elementClick = $(this).attr("href");
+        var destination = $(elementClick).offset().top;
+        $('html, body').animate({scrollTop: destination - 90 + 'px'}, 300);
+        return false;
+    });
     $(window).scroll(function(){    
         if ($(this).scrollTop() > $(this).height()) {
             $('.js-go-top').addClass('is-visible');
@@ -65,14 +71,6 @@ $(document).ready(function () {
             $('.js-go-top').removeClass('is-visible');
             $('.js-go-top').removeAttr('style');
         }
-    });
-
-    //Click event to scroll to section whith id like href    
-    $('.js-goto').click(function () {
-        var elementClick = $(this).attr("href");
-        var destination = $(elementClick).offset().top;
-        $('html, body').animate({scrollTop: destination - 90 + 'px'}, 300);
-        return false;
     });
 
     //Stop drag

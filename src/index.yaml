@@ -12,6 +12,10 @@ PageList:
 - file: card.html
   ready: 50
   desc : Подробная карточа
+  
+- file: cart.html
+  ready: 50
+  desc : Корзина
 
 - file: contacts.html
   ready: 50

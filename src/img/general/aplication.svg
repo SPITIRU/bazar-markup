@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X7 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="42.3333mm" height="42.3333mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 42333 42333"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:#565656;stroke-width:1270;stroke-linecap:round;stroke-linejoin:round}
+    .str1 {stroke:#565656;stroke-width:1270;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1270.003000 3810.009000}
+    .fil0 {fill:none}
+   ]]>
+  </style>
+ </defs>
+ <g id="Слой_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_3255725272032">
+   <polygon class="fil0" points="0,0 42333,0 42333,42333 0,42333 "/>
+   <path class="fil0 str0" d="M21541 5064c2992,0 5581,1729 6822,4242 53,-1 107,-2 160,-2 4201,0 7606,3405 7606,7606 0,1651 -526,3179 -1420,4426 894,1247 1420,2775 1420,4427 0,4200 -3405,7606 -7606,7606 -112,0 -224,-3 -335,-8 -1299,2331 -3789,3908 -6647,3908 -2885,0 -5394,-1606 -6684,-3972 -342,47 -692,72 -1047,72 -4201,0 -7606,-3406 -7606,-7606 0,-1652 526,-3180 1420,-4427 -894,-1247 -1420,-2775 -1420,-4426 0,-4201 3405,-7606 7606,-7606 299,0 594,17 884,51 1232,-2540 3835,-4291 6847,-4291z"/>
+   <path class="fil0 str1" d="M32366 19656c577,-805 880,-1756 880,-2746 0,-2610 -2113,-4723 -4723,-4723 -35,0 -70,1 -105,1l-1829 35 -811 -1640c-798,-1615 -2435,-2636 -4237,-2636 -1814,0 -3462,1035 -4253,2666l-894 1842 -2033 -236c-183,-21 -367,-32 -551,-32 -2609,0 -4723,2113 -4723,4723 0,990 304,1941 881,2746l1204 1680 -1204 1680c-577,805 -881,1756 -881,2747 0,2609 2114,4723 4723,4723 219,0 438,-16 655,-46l1972 -270 952 1747c829,1521 2414,2469 4152,2469 1721,0 3293,-930 4129,-2429l866 -1553 1777 77c70,3 140,5 210,5 2610,0 4723,-2114 4723,-4723 0,-991 -303,-1942 -880,-2747l-1204 -1680 1204 -1680z"/>
+  </g>
+ </g>
+</svg>
