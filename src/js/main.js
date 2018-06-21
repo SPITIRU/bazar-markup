@@ -33,12 +33,12 @@ $(document).ready(function () {
     }
 
     // //Masked inputmask https://github.com/RobinHerbots/Inputmask
-    // if ($('.js-phone-mask').length > 0) {
-    //     $('.js-phone-mask').inputmask({
-    //         mask: "+7 (999) 999-99-99",
-    //         clearIncomplete: true
-    //     })
-    // }
+    if ($('.js-phone-mask').length > 0) {
+        $('.js-phone-mask').inputmask({
+            mask: "+7 (999) 999-99-99",
+            clearIncomplete: true
+        })
+    }
 
     function mainOffset() {
         $('.main').css('padding-top', $('.header').outerHeight());

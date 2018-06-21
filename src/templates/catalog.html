@@ -57,9 +57,11 @@ changer:
 					<ul class="changer__list js-changer">
 						{% for item in changer %}
 						<li class="changer__item {{ item.class }}">
-							{{ item.title }}
-							<span class="changer__counter">{{ item.counter }}</span>
-							<div class="changer__reset"><i class="fal fa-times"></i></div>
+							<a href="#" class="changer__link">
+								{{ item.title }}
+								<span class="changer__counter">{{ item.counter }}</span>
+								<div class="changer__reset"><i class="fal fa-times"></i></div>
+							</a>
 						</li>
 						{% endfor %}﻿
 					</ul>

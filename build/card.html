@@ -2301,6 +2301,70 @@
           </div>
         </div>
       </div>
+      <!-- begin auth-form -->
+      <div class="modal fade" id="auth-form">
+        <div class="modal-dialog modal-dialog--sm" role="document">
+          <div class="modal-content">
+            <button class="close modal__btn--close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal-body">
+              <div class="form">
+                <div class="form__header">
+                  <div class="form__title">Вход или регистрация</div>
+                </div>
+                <div class="form__inner">
+                  <form class="auth-form">
+                    <div class="input input--email form__input">
+                      <input type='email' class="input__field" placeholder="Введите e-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                      <span class="input__error">*Какая-то ошибочка вышла</span>
+                    </div>
+                    <div class="input input--password form__input">
+                      <input type='password' class="input__field" placeholder="Введите пароль">
+                      <i class="input__icon fal fa-eye-slash js-input-password--show"></i>
+                      <i class="input__icon fal fa-eye js-input-password--hide" style="display: none;"></i>
+                      <span class="input__error">*Какая-то ошибочка вышла</span>
+                    </div>
+                    <div class="form__box">
+                      <label class="checkbox auth-form__rememberme">
+                        <input type="checkbox">
+                        <span class="checkbox__box"></span>
+                        <span class="checkbox__title">Запомнить меня</span>
+                      </label>
+                      <a href="recover-password.html" class="form__link form__link--recover">Забыли пароль?</a>
+                    </div>
+                    <div class="form__buttons">
+                      <button class="button button--default form__btn">Войти</button>
+                    </div>
+                    <div class="section-header form__devider">
+                      <span class="section-header__text">или войдите через</span>
+                    </div>
+                    <div class="social form__social">
+                      <ul class="social__list">
+                        <li class="social__item">
+                          <a href="#" class="social__link social__link--vk"></a>
+                        </li>
+                        <li class="social__item">
+                          <a href="#" class="social__link social__link--ok"></a>
+                        </li>
+                        <li class="social__item">
+                          <a href="#" class="social__link social__link--inst"></a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="form-success">
+                      <div class="form-success__center">
+                        <h3 class="form-success__title">Спасибо за регистрацию!</h3>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end auth-form -->
       <!-- begin change-city -->
       <div class="modal fade change-city" id="change-city">
         <div class="modal-dialog modal-dialog--md">
@@ -2381,70 +2445,6 @@
         </div>
       </div>
       <!-- end change-city -->
-      <!-- begin auth-form -->
-      <div class="modal fade" id="auth-form">
-        <div class="modal-dialog modal-dialog--sm" role="document">
-          <div class="modal-content">
-            <button class="close modal__btn--close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-            <div class="modal-body">
-              <div class="form">
-                <div class="form__header">
-                  <div class="form__title">Вход или регистрация</div>
-                </div>
-                <div class="form__inner">
-                  <form class="auth-form">
-                    <div class="input input--email form__input">
-                      <input type='email' class="input__field" placeholder="Введите e-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
-                      <span class="input__error">*Какая-то ошибочка вышла</span>
-                    </div>
-                    <div class="input input--password form__input">
-                      <input type='password' class="input__field" placeholder="Введите пароль">
-                      <i class="input__icon fal fa-eye-slash js-input-password--show"></i>
-                      <i class="input__icon fal fa-eye js-input-password--hide" style="display: none;"></i>
-                      <span class="input__error">*Какая-то ошибочка вышла</span>
-                    </div>
-                    <div class="form__box">
-                      <label class="checkbox auth-form__rememberme">
-                        <input type="checkbox">
-                        <span class="checkbox__box"></span>
-                        <span class="checkbox__title">Запомнить меня</span>
-                      </label>
-                      <a href="recover-password.html" class="form__link form__link--recover">Забыли пароль?</a>
-                    </div>
-                    <div class="form__buttons">
-                      <button class="button button--default form__btn">Войти</button>
-                    </div>
-                    <div class="section-header form__devider">
-                      <span class="section-header__text">или войдите через</span>
-                    </div>
-                    <div class="social form__social">
-                      <ul class="social__list">
-                        <li class="social__item">
-                          <a href="#" class="social__link social__link--vk"></a>
-                        </li>
-                        <li class="social__item">
-                          <a href="#" class="social__link social__link--ok"></a>
-                        </li>
-                        <li class="social__item">
-                          <a href="#" class="social__link social__link--inst"></a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="form-success">
-                      <div class="form-success__center">
-                        <h3 class="form-success__title">Спасибо за регистрацию!</h3>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- end auth-form -->
     </div>
     <!-- end windows -->
     <div class="go-top js-go-top">Наверх</div>

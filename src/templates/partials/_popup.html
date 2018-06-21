@@ -18,37 +18,6 @@
 	</div>
 </div>
 
-<!-- begin change-city -->
-<div class="modal fade change-city" id="change-city">
-	<div class="modal-dialog modal-dialog--md">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h5 class="modal-title">Выберите город</h5>
-				<button class="close modal__btn--close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-			</div>
-			<div class="modal-body">
-				<div class="change-city__title">Россия</div>
-				<div class="change-city__in">
-					<ul class="change-city__list">
-						{% import "data/data.html" as cities %}		
-						{% for item in cities.cityList %}					
-							<li class="change-city__item">{{ item.city }}</li>									
-						{% endfor %}
-					</ul>	
-				</div>
-				<ul class="change-city__list change-city__list_country">			
-					<li class="change-city__item change-city__item--belarus">Белоруссия</li>	
-					<li class="change-city__item change-city__item--ukraine">Украина</li>	
-					<li class="change-city__item change-city__item--kaz">Казахстан</li>	
-				</ul>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- end change-city -->
-
 <!-- begin auth-form -->
 <div class="modal fade" id="auth-form">
 	<div class="modal-dialog modal-dialog--sm" role="document">
@@ -110,3 +79,34 @@
 	</div>
 </div>
 <!-- end auth-form -->
+
+<!-- begin change-city -->
+<div class="modal fade change-city" id="change-city">
+	<div class="modal-dialog modal-dialog--md">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Выберите город</h5>
+				<button class="close modal__btn--close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="change-city__title">Россия</div>
+				<div class="change-city__in">
+					<ul class="change-city__list">
+						{% import "data/data.html" as cities %}		
+						{% for item in cities.cityList %}					
+							<li class="change-city__item">{{ item.city }}</li>									
+						{% endfor %}
+					</ul>	
+				</div>
+				<ul class="change-city__list change-city__list_country">			
+					<li class="change-city__item change-city__item--belarus">Белоруссия</li>	
+					<li class="change-city__item change-city__item--ukraine">Украина</li>	
+					<li class="change-city__item change-city__item--kaz">Казахстан</li>	
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end change-city -->

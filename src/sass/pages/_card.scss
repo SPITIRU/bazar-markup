@@ -303,7 +303,12 @@ $card-indent: $gutter*2;
 		}
 	}
 
-	&__info{}//.card__info
+	&__info{
+		max-width: 375px;
+		.tab{
+			&__titles{display: flex;}
+		}
+	}//.card__info
 
 	&__related, &__colors{
 		margin-bottom: $card-indent;
@@ -748,7 +753,7 @@ $card-indent: $gutter*2;
 	}//bz-table__item
 
 	&__subitem{
-		min-width: 320px;
+		min-width: 285px;
 		width: 215px;
 		font-size: 15px;
 		color: $color-text;

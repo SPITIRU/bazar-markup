@@ -16,6 +16,10 @@ PageList:
 - file: cart.html
   ready: 50
   desc : Корзина
+  
+- file: cart-order.html
+  ready: 50
+  desc : Корзина оформление заказа
 
 - file: contacts.html
   ready: 50

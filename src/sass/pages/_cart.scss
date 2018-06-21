@@ -10,17 +10,78 @@
 	}//.cart__items
 
 	&__item{
+		margin-bottom: $gutter;
 		padding: $gutter;
+		&:last-child{
+			margin-bottom: 0;
+		}
 	}//.cart__item
 
 	&__box{
 		@extend %flexCenter;
 		justify-content: space-between;
-	}
+	}//.cart__box
 
 	&__btn{
-		// height: 45px;
-		// line-height: 44px;
 		font-size: 15px;
-	}
+	}//.cart__btn
+
+	&__sum{
+		font-family: $f-bold;
+		font-size: 14px;
+
+		&_sale{
+			span{
+				font-family: $f2-bold;
+				font-size: 18px;
+				color: $color-accent;
+			}			
+		}
+
+		&_current{
+			font-size: 17px;
+			@extend .cart__sum_sale;
+			span{font-size: 20px;}
+		}
+	}//.cart__sum
+
+	&__policy{
+		margin-bottom: $gutter;
+	}//.cart__policy
+
+	&__form{
+		margin-top: $gutter*2.5;
+
+		.form{
+			&__inner{
+				@include row-flex;
+			}
+			&__box{
+				margin-bottom: 0;
+				@include col;
+				@include size(4);
+
+				&--wide{
+					flex-direction: column;
+
+					.form__input{
+						width: 100%;
+					}
+				}
+
+				.form__box{
+					width: 100%;
+					margin-bottom: 0;
+					.form__input{
+						&:last-child{
+							width: 50%;
+						}
+						& + .form__input{
+							margin-left: $gutter;
+						}						
+					}
+				}
+			}
+		}
+	}//.cart__form
 }//.cart

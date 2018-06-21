@@ -1,0 +1,130 @@
+---
+title: Корзина
+wrapperClass: page-cart
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+<!-- begin home cart -->
+<main class="main cart cart--order">
+
+	<div class="container">
+
+		<div class="section-header cart__title">
+			<h1 class="h1">Оформление заказа</h1>
+		</div>
+
+		<!-- begin cart__wrap -->
+		<div class="cart__wrap">
+
+			<div class="form cart__form">
+				<form class="cart-form">
+					<div class="form__inner">
+
+						<div class="form__box form__box--wide">
+							<div class="input form__input">
+								<input 
+								type='text'
+								class="input__field"
+								placeholder="Имя">
+								<span class="input__error">*Какая-то ошибочка вышла</span>
+							</div>
+							<div class="input form__input">
+								<input 
+								type='text'
+								class="input__field"
+								placeholder="Фамилия">
+								<span class="input__error">*Какая-то ошибочка вышла</span>
+							</div>
+						</div>
+
+						<div class="form__box form__box--wide">
+							<div class="input form__input">
+								<input 
+								type='phone'
+								class="input__field js-phone-mask"
+								placeholder="Телефон">
+								<span class="input__error">*Какая-то ошибочка вышла</span>
+							</div>
+							<div class="input form__input">
+								<input 
+								type='email'
+								class="input__field"
+								placeholder="E-mail"
+								pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+								<span class="input__error">*Какая-то ошибочка вышла</span>
+							</div>
+						</div>
+
+						<div class="form__box form__box--wide">
+							<div class="form__box">
+								<div class="input form__input">
+									<input 
+									type='text'
+									class="input__field"
+									placeholder="Город">
+									<span class="input__error">*Какая-то ошибочка вышла</span>
+								</div>
+								<div class="input form__input">
+									<input 
+									type='text'
+									class="input__field"
+									placeholder="Индекс">
+									<span class="input__error">*Какая-то ошибочка вышла</span>
+								</div>
+							</div>
+							
+							<div class="form__box">
+								<div class="input form__input">
+									<input 
+									type='text'
+									class="input__field"
+									placeholder="Улица">
+									<span class="input__error">*Какая-то ошибочка вышла</span>
+								</div>
+								<div class="input form__input">
+									<input 
+									type='text'
+									class="input__field"
+									placeholder="Дом/корпус">
+									<span class="input__error">*Какая-то ошибочка вышла</span>
+								</div>
+							</div>
+						</div>
+
+						
+
+						<div class="form-success">
+							<div class="form-success__center">
+								<h3 class="form-success__title">Спасибо за регистрацию!</h3>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="policy cart__policy">
+						{{ item.checkbox('Я соглалашаюсь', 'form__checkbox') }}
+						на обработку персональных данных в соответствии с <a href="#" target="_blank">Условиями пользовательского соглашения</a>.
+					</div>	
+
+					<div class="cart__box">
+						<div class="cart__sum">
+							<div class="cart__sum_sale">Сумма скидки: <span>10533,75 руб.</span></div>
+							<div class="cart__sum_current">Итого к оплате: <span>33641,25 руб.</span></div>
+						</div>
+						<button class="button button--default cart__btn">Продолжить</button>
+					</div>
+
+				</form>
+			</div>
+			
+		</div>
+		<!-- end cart__wrap -->
+
+	</div>
+
+</main>	
+<!-- end home cart -->
+
+{% endblock %}

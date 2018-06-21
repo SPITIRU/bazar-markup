@@ -19,6 +19,7 @@ wrapperClass: page-cart
 		<div class="cart__wrap">
 
 			<div class="cart__items">
+				{% for i in range(0, 2) %}
 				<div class="product-item product-item--wide cart__item" itemscope itemtype="http://schema.org/Product">
 					<div class="product-item__img">
 						<img src="img/products/atlas/small/1.png" alt="Атлас дюпон" itemprop="image">
@@ -83,12 +84,13 @@ wrapperClass: page-cart
 						</div>
 					</div>
 				</div>
+				{% endfor %}﻿
 			</div>
 
 			<div class="cart__box">
 				<div class="cart__sum">
-					<div class="cart__sum_sale">Сумма скидки: 10533,75 руб.</div>
-					<div class="cart__sum_current">Итого к оплате: 33641,25 руб.</div>
+					<div class="cart__sum_sale">Сумма скидки: <span>10533,75 руб.</span></div>
+					<div class="cart__sum_current">Итого к оплате: <span>33641,25 руб.</span></div>
 				</div>
 				<button class="button button--default cart__btn">Продолжить</button>
 			</div>
