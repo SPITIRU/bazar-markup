@@ -51,6 +51,7 @@
 		border-bottom: 1px dashed $color-border;
 		@extend %flexCenter;
 		@include respond-to(xs) {
+			margin-bottom: $gutter;
 			padding: 15px 0;
 			position: relative;
 			justify-content: center;
@@ -82,7 +83,12 @@
 		}
 	}//.catalog__sorting
 
-	&__changer{margin-bottom: 30px;}//.catalog__changer
+	&__changer{
+		margin-bottom: 30px;
+		@include respond-to(xs) {
+			margin-bottom: $gutter/2;
+		}
+	}//.catalog__changer
 
 	&__back{
 		padding: 0 10px;

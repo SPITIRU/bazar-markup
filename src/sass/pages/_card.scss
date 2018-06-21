@@ -199,7 +199,7 @@ $card-indent: $gutter*2;
 				}
 
 				&::before, &::after{
-					margin-left: 20px;
+					margin-left: 15px;
 					border-color: darken($color-info, 15%);
 					@include tr;
 				}

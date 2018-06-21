@@ -120,7 +120,7 @@
                     </a>
                   </li>
                   <li class="user-nav__item user-nav__item--cart" data-cart-counter="8">
-                    <a href="#" class="user-nav__link">
+                    <a href="cart.html" class="user-nav__link">
                       <i class="fal fa-shopping-cart user-nav__icon"></i>
                       <span class="user-nav__text">Корзина</span>
                     </a>
@@ -1574,7 +1574,7 @@
             <h1 class="h1">Корзина</h1>
           </div>
           <!-- begin cart__wrap -->
-          <div class="cart__wrap">
+          <div class="cart__wrap" style="display: none;">
             <div class="cart__items">
               <div class="product-item product-item--wide cart__item" itemscope itemtype="http://schema.org/Product">
                 <div class="product-item__img">
@@ -1701,6 +1701,12 @@
             </div>
           </div>
           <!-- end cart__wrap -->
+          <!-- begin cart__empty -->
+          <div class="cart__empty">
+            <p>Ваша корзина пуста.</p>
+            <a href="#" class="button button--transparent button--info card__btn--back">Вернуться к покупкам</a>
+          </div>
+          <!-- end cart__empty -->
         </div>
       </main>
       <!-- end home cart -->

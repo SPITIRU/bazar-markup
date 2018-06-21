@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Template</title>
+    <title>Контакты</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -18,7 +18,7 @@
     <link rel="stylesheet" media="all" href="css/app.css"> </head>
   <body class="loading" itemscope="itemscope" itemtype="http://schema.org/WebPage">
     <!-- begin wrapper -->
-    <div class="wrapper ">
+    <div class="wrapper page-contacts">
       <!-- begin header -->
       <header class="header " itemscope itemtype="http://schema.org/WPHeader">
         <!-- begin header__top-line -->
@@ -120,7 +120,7 @@
                     </a>
                   </li>
                   <li class="user-nav__item user-nav__item--cart" data-cart-counter="8">
-                    <a href="#" class="user-nav__link">
+                    <a href="cart.html" class="user-nav__link">
                       <i class="fal fa-shopping-cart user-nav__icon"></i>
                       <span class="user-nav__text">Корзина</span>
                     </a>
@@ -1567,9 +1567,44 @@
         </div>
       </header>
       <!-- end header -->
-      <!-- begin home -->
-      <main class="main home"> </main>
-      <!-- end home -->
+      <!-- begin home contacts -->
+      <main class="main contacts">
+        <div class="container">
+          <div class="contacts__wrap">
+            <div class="contacts__map">
+              <div class="contacts-map" id="contacts-map"></div>
+            </div>
+            <div class="contacts__text">
+              <h1 class="h1 contacts__title">Контакты</h1>
+              <div class="contacts-box__wrap">
+                <div class="contacts__box contacts-box">
+                  <span class="contacts-box__title ">
+                    <i class="fal fa-phone contacts-box__icon"></i>Телефоны</span>
+                  <div class="contacts-box__item">
+                    <a href="tel:88007078630" class="contacts-box__link">8 800 707-86-30</a>
+                    <a href="tel:79372531125" class="contacts-box__link">7 937 253-11-25</a>
+                  </div>
+                </div>
+                <div class="contacts__box contacts-box">
+                  <span class="contacts-box__title">
+                    <i class="fal fa-envelope contacts-box__icon"></i>E-mail</span>
+                  <div class="contacts-box__item">
+                    <a href="mailto:info@yandex.ru" class="contacts-box__link">info@yandex.ru</a>
+                  </div>
+                </div>
+                <div class="contacts__box contacts-box">
+                  <span class="contacts-box__title">
+                    <i class="fal fa-map-marker-alt contacts-box__icon"></i>Адрес:</span>
+                  <div class="contacts-box__item">
+                    <span class="contacts-box__link">г.Москва ул.Чехова, 55</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- end home contacts -->
       <!-- begin footer -->
       <footer class="footer js-footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
         <div class="container">
@@ -1839,8 +1874,8 @@
     <div class="preloader"></div>
     <!-- begin scripts -->
     <script type="text/javascript" src="js/libs.min.js"></script>
-    <script type="text/javascript" src="js/del.js"></script>
     <script src="js/assets/yandex.map.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/del.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <!-- end scripts -->
   </body>

@@ -20,6 +20,10 @@ PageList:
 - file: cart-order.html
   ready: 50
   desc : Корзина оформление заказа
+  
+- file: cart-success.html
+  ready: 50
+  desc : Корзина триумф
 
 - file: contacts.html
   ready: 50

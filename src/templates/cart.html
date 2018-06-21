@@ -16,7 +16,7 @@ wrapperClass: page-cart
 		</div>
 
 		<!-- begin cart__wrap -->
-		<div class="cart__wrap">
+		<div class="cart__wrap" style="display: none;">
 
 			<div class="cart__items">
 				{% for i in range(0, 2) %}
@@ -88,6 +88,13 @@ wrapperClass: page-cart
 			
 		</div>
 		<!-- end cart__wrap -->
+
+		<!-- begin cart__empty -->
+		<div class="cart__empty">
+			<p>Ваша корзина пуста.</p>
+			<a href="#" class="button button--transparent button--info card__btn--back">Вернуться к покупкам</a>
+		</div>
+		<!-- end cart__empty -->
 
 	</div>
 
