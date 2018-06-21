@@ -99,6 +99,9 @@ body{
 		font-weight: 600;
 		font-size: 20px;
 		text-transform: uppercase;
+		@include respond-to(xs) {
+			margin: $gutter 0;
+		}
 	}
 
 	.h2, &__text{

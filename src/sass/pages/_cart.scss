@@ -1,4 +1,5 @@
 .cart{
+	padding-bottom: $gutter*2;
 	border-top: 1px solid $color-border--light;
 
 	&__title, &__item{
@@ -12,6 +13,10 @@
 	&__item{
 		margin-bottom: $gutter;
 		padding: $gutter;
+		@include respond-to(xs) {
+			padding: $gutter 0;
+			margin-bottom: 0;
+		}
 		&:last-child{
 			margin-bottom: 0;
 		}
@@ -20,15 +25,30 @@
 	&__box{
 		@extend %flexCenter;
 		justify-content: space-between;
+		@include respond-to(xs) {
+			flex-wrap: wrap;
+		}
 	}//.cart__box
 
 	&__btn{
 		font-size: 15px;
+
+		@include respond-to(xs) {
+			width: 100%;
+			height: 45px;
+			line-height: 44px;
+			font-size: 16px;
+		}
 	}//.cart__btn
 
 	&__sum{
 		font-family: $f-bold;
 		font-size: 14px;
+
+		@include respond-to(xs) {
+			width: 100%;
+			margin-bottom: $gutter;
+		}
 
 		&_sale{
 			span{
@@ -52,14 +72,25 @@
 	&__form{
 		margin-top: $gutter*2.5;
 
+		@include respond-to(xs) {
+			margin-top: $gutter*1.5;
+		}
+
 		.form{
 			&__inner{
 				@include row-flex;
+				& > .form__box{
+					&:last-child{
+						@include size-sm(12);
+					}
+				}
 			}
 			&__box{
 				margin-bottom: 0;
 				@include col;
 				@include size(4);
+				@include size-md(6);
+				@include size-xs(12);
 
 				&--wide{
 					flex-direction: column;
@@ -75,9 +106,15 @@
 					.form__input{
 						&:last-child{
 							width: 50%;
+							@include respond-to(xs) {
+								width: 55%;
+							}
 						}
 						& + .form__input{
 							margin-left: $gutter;
+							@include respond-to(xs) {
+								margin-left: $gutter/2;
+							}
 						}						
 					}
 				}
