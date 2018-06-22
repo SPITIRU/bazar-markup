@@ -26,6 +26,17 @@
 	}//.lk__content
 
 	&__nav{}//.lk__nav
+
+	&__empty {
+		margin-left: -330px;
+		@include respond-to(md) {
+			margin-left: -215px;
+		}
+		@include respond-to(sm) {
+			padding: 0;
+			margin-left: 0;
+		}
+	}//.lk__empty
 }//.lk
 
 .lk-nav{

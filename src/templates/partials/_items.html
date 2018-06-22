@@ -9,13 +9,9 @@
 
 {% macro btn(title, class) %}
 <button class="button {{ class }}">{{ title }}</button>
-{% endmacro %}
-
-{% macro btnLink(title, class, href="#") %}
+{% endmacro %} {% macro btnLink(title, class, href="#") %}
 <a {{ href }} class="button {{ class }}">{{ title }}</a>
-{% endmacro %}
-
-{% macro checkbox(title, class) %}
+{% endmacro %} {% macro checkbox(title, class) %}
 <label class="checkbox {{class}}">
 	<input type="checkbox">
 	<span class="checkbox__box"></span>
@@ -43,9 +39,10 @@
 
 {% macro policy(class) %}
 <div class="policy js-policy {{class}}">
-	Заполняя форму, Вы соглашаетесь на обработку персональных данных в соответствии с <a href="#" target="_blank">Условиями пользовательского соглашения</a>.
+	Заполняя форму, Вы соглашаетесь на обработку персональных данных в соответствии с
+	<a href="#" target="_blank">Условиями пользовательского соглашения</a>.
 </div>
-{% endmacro %}
+{% endmacro %} 
 
 {% macro social(class) %}
 <div class="social {{ class }}">
@@ -61,7 +58,7 @@
 		</li>
 	</ul>
 </div>
-{% endmacro %}
+{% endmacro %} 
 
 {% macro starRating() %}
 <div class="star-rating">
@@ -78,7 +75,7 @@
 		<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-1" title="1 из 5"></label>
 	</div>
 </div>
-{% endmacro %}
+{% endmacro %} 
 
 {% macro productItem(class) %}
 <a href="#" class="product-item js-product-item" itemscope itemtype="http://schema.org/Product">
@@ -88,14 +85,16 @@
 	</div>
 	<div class="product-item__desc">
 		<div class="product-item__box">
-			<h5 class="h5 product-item__title" itemprop="name">Атлас дюпон <span>white</span></h5>
+			<h5 class="h5 product-item__title" itemprop="name">Атлас дюпон
+				<span>white</span>
+			</h5>
 			<span class="product-item__articul">ам07</span>
 		</div>
 		<div class="product-item__box">
 			<div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 				<meta itemprop="price" content="300.00">
-				<meta itemprop="priceCurrency" content="RUB" />
-				300 <i class="fal fa-ruble-sign"></i>
+				<meta itemprop="priceCurrency" content="RUB" /> 300
+				<i class="fal fa-ruble-sign"></i>
 			</div>
 			<div class="product-item__color-count color-count">18 цветов</div>
 		</div>
@@ -111,7 +110,7 @@
 					<li class="color__item" data-color="img/products/atlas/3.png">
 						<img class="color__img" src="img/products/atlas/colors/3.png" alt="alt">
 					</li>
-					<li class="color__item"  data-color="img/products/atlas/4.png">
+					<li class="color__item" data-color="img/products/atlas/4.png">
 						<img class="color__img" src="img/products/atlas/colors/4.png" alt="alt">
 					</li>
 				</ul>
@@ -120,11 +119,11 @@
 			<button class="button button--transparent button--muted product-item__btn">Добавить в корзину</button>
 
 			<button class="button button--transparent button--default product-item__btn">Подробнее</button>
-		
+
 		</div>
 	</div>
 </a>
-{% endmacro %}
+{% endmacro %} 
 
 {% macro productItemSmall(class) %}
 <a href="#" class="product-item product-item--small" itemscope itemtype="http://schema.org/Product">
@@ -132,15 +131,17 @@
 		<img src="img/products/atlas/small/1.png" alt="Атлас дюпон" itemprop="image">
 	</div>
 	<div class="product-item__desc">
-		<h5 class="h5 product-item__title" itemprop="name">Атлас дюпон <span>white</span></h5>
+		<h5 class="h5 product-item__title" itemprop="name">Атлас дюпон
+			<span>white</span>
+		</h5>
 		<div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 			<meta itemprop="price" content="300.00">
-			<meta itemprop="priceCurrency" content="RUB" />
-			300 <i class="rub">руб.</i>
+			<meta itemprop="priceCurrency" content="RUB" /> 300
+			<i class="rub">руб.</i>
 		</div>
 	</div>
 </a>
-{% endmacro %}
+{% endmacro %} 
 
 {% macro productItemColor(class) %}
 <a href="#" class="product-item product-item--small product-item--color" itemscope itemtype="http://schema.org/Product">
@@ -151,4 +152,35 @@
 		<h5 class="h5 product-item__title" itemprop="name">Черный</h5>
 	</div>
 </a>
+{% endmacro %}
+
+{% macro lkSidebar(class) %}
+<!-- begin lk__sidebar -->
+<sidebar class="lk__sidebar">
+	<nav class="lk-nav lk__nav">
+		<ul class="lk-nav__list">
+			<li class="lk-nav__item">
+				<a href="#" class="lk-nav__link lk-nav__link--order">
+					Заказы
+				</a>
+			</li>
+			<li class="lk-nav__item">
+				<a href="#" class="lk-nav__link lk-nav__link--fav">
+					Избранное
+				</a>
+			</li>
+			<li class="lk-nav__item">
+				<a href="#" class="lk-nav__link lk-nav__link--data">
+					Личные данные
+				</a>
+			</li>
+			<li class="lk-nav__item">
+				<a href="#" class="lk-nav__link lk-nav__link--exit">
+					Выйти
+				</a>
+			</li>
+		</ul>
+	</nav>
+</sidebar>
+<!-- end lk__sidebar -->
 {% endmacro %}

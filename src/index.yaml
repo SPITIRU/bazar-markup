@@ -12,6 +12,10 @@ PageList:
 - file: card.html
   ready: 50
   desc : Подробная карточа
+
+- file: contacts.html
+  ready: 50
+  desc : Контакты
   
 - file: cart.html
   ready: 50
@@ -28,10 +32,10 @@ PageList:
 - file: lk-order.html
   ready: 50
   desc : ЛК заказы
-
-- file: contacts.html
+  
+- file: lk-favorits.html
   ready: 50
-  desc : Контакты
+  desc : ЛК избраное
 
   #404
 - file: 404.html

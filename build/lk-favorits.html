@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Личный кабинет | Заказы</title>
+    <title>Личный кабинет | Избранное</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -1595,7 +1595,7 @@
       <main class="main lk">
         <div class="container">
           <div class="section-header cart__title">
-            <h1 class="h1">Мои заказы</h1>
+            <h1 class="h1">Избранное</h1>
           </div>
           <div class="lk__wrap">
             <!-- begin lk__sidebar -->
@@ -1620,253 +1620,390 @@
             <!-- end lk__sidebar -->
             <!-- begin lk__content -->
             <div class="lk__content">
-              <div class="user-order">
-                <div class="accordeon lk__accordeon js-accordeon">
-                  <div class="accordeon__item user-order__item">
-                    <div class="accordeon__title user-order__title">
-                      <div class="user-order__box">
-                        <span class="user-order__num">Заказ
-                          <span>№018901</span>
-                        </span>
-                        <span class="user-order__date">18 апр. 2018 10:48</span>
-                      </div>
-                      <div class="user-order__box user-order__box--last">
-                        <span class="user-order__sum_title">Сумма заказа</span>
-                        <span class="user-order__sum">45 200,50 руб.</span>
-                      </div>
-                      <span class="user-order__info">подробнее</span>
+              <!-- begin product-item -->
+              <div class="product-item__wrap">
+                <a href="#" class="product-item js-product-item" itemscope itemtype="http://schema.org/Product">
+                  <div class="product-item__img">
+                    <img class="product-item__image" src="img/products/atlas/1.png" alt="Атлас дюпон" itemprop="image">
+                    <button class="button-icon button-icon--fav js-button-icon--fav product-item__fav"></button>
+                  </div>
+                  <div class="product-item__desc">
+                    <div class="product-item__box">
+                      <h5 class="h5 product-item__title" itemprop="name">Атлас дюпон
+                        <span>white</span>
+                      </h5>
+                      <span class="product-item__articul">ам07</span>
                     </div>
-                    <div class="accordeon__content user-order__content" style="display: none;">
-                      <div class="user-order-item">
-                        <div class="user-order-item__img">
-                          <img src="img/products/atlas/small/1.png" alt="Атлас дюпон"> </div>
-                        <div class="user-order-item__desc">
-                          <div class="user-order-item__left">
-                            <div class="user-order-item__title_wrap">
-                              <h5 class="h5 user-order-item__title product-item__title">
-                                <a href="#">Атлас дюпон
-                                  <span>white</span>
-                                </a>
-                              </h5>
-                              <span class="user-order-item__type">ткани</span>
-                              <span class="user-order-item__articul">ac06</span>
-                            </div>
-                          </div>
-                          <div class="user-order-item__right">
-                            <div class="user-order-item__box">
-                              <div class="user-order-item__price"> 340
-                                <span>руб./м</span> &nbsp; x &nbsp;
-                                <span class="user-order-item__count">15
-                                  <span>м (1 рул)</span>
-                                </span>
-                              </div>
-                            </div>
-                            <div class="user-order-item__box">
-                              <span class="user-order-item__sum">4 350,00
-                                <span>руб.</span>
-                              </span>
-                            </div>
-                          </div>
-                        </div>
+                    <div class="product-item__box">
+                      <div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <meta itemprop="price" content="300.00">
+                        <meta itemprop="priceCurrency" content="RUB" /> 300
+                        <i class="fal fa-ruble-sign"></i>
                       </div>
-                      <div class="user-order-item">
-                        <div class="user-order-item__img">
-                          <img src="img/products/atlas/small/1.png" alt="Атлас дюпон"> </div>
-                        <div class="user-order-item__desc">
-                          <div class="user-order-item__left">
-                            <div class="user-order-item__title_wrap">
-                              <h5 class="h5 user-order-item__title product-item__title">
-                                <a href="#">Атлас дюпон
-                                  <span>white</span>
-                                </a>
-                              </h5>
-                              <span class="user-order-item__type">ткани</span>
-                              <span class="user-order-item__articul">ac06</span>
-                            </div>
-                          </div>
-                          <div class="user-order-item__right">
-                            <div class="user-order-item__box">
-                              <div class="user-order-item__price"> 340
-                                <span>руб./м</span> &nbsp; x &nbsp;
-                                <span class="user-order-item__count">15
-                                  <span>м (1 рул)</span>
-                                </span>
-                              </div>
-                            </div>
-                            <div class="user-order-item__box">
-                              <span class="user-order-item__sum">4 350,00
-                                <span>руб.</span>
-                              </span>
-                            </div>
-                          </div>
-                        </div>
+                      <div class="product-item__color-count color-count">18 цветов</div>
+                    </div>
+                    <div class="product-item__more">
+                      <div class="product-item__color color">
+                        <ul class="color__list">
+                          <li class="color__item" data-color="img/products/atlas/1.png">
+                            <img class="color__img" src="img/products/atlas/colors/1.png" alt="alt"> </li>
+                          <li class="color__item" data-color="img/products/atlas/2.png">
+                            <img class="color__img" src="img/products/atlas/colors/2.png" alt="alt"> </li>
+                          <li class="color__item" data-color="img/products/atlas/3.png">
+                            <img class="color__img" src="img/products/atlas/colors/3.png" alt="alt"> </li>
+                          <li class="color__item" data-color="img/products/atlas/4.png">
+                            <img class="color__img" src="img/products/atlas/colors/4.png" alt="alt"> </li>
+                        </ul>
                       </div>
+                      <button class="button button--transparent button--muted product-item__btn">Добавить в корзину</button>
+                      <button class="button button--transparent button--default product-item__btn">Подробнее</button>
                     </div>
                   </div>
-                  <div class="accordeon__item user-order__item">
-                    <div class="accordeon__title user-order__title">
-                      <div class="user-order__box">
-                        <span class="user-order__num">Заказ
-                          <span>№018901</span>
-                        </span>
-                        <span class="user-order__date">18 апр. 2018 10:48</span>
-                      </div>
-                      <div class="user-order__box user-order__box--last">
-                        <span class="user-order__sum_title">Сумма заказа</span>
-                        <span class="user-order__sum">45 200,50 руб.</span>
-                      </div>
-                      <span class="user-order__info">подробнее</span>
+                </a>
+                <a href="#" class="product-item js-product-item" itemscope itemtype="http://schema.org/Product">
+                  <div class="product-item__img">
+                    <img class="product-item__image" src="img/products/atlas/1.png" alt="Атлас дюпон" itemprop="image">
+                    <button class="button-icon button-icon--fav js-button-icon--fav product-item__fav"></button>
+                  </div>
+                  <div class="product-item__desc">
+                    <div class="product-item__box">
+                      <h5 class="h5 product-item__title" itemprop="name">Атлас дюпон
+                        <span>white</span>
+                      </h5>
+                      <span class="product-item__articul">ам07</span>
                     </div>
-                    <div class="accordeon__content user-order__content" style="display: none;">
-                      <div class="user-order-item">
-                        <div class="user-order-item__img">
-                          <img src="img/products/atlas/small/1.png" alt="Атлас дюпон"> </div>
-                        <div class="user-order-item__desc">
-                          <div class="user-order-item__left">
-                            <div class="user-order-item__title_wrap">
-                              <h5 class="h5 user-order-item__title product-item__title">
-                                <a href="#">Атлас дюпон
-                                  <span>white</span>
-                                </a>
-                              </h5>
-                              <span class="user-order-item__type">ткани</span>
-                              <span class="user-order-item__articul">ac06</span>
-                            </div>
-                          </div>
-                          <div class="user-order-item__right">
-                            <div class="user-order-item__box">
-                              <div class="user-order-item__price"> 340
-                                <span>руб./м</span> &nbsp; x &nbsp;
-                                <span class="user-order-item__count">15
-                                  <span>м (1 рул)</span>
-                                </span>
-                              </div>
-                            </div>
-                            <div class="user-order-item__box">
-                              <span class="user-order-item__sum">4 350,00
-                                <span>руб.</span>
-                              </span>
-                            </div>
-                          </div>
-                        </div>
+                    <div class="product-item__box">
+                      <div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <meta itemprop="price" content="300.00">
+                        <meta itemprop="priceCurrency" content="RUB" /> 300
+                        <i class="fal fa-ruble-sign"></i>
                       </div>
-                      <div class="user-order-item">
-                        <div class="user-order-item__img">
-                          <img src="img/products/atlas/small/1.png" alt="Атлас дюпон"> </div>
-                        <div class="user-order-item__desc">
-                          <div class="user-order-item__left">
-                            <div class="user-order-item__title_wrap">
-                              <h5 class="h5 user-order-item__title product-item__title">
-                                <a href="#">Атлас дюпон
-                                  <span>white</span>
-                                </a>
-                              </h5>
-                              <span class="user-order-item__type">ткани</span>
-                              <span class="user-order-item__articul">ac06</span>
-                            </div>
-                          </div>
-                          <div class="user-order-item__right">
-                            <div class="user-order-item__box">
-                              <div class="user-order-item__price"> 340
-                                <span>руб./м</span> &nbsp; x &nbsp;
-                                <span class="user-order-item__count">15
-                                  <span>м (1 рул)</span>
-                                </span>
-                              </div>
-                            </div>
-                            <div class="user-order-item__box">
-                              <span class="user-order-item__sum">4 350,00
-                                <span>руб.</span>
-                              </span>
-                            </div>
-                          </div>
-                        </div>
+                      <div class="product-item__color-count color-count">18 цветов</div>
+                    </div>
+                    <div class="product-item__more">
+                      <div class="product-item__color color">
+                        <ul class="color__list">
+                          <li class="color__item" data-color="img/products/atlas/1.png">
+                            <img class="color__img" src="img/products/atlas/colors/1.png" alt="alt"> </li>
+                          <li class="color__item" data-color="img/products/atlas/2.png">
+                            <img class="color__img" src="img/products/atlas/colors/2.png" alt="alt"> </li>
+                          <li class="color__item" data-color="img/products/atlas/3.png">
+                            <img class="color__img" src="img/products/atlas/colors/3.png" alt="alt"> </li>
+                          <li class="color__item" data-color="img/products/atlas/4.png">
+                            <img class="color__img" src="img/products/atlas/colors/4.png" alt="alt"> </li>
+                        </ul>
                       </div>
+                      <button class="button button--transparent button--muted product-item__btn">Добавить в корзину</button>
+                      <button class="button button--transparent button--default product-item__btn">Подробнее</button>
                     </div>
                   </div>
-                  <div class="accordeon__item user-order__item">
-                    <div class="accordeon__title user-order__title">
-                      <div class="user-order__box">
-                        <span class="user-order__num">Заказ
-                          <span>№018901</span>
-                        </span>
-                        <span class="user-order__date">18 апр. 2018 10:48</span>
-                      </div>
-                      <div class="user-order__box user-order__box--last">
-                        <span class="user-order__sum_title">Сумма заказа</span>
-                        <span class="user-order__sum">45 200,50 руб.</span>
-                      </div>
-                      <span class="user-order__info">подробнее</span>
+                </a>
+                <a href="#" class="product-item js-product-item" itemscope itemtype="http://schema.org/Product">
+                  <div class="product-item__img">
+                    <img class="product-item__image" src="img/products/atlas/1.png" alt="Атлас дюпон" itemprop="image">
+                    <button class="button-icon button-icon--fav js-button-icon--fav product-item__fav"></button>
+                  </div>
+                  <div class="product-item__desc">
+                    <div class="product-item__box">
+                      <h5 class="h5 product-item__title" itemprop="name">Атлас дюпон
+                        <span>white</span>
+                      </h5>
+                      <span class="product-item__articul">ам07</span>
                     </div>
-                    <div class="accordeon__content user-order__content" style="display: none;">
-                      <div class="user-order-item">
-                        <div class="user-order-item__img">
-                          <img src="img/products/atlas/small/1.png" alt="Атлас дюпон"> </div>
-                        <div class="user-order-item__desc">
-                          <div class="user-order-item__left">
-                            <div class="user-order-item__title_wrap">
-                              <h5 class="h5 user-order-item__title product-item__title">
-                                <a href="#">Атлас дюпон
-                                  <span>white</span>
-                                </a>
-                              </h5>
-                              <span class="user-order-item__type">ткани</span>
-                              <span class="user-order-item__articul">ac06</span>
-                            </div>
-                          </div>
-                          <div class="user-order-item__right">
-                            <div class="user-order-item__box">
-                              <div class="user-order-item__price"> 340
-                                <span>руб./м</span> &nbsp; x &nbsp;
-                                <span class="user-order-item__count">15
-                                  <span>м (1 рул)</span>
-                                </span>
-                              </div>
-                            </div>
-                            <div class="user-order-item__box">
-                              <span class="user-order-item__sum">4 350,00
-                                <span>руб.</span>
-                              </span>
-                            </div>
-                          </div>
-                        </div>
+                    <div class="product-item__box">
+                      <div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <meta itemprop="price" content="300.00">
+                        <meta itemprop="priceCurrency" content="RUB" /> 300
+                        <i class="fal fa-ruble-sign"></i>
                       </div>
-                      <div class="user-order-item">
-                        <div class="user-order-item__img">
-                          <img src="img/products/atlas/small/1.png" alt="Атлас дюпон"> </div>
-                        <div class="user-order-item__desc">
-                          <div class="user-order-item__left">
-                            <div class="user-order-item__title_wrap">
-                              <h5 class="h5 user-order-item__title product-item__title">
-                                <a href="#">Атлас дюпон
-                                  <span>white</span>
-                                </a>
-                              </h5>
-                              <span class="user-order-item__type">ткани</span>
-                              <span class="user-order-item__articul">ac06</span>
-                            </div>
-                          </div>
-                          <div class="user-order-item__right">
-                            <div class="user-order-item__box">
-                              <div class="user-order-item__price"> 340
-                                <span>руб./м</span> &nbsp; x &nbsp;
-                                <span class="user-order-item__count">15
-                                  <span>м (1 рул)</span>
-                                </span>
-                              </div>
-                            </div>
-                            <div class="user-order-item__box">
-                              <span class="user-order-item__sum">4 350,00
-                                <span>руб.</span>
-                              </span>
-                            </div>
-                          </div>
-                        </div>
+                      <div class="product-item__color-count color-count">18 цветов</div>
+                    </div>
+                    <div class="product-item__more">
+                      <div class="product-item__color color">
+                        <ul class="color__list">
+                          <li class="color__item" data-color="img/products/atlas/1.png">
+                            <img class="color__img" src="img/products/atlas/colors/1.png" alt="alt"> </li>
+                          <li class="color__item" data-color="img/products/atlas/2.png">
+                            <img class="color__img" src="img/products/atlas/colors/2.png" alt="alt"> </li>
+                          <li class="color__item" data-color="img/products/atlas/3.png">
+                            <img class="color__img" src="img/products/atlas/colors/3.png" alt="alt"> </li>
+                          <li class="color__item" data-color="img/products/atlas/4.png">
+                            <img class="color__img" src="img/products/atlas/colors/4.png" alt="alt"> </li>
+                        </ul>
                       </div>
+                      <button class="button button--transparent button--muted product-item__btn">Добавить в корзину</button>
+                      <button class="button button--transparent button--default product-item__btn">Подробнее</button>
                     </div>
                   </div>
-                </div>
+                </a>
+                <a href="#" class="product-item js-product-item" itemscope itemtype="http://schema.org/Product">
+                  <div class="product-item__img">
+                    <img class="product-item__image" src="img/products/atlas/1.png" alt="Атлас дюпон" itemprop="image">
+                    <button class="button-icon button-icon--fav js-button-icon--fav product-item__fav"></button>
+                  </div>
+                  <div class="product-item__desc">
+                    <div class="product-item__box">
+                      <h5 class="h5 product-item__title" itemprop="name">Атлас дюпон
+                        <span>white</span>
+                      </h5>
+                      <span class="product-item__articul">ам07</span>
+                    </div>
+                    <div class="product-item__box">
+                      <div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <meta itemprop="price" content="300.00">
+                        <meta itemprop="priceCurrency" content="RUB" /> 300
+                        <i class="fal fa-ruble-sign"></i>
+                      </div>
+                      <div class="product-item__color-count color-count">18 цветов</div>
+                    </div>
+                    <div class="product-item__more">
+                      <div class="product-item__color color">
+                        <ul class="color__list">
+                          <li class="color__item" data-color="img/products/atlas/1.png">
+                            <img class="color__img" src="img/products/atlas/colors/1.png" alt="alt"> </li>
+                          <li class="color__item" data-color="img/products/atlas/2.png">
+                            <img class="color__img" src="img/products/atlas/colors/2.png" alt="alt"> </li>
+                          <li class="color__item" data-color="img/products/atlas/3.png">
+                            <img class="color__img" src="img/products/atlas/colors/3.png" alt="alt"> </li>
+                          <li class="color__item" data-color="img/products/atlas/4.png">
+                            <img class="color__img" src="img/products/atlas/colors/4.png" alt="alt"> </li>
+                        </ul>
+                      </div>
+                      <button class="button button--transparent button--muted product-item__btn">Добавить в корзину</button>
+                      <button class="button button--transparent button--default product-item__btn">Подробнее</button>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="product-item js-product-item" itemscope itemtype="http://schema.org/Product">
+                  <div class="product-item__img">
+                    <img class="product-item__image" src="img/products/atlas/1.png" alt="Атлас дюпон" itemprop="image">
+                    <button class="button-icon button-icon--fav js-button-icon--fav product-item__fav"></button>
+                  </div>
+                  <div class="product-item__desc">
+                    <div class="product-item__box">
+                      <h5 class="h5 product-item__title" itemprop="name">Атлас дюпон
+                        <span>white</span>
+                      </h5>
+                      <span class="product-item__articul">ам07</span>
+                    </div>
+                    <div class="product-item__box">
+                      <div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <meta itemprop="price" content="300.00">
+                        <meta itemprop="priceCurrency" content="RUB" /> 300
+                        <i class="fal fa-ruble-sign"></i>
+                      </div>
+                      <div class="product-item__color-count color-count">18 цветов</div>
+                    </div>
+                    <div class="product-item__more">
+                      <div class="product-item__color color">
+                        <ul class="color__list">
+                          <li class="color__item" data-color="img/products/atlas/1.png">
+                            <img class="color__img" src="img/products/atlas/colors/1.png" alt="alt"> </li>
+                          <li class="color__item" data-color="img/products/atlas/2.png">
+                            <img class="color__img" src="img/products/atlas/colors/2.png" alt="alt"> </li>
+                          <li class="color__item" data-color="img/products/atlas/3.png">
+                            <img class="color__img" src="img/products/atlas/colors/3.png" alt="alt"> </li>
+                          <li class="color__item" data-color="img/products/atlas/4.png">
+                            <img class="color__img" src="img/products/atlas/colors/4.png" alt="alt"> </li>
+                        </ul>
+                      </div>
+                      <button class="button button--transparent button--muted product-item__btn">Добавить в корзину</button>
+                      <button class="button button--transparent button--default product-item__btn">Подробнее</button>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="product-item js-product-item" itemscope itemtype="http://schema.org/Product">
+                  <div class="product-item__img">
+                    <img class="product-item__image" src="img/products/atlas/1.png" alt="Атлас дюпон" itemprop="image">
+                    <button class="button-icon button-icon--fav js-button-icon--fav product-item__fav"></button>
+                  </div>
+                  <div class="product-item__desc">
+                    <div class="product-item__box">
+                      <h5 class="h5 product-item__title" itemprop="name">Атлас дюпон
+                        <span>white</span>
+                      </h5>
+                      <span class="product-item__articul">ам07</span>
+                    </div>
+                    <div class="product-item__box">
+                      <div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <meta itemprop="price" content="300.00">
+                        <meta itemprop="priceCurrency" content="RUB" /> 300
+                        <i class="fal fa-ruble-sign"></i>
+                      </div>
+                      <div class="product-item__color-count color-count">18 цветов</div>
+                    </div>
+                    <div class="product-item__more">
+                      <div class="product-item__color color">
+                        <ul class="color__list">
+                          <li class="color__item" data-color="img/products/atlas/1.png">
+                            <img class="color__img" src="img/products/atlas/colors/1.png" alt="alt"> </li>
+                          <li class="color__item" data-color="img/products/atlas/2.png">
+                            <img class="color__img" src="img/products/atlas/colors/2.png" alt="alt"> </li>
+                          <li class="color__item" data-color="img/products/atlas/3.png">
+                            <img class="color__img" src="img/products/atlas/colors/3.png" alt="alt"> </li>
+                          <li class="color__item" data-color="img/products/atlas/4.png">
+                            <img class="color__img" src="img/products/atlas/colors/4.png" alt="alt"> </li>
+                        </ul>
+                      </div>
+                      <button class="button button--transparent button--muted product-item__btn">Добавить в корзину</button>
+                      <button class="button button--transparent button--default product-item__btn">Подробнее</button>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="product-item js-product-item" itemscope itemtype="http://schema.org/Product">
+                  <div class="product-item__img">
+                    <img class="product-item__image" src="img/products/atlas/1.png" alt="Атлас дюпон" itemprop="image">
+                    <button class="button-icon button-icon--fav js-button-icon--fav product-item__fav"></button>
+                  </div>
+                  <div class="product-item__desc">
+                    <div class="product-item__box">
+                      <h5 class="h5 product-item__title" itemprop="name">Атлас дюпон
+                        <span>white</span>
+                      </h5>
+                      <span class="product-item__articul">ам07</span>
+                    </div>
+                    <div class="product-item__box">
+                      <div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <meta itemprop="price" content="300.00">
+                        <meta itemprop="priceCurrency" content="RUB" /> 300
+                        <i class="fal fa-ruble-sign"></i>
+                      </div>
+                      <div class="product-item__color-count color-count">18 цветов</div>
+                    </div>
+                    <div class="product-item__more">
+                      <div class="product-item__color color">
+                        <ul class="color__list">
+                          <li class="color__item" data-color="img/products/atlas/1.png">
+                            <img class="color__img" src="img/products/atlas/colors/1.png" alt="alt"> </li>
+                          <li class="color__item" data-color="img/products/atlas/2.png">
+                            <img class="color__img" src="img/products/atlas/colors/2.png" alt="alt"> </li>
+                          <li class="color__item" data-color="img/products/atlas/3.png">
+                            <img class="color__img" src="img/products/atlas/colors/3.png" alt="alt"> </li>
+                          <li class="color__item" data-color="img/products/atlas/4.png">
+                            <img class="color__img" src="img/products/atlas/colors/4.png" alt="alt"> </li>
+                        </ul>
+                      </div>
+                      <button class="button button--transparent button--muted product-item__btn">Добавить в корзину</button>
+                      <button class="button button--transparent button--default product-item__btn">Подробнее</button>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="product-item js-product-item" itemscope itemtype="http://schema.org/Product">
+                  <div class="product-item__img">
+                    <img class="product-item__image" src="img/products/atlas/1.png" alt="Атлас дюпон" itemprop="image">
+                    <button class="button-icon button-icon--fav js-button-icon--fav product-item__fav"></button>
+                  </div>
+                  <div class="product-item__desc">
+                    <div class="product-item__box">
+                      <h5 class="h5 product-item__title" itemprop="name">Атлас дюпон
+                        <span>white</span>
+                      </h5>
+                      <span class="product-item__articul">ам07</span>
+                    </div>
+                    <div class="product-item__box">
+                      <div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <meta itemprop="price" content="300.00">
+                        <meta itemprop="priceCurrency" content="RUB" /> 300
+                        <i class="fal fa-ruble-sign"></i>
+                      </div>
+                      <div class="product-item__color-count color-count">18 цветов</div>
+                    </div>
+                    <div class="product-item__more">
+                      <div class="product-item__color color">
+                        <ul class="color__list">
+                          <li class="color__item" data-color="img/products/atlas/1.png">
+                            <img class="color__img" src="img/products/atlas/colors/1.png" alt="alt"> </li>
+                          <li class="color__item" data-color="img/products/atlas/2.png">
+                            <img class="color__img" src="img/products/atlas/colors/2.png" alt="alt"> </li>
+                          <li class="color__item" data-color="img/products/atlas/3.png">
+                            <img class="color__img" src="img/products/atlas/colors/3.png" alt="alt"> </li>
+                          <li class="color__item" data-color="img/products/atlas/4.png">
+                            <img class="color__img" src="img/products/atlas/colors/4.png" alt="alt"> </li>
+                        </ul>
+                      </div>
+                      <button class="button button--transparent button--muted product-item__btn">Добавить в корзину</button>
+                      <button class="button button--transparent button--default product-item__btn">Подробнее</button>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="product-item js-product-item" itemscope itemtype="http://schema.org/Product">
+                  <div class="product-item__img">
+                    <img class="product-item__image" src="img/products/atlas/1.png" alt="Атлас дюпон" itemprop="image">
+                    <button class="button-icon button-icon--fav js-button-icon--fav product-item__fav"></button>
+                  </div>
+                  <div class="product-item__desc">
+                    <div class="product-item__box">
+                      <h5 class="h5 product-item__title" itemprop="name">Атлас дюпон
+                        <span>white</span>
+                      </h5>
+                      <span class="product-item__articul">ам07</span>
+                    </div>
+                    <div class="product-item__box">
+                      <div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <meta itemprop="price" content="300.00">
+                        <meta itemprop="priceCurrency" content="RUB" /> 300
+                        <i class="fal fa-ruble-sign"></i>
+                      </div>
+                      <div class="product-item__color-count color-count">18 цветов</div>
+                    </div>
+                    <div class="product-item__more">
+                      <div class="product-item__color color">
+                        <ul class="color__list">
+                          <li class="color__item" data-color="img/products/atlas/1.png">
+                            <img class="color__img" src="img/products/atlas/colors/1.png" alt="alt"> </li>
+                          <li class="color__item" data-color="img/products/atlas/2.png">
+                            <img class="color__img" src="img/products/atlas/colors/2.png" alt="alt"> </li>
+                          <li class="color__item" data-color="img/products/atlas/3.png">
+                            <img class="color__img" src="img/products/atlas/colors/3.png" alt="alt"> </li>
+                          <li class="color__item" data-color="img/products/atlas/4.png">
+                            <img class="color__img" src="img/products/atlas/colors/4.png" alt="alt"> </li>
+                        </ul>
+                      </div>
+                      <button class="button button--transparent button--muted product-item__btn">Добавить в корзину</button>
+                      <button class="button button--transparent button--default product-item__btn">Подробнее</button>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="product-item js-product-item" itemscope itemtype="http://schema.org/Product">
+                  <div class="product-item__img">
+                    <img class="product-item__image" src="img/products/atlas/1.png" alt="Атлас дюпон" itemprop="image">
+                    <button class="button-icon button-icon--fav js-button-icon--fav product-item__fav"></button>
+                  </div>
+                  <div class="product-item__desc">
+                    <div class="product-item__box">
+                      <h5 class="h5 product-item__title" itemprop="name">Атлас дюпон
+                        <span>white</span>
+                      </h5>
+                      <span class="product-item__articul">ам07</span>
+                    </div>
+                    <div class="product-item__box">
+                      <div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <meta itemprop="price" content="300.00">
+                        <meta itemprop="priceCurrency" content="RUB" /> 300
+                        <i class="fal fa-ruble-sign"></i>
+                      </div>
+                      <div class="product-item__color-count color-count">18 цветов</div>
+                    </div>
+                    <div class="product-item__more">
+                      <div class="product-item__color color">
+                        <ul class="color__list">
+                          <li class="color__item" data-color="img/products/atlas/1.png">
+                            <img class="color__img" src="img/products/atlas/colors/1.png" alt="alt"> </li>
+                          <li class="color__item" data-color="img/products/atlas/2.png">
+                            <img class="color__img" src="img/products/atlas/colors/2.png" alt="alt"> </li>
+                          <li class="color__item" data-color="img/products/atlas/3.png">
+                            <img class="color__img" src="img/products/atlas/colors/3.png" alt="alt"> </li>
+                          <li class="color__item" data-color="img/products/atlas/4.png">
+                            <img class="color__img" src="img/products/atlas/colors/4.png" alt="alt"> </li>
+                        </ul>
+                      </div>
+                      <button class="button button--transparent button--muted product-item__btn">Добавить в корзину</button>
+                      <button class="button button--transparent button--default product-item__btn">Подробнее</button>
+                    </div>
+                  </div>
+                </a>
               </div>
+              <!-- end product-item -->
               <!-- begin empty -->
               <div class="empty lk__empty" style="display: none;">
                 <p>Вы еще не добавляли товар в избранное.</p>

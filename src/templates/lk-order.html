@@ -16,34 +16,7 @@ wrapperClass: page-lk
 
 		<div class="lk__wrap">
 
-			<!-- begin lk__sidebar -->
-			<sidebar class="lk__sidebar">
-				<nav class="lk-nav lk__nav">
-					<ul class="lk-nav__list">
-						<li class="lk-nav__item">
-							<a href="#" class="lk-nav__link lk-nav__link--order">
-								Заказы
-							</a>
-						</li>
-						<li class="lk-nav__item">
-							<a href="#" class="lk-nav__link lk-nav__link--fav">
-								Избранное
-							</a>
-						</li>
-						<li class="lk-nav__item">
-							<a href="#" class="lk-nav__link lk-nav__link--data">
-								Личные данные
-							</a>
-						</li>
-						<li class="lk-nav__item">
-							<a href="#" class="lk-nav__link lk-nav__link--exit">
-								Выйти
-							</a>
-						</li>
-					</ul>
-				</nav>
-			</sidebar>
-			<!-- end lk__sidebar -->
+			{{ item.lkSidebar() }}
 
 			<!-- begin lk__content -->
 			<div class="lk__content">
@@ -123,9 +96,16 @@ wrapperClass: page-lk
 
 							</div>
 						</div>	
-						{% endfor %}﻿				
+						{% endfor %}
 					</div>
 				</div>
+
+                <!-- begin empty -->
+                <div class="empty lk__empty"  style="display: none;">
+                    <p>Вы еще не добавляли товар в избранное.</p>
+                    <a href="#" class="button button--transparent button--info card__btn--back">Вернуться в каталог</a>
+                </div>
+                <!-- end empty -->
 				
 			</div>
 			<!-- end lk__content -->

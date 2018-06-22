@@ -1,0 +1,47 @@
+---
+title: Личный кабинет | Избранное
+wrapperClass: page-lk
+---
+
+{% extends "layouts/_layout.html" %} {% block content %}
+
+<!-- begin home lk -->
+<main class="main lk">
+    <div class="container">
+
+        <div class="section-header cart__title">
+            <h1 class="h1">Избранное</h1>
+        </div>
+
+        <div class="lk__wrap">
+
+            {{ item.lkSidebar() }}
+
+            <!-- begin lk__content -->
+            <div class="lk__content">
+
+                <!-- begin product-item -->
+                <div class="product-item__wrap">
+                    {% for i in range(0, 10) %}
+                        {{ item.productItem() }}
+                    {% endfor %}
+                </div>
+                <!-- end product-item -->
+
+                <!-- begin empty -->
+                <div class="empty lk__empty"  style="display: none;">
+                    <p>Вы еще не добавляли товар в избранное.</p>
+                    <a href="#" class="button button--transparent button--info card__btn--back">Вернуться в каталог</a>
+                </div>
+                <!-- end empty -->
+
+            </div>
+            <!-- end lk__content -->
+
+        </div>
+
+    </div>
+</main>
+<!-- end home lk -->
+
+{% endblock %}

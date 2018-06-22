@@ -63,15 +63,6 @@
 
 	&__policy{margin-bottom: $gutter;}//.cart__policy
 
-	&__empty{
-		padding: 50px 0;
-		text-align: center;
-		p{
-			font-size: 20px;
-			text-transform: uppercase;
-		}
-	}//.cart__empty
-
 	&__form{
 		margin-top: $gutter*2.5;
 
@@ -146,3 +137,12 @@
 
 	&__text{margin-bottom: $gutter*2;}//.cart-success__text	
 }//.cart-success
+
+.empty{
+	padding: 50px 0;
+	text-align: center;
+	p{
+		font-size: 20px;
+		text-transform: uppercase;
+	}
+}//empty

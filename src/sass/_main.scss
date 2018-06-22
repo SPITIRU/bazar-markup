@@ -14,7 +14,7 @@ body{
 .text-center{text-align: center;}
 .text-number{font-family: $f2;}
 
-.preloader{
+.preloader {
 	display: none;
 	background-color: #fff;
 	position: fixed;
@@ -49,9 +49,7 @@ body{
 	@extend %flexColumn;
 }//.wrapper 
 
-.main{
-	flex: 1;
-}
+.main {flex: 1;}
 
 .container {@include container;}
 
@@ -78,10 +76,10 @@ body{
 
 .bg {
 	&--white {background-color: #fff;}
-	&--green{background-color: $color-success;}
+	&--green {background-color: $color-success;}
 }
 
-.section-header{
+.section-header {
 	display: block;
 	width: 100%;
 	margin: auto;
@@ -90,18 +88,18 @@ body{
 	line-height: 1;
 	overflow: hidden;
 
-	.h1{
+	.h1 {
 		margin: $gutter*2 0;
 		font-family: $f2-bold;
 		font-weight: 600;
 		font-size: 20px;
 		text-transform: uppercase;
-		@include respond-to(xs) {
+		@include respond-to(sm) {
 			margin: $gutter 0;
 		}
 	}
 
-	.h2, &__text{
+	.h2, &__text {
 		display: inline-block;
 		margin: 45px 0;
 		position: relative;
@@ -129,24 +127,24 @@ body{
 		}
 	}
 
-	&__text{
+	&__text {
 		&::before, &::after{
 			top: -6px;
 		}
 	}
 }
 
-.bz-section{
+.bz-section {
 	padding: 50px 0;
 	@include respond-to(xs) {
 		padding-bottom: 30px;
 	}
 }
 
-.phone{
+.phone {
 	@extend %flexColumn;
 
-	&__desc{
+	&__desc {
 		color: $gray;
 		font-size: 9px;
 		line-height: 1.4;
@@ -154,7 +152,7 @@ body{
 	}//.phone__desc
 }//.phone
 
-.social{
+.social {
 
 	&__list{@extend %flexCenter;}//.social__list
 
