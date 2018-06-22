@@ -5,6 +5,9 @@
 	&__wrap{
 		padding: $gutter*2.5 0;
 		@extend %flex;
+		@include respond-to(xs) {
+			padding: 30px 0;
+		}
 	}//.lk__wrap
 
 	&__sidebar{
@@ -12,6 +15,9 @@
 		margin-right: 30px;
 		@include respond-to(md) {
 			width: 180px;
+		}
+		@include respond-to(sm) {
+			display: none;
 		}
 	}//.lk__sidebar
 
@@ -71,6 +77,7 @@
 .user-order{
 
 	&__item{
+		& + & {margin-top: $gutter/2;}
 		&:hover, &.is-open{
 			.user-order{
 				&__title{
@@ -135,51 +142,66 @@
 	}//.user-order__content
 }//.user-order
 
-.user-order-item{
+.user-order-item {
 	padding: 10px 0;
 	@extend %flexCenter;
 
-	& + &{
-		border-top: 1px solid $color-border--light;
-	}
+	& + & {border-top: 1px solid $color-border--light;}
 
-	&__left{
+	&__desc {
+		@extend %flexCenter;
+		justify-content: space-bettwen;
+		flex: 1;
+		@include respond-to(xs) {
+			flex-direction: column;
+		}
+	}//.user-order-item__desc
+
+	&__left {
 		width: 50%;
+		@include respond-to(sm) {
+			width: 40%;
+		}
+		@include respond-to(xs) {
+			width: 100%;
+		}
 	}//.user-order-item__left
 
-	&__right{
+	&__right {
 		width: 50%;
 		text-align: right;
 		@extend %flexCenter;
 		justify-content: flex-end;
+		@include respond-to(sm) {
+			width: 60%;
+		}
+		@include respond-to(xs) {
+			width: 100%;
+			text-align: left;
+			justify-content: space-between;
+		}
+		@include respond-to(i7) {
+			flex-direction: column;
+		}
 	}//.user-order-item__right
 
-	&__img{
-		width: 60px;
-		margin-right: $gutter;
-	}//.user-order-item__img
-
-	&__desc{}//.user-order-item__desc
-
-	&__title{
-		font-size: 14px;
-	}//.user-order-item__title
-
-	&__type{
-		display: block;
-		text-transform: lowercase;
-		font-size: 14px;
-	}//.user-order-item__type
-
-	&__articul{
-		font-size: 14px;
-		text-transform: uppercase;
-	}//.user-order-item__articul
-
-	&__box{
+	&__box {
 		position: relative;
-		& + &{
+		@include respond-to(i7) {
+			width: 100%;
+			&:last-child{
+				margin-top: 10px;
+				text-align: right;
+			}
+		}
+		& + & {
 			margin-left: 50px;
+			@include respond-to(xs) {
+				margin-left: 15px;
+			}
+			@include respond-to(i7) {
+				margin-left: 0;
+			}
 			&::before{
 				content: '';
 				display: block;
@@ -188,9 +210,49 @@
 				background-color: #a2a2a2;
 				@include vy;
 				left: -25px;
+				@include respond-to(xs) {
+					left: -20px;
+				}
+				@include respond-to(i7) {
+					display: none;
+				}
 			}
 		}
 	}//.user-order-item__box
+
+	&__img {
+		width: 60px;
+		margin-right: $gutter;
+		@include respond-to(xs) {
+			width: 40px;
+		}
+	}//.user-order-item__img
+
+	&__title {
+		font-size: 14px;
+	}//.user-order-item__title
+
+	&__type {
+		display: block;
+		text-transform: lowercase;
+		font-size: 14px;
+		@include respond-to(xs) {
+			display: inline-block;
+			&::after{
+				content: '/';
+				padding-left: 5px;
+			}
+		}
+	}//.user-order-item__type
+
+	&__articul{
+		font-size: 14px;
+		text-transform: uppercase;
+		@include respond-to(xs) {
+			display: inline-block;
+			font-family: $f-bold;
+		}
+	}//.user-order-item__articul
 
 	&__price{
 		font-family: $f2-bold;
