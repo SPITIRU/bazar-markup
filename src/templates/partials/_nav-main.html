@@ -5,23 +5,51 @@
 			<a href="#change-city" data-toggle="modal" class="city__link">Санкт-Петербург</a>
 		</div>
 
-		<a href="tel:8 800 707-86-30" class="phone nav-main__phone" itemprop="telephone">8 800 707-86-30</a>
-
-		<!-- begin hamburger -->
-		<div class="nav-main__btn--close"><button class="hamburger js-hamburger"><span></span></button></div>
-		<!-- end hamburger -->			
+		<a href="tel:8 800 707-86-30" class="phone nav-main__phone" itemprop="telephone">8 800 707-86-30</a>	
 	</div>
+
+	<!-- begin hamburger -->
+	<div class="nav-main__btn--close"><button class="hamburger js-hamburger"><span></span></button></div>
+	<!-- end hamburger -->		
+
 	<ul class="nav-main__list">		
-		<li class="nav-main__item nav-main__item--lk xs-only">
-			<a href="#" class="nav-main__link" style="display: none;">
-				<i class="fal fa-user nav-main__icon"></i>
-				<span class="nav-main__text">Личный кабинет</span>
-			</a>
+
+		<li class="nav-main__item nav-main__item--lk xs-only" style="display: none;">
 			<a href="#auth-form" data-toggle="modal" class="nav-main__link">
 				<i class="fal fa-user nav-main__icon"></i>
 				<span class="nav-main__text">Войти / Зарегистрироваться</span>
 			</a>
+		</li>		
+		
+		<li class="nav-main__item nav-main__item--lk xs-only">
+			<a href="#" class="nav-main__link js-main-nav-link--forward">
+				<i class="fal fa-user nav-main__icon"></i>
+				<span class="nav-main__text">Личный кабинет</span>
+				<i class="fal fa-angle-right"></i>
+			</a>
+			<ul class="nav-dropdown nav-main__dropdown">
+				<div class="nav-dropdown__items">
+					<div class="nav-dropdown__columns">
+						<li class="nav-dropdown__item">
+							<a href="javascript:void(0);" class="nav-dropdown__title nav-dropdown__title--back js-main-nav-link--forward">Назад</a>
+						</li>
+						<li class="nav-dropdown__item">
+							<a href="#" class="nav-dropdown__title nav-dropdown__title--order">Заказы</a>
+						</li>
+						<li class="nav-dropdown__item">
+							<a href="#" class="nav-dropdown__title nav-dropdown__title--fav">Избранное</a>
+						</li>
+						<li class="nav-dropdown__item">
+							<a href="#" class="nav-dropdown__title nav-dropdown__title--data">Личные данные</a>
+						</li>
+						<li class="nav-dropdown__item">
+							<a href="#" class="nav-dropdown__title nav-dropdown__title--exit">Выйти</a>
+						</li>
+					</div>
+				</div>
+			</ul>
 		</li>
+
 		{% import "data/data.html" as mainMain %}		
 		{% for item in mainMain.mainMenu %}				
 		<li class="nav-main__item">
@@ -59,6 +87,7 @@
 		</li>
 		{% endfor %}	
 	</ul>
+
 	<ul class="nav-main__list nav-main__list--sub">
 		<li class="nav-main__item"><a href="#" class="nav-main__link">О нас</a></li>
 		<li class="nav-main__item"><a href="#" class="nav-main__link">Условия оплаты</a></li>

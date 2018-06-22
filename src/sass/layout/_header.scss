@@ -6,7 +6,7 @@
 	width: 100%;
 	z-index: z(fixed);
 
-	@include respond-to(xs) {
+	@include respond-to(sm) {
 		position: fixed;
 	}
 
@@ -21,7 +21,7 @@
 		color: #fff;
 		background-color: $color-bg--dark;
 
-		@include respond-to(xs) {
+		@include respond-to(sm) {
 			display: none;
 		}
 	}//.header__top-line
@@ -31,7 +31,7 @@
 		background-color: $color-bg--lighten;
 		@include tr;
 
-		@include respond-to(xs) {
+		@include respond-to(sm) {
 			height: 50px;
 		}
 	}//.header__bottom
@@ -53,22 +53,23 @@
 	&__logo{
 		line-height: 70px;
 
-		@include respond-to(xs) {
+		@include respond-to(sm) {
 			margin-left: 35px;
+			width: 165px;
 		}
 	}//.header__logo
 
 	&__search{
 		margin: 0 auto;
 
-		@include respond-to(xs) {
+		@include respond-to(sm) {
 			position: absolute;
 			top: 100%;
 			left: 0;
 			width: 100%;
 			z-index: -1;
 			background-color: #fff;
-			@include trfY(-150%);
+			@include trfY(-250%);
 			@include tr;
 
 			&.is-visible{
@@ -182,9 +183,6 @@
 .logo{
 	display: inline-block;
 	width: 190px;
-	@include respond-to(sm) {
-		width: 165px;
-	}
 }//.logo
 
 .search{
@@ -196,7 +194,7 @@
 		@include respond-to(sm) {
 			width: 350px;
 		}
-		@include respond-to(xs) {
+		@include respond-to(sm) {
 			width: 100%;
 			border-top: 1px solid $color-border--light;
 		}
@@ -207,7 +205,7 @@
 		border-right: 0;
 		background-color: #fff;
 		@include tr;
-		@include respond-to(xs) {
+		@include respond-to(sm) {
 			border-left: 0;
 			border-top: 0;
 			&:focus{
@@ -261,7 +259,7 @@
 	overflow-y: auto;
 	@include bz-scroll;
 
-	@include respond-to(xs) {
+	@include respond-to(sm) {
 		border-right-color: transparent;
 		border-left-color: transparent;
 	    box-shadow: 0 10px 20px rgba(#000, .2);
@@ -307,7 +305,7 @@
 
 .user-nav{
 	
-	@include respond-to(xs) {
+	@include respond-to(sm) {
 		margin-left: auto;
 		margin-right: 10px;
 	}
@@ -327,7 +325,7 @@
 				position: absolute;
 				top: -10px;
 				right: 0;
-				@include respond-to(xs) {
+				@include respond-to(sm) {
 					right: -10px;
 				}
 			}
@@ -357,7 +355,7 @@
 		font-size: 13px;
 		color: $color-text;
 		@include tr;
-		@include respond-to(xs) {
+		@include respond-to(sm) {
 			display: none;
 		}
 	}//.user-nav__text

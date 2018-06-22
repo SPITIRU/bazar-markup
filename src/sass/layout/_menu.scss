@@ -15,7 +15,7 @@
 	position: relative;
 	@include tr;
 
-	@include respond-to(xs) {
+	@include respond-to(sm) {
 		background-color: #949494;		
 		position: fixed;
 		top: 0;
@@ -32,7 +32,7 @@
 			@include trfX(0);
 
 			.nav-main__btn--close{
-				box-shadow: 5px 5px 20px rgba(0,0,0,.3);
+				box-shadow: 20px 0 25px rgba(0,0,0,.3);
 				background-color: $color-accent;
 			}
 
@@ -58,7 +58,7 @@
 		transition: height .5s linear;
 		@extend %flex;
 
-		@include respond-to(xs) {
+		@include respond-to(sm) {
 			height: auto;
 			padding: 0;
 			background-color: #fff;
@@ -68,7 +68,7 @@
 		&--sub{
 			display: none;
 
-			@include respond-to(xs) {
+			@include respond-to(sm) {
 				display: block;
 				background-color: #949494;
 
@@ -103,13 +103,13 @@
 			}
 		}
 
-		@include respond-to(xs) {
+		@include respond-to(sm) {
 			display: block;
 			padding: 0;
 			border-bottom: 1px solid $color-border--lighten;
 		}
 		&:hover{
-			@include min-screen(481) {
+			@include min-screen(769) {
 				.nav-main{
 					&__dropdown{display: block;}
 					&__link{
@@ -135,8 +135,10 @@
 						justify-content: center;
 						align-items: center;
 					}
+					.fa-angle-right{margin-left: auto;}
 				}
 			}
+			
 		}
 	}//.nav-main__item
 
@@ -148,7 +150,7 @@
 		align-items: center;
 		justify-content: center;
 
-		@include respond-to(xs) {
+		@include respond-to(sm) {
 			padding: 10px 15px;
 			display: flex;
 			align-items: center;
@@ -166,7 +168,7 @@
 
 		.fal{
 			margin-left: auto;
-			@include min-screen(481) {
+			@include min-screen(769) {
 				display: none;
 			}
 		}
@@ -177,7 +179,7 @@
 		font-size: 12px;
 		text-transform: uppercase;
 
-		@include respond-to(xs) {
+		@include respond-to(sm) {
 			text-transform: initial;
 			font-size: 16px;
 		}
@@ -192,7 +194,7 @@
 		margin-bottom: 5px;
 		transition: fill .35s ease, opacity .35s linear, visibility .35s linear;
 
-		@include respond-to(xs) {
+		@include respond-to(sm) {
 			width: 30px;
 			height: 30px;
 			margin-right: 10px;
@@ -207,7 +209,7 @@
 		left: 0;
 		width: 100%;
 
-		@include respond-to(xs) {
+		@include respond-to(sm) {
 			// position: fixed;
 			@include listPosition;
 			top: 100px;
@@ -221,7 +223,7 @@
 		position: relative;
 		@extend %flexCenter;
 
-		@include min-screen(481) {
+		@include min-screen(769) {
 			display: none;
 		}
 	}//.nav-main__top-line
@@ -284,7 +286,7 @@
 		@include container;		
 		@extend %flexColumn;
 
-		@include respond-to(xs) {
+		@include respond-to(sm) {
 			padding: 0;
 		}
 	}//.nav-main-dropdown__items
@@ -296,7 +298,7 @@
 		@include respond-to(sm) {
 			columns: auto 4;
 		}
-		@include respond-to(xs) {
+		@include respond-to(sm) {
 			background-color: #fff;
 			columns: auto;
 			@include bz-scroll;
@@ -314,7 +316,7 @@
 			}
 		}
 
-		@include respond-to(xs) {
+		@include respond-to(sm) {
 			display: block;
 			padding: 0;
 		}
@@ -326,7 +328,28 @@
 		font-family: $f-bold;
 		font-size: 14px;
 
-		@include respond-to(xs) {
+		&::after{
+			font-family: fal;
+			font-size: 16px;
+			@include vy;
+			left: 10px;
+		}
+
+		@each $theme, $icon in $nav-lk-icons{
+			&--#{$theme}{
+				&::after{
+					content: $icon;
+				}
+			}
+		}
+
+		&--order{
+			&::after{
+				left: 8px;
+			}
+		}
+
+		@include respond-to(sm) {
 			display: block;
 			margin-bottom: 0;
 			padding: 15px;
@@ -341,7 +364,7 @@
 				@include vy;
 			}
 
-			&:not(.nav-dropdown__title--link){
+			&:not(.nav-dropdown__title--link, .nav-dropdown__title--back){
 				font-size: 16px;			
 
 				&::before{
@@ -351,20 +374,20 @@
 			}			
 		}
 
-		&--link{
+		&--link, &--back{
 			border-bottom: 1px solid $color-border--lighten;			
 			&::before{
 				content: '\f104';
 				left: 10px;
 			}
-			@include min-screen(481) {
+			@include min-screen(769) {
 				display: none;
 			}
 		}
 
 		&--temp{
 			display: none;
-			@include respond-to(xs) {
+			@include respond-to(sm) {
 				display: block;
 				text-transform: uppercase;
 				background-color: $color-bg--light;	
@@ -375,7 +398,7 @@
 
 	&--sub{
 
-		@include respond-to(xs) {
+		@include respond-to(sm) {
 			position: absolute;
 			@include listPosition;
 			top: 107px;
@@ -387,7 +410,7 @@
 		li{
 			font-size: 13px;
 
-			@include respond-to(xs) {
+			@include respond-to(sm) {
 				display: block;
 				margin-bottom: 0;
 				padding: 15px;
@@ -417,7 +440,7 @@
 	border: 0;
 	outline: none;
 
-	@include respond-to(xs) {
+	@include respond-to(sm) {
 		display: block;
 	}
 

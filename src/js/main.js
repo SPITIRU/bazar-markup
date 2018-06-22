@@ -103,7 +103,7 @@ $(document).ready(function () {
     });
 
     
-    if($(window).width() <= 480) {
+    if($(window).width() <= 768) {
         //Mobile Nav
         $('.js-nav-main').prependTo('.wrapper ');
         $('.js-main-nav-link--forward').on('click', function(e) {
@@ -119,13 +119,13 @@ $(document).ready(function () {
             if (!navItem.hasClass('is-active') && !$(this).hasClass('nav-dropdown__title--link')) {
                 navItem.addClass('is-active');
                 block.insertAfter(navItem.find('.nav-dropdown__title--link')).text(title);
-            } else if (navItem.hasClass('is-active') && !navItemDropdown.hasClass('is-active') && !$(this).hasClass('nav-dropdown__title--link')) {
+            } else if (navItem.hasClass('is-active') && !navItemDropdown.hasClass('is-active') && !($(this).hasClass('nav-dropdown__title--link') || $(this).hasClass('nav-dropdown__title--back'))) {
                 navItemDropdown.addClass('is-active');
                 mainDropdown.css('overflow', 'hidden');
-            } else if (navItem.hasClass('is-active') && !navItemDropdown2.hasClass('is-active') && $(this).hasClass('nav-dropdown__title--link')) {
+            } else if (navItem.hasClass('is-active') && !navItemDropdown2.hasClass('is-active') && ($(this).hasClass('nav-dropdown__title--link') || $(this).hasClass('nav-dropdown__title--back'))) {
                 navItem.removeClass('is-active');   
                 navItemDropdown.find('.nav-dropdown__title--temp').remove();             
-            } else if (navItem.hasClass('is-active') && navItemDropdown2.hasClass('is-active') && $(this).hasClass('nav-dropdown__title--link')) {
+            } else if (navItem.hasClass('is-active') && navItemDropdown2.hasClass('is-active') && ($(this).hasClass('nav-dropdown__title--link') || $(this).hasClass('nav-dropdown__title--back'))) {
                 navItemDropdown2.removeClass('is-active');
                 mainDropdown.removeAttr('style');                
             }            

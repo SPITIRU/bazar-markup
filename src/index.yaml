@@ -24,6 +24,10 @@ PageList:
 - file: cart-success.html
   ready: 50
   desc : Корзина триумф
+  
+- file: lk-order.html
+  ready: 50
+  desc : ЛК заказы
 
 - file: contacts.html
   ready: 50

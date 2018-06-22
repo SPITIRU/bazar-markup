@@ -7,6 +7,15 @@ if ($('.js-accordeon').length > 0) {
 	        $(this).parent().addClass('is-open').find('.accordeon__content').removeAttr('style');
 	    }   
 	});
+  if ($('.js-accordeon').hasClass('lk__accordeon')) {
+    $(this).find('.accordeon__title').on('click', function() {
+        if($(this).parent().hasClass('is-open')){
+            $(this).find('.user-order__info').text('скрыть');
+        } else {
+            $(this).find('.user-order__info').text('подробнее');
+        }
+    });
+  }
 }
 
 //checkbox

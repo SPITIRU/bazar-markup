@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Попап окна на сайте</title>
+    <title>Личный кабинет | Заказы</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -18,9 +18,9 @@
     <link rel="stylesheet" media="all" href="css/app.css"> </head>
   <body class="loading" itemscope="itemscope" itemtype="http://schema.org/WebPage">
     <!-- begin wrapper -->
-    <div class="wrapper ">
+    <div class="wrapper page-lk">
       <!-- begin header -->
-      <header class="header bg--dark" itemscope itemtype="http://schema.org/WPHeader">
+      <header class="header " itemscope itemtype="http://schema.org/WPHeader">
         <!-- begin header__top-line -->
         <div class="header__top-line">
           <div class="header__in">
@@ -1591,43 +1591,126 @@
         </div>
       </header>
       <!-- end header -->
-      <style>
-        main {
-          padding: 100px 50px;
-        }
-
-        h1 {
-          margin-bottom: 50px;
-        }
-
-        .popup__list a {
-          display: inline-block;
-          margin-right: 30px;
-          margin-bottom: 15px;
-          color: #2d6cb4;
-        }
-
-        .popup__list a:hover {
-          color: #2d6cb4;
-          text-decoration: underline;
-        }
-
-        @media screen and (max-width: 480px) {
-          main {
-            margin: 10px;
-          }
-        }
-
-      </style>
-      <!-- begin home -->
-      <main class="main">
-        <h1>Попап окна на сайте</h1>
-        <div class="container popup__list">
-          <a href="#auth-form" data-toggle="modal">Регистрация</a>
-          <a href="#change-city" data-toggle="modal">Выбор города</a>
+      <!-- begin home lk -->
+      <main class="main lk">
+        <div class="container">
+          <div class="section-header cart__title">
+            <h1 class="h1">Мои заказы</h1>
+          </div>
+          <div class="lk__wrap">
+            <!-- begin lk__sidebar -->
+            <sidebar class="lk__sidebar">
+              <nav class="lk-nav lk__nav">
+                <ul class="lk-nav__list">
+                  <li class="lk-nav__item">
+                    <a href="#" class="lk-nav__link lk-nav__link--order"> Заказы </a>
+                  </li>
+                  <li class="lk-nav__item">
+                    <a href="#" class="lk-nav__link lk-nav__link--fav"> Избранное </a>
+                  </li>
+                  <li class="lk-nav__item">
+                    <a href="#" class="lk-nav__link lk-nav__link--data"> Личные данные </a>
+                  </li>
+                  <li class="lk-nav__item">
+                    <a href="#" class="lk-nav__link lk-nav__link--exit"> Выйти </a>
+                  </li>
+                </ul>
+              </nav>
+            </sidebar>
+            <!-- end lk__sidebar -->
+            <!-- begin lk__content -->
+            <div class="lk__content">
+              <div class="user-order">
+                <div class="accordeon lk__accordeon js-accordeon">
+                  <div class="accordeon__item user-order__item">
+                    <div class="accordeon__title user-order__title">
+                      <div class="user-order__box">
+                        <span class="user-order__num">Заказ
+                          <span>№018901</span>
+                        </span>
+                        <span class="user-order__date">18 апр. 2018 10:48</span>
+                      </div>
+                      <div class="user-order__box user-order__box--last">
+                        <span class="user-order__sum_title">Сумма заказа</span>
+                        <span class="user-order__sum">45 200,50 руб.</span>
+                      </div>
+                      <span class="user-order__info">подробнее</span>
+                    </div>
+                    <div class="accordeon__content user-order__content" style="display: none;">
+                      <div class="user-order-item">
+                        <div class="user-order-item__img">
+                          <img src="img/products/atlas/small/1.png" alt="Атлас дюпон"> </div>
+                        <div class="user-order-item__left">
+                          <div class="user-order-item__desc">
+                            <div class="user-order-item__title_wrap">
+                              <h5 class="h5 user-order-item__title product-item__title">
+                                <a href="#">Атлас дюпон
+                                  <span>white</span>
+                                </a>
+                              </h5>
+                              <span class="user-order-item__type">ткани</span>
+                              <span class="user-order-item__articul">ac06</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="user-order-item__right">
+                          <div class="user-order-item__box">
+                            <div class="user-order-item__price"> 340
+                              <span>руб./м</span> &nbsp; x &nbsp;
+                              <span class="user-order-item__count">15
+                                <span>м (1 рул)</span>
+                              </span>
+                            </div>
+                          </div>
+                          <div class="user-order-item__box">
+                            <span class="user-order-item__sum">4 350,00
+                              <span>руб.</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="user-order-item">
+                        <div class="user-order-item__img">
+                          <img src="img/products/atlas/small/1.png" alt="Атлас дюпон"> </div>
+                        <div class="user-order-item__left">
+                          <div class="user-order-item__desc">
+                            <div class="user-order-item__title_wrap">
+                              <h5 class="h5 user-order-item__title product-item__title">
+                                <a href="#">Атлас дюпон
+                                  <span>white</span>
+                                </a>
+                              </h5>
+                              <span class="user-order-item__type">ткани</span>
+                              <span class="user-order-item__articul">ac06</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="user-order-item__right">
+                          <div class="user-order-item__box">
+                            <div class="user-order-item__price"> 340
+                              <span>руб./м</span> &nbsp; x &nbsp;
+                              <span class="user-order-item__count">15
+                                <span>м (1 рул)</span>
+                              </span>
+                            </div>
+                          </div>
+                          <div class="user-order-item__box">
+                            <span class="user-order-item__sum">4 350,00
+                              <span>руб.</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end lk__content -->
+          </div>
         </div>
       </main>
-      <!-- end home -->
+      <!-- end home lk -->
       <!-- begin footer -->
       <footer class="footer js-footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
         <div class="container">

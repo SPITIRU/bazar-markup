@@ -112,11 +112,22 @@ $z-index: (
 $icon-vk        : '\f189';
 $icon-odnk      : '\f263';
 $icon-inst      : '\f16d';
+$icon-order     : '\f07a';
+$icon-fav       : '\f004';
+$icon-data      : '\f044';
+$icon-exit      : '\f08b';
 
 $soc-icons: (
 	vk          : $icon-vk,
 	ok          : $icon-odnk,
 	inst        : $icon-inst
+);
+
+$nav-lk-icons: (
+	order       : $icon-order,
+	fav         : $icon-fav,
+	data        : $icon-data,
+	exit        : $icon-exit
 );
 
 

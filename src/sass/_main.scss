@@ -51,9 +51,6 @@ body{
 
 .main{
 	flex: 1;
-	@include respond-to(xs) {
-		padding-top: 50px;
-	}
 }
 
 .container {@include container;}
