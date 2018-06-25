@@ -1,0 +1,151 @@
+---
+title: Личный кабинет | Заказы
+wrapperClass: page-lk
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+<!-- begin home lk -->
+<main class="main lk">
+	<div class="container">
+
+		<div class="section-header cart__title">
+			<h1 class="h1">Личные данные</h1>
+		</div>
+
+		<div class="lk__wrap">
+
+			{{ item.lkSidebar() }}
+
+			<!-- begin lk__content -->
+			<div class="lk__content stiky-content">
+
+                <div class="form lk__form">
+                    <form class="lk-form">
+                        <div class="form__inner">
+    
+                            <div class="form__box form__box--wide">
+                                <div class="input form__input">
+                                    <input 
+                                    type='text'
+                                    class="input__field"
+                                    placeholder="Имя">
+                                    <span class="input__error">*Какая-то ошибочка вышла</span>
+                                </div>
+                                <div class="input form__input">
+                                    <input 
+                                    type='text'
+                                    class="input__field"
+                                    placeholder="Фамилия">
+                                    <span class="input__error">*Какая-то ошибочка вышла</span>
+                                </div>
+                                </div>
+                                <div class="input form__input">
+                                    <input 
+                                    type='num'
+                                    class="input__field js-born-mask"
+                                    placeholder="Дата рождения /  дд.мм.гг">
+                                    <span class="input__error">*Какая-то ошибочка вышла</span>
+                                </div>
+                            </div>
+    
+                            <div class="form__box form__box--wide">
+                                <div class="input form__input">
+                                    <input 
+                                    type='tel'
+                                    class="input__field js-phone-mask"
+                                    placeholder="Телефон">
+                                    <span class="input__error">*Какая-то ошибочка вышла</span>
+                                </div>
+                                <div class="input form__input">
+                                    <input 
+                                    type='email'
+                                    class="input__field"
+                                    placeholder="E-mail"
+                                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                                    <span class="input__error">*Какая-то ошибочка вышла</span>
+                                </div>
+                            </div>
+    
+                            <div class="form__box form__box--wide">
+                                <div class="form__box">
+                                    <div class="input form__input">
+                                        <input 
+                                        type='text'
+                                        class="input__field"
+                                        placeholder="Страна">
+                                        <span class="input__error">*Какая-то ошибочка вышла</span>
+                                    </div>
+                                <div class="form__box">
+                                    <div class="input form__input">
+                                        <input 
+                                        type='text'
+                                        class="input__field"
+                                        placeholder="Город">
+                                        <span class="input__error">*Какая-то ошибочка вышла</span>
+                                    </div>
+                                <div class="form__box">
+                                    <div class="input form__input">
+                                        <input 
+                                        type='text'
+                                        class="input__field"
+                                        placeholder="Улица">
+                                        <span class="input__error">*Какая-то ошибочка вышла</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="form__box">
+                                    <div class="input form__input">
+                                        <input 
+                                        type='text'
+                                        class="input__field"
+                                        placeholder="Дом/корпус">
+                                        <span class="input__error">*Какая-то ошибочка вышла</span>
+                                    </div>
+                                </div>
+                                </div>
+                                
+                                <div class="form__box">
+                                    <div class="input input--password form__input">
+                                        <input
+                                            type='password'
+                                            class="input__field"
+                                            placeholder="Введите пароль">
+                                        <i class="input__icon fal fa-eye-slash js-input-password--show"></i>
+                                        <i class="input__icon fal fa-eye js-input-password--hide" style="display: none;"></i>
+                                        <span class="input__error">*Какая-то ошибочка вышла</span>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>						
+    
+                        <div class="form-success">
+                            <div class="form-success__center">
+                                <h3 class="form-success__title">Спасибо за регистрацию!</h3>
+                            </div>
+                        </div>
+    
+                        <div class="policy cart__policy">
+                            {{ item.checkbox('Я соглалашаюсь', 'form__checkbox') }}
+                            на обработку персональных данных в соответствии с <a href="#" target="_blank">Условиями пользовательского соглашения</a>.
+                        </div>	
+    
+                        <div class="form__box">
+                            <button class="button button--default form__btn">Сохранить</button>
+                        </div>
+    
+                    </form>
+                </div>
+				
+			</div>
+			<!-- end lk__content -->
+
+		</div>
+
+	</div>
+</main>	
+<!-- end home lk -->
+
+{% endblock %}

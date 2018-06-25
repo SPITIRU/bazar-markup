@@ -39,19 +39,24 @@
 	}
 
 	&__btn{
+		min-width: auto;
+		height: 32px;
+		line-height: 31px;
+		border: 0;
+		outline: none;
+		cursor: pointer;
 		
-		&--close{		
+		&--close{
+			height: auto;
+			line-height: auto;
 			padding: 5px 10px;	
 			font-size: 21px;
 			font-weight: 700;
 			line-height: 1;
 			color: #000;
 			text-shadow: 0 1px 0 #fff;
-			opacity: .3;
 			background-color: transparent;
-			border: 0;
-			cursor: pointer;
-			outline: none;
+			opacity: .3;
 			position: absolute;
 			top: 3px;
 			right: 5px;
@@ -65,7 +70,15 @@
 			&:not(:disabled):not(.disabled) {
 				cursor: pointer;
 			}
-		}	    
+		}
+
+		&--cancel {
+			padding: 0 15px;
+		}
+
+		&--confirm {
+			padding: 0 15px;
+		}
 	}
 }//.modal
 
@@ -139,3 +152,9 @@
 		}
 	}//.change-city__item
 }//.change-city
+
+.logout {
+	&__question {
+		padding: $gutter 0;
+	}//.logout__question
+}//.logout

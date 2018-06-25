@@ -9,6 +9,7 @@ $card-indent: $gutter*2;
 
 	&__top-line{
 		margin-bottom: $gutter;
+		padding-top: 20px;
 		@extend %flexCenter;
 
 		@include respond-to(xs) {

@@ -66,7 +66,8 @@ $('.js-bz-slider--card').slick({
 
         breakpoint: 481,
         settings: {
-            dots: true
+            dots: true,
+            fade: false
         }
 
     }]

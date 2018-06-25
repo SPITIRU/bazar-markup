@@ -1614,7 +1614,7 @@
                   </div>
                   <div class="form__box form__box--wide">
                     <div class="input form__input">
-                      <input type='phone' class="input__field js-phone-mask" placeholder="Телефон">
+                      <input type='tel' class="input__field js-phone-mask" placeholder="Телефон">
                       <span class="input__error">*Какая-то ошибочка вышла</span>
                     </div>
                     <div class="input form__input">
@@ -1643,11 +1643,6 @@
                         <span class="input__error">*Какая-то ошибочка вышла</span>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div class="form-success">
-                  <div class="form-success__center">
-                    <h3 class="form-success__title">Спасибо за регистрацию!</h3>
                   </div>
                 </div>
                 <div class="policy cart__policy">
@@ -1781,7 +1776,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title">Modal title</h5>
-              <button type="button modal__btn--close" class="close" data-dismiss="modal" aria-label="Close">
+              <button type="button  modal__btn modal__btn--close" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
@@ -1797,7 +1792,7 @@
       <div class="modal fade" id="auth-form">
         <div class="modal-dialog modal-dialog--sm" role="document">
           <div class="modal-content">
-            <button class="close modal__btn--close" data-dismiss="modal" aria-label="Close">
+            <button class="close modal__btn modal__btn--close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
             <div class="modal-body">
@@ -1863,7 +1858,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title">Выберите город</h5>
-              <button class="close modal__btn--close" data-dismiss="modal" aria-label="Close">
+              <button class="close modal__btn modal__btn--close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
@@ -1937,6 +1932,27 @@
         </div>
       </div>
       <!-- end change-city -->
+      <!-- begin logout -->
+      <div class="modal fade logout" id="logout">
+        <div class="modal-dialog modal-dialog--sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Хотите выйте?</h5>
+              <button class="close modal__btn modal__btn--close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="logout__question">Вы уверены, что хотите выйти?</div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="button button--mute modal__btn modal__btn--cancel" data-dismiss="modal">Отмена</button>
+              <button type="button" class="button button--default modal__btn modal__btn--confirm">Выйти</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end logout -->
     </div>
     <!-- end windows -->
     <div class="go-top js-go-top">Наверх</div>

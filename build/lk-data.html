@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Контакты</title>
+    <title>Личный кабинет | Заказы</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -18,7 +18,7 @@
     <link rel="stylesheet" media="all" href="css/app.css"> </head>
   <body class="loading" itemscope="itemscope" itemtype="http://schema.org/WebPage">
     <!-- begin wrapper -->
-    <div class="wrapper page-contacts">
+    <div class="wrapper page-lk">
       <!-- begin header -->
       <header class="header " itemscope itemtype="http://schema.org/WPHeader">
         <!-- begin header__top-line -->
@@ -1591,44 +1591,120 @@
         </div>
       </header>
       <!-- end header -->
-      <!-- begin home contacts -->
-      <main class="main contacts">
+      <!-- begin home lk -->
+      <main class="main lk">
         <div class="container">
-          <div class="contacts__wrap">
-            <div class="contacts__map">
-              <div class="contacts-map" id="contacts-map"></div>
-            </div>
-            <div class="contacts__text">
-              <h1 class="h1 contacts__title">Контакты</h1>
-              <div class="contacts-box__wrap">
-                <div class="contacts__box contacts-box">
-                  <span class="contacts-box__title ">
-                    <i class="fal fa-phone contacts-box__icon"></i>Телефоны</span>
-                  <div class="contacts-box__item">
-                    <a href="tel:88007078630" class="contacts-box__link">8 800 707-86-30</a>
-                    <a href="tel:79372531125" class="contacts-box__link">7 937 253-11-25</a>
+          <div class="section-header cart__title">
+            <h1 class="h1">Личные данные</h1>
+          </div>
+          <div class="lk__wrap">
+            <!-- begin lk__sidebar -->
+            <sidebar class="lk__sidebar js-stiky-block">
+              <nav class="lk-nav lk__nav stiky-block__inner">
+                <ul class="lk-nav__list">
+                  <li class="lk-nav__item">
+                    <a href="lk-order.html" class="lk-nav__link lk-nav__link--order"> Заказы </a>
+                  </li>
+                  <li class="lk-nav__item">
+                    <a href="lk-favorits.html" class="lk-nav__link lk-nav__link--fav"> Избранное </a>
+                  </li>
+                  <li class="lk-nav__item">
+                    <a href="lk-data.html" class="lk-nav__link lk-nav__link--data"> Личные данные </a>
+                  </li>
+                  <li class="lk-nav__item">
+                    <a href="javascript:void(0)" data-toggle="modal" class="lk-nav__link lk-nav__link--exit"> Выйти </a>
+                  </li>
+                </ul>
+              </nav>
+            </sidebar>
+            <!-- end lk__sidebar -->
+            <!-- begin lk__content -->
+            <div class="lk__content stiky-content">
+              <div class="form lk__form">
+                <form class="lk-form">
+                  <div class="form__inner">
+                    <div class="form__box form__box--wide">
+                      <div class="input form__input">
+                        <input type='text' class="input__field" placeholder="Имя">
+                        <span class="input__error">*Какая-то ошибочка вышла</span>
+                      </div>
+                      <div class="input form__input">
+                        <input type='text' class="input__field" placeholder="Фамилия">
+                        <span class="input__error">*Какая-то ошибочка вышла</span>
+                      </div>
+                    </div>
+                    <div class="input form__input">
+                      <input type='num' class="input__field js-born-mask" placeholder="Дата рождения /  дд.мм.гг">
+                      <span class="input__error">*Какая-то ошибочка вышла</span>
+                    </div>
                   </div>
-                </div>
-                <div class="contacts__box contacts-box">
-                  <span class="contacts-box__title">
-                    <i class="fal fa-envelope contacts-box__icon"></i>E-mail</span>
-                  <div class="contacts-box__item">
-                    <a href="mailto:info@yandex.ru" class="contacts-box__link">info@yandex.ru</a>
+                  <div class="form__box form__box--wide">
+                    <div class="input form__input">
+                      <input type='tel' class="input__field js-phone-mask" placeholder="Телефон">
+                      <span class="input__error">*Какая-то ошибочка вышла</span>
+                    </div>
+                    <div class="input form__input">
+                      <input type='email' class="input__field" placeholder="E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                      <span class="input__error">*Какая-то ошибочка вышла</span>
+                    </div>
                   </div>
-                </div>
-                <div class="contacts__box contacts-box">
-                  <span class="contacts-box__title">
-                    <i class="fal fa-map-marker-alt contacts-box__icon"></i>Адрес:</span>
-                  <div class="contacts-box__item">
-                    <span class="contacts-box__link">г.Москва ул.Чехова, 55</span>
+                  <div class="form__box form__box--wide">
+                    <div class="form__box">
+                      <div class="input form__input">
+                        <input type='text' class="input__field" placeholder="Страна">
+                        <span class="input__error">*Какая-то ошибочка вышла</span>
+                      </div>
+                      <div class="form__box">
+                        <div class="input form__input">
+                          <input type='text' class="input__field" placeholder="Город">
+                          <span class="input__error">*Какая-то ошибочка вышла</span>
+                        </div>
+                        <div class="form__box">
+                          <div class="input form__input">
+                            <input type='text' class="input__field" placeholder="Улица">
+                            <span class="input__error">*Какая-то ошибочка вышла</span>
+                          </div>
+                        </div>
+                        <div class="form__box">
+                          <div class="input form__input">
+                            <input type='text' class="input__field" placeholder="Дом/корпус">
+                            <span class="input__error">*Какая-то ошибочка вышла</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form__box">
+                        <div class="input input--password form__input">
+                          <input type='password' class="input__field" placeholder="Введите пароль">
+                          <i class="input__icon fal fa-eye-slash js-input-password--show"></i>
+                          <i class="input__icon fal fa-eye js-input-password--hide" style="display: none;"></i>
+                          <span class="input__error">*Какая-то ошибочка вышла</span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                  <div class="form-success">
+                    <div class="form-success__center">
+                      <h3 class="form-success__title">Спасибо за регистрацию!</h3>
+                    </div>
+                  </div>
+                  <div class="policy cart__policy">
+                    <label class="checkbox form__checkbox">
+                      <input type="checkbox">
+                      <span class="checkbox__box"></span>
+                      <span class="checkbox__title">Я соглалашаюсь</span>
+                    </label> на обработку персональных данных в соответствии с
+                    <a href="#" target="_blank">Условиями пользовательского соглашения</a>. </div>
+                  <div class="form__box">
+                    <button class="button button--default form__btn">Сохранить</button>
+                  </div>
+                </form>
               </div>
             </div>
+            <!-- end lk__content -->
           </div>
         </div>
       </main>
-      <!-- end home contacts -->
+      <!-- end home lk -->
       <!-- begin footer -->
       <footer class="footer js-footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
         <div class="container">
@@ -1919,7 +1995,6 @@
     <div class="preloader"></div>
     <!-- begin scripts -->
     <script type="text/javascript" src="js/libs.min.js"></script>
-    <script src="js/assets/yandex.map.js" type="text/javascript"></script>
     <script type="text/javascript" src="js/del.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <!-- end scripts -->

@@ -33,9 +33,13 @@ $(document).ready(function () {
     }
 
     // //Masked inputmask https://github.com/RobinHerbots/Inputmask
-    if ($('.js-phone-mask').length > 0) {
+    if ($('.js-phone-mask').length > 0 || $('.js-born-mask').length > 0) {
         $('.js-phone-mask').inputmask({
             mask: "+7 (999) 999-99-99",
+            clearIncomplete: true
+        })
+        $('.js-born-mask').inputmask({
+            mask: "99-99-9999",
             clearIncomplete: true
         })
     }
@@ -213,6 +217,12 @@ $(document).ready(function () {
     */
 
     //=include partials/components.js
+
+    /*
+    *Lk.js
+    */
+
+    //=include partials/lk.js
 
 });
 

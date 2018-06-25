@@ -1599,27 +1599,27 @@
           </div>
           <div class="lk__wrap">
             <!-- begin lk__sidebar -->
-            <sidebar class="lk__sidebar">
-              <nav class="lk-nav lk__nav">
+            <sidebar class="lk__sidebar js-stiky-block">
+              <nav class="lk-nav lk__nav stiky-block__inner">
                 <ul class="lk-nav__list">
                   <li class="lk-nav__item">
-                    <a href="#" class="lk-nav__link lk-nav__link--order"> Заказы </a>
+                    <a href="lk-order.html" class="lk-nav__link lk-nav__link--order"> Заказы </a>
                   </li>
                   <li class="lk-nav__item">
-                    <a href="#" class="lk-nav__link lk-nav__link--fav"> Избранное </a>
+                    <a href="lk-favorits.html" class="lk-nav__link lk-nav__link--fav"> Избранное </a>
                   </li>
                   <li class="lk-nav__item">
-                    <a href="#" class="lk-nav__link lk-nav__link--data"> Личные данные </a>
+                    <a href="lk-data.html" class="lk-nav__link lk-nav__link--data"> Личные данные </a>
                   </li>
                   <li class="lk-nav__item">
-                    <a href="#" class="lk-nav__link lk-nav__link--exit"> Выйти </a>
+                    <a href="javascript:void(0)" data-toggle="modal" class="lk-nav__link lk-nav__link--exit"> Выйти </a>
                   </li>
                 </ul>
               </nav>
             </sidebar>
             <!-- end lk__sidebar -->
             <!-- begin lk__content -->
-            <div class="lk__content">
+            <div class="lk__content stiky-content">
               <div class="user-order">
                 <div class="accordeon lk__accordeon js-accordeon">
                   <div class="accordeon__item user-order__item">
@@ -1985,7 +1985,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title">Modal title</h5>
-              <button type="button modal__btn--close" class="close" data-dismiss="modal" aria-label="Close">
+              <button type="button  modal__btn modal__btn--close" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
@@ -2001,7 +2001,7 @@
       <div class="modal fade" id="auth-form">
         <div class="modal-dialog modal-dialog--sm" role="document">
           <div class="modal-content">
-            <button class="close modal__btn--close" data-dismiss="modal" aria-label="Close">
+            <button class="close modal__btn modal__btn--close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
             <div class="modal-body">
@@ -2067,7 +2067,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title">Выберите город</h5>
-              <button class="close modal__btn--close" data-dismiss="modal" aria-label="Close">
+              <button class="close modal__btn modal__btn--close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
@@ -2141,6 +2141,27 @@
         </div>
       </div>
       <!-- end change-city -->
+      <!-- begin logout -->
+      <div class="modal fade logout" id="logout">
+        <div class="modal-dialog modal-dialog--sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Хотите выйте?</h5>
+              <button class="close modal__btn modal__btn--close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="logout__question">Вы уверены, что хотите выйти?</div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="button button--mute modal__btn modal__btn--cancel" data-dismiss="modal">Отмена</button>
+              <button type="button" class="button button--default modal__btn modal__btn--confirm">Выйти</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end logout -->
     </div>
     <!-- end windows -->
     <div class="go-top js-go-top">Наверх</div>

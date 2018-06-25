@@ -1,0 +1,33 @@
+.bz-pushUp {
+    display: block;
+    padding: 5px 15px;
+    font-size: 15px;
+    line-height: 1.2;
+    color: #fff;
+    background-color: $color-main;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: fixed;
+    top: 10px;
+    right: -200%;
+    max-width: 300px;
+    width: 100%;
+    height: 50px;
+    border-radius: $border-radius;
+    z-index: z(modal);
+    @include tr;
+
+    &.is-active {
+        right: 10px;
+    }
+
+    &__close {
+        width: 10px;
+        height: 10px;
+        fill: #fff;
+        cursor: pointer;
+        position: absolute;
+        top: 2px;
+        right: 8px;
+    }
+} //bz-pushUp
