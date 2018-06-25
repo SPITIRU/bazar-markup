@@ -21,6 +21,75 @@
 	}
 }//.advantages
 
+.advantages-item{
+	margin-bottom: $base-indent*2;
+	@extend %flexCenter;
+
+	@include col;
+	@include size(4);
+	@include size-md(6);
+	@include size-xs(12);
+		
+	@include respond-to(sm) {
+		justify-content: center;
+	}
+		
+	@include respond-to(xs) {
+		justify-content: flex-start;
+	}
+
+	&__wrap{
+		@include row-flex;
+		
+		@include respond-to(sm) {
+			justify-content: center;
+			align-items: center;
+		}
+	}//.advantages-item__wrap
+
+	&__icon{
+		width: 90px;
+		height: 90px;
+		margin-right: $gutter;
+		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+		border: 1px solid $color-accent;
+		border-radius: 50%;
+		background-color: $color-accent;
+		display: inline-flex;
+
+		.icon, .fal{margin: auto;}
+
+		.icon{fill: #fff;}
+
+		.fal{
+			font-size: 30px;
+			color: #fff;
+		}
+	}//.advantages-item__icon
+
+	&__img{
+		width: 70px;
+		height: 70px;
+		margin: auto;
+	}//.advantages-item__img
+
+	&__desc{
+		@extend %flexColumn;
+	}//.advantages-item__desc
+
+	&__num{
+		font-family: $f2-bold;
+		font-size: 25px;
+		line-height: 1.2;
+		letter-spacing: 0.7px;
+		span{
+			font-size: 22px;
+		}
+	}//.advantages-item__num
+
+	&__text{font-size: 16px;}//.advantages-item__text	
+}//.advantages-item
+
 .new{
 	padding-top: 0;
 
@@ -197,70 +266,6 @@
 
 	img{height: 100%;}
 }//.bz-grid
-
-.advantages-item{
-	margin-bottom: $base-indent*2;
-	@extend %flexCenter;
-
-	@include col;
-	@include size(4);
-	@include size-md(6);
-	@include size-xs(12);
-		
-	@include respond-to(sm) {
-		justify-content: center;
-	}
-		
-	@include respond-to(xs) {
-		justify-content: flex-start;
-	}
-
-	&__wrap{
-		@include row-flex;
-		
-		@include respond-to(sm) {
-			justify-content: center;
-			align-items: center;
-		}
-	}//.advantages-item__wrap
-
-	&__icon{
-		width: 90px;
-		height: 90px;
-		margin-right: 10px;
-		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
-		border: 1px solid $color-accent;
-		border-radius: 50%;
-		background-color: $color-accent;
-		display: inline-flex;
-
-		.icon, .fal{margin: auto;}
-
-		.icon{fill: #fff;}
-
-		.fal{
-			font-size: 30px;
-			color: #fff;
-		}
-	}//.advantages-item__icon
-
-	&__desc{
-		@extend %flexColumn;
-		align-items: center;
-		justify-content: center;
-	}//.advantages-item__desc
-
-	&__num{
-		font-family: $f2-bold;
-		font-size: 35px;
-		letter-spacing: 0.7px;
-		span{
-			font-size: 22px;
-		}
-	}//.advantages-item__num
-
-	&__text{font-size: 14px;}//.advantages-item__text	
-}//.advantages-item
 
 .why-we{
 	padding: 50px 0;

@@ -36,7 +36,6 @@ PageList:
 - file: lk-favorits.html
   ready: 50
   desc : ЛК избраное
-  desc : ЛК заказы
   
 - file: lk-data.html
   ready: 50

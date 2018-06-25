@@ -3,16 +3,18 @@ title: BAZAR-TEX | Ткани и Фурнитура
 wrapperClass: page-home
 
 advantages:
-- icon: 'fa-percentage'
-  num: '300'
-  text: 'позиций в наличии'
-- icon: 'fa-truck'
-  num: '1200'
-  text: 'отправленных заказов'
-- icon: 'fa-thumbs-up'
-  num: '3'
-  numText: 'года'
-  text: 'большой опыт работы'
+- icon: 'otrez'
+  num: '1'
+  numText: 'метра'
+  text: 'Покупка от'
+- icon: 'send-product'
+  num: '24'
+  numText: 'часов'
+  text: 'Отправка в течении'
+- icon: 'delivery'
+  num: '190'
+  numText: 'руб'
+  text: 'доставка от'
 ---
 {% extends "layouts/_layout.html" %}
 
@@ -180,11 +182,11 @@ advantages:
 				{% for item in advantages %}
 				<div class="advantages-item">
 					<div class="advantages-item__icon">
-						<i class="fal {{ item.icon }}"></i>
+						<img class="advantages-item__img" src="img/general/{{ item.icon }}.svg" alt="alt">
 					</div>
 					<div class="advantages-item__desc">
-						<span class="advantages-item__num">{{ item.num }} <span>{{ item.numText }}</span></span>
 						<span class="advantages-item__text">{{ item.text }}</span>
+						<span class="advantages-item__num">{{ item.num }} <span>{{ item.numText }}</span></span>
 					</div>
 				</div>
 				{% endfor %}﻿

@@ -245,7 +245,7 @@ $card-indent: $gutter*2;
 					left: -100px;
 				}				
 			}
-			&:hover{
+			&:hover, &.is-checked{
 				span{
 					&::after{right: -100px;}
 					&::before{left: 12px;}					
