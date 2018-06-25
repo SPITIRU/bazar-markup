@@ -573,10 +573,6 @@
 				content: '\f101';
 			}
 		}
-
-		&_wrap{
-			margin-bottom: $gutter/2;
-		}
 	}//.product-item__title
 
 	&__price{
@@ -701,10 +697,9 @@
 				}
 			}
 			&__title{
-				margin-bottom: 5px;
-				font-size: 18px;
+				font-size: 15px;
 				@include respond-to(xs) {
-					font-size: 15px;
+					margin-bottom: 10px;
 				}
 			}
 			&__articul{
@@ -754,12 +749,14 @@
 		}
 		.item-select{
 			max-width: 180px;
+			margin-left: -70px;
 			width: 100%;
 			margin-top: 0;
 			position: relative;
 
 			@include respond-to(xs) {
 				order: 3;
+				margin-left: 0;
 			}
 
 			&--count{
@@ -812,7 +809,7 @@
 		width: 13px;
 		height: 13px;
 		background-color: transparent;
-		@include sprite(colors)
+		@include sprite(colors);
 		border-radius: 50%;
 		@include vy;
 		left: 0;

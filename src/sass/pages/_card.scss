@@ -236,19 +236,43 @@ $card-indent: $gutter*2;
 					@include tr();
 				}
 
-				&::after{
-					content: '\f07a';
-					right: 13px;
-				}
-				&::before{
-					content: '\f218';
-					left: -100px;
-				}				
+				&:first-child {
+					&::after{
+						content: '\f07a';
+						right: 13px;
+					}
+					&::before{
+						content: '\f218';
+						left: -100px;
+					}			
+				}		
+				&:last-child {
+					display: none;
+					&::after{
+						content: '\f2ed';
+						right: 14px;
+					}
+								
+				}	
 			}
-			&:hover, &.is-checked{
+			&:hover{
 				span{
-					&::after{right: -100px;}
-					&::before{left: 12px;}					
+					&:first-child {
+						&::after{right: -100px;}
+						&::before{left: 12px;}
+					}			
+				}
+			}
+			&.is-checked {
+				color: #fff;
+				background-color: $color-main;
+				span {
+					&:first-child {
+						display: none;
+					}
+					&:last-child {
+						display: block;
+					}
 				}
 			}
 		}//.card__btn--cart
@@ -288,6 +312,7 @@ $card-indent: $gutter*2;
 	.button-box{
 		margin-bottom: $gutter*1.5;
 		@extend %flexCenter;
+		flex-wrap: wrap;
 
 		@include respond-to(xs) {			
 			.button--yellow{width: 90%;}
@@ -303,6 +328,15 @@ $card-indent: $gutter*2;
 			}
 		}
 	}
+
+	&__order-info {
+		width: 100%;
+		margin-top: 5px;
+		font-size: 13px;
+		span{
+			font-family: $f2-bold;
+		}
+	}//.card__order-info
 
 	&__info{
 		max-width: 375px;
@@ -469,6 +503,10 @@ $card-indent: $gutter*2;
 			&__list{display: block;}
 		}
 	}
+
+	&.is-error {
+		.item-select__error{display: block;}
+	}
 	
 	&.is-close{
 		.item-select{
@@ -484,6 +522,18 @@ $card-indent: $gutter*2;
 			}
 		}			
 	}
+
+	&__error {
+		display: none;
+		font-size: 13px;
+		line-height: 1;
+		text-align: center;
+		color: $gray;
+		position: absolute;
+		bottom: -17px;
+		left: 0;
+		right: 0;
+	}//.item-select__error
 
 	&__group{
 		max-width: 375px;
