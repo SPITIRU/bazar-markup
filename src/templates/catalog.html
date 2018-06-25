@@ -20,7 +20,7 @@ changer:
 <!-- begin home -->
 <main class="main catalog">
 	<div class="container">
-
+		<!-- begin catalog__wrap -->
 		<div class="catalog__wrap">
 
 			{% include "partials/components/_catalog-filter.html" %}
@@ -28,8 +28,7 @@ changer:
 			<!-- begin catalog-filter__btn -->
 			<button class="catalog-filter__btn catalog-filter__btn--show js-catalog-filter--show">
 				{{mixin.icon('filter-btn')}}
-			</button>
-			<!-- end catalog-filter__btn -->
+			</button><!-- end catalog-filter__btn -->
 
 			<!-- begin catalog-content -->
 			<div class="catalog-content catalog__content">
@@ -48,8 +47,7 @@ changer:
 							<option value="Рейтинг агенств">В начале новинки</option>
 						</select>
 					</div>
-				</div>
-				<!-- end catalog__top-line -->
+				</div><!-- end catalog__top-line -->
 
 				<!-- begin catalog__changer -->
 				<div class="catalog__changer changer">
@@ -65,27 +63,23 @@ changer:
 						</li>
 						{% endfor %}
 					</ul>
-				</div>
-				<!-- end catalog__changer -->
+				</div><!-- end catalog__changer -->
 
 				<!-- begin product-item -->
 				<div class="product-item__wrap">
 					{% for i in range(0, 10) %}
 						{{ item.productItem() }}
 					{% endfor %}
-				</div>
-				<!-- end product-item -->
+				</div><!-- end product-item -->
 
 				<!-- begin catalog-content__empty -->
 				<div class="catalog-content__empty" style="display: none;">
 					<p>По вашим поисковым параметрам ничего не найдено</p>
 					<button class="button button--transparent button--muted">Сбросить фильтр</button>
-				</div>
-				<!-- end catalog-content__empty -->
+				</div><!-- end catalog-content__empty -->
 
 				<!-- begin catalog-content__btn -->
-				<button class="button button--transparent button--info catalog-content__btn">Показать еще</button>
-				<!-- end catalog-content__btn -->
+				<button class="button button--transparent button--info catalog-content__btn">Показать еще</button><!-- end catalog-content__btn -->
 
 				<!-- begin pagination -->
 				<div class="pagination">
@@ -110,20 +104,24 @@ changer:
 							</a>
 						</li>
 					</ul>
-				</div>
-				<!-- end pagination -->
+				</div><!-- end pagination -->
 
 				<!-- begin catalog-content__preloader -->
 				<div class="catalog-content__preloader preloader" style="display: none;">
 					<div class="preloader__inner"></div>
-				</div>
-				<!-- end catalog-content__preloader -->
+				</div><!-- end catalog-content__preloader -->
+			</div><!-- end catalog-content -->
+
+		</div><!-- end catalog__wrap -->
+
+		<!-- begin seoblock --> 
+		<section class="seoblock">  
+			<div class="container">
+				<p class="seoblock__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, reprehenderit earum. Molestiae tenetur pariatur, sequi quo id quisquam dolorum non fuga incidunt maiores suscipit repudiandae repellat corporis, cumque a placeat maxime quaerat quidem in ullam totam. Ratione quo quam esse asperiores corrupti consequuntur maiores? Accusantium, saepe est illum placeat aliquid omnis consequuntur, neque tempora itaque optio debitis veritatis, molestias magnam ad aperiam explicabo perspiciatis atque ullam nihil vel assumenda. Cum!</p>
 			</div>
-			<!-- end catalog-content -->
-		</div>
+		</section> <!-- end seoblock -->
 
 	</div>
-</main>	
-<!-- end home -->
+</main><!-- end home -->
 
 {% endblock %}

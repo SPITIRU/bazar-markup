@@ -291,15 +291,15 @@ body{
 	&__icon{}//.pagination__icon	
 }//pagination
 
-.range{
+.range {
 	@include clr;
 
-	&__slider{
+	&__slider {
 		margin-top: 5px;
 		margin-bottom: 15px;
 	}//range__slider
 
-	&__from, &__to{
+	&__from, &__to {
 		display: inline-block;
 		vertical-align: middle;
 		font-size: 15px;
@@ -315,11 +315,12 @@ body{
 		}
 	}//range__from
 
-	&__from{float: left;}
-	&__to{float: right;}//range__to
+	&__from {float: left;}//range__from
+
+	&__to {float: right;}//range__to
 }//range
 
-.page-title{
+.page-title {
 	margin-bottom: $gutter;
 	font-family: $f2;
 	font-size: 19px;
@@ -329,12 +330,12 @@ body{
 
 .tab{
 
-	&__titles{
+	&__titles {
 		border-bottom: 1px solid rgba(#000, .1);
 		display: inline-flex;
 	}//.tab__titles
 
-	&__title{
+	&__title {
 		padding: 5px 0;
 		text-transform: uppercase;
 		font-size: 14px;
@@ -344,18 +345,17 @@ body{
 		outline: none;
 		position: relative;
 		top: 1px;
-		&:hover{
-			border-bottom: 1px solid rgba($color-accent, .4);
-		}
-		&.is-active, &.ui-tabs-active{
-			border-bottom: 1px solid $color-accent;
-		}
-		& + &{margin-left: 30px;}
+
+		&:hover {border-bottom: 1px solid rgba($color-accent, .4);}
+
+		&.is-active, &.ui-tabs-active {border-bottom: 1px solid $color-accent;}
+
+		& + & {margin-left: 30px;}
 	}//.tab__title
 
-	&__contentes{@include clr;}//.tab__contentes
+	&__contentes {@include clr;}//.tab__contentes
 
-	&__content{
+	&__content {
 		display: none;
 		padding: 15px 0;
 		p{
@@ -364,7 +364,7 @@ body{
 		}
 	}//.tab__content
 
-	&__icon{
+	&__icon {
 		width: 40px;
 		height: 40px;
 		&_wrap{
@@ -378,16 +378,22 @@ body{
 		}
 	}//.tab__icon
 
-	&__text{
+	&__text {
 		font-size: 12px;
 		text-align: center;
 	}//.tab__text
 }//.tab
 
-.star-rating{
+.seoblock {
+	&__text {
+		margin: $gutter*2.5 0;
+	}//.seoblock__text
+}//.seoblock
+
+.star-rating {
 	font-size: 0;
 
-	&__wrap{
+	&__wrap {
 		display: inline-block;
 		font-size: 16px;
 		&::after{
@@ -397,7 +403,7 @@ body{
 		}
 	}
 
-	&__ico{
+	&__ico {
 		float: right;
 		padding-left: 2px;
 		cursor: pointer;
@@ -407,22 +413,22 @@ body{
 		}
 	}
 
-	&__input{display: none;}
+	&__input {display: none;}
 }
 .star-rating__ico:hover:before,
 .star-rating__ico:hover ~ .star-rating__ico:before,
-.star-rating__input:checked ~ .star-rating__ico:before{content: "\f005";}
+.star-rating__input:checked ~ .star-rating__ico:before {content: "\f005";}
 
-.policy{
+.policy {
 	font-family: $f-light;
 	font-size: 14px;
-	a{
+	a {
 		color: $color-info;
 		&:hover{text-decoration: underline;}
 	}
 }//.policy
 
-.go-top{
+.go-top {
 	width: 52px;
 	height: 52px;
 	padding-top: 5px;
