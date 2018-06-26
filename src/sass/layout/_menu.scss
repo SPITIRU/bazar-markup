@@ -292,8 +292,6 @@
 	background-color: $color-bg--lighten;
 	z-index: z(dropdown);
 
-	&__in{}//.nav-main-dropdown__in
-
 	&__items{
 		height: auto;
 		@include container;		
@@ -421,6 +419,7 @@
 		& + &{margin-left: 15px;}
 
 		li{
+			min-width: 120px;
 			font-size: 13px;
 
 			@include respond-to(sm) {

@@ -13,7 +13,7 @@
 
     &__items {
         @extend %flexColumn;
-    @include respond-to(xs) {
+        @include respond-to(xs) {
             order: 3;
         }
     } //.cart__items
