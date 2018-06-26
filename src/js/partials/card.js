@@ -13,6 +13,10 @@ if ($('.js-tab').length > 0 && $(window).width() > 480) {
     document.querySelector('.js-tab').addEventListener('click', tabs);
 }
 
+$('#preview').on('shown.bs.modal', function(e) {
+    $('.js-bz-slider--card').resize();
+});
+
 //Табы
 function tabs(e) {
     var target = e.target;
@@ -133,43 +137,4 @@ if ($('.js-item-select').length > 0) {
                 }
             }
         });
-
-    $('.js-item-select-control--plus').on('click', function(e) {
-        let select = $(this).closest('.js-item-select');
-        let input = select.find('.item-select__input');
-        let value = select.find('.item-select__value');
-        let curentVal = parseInt(input.val());
-        let count = parseInt(input.val()) + 1 + ' ' + 'м';
-
-        input.removeAttr('style').val(count);
-
-        if (curentVal > 0) {
-            input.change();
-        } else {
-            input.val(1 + 'м');
-        }
-
-        value.children('.item-select__title').css('display', 'none');
-        e.stopPropagation();
-    });
-
-    $('.js-item-select-control--minus').on('click', function() {
-        let select = $(this).closest('.js-item-select');
-        let input = select.find('.item-select__input');
-        let value = select.find('.item-select__value');
-        let curentVal = parseInt(input.val());
-        let count = parseInt(input.val()) - 1 + ' ' + 'м';
-
-        if (curentVal > 1) {
-            count = count < 1 ? 1 : count;
-            input.val(count);
-            input.change();
-            select.removeClass('is-close');
-        } else {
-            value.children('.item-select__title').removeAttr('style');
-            input.css('display', 'none');
-            select.removeClass('is-active');
-        }
-        return false;
-    });
 }

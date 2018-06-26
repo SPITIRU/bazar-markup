@@ -1,24 +1,5 @@
 ---
-title: Атлас дюпон «izumrud» 
-
-productDesc:
- - title: Состав
-   desc: 100% п/э
- - title: Плотность
-   desc: 120 гр/м.кв
- - title: Ширина
-   desc: 1.5 м
- - title: Цвет
-   desc: коричневый
- - title: Производитель
-   desc: Турция
- - title: Отпускается
-   desc: от 1 м
- - title: Кол-во метров в рулоне
-   desc: 25
- - title: Артикул
-   desc: ас06
-
+title: Атлас дюпон «izumrud»
 ---
 
 {% extends "layouts/_layout.html" %}
@@ -28,7 +9,7 @@ productDesc:
 <!-- begin main card -->
 <main class="main card">
 	<div class="container">
-		
+
 		<!-- begin card__top-line -->
 		<div class="card__top-line">
 			{% include "partials/components/_breadcrumbs.html" %}
@@ -36,8 +17,8 @@ productDesc:
 			<a href="#" class="button button--link card__btn card__btn--back">Вернуться в каталог</a>
 
 			<a href="#" class="card__back">Атлас</a>
-		</div>
-		<!-- end card__top-line -->		
+		</div><!-- end card__top-line -->
+
 		<!-- begin card__wrap -->
 		<div class="card__wrap"  itemscope itemtype="http://schema.org/Product">
 			<!-- begin card__image -->
@@ -49,7 +30,7 @@ productDesc:
 							<img itemprop="url contentUrl" src="img/products/atlas/big/{{i+1}}.png" alt="Атлас дюпон «izumrud»">
 							<meta itemprop="name" content="здесь полное описание вплоть до артикула">
 						</div>
-						{% endfor %}				
+						{% endfor %}
 					</div>
 					<div class="card__slider--nav js-bz-slider--card-nav">
 						{% for i in range(0, 4) %}
@@ -57,8 +38,7 @@ productDesc:
 						{% endfor %}
 					</div>
 				</div>
-			</div>
-			<!-- end card__image -->
+			</div><!-- end card__image -->
 
 			<!-- begin card__desc -->
 			<div class="card__desc">
@@ -125,9 +105,8 @@ productDesc:
 							</div>
 						</div>
 					</div>
-				</div>
-				<!-- end item-select -->
-				
+				</div><!-- end item-select -->
+
 				<div class="button-box">
 					<button class="button button--yellow card__btn card__btn--cart is-checked" onclick= "pushUp();">
 						Добавить в корзину
@@ -153,15 +132,16 @@ productDesc:
 							</div>
 							<div class="tab__contentes">
 								<div class="tab__content tab__content--car" style="display: block;" data-tab-content="0">
-								
+
 									<div class="bz-table bz-table--dot">
 										<ul class="bz-table__list">
-											{% for item in productDesc %}
-											<li class="bz-table__item">
-												<span class="bz-table__subitem"><span>{{ item.title }}</span></span>
-												<a href="#" class="bz-table__subitem">{{ item.desc }}</a>
-											</li>
-											{% endfor %}
+											{% import "data/data.html" as productDesc %}
+											  {% for item in productDesc.productDesc %}
+											  <li class="bz-table__item">
+												  <span class="bz-table__subitem"><span>{{ item.title }}</span></span>
+												  <a href="#" class="bz-table__subitem">{{ item.desc }}</a>
+											  </li>
+											  {% endfor %}
 										</ul>
 									</div>
 
@@ -176,13 +156,10 @@ productDesc:
 						</div>
 					</div>
 
-				</div>
-				<!-- end card__info -->
+				</div><!-- end card__info -->
 
-			</div>
-			<!-- end card__desc -->
-		</div>
-		<!-- end card__wrap -->
+			</div><!-- end card__desc -->
+		</div><!-- end card__wrap -->
 
 		<!-- begin card__related -->
 		<div class="card__related related">
@@ -295,8 +272,7 @@ productDesc:
 				</div>
 			</div>
 
-		</div>
-		<!-- end card__related -->
+		</div><!-- end card__related -->
 
 		<!-- begin card__colors -->
 		<div class="card__colors">
@@ -306,18 +282,16 @@ productDesc:
 			<div class="product-item__wrap">
 				{% for i in range(0, 4) %}
 					{{ item.productItemColor() }}
-				{% endfor %}﻿				
+				{% endfor %}
 			</div>
 
-		</div>
-		<!-- end card__colors -->
+		</div><!-- end card__colors -->
 
 		<div class="button-box">
 			<a href="#" class="button button--transparent button--info card__btn--back">Вернуться в каталог</a>
 		</div>
 
 	</div>
-</main>	
-<!-- end main card -->
+</main><!-- end main card -->
 
 {% endblock %}

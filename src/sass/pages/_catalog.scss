@@ -471,13 +471,13 @@
 	}
 }//.sorting
 
-.product-item{
+.product-item {
 	display: inline-block;
 	margin-bottom: $base-indent*1.5;
 	background-color: #fff;
 	position: relative;
 
-	&:hover, &.is-hover{
+	&:hover, &.is-hover {
 		color: $color-text;
 		@include min-screen(481) {
 			box-shadow: 0 20px 30px rgba(#000, 0.4);
@@ -488,7 +488,7 @@
 		}
 	}
 
-	&__wrap{
+	&__wrap {
 		@include row-flex();
 		.product-item{
 			@include col();
@@ -505,23 +505,23 @@
 				@include size-i5(6);
 			}
 		}
-	}
+	}//.product-item__wrap
 
-	&__img{
+	&__img {
 		margin-bottom: 10px;
 		padding: 10px;
 		border: 1px solid $color-border--light;
 		position: relative;
 	}//.product-item__img
 
-	&__fav{
+	&__fav {
 		color: #fff;
 		position: absolute;
 		top: 12px;
 		right: 15px;
 	}//.product-item__fav
 
-	&__more{
+	&__more {
 		display: none;
 		padding: 0 10px 10px;
 		background-color: #fff;
@@ -536,11 +536,11 @@
 		}
 	}//.product-item__more
 
-	&__box{@extend %flexCenter;}//.product-item__box
+	&__box {@extend %flexCenter;}//.product-item__box
 
-	&__desc{padding: 0 10px;}//.product-item__desc
+	&__desc {padding: 0 10px;}//.product-item__desc
 
-	&__title{
+	&__title {
 		margin-bottom: 0px;
 		font-family: $f2-bold;
 		font-size: 12px;
@@ -566,29 +566,29 @@
 		}
 	}//.product-item__title
 
-	&__price{
+	&__price {
 		font-family: $f2-bold;
 		font-size: 14px;
 	}//.product-item__price
 
-	&__articul, &__color-count{margin-left: auto;}//.product-item__articul
+	&__articul, &__color-count {margin-left: auto;}//.product-item__articul
 
-	&__articul{
+	&__articul {
 		font-size: 12px;
 		text-transform: uppercase;
 	}//.product-item__articul
 
-	&__color-count{
+	&__color-count {
 		margin-left: auto;
 		font-style: normal;
 	}//.product-item__color-count
 
-	&__color{
+	&__color {
 		margin-top: 15px;
 		margin-bottom: 10px;
 	}//.product-item__color
 
-	&__btn{
+	&__btn {
 		display: block;
 		width: 100%;
 		& + &{
@@ -596,7 +596,7 @@
 		}
 	}//.product-item__btn
 
-	&__del{
+	&__del {
 		border: 0;
 		background-color: transparent;
 		.icon{
@@ -605,12 +605,12 @@
 		}
 	}//.product-item__del
 
-	&__box{
+	&__box {
 		@extend %flexCenter;
 		justify-content: space-between;
-	}
+	}//.product-item__box
 
-	&--small{
+	&--small {
 		width: 180px;
 
 		@include min-screen(481) {

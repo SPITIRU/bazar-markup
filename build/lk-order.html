@@ -2124,27 +2124,219 @@
         </div>
       </div>
       <!-- end change-city -->
-      <!-- begin logout -->
-      <div class="modal fade logout" id="logout">
-        <div class="modal-dialog modal-dialog--sm">
+      <!-- begin preview -->
+      <div class="modal fade preview" id="preview">
+        <div class="modal-dialog modal-dialog--lg">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title">Хотите выйте?</h5>
+              <h5 class="modal-title">Выберите город</h5>
               <button class="close modal__btn modal__btn--close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-              <div class="logout__question">Вы уверены, что хотите выйти?</div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="button button--mute modal__btn modal__btn--cancel" data-dismiss="modal">Отмена</button>
-              <button type="button" class="button button--default modal__btn modal__btn--confirm">Выйти</button>
+              <div class="preview__wrap">
+                <div class="preview__arrow preview__arrow--prev"></div>
+                <div class="preview__arrow preview__arrow--next"></div>
+                <!-- begin card__wrap -->
+                <div class="card__wrap" itemscope itemtype="http://schema.org/Product">
+                  <!-- begin card__image -->
+                  <div class="card__image">
+                    <div class="bz-slider bz-slider--card card__slider">
+                      <div class="bz-slider__slides js-bz-slider--card">
+                        <div itemscope itemtype="https://schema.org/ImageObject">
+                          <img itemprop="url contentUrl" src="img/products/atlas/big/1.png" alt="Атлас дюпон «izumrud»">
+                          <meta itemprop="name" content="здесь полное описание вплоть до артикула"> </div>
+                        <div itemscope itemtype="https://schema.org/ImageObject">
+                          <img itemprop="url contentUrl" src="img/products/atlas/big/2.png" alt="Атлас дюпон «izumrud»">
+                          <meta itemprop="name" content="здесь полное описание вплоть до артикула"> </div>
+                        <div itemscope itemtype="https://schema.org/ImageObject">
+                          <img itemprop="url contentUrl" src="img/products/atlas/big/3.png" alt="Атлас дюпон «izumrud»">
+                          <meta itemprop="name" content="здесь полное описание вплоть до артикула"> </div>
+                        <div itemscope itemtype="https://schema.org/ImageObject">
+                          <img itemprop="url contentUrl" src="img/products/atlas/big/4.png" alt="Атлас дюпон «izumrud»">
+                          <meta itemprop="name" content="здесь полное описание вплоть до артикула"> </div>
+                      </div>
+                      <div class="card__slider--nav js-bz-slider--card-nav">
+                        <div>
+                          <img src="img/products/atlas/small/1.png" alt="alt"> </div>
+                        <div>
+                          <img src="img/products/atlas/small/2.png" alt="alt"> </div>
+                        <div>
+                          <img src="img/products/atlas/small/3.png" alt="alt"> </div>
+                        <div>
+                          <img src="img/products/atlas/small/4.png" alt="alt"> </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end card__image -->
+                  <!-- begin card__desc -->
+                  <div class="card__desc">
+                    <h1 class="h1 product-item__title card__title" itemprop="name">Атлас дюпон
+                      <span>white</span>
+                    </h1>
+                    <div class="card__price">340,00
+                      <span>руб/м</span>
+                    </div>
+                    <!-- begin item-select -->
+                    <div class="item-select__group card__item-select">
+                      <div class="item-select item-select--color js-item-select">
+                        <div class="item-select__caption">Цвет</div>
+                        <div class="item-select__value">
+                          <span class="item-select__color" data-item-select-color="#233e23"></span>
+                          <span class="item-select__title">Темно зеленый</span>
+                        </div>
+                        <div class="item-select__list">
+                          <div class="item-select__item">
+                            <span class="item-select__color" data-item-select-color="#233e23"></span>
+                            <span class="item-select__title">Темно зеленый</span>
+                            <span class="item-select__subtitle stock">в наличии</span>
+                          </div>
+                          <div class="item-select__item">
+                            <span class="item-select__color" data-item-select-color="#46358d"></span>
+                            <span class="item-select__title">Темно синий</span>
+                            <span class="item-select__subtitle ends">заканчивается</span>
+                          </div>
+                          <div class="item-select__item">
+                            <span class="item-select__color" data-item-select-color="#e4d8cb"></span>
+                            <span class="item-select__title">Бежевый</span>
+                            <span class="item-select__subtitle stock">в наличии</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item-select item-select--count js-item-select">
+                        <div class="item-select__caption">Количество</div>
+                        <div class="item-select__value">
+                          <div class="item-select__control item-select__control--minus js-item-select-control--minus"></div>
+                          <span class="item-select__title">Выбрать</span>
+                          <input type="text" class="item-select__input" style="display: none;" spellcheck="false">
+                          <div class="item-select__control item-select__control--plus js-item-select-control--plus"></div>
+                        </div>
+                        <div class="item-select__list">
+                          <div class="item-select__item item-select__item--header">
+                            <span class="item-select__title">Купить от:</span>
+                            <span class="item-select__subtitle">Цена за метр:</span>
+                          </div>
+                          <div class="item-select__item">
+                            <span class="item-select__title">1 м</span>
+                            <span class="item-select__subtitle">340,00 руб.</span>
+                          </div>
+                          <div class="item-select__item">
+                            <div class="item-select__title_wrap">
+                              <span class="item-select__title">15 м </span>
+                              <span class="item-select__title_desc">(рулон)</span>
+                            </div>
+                            <span class="item-select__subtitle">4 335,00 руб.
+                              <span>-15%</span>
+                            </span>
+                          </div>
+                          <div class="item-select__item">
+                            <div class="item-select__title_wrap">
+                              <span class="item-select__title">150 м</span>
+                              <span class="item-select__title_desc">(10 рулонов)</span>
+                            </div>
+                            <span class="item-select__subtitle">38 250,00 руб.
+                              <span>-25%</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end item-select -->
+                    <div class="button-box">
+                      <button class="button button--yellow card__btn card__btn--cart is-checked" onclick="pushUp();"> Добавить в корзину
+                        <span></span>
+                        <span title="убрать из корзины"></span>
+                      </button>
+                      <div tooltip="в избранное">
+                        <button class="button-icon button-icon--fav js-button-icon--fav card__btn card__btn--fav"></button>
+                      </div>
+                      <span class="card__order-info">В корзине
+                        <span>5</span> метров —
+                        <span>1694,90 </span>руб.</span>
+                    </div>
+                    <!-- begin card__info -->
+                    <div class="card__info">
+                      <div class="tab tab--transform js-tab--transform">
+                        <div class="tab__wrap">
+                          <div class="tab__titles js-tab">
+                            <div class="tab__title is-active" data-tab="0">Характеристики</div>
+                            <div class="tab__title" data-tab="1">Описание</div>
+                          </div>
+                          <div class="tab__contentes">
+                            <div class="tab__content tab__content--car" style="display: block;" data-tab-content="0">
+                              <div class="bz-table bz-table--dot">
+                                <ul class="bz-table__list">
+                                  <li class="bz-table__item">
+                                    <span class="bz-table__subitem">
+                                      <span>Состав</span>
+                                    </span>
+                                    <a href="#" class="bz-table__subitem">100% п/э</a>
+                                  </li>
+                                  <li class="bz-table__item">
+                                    <span class="bz-table__subitem">
+                                      <span>Плотность</span>
+                                    </span>
+                                    <a href="#" class="bz-table__subitem">120 гр/м.кв</a>
+                                  </li>
+                                  <li class="bz-table__item">
+                                    <span class="bz-table__subitem">
+                                      <span>Ширина</span>
+                                    </span>
+                                    <a href="#" class="bz-table__subitem">1.5 м</a>
+                                  </li>
+                                  <li class="bz-table__item">
+                                    <span class="bz-table__subitem">
+                                      <span>Цвет</span>
+                                    </span>
+                                    <a href="#" class="bz-table__subitem">коричневый</a>
+                                  </li>
+                                  <li class="bz-table__item">
+                                    <span class="bz-table__subitem">
+                                      <span>Производитель</span>
+                                    </span>
+                                    <a href="#" class="bz-table__subitem">Турция</a>
+                                  </li>
+                                  <li class="bz-table__item">
+                                    <span class="bz-table__subitem">
+                                      <span>Отпускается</span>
+                                    </span>
+                                    <a href="#" class="bz-table__subitem">от 1 м</a>
+                                  </li>
+                                  <li class="bz-table__item">
+                                    <span class="bz-table__subitem">
+                                      <span>Кол-во метров в рулоне</span>
+                                    </span>
+                                    <a href="#" class="bz-table__subitem">25</a>
+                                  </li>
+                                  <li class="bz-table__item">
+                                    <span class="bz-table__subitem">
+                                      <span>Артикул</span>
+                                    </span>
+                                    <a href="#" class="bz-table__subitem">ас06</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="tab__content tab__content--product" data-tab-content="1">
+                              <p>Плотная ткань с гладкокрашенной отделкой. Лицевая сторона гладкая, с мягким атласным блеском. Изнаночная - матовая, с зернистой поверхностью. Материал прочный, эластичный, хорошо драпирующийся. Атлас широко применяется для
+                                изготовления праздничных и концертных нарядов, свадебных платьев.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end card__info -->
+                  </div>
+                  <!-- end card__desc -->
+                </div>
+                <!-- end card__wrap -->
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- end logout -->
+      <!-- end preview -->
     </div>
     <!-- end windows -->
     <div class="go-top js-go-top">Наверх</div>
