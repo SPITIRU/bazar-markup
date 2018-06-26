@@ -5,7 +5,6 @@ options:
 files:
   include: 'sass/**/*.s+(a|c)ss'
   ignore:
-    - 'src/sass/base/**/*.*'
     - 'src/sass/_libs.s+(a|c)ss'
     - 'src/sass/helpers/**/*.*'
     - 'src/sass/generated/**/*.*'
