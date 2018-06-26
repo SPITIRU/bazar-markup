@@ -89,13 +89,8 @@
 <div class="modal fade preview" id="preview">
 	<div class="modal-dialog modal-dialog--lg">
 		<div class="modal-content">
-			<div class="modal-header">
-				<h5 class="modal-title">Выберите город</h5>
-				<button class="close modal__btn modal__btn--close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-			</div>
 			<div class="modal-body">
+				<button class="close modal__btn modal__btn--close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 
 				<div class="preview__wrap">
 					<div class="preview__arrow preview__arrow--prev"></div>
@@ -200,11 +195,13 @@
 							</div><!-- end item-select -->
 
 							<div class="button-box">
-								<button class="button button--yellow card__btn card__btn--cart is-checked" onclick="pushUp();">
+								<button class="button button--yellow card__btn card__btn--cart" onclick="pushUp();">
 									Добавить в корзину
 									<span></span>
 									<span title="убрать из корзины"></span>
 								</button>
+
+								<a href="#" class="button button--default">Подробнее</a>
 
 								<div tooltip="в избранное">
 									<button class="button-icon button-icon--fav js-button-icon--fav card__btn card__btn--fav"></button>
@@ -256,6 +253,19 @@
 
 						</div><!-- end card__desc -->
 					</div><!-- end card__wrap -->
+
+					<!-- begin card__colors -->
+					<div class="card__colors">
+
+						<h2 class="h2 page-title">Другие цвета</h2>
+
+						<div class="product-item__wrap">
+							{% for i in range(0, 4) %}
+								{{ item.productItemColor() }}
+							{% endfor %}
+						</div>
+
+					</div><!-- end card__colors -->
 
 				</div>
 

@@ -73,11 +73,11 @@ if (
         ]
     });
     $('.js-bz-slider--card-nav').slick({
-        slidesToShow: 6,
+        slidesToShow: 7,
         slidesToScroll: 1,
         asNavFor: '.js-bz-slider--card',
         dots: true,
-        centerMode: true,
+        // centerMode: true,
         focusOnSelect: true,
         responsive: [
             {

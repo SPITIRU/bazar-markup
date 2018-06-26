@@ -166,6 +166,17 @@
 
 .preview {
 
+	@include respond-to(md) {
+		.modal-dialog--lg {width: 825px;}
+	}
+
+	&.show {
+		.preview__arrow {
+			transform: translateX(0);
+			z-index: initial;
+		}
+	}
+
 	&__arrow {
 		display: block;
 		width: 60px;
@@ -174,8 +185,10 @@
 		cursor: pointer;
 		border-radius: 50%;
 		position: fixed;
-		top: 40%;
+		top: 320px;
 		@include tr;
+		// transition-delay: .35s;
+		z-index: -1;
 
 		&:hover {
 			background-color: rgba(#000, .6);
@@ -194,6 +207,7 @@
 
 		&--prev {
 			left: -80px;
+			transform: translateX(100%);
 			&::before {
 				left: 10px;
 				@include sprite('angel-white--left');
@@ -201,6 +215,7 @@
 		}
 		&--next {
 			right: -80px;
+			transform: translateX(-100%);
 			&::before {
 				left: 18px;
 				@include sprite('angel-white--right');
@@ -208,14 +223,61 @@
 		}
 	}//.preview__arrow
 
-	.button-box {
-		margin-bottom: $gutter;
-		@extend %flexCenter;
-		flex-wrap: wrap;
+	.card {
+		&__wrap, &__title {margin-bottom: $gutter;}
 
-		div[tooltip] {
-			display: inline-flex;
+		&__wrap {
+			.button-box {
+				margin-bottom: $gutter;
+				text-align: left;
+				@extend %flexCenter;
+				flex-wrap: wrap;
+
+				div[tooltip] {
+					display: inline-flex;
+					margin-left: 15px;
+					@include respond-to(md) {
+						margin-top: $gutter;
+					}
+				}
+			}
+			.button {
+				@include respond-to(md) {
+					width: 100%;
+					margin-left: 0;
+					margin-top: $gutter;
+					&:first-child {
+						margin-top: 0;
+					}
+				}
+			}
+		}
+
+		&__image {
+			margin-right: 25px;
+			@include respond-to(md) {
+				width: 45%;
+			}
+		}
+
+		&__title {font-size: 28px;}
+
+		&__price {margin-bottom: 0;}
+
+		&__item-select {margin-top: $gutter;}
+	}
+
+	.button-box {
+		text-align: center;
+		.button--default{
+			height: 43px;
+			line-height: 42px;
 			margin-left: $gutter;
+			font-family: $f;
+			font-size: 16px;
+			@include respond-to(md) {
+				width: 85%;
+			}
 		}
 	}
 }//.preview

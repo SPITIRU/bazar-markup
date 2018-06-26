@@ -11,6 +11,7 @@
 	color: $color-text;
 	text-decoration: none;
 	border: none;
+	box-shadow: 0 2px 12px 0 rgba(0,0,0,.2);
 	border-radius: $border-radius;
 	outline: none;
 	cursor: pointer;
@@ -27,14 +28,18 @@
 		}
 		&--#{$theme}:hover,
 		&--#{$theme}:focus{
+			color: #fff;
 			background-color: lighten($color, 6%);
 		}
 		&--#{$theme}:active, {
+			color: #fff;
 			background-color: lighten($color, 4%);
+			box-shadow: none;
 		}
 	}
 
 	&--transparent{
+		box-shadow: none;
 		background-color: transparent;
 
 		@each $theme, $color in $button-colors{
@@ -53,7 +58,10 @@
 		}
 	}//.button--transparent
 
-	&--yellow{color: $color-text;}//.button--yellow
+	&--yellow{
+		color: $color-text;
+		&:hover, &:focus, &:active {color: $color-text;}
+	}//.button--yellow
 
 	&--muted{
 		&:hover{
@@ -69,6 +77,7 @@
 		color: $color-accent;
 		text-transform: initial;
 		background-color: transparent;
+		box-shadow: none;
 		border: 0;
 	}//.button--link
 }//.button
