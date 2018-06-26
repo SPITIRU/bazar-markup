@@ -52,7 +52,7 @@
 
 		{% import "data/data.html" as mainMain %}		
 		{% for item in mainMain.mainMenu %}				
-		<li class="nav-main__item">
+		<li class="nav-main__item {{ item.class }}">
 			<a href="#" class="nav-main__link js-main-nav-link--forward">
 				<svg class="icon icon-{{ item.icon }} nav-main__icon">
 					<use xlink:href="img/sprite.svg#{{ item.icon }}"></use>
