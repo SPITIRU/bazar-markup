@@ -101,11 +101,31 @@
               <!-- begin user-nav -->
               <div class="user-nav header__user-nav">
                 <ul class="user-nav__list">
-                  <li class="user-nav__item">
+                  <li class="user-nav__item" style="display: none;">
                     <a href="#auth-form" data-toggle="modal" class="user-nav__link sm-hide">
                       <i class="fal fa-user user-nav__icon"></i>
                       <span class="user-nav__text">Войти</span>
                     </a>
+                  </li>
+                  <li class="user-nav__item dropdown center js-dropdown">
+                    <a href="javascript:void(0)" data-toggle="modal" class="user-nav__link sm-hide">
+                      <i class="fal fa-user user-nav__icon"></i>
+                      <span class="user-nav__text">Александр Марабаев</span>
+                    </a>
+                    <ul class="user-nav__dropdown dropdown__list">
+                      <li>
+                        <a href="#">Заказы</a>
+                      </li>
+                      <li>
+                        <a href="#">Избранное</a>
+                      </li>
+                      <li>
+                        <a href="#">Личные данные</a>
+                      </li>
+                      <li>
+                        <a href="#">Выход</a>
+                      </li>
+                    </ul>
                   </li>
                   <li class="user-nav__item sm-only">
                     <a href="javascript:void(0);" class="user-nav__link js-mobile-search--show">
@@ -1621,7 +1641,7 @@
       </style>
       <!-- begin home -->
       <main class="main">
-        <h1>Попап окна на сайте</h1>
+        <h1 style="margin-top: 40px;">Попап окна на сайте</h1>
         <div class="container popup__list">
           <a href="#auth-form" data-toggle="modal">Регистрация</a>
           <a href="#change-city" data-toggle="modal">Выбор города</a>

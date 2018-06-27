@@ -38,8 +38,6 @@
 
 	&__city{margin-right: 60px;}//.header__city
 
-	&__conditions{}//.header__conditions
-
 	&__phone{
 		margin-left: auto;
 		color: #fff;
@@ -77,12 +75,10 @@
 			}
 		}
 	}//.header__search
-
-	&__user-nav{}//.header__user-nav
 }//header
 
 .header-main{
-	
+
 	&.header--fixed{
 		border-bottom: 1px solid $color-border--light;
 		position: fixed;
@@ -120,7 +116,7 @@
 			}
 			&__field{padding: 5px 15px;}
 		}
-		
+
 		.nav-main{
 			&__list{height: 30px;}
 			&__icon{
@@ -165,9 +161,7 @@
 	&__list{@extend %flexCenter;}//.coditions__list
 
 	&__item{
-		& + &{
-			margin-left: 30px;
-		}
+		& + &{margin-left: 30px;}
 	}//.coditions__item
 
 	&__link{
@@ -267,15 +261,11 @@
 	    top: 100%;
 	}
 
-	&__list{}//search-hint__list
-
 	&__item{
-		& + & {
-			border-top: 1px solid $color-border--light;
-		}
-		&.is-selected{
-			background-color: #eee;
-		}
+
+		& + & {border-top: 1px solid $color-border--light;}
+
+		&.is-selected{background-color: #eee;}
 	}//search-hint__item
 
 	&__link{
@@ -300,12 +290,10 @@
 		border-radius: $border-radius;
 		background-color: $color-muted;
 	}//search-hint__bade
-	
-	&__text{}//search-hint__text
 }//search-hint
 
 .user-nav{
-	
+
 	@include respond-to(sm) {
 		margin-left: auto;
 		margin-right: 10px;
@@ -314,9 +302,10 @@
 	&__list{@extend %flexCenter;}//.user-nav__list
 
 	&__item{
-		& + &{
-			margin-left: 20px;
-		}
+		position: relative;
+
+		& + &{margin-left: 20px;}
+
 		&--cart{
 			position: relative;
 			&::before{
@@ -336,6 +325,7 @@
 	&__link{
 		@extend %flexColumn;
 		align-items: center;
+
 		&:hover{
 			.user-nav__icon{
 				fill: $color-accent;
@@ -360,4 +350,33 @@
 			display: none;
 		}
 	}//.user-nav__text
+
+	&__dropdown {
+		padding: 6px 0;
+		min-width: 180px;
+
+		li {
+			&:last-child {
+				margin-top: 5px;
+				padding-top: 5px;
+				border-top: 1px solid $color-border--light;
+				a {
+					padding: 0 15px;
+				}
+			}
+		}
+
+		a {
+			display: block;
+			padding: 5px 15px;
+			font-family: $f;
+			font-size: 14px;
+			transition: initial;
+			&:hover {
+				color: $color-accent;
+				// background-color: $gray--lightest;
+				text-decoration: underline;
+			}
+		}
+	}//.user-nav__dropdown
 }//.user-nav

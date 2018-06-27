@@ -270,11 +270,9 @@
 	.button-box {
 		text-align: center;
 		.button--default{
-			height: 43px;
-			line-height: 42px;
+			@include btnBig;
 			margin-left: $gutter;
 			font-family: $f;
-			font-size: 16px;
 			@include respond-to(md) {
 				width: 85%;
 			}

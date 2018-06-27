@@ -65,13 +65,11 @@ $color-icon--light  :#a2a2a2;
 //border
 // $color-border--darkest   :;
 // $color-border--darken    :;
-// $color-border--dark      :;
-$color-border--dark   : $gray--dark;
-$color-border         : $gray;
-$color-border--light  : $gray--light;
-$color-border--lighten: $gray--lighten;
-// $color-border--lighten   :;
-// $color-border--lightest  :;
+$color-border--dark    : $gray--dark;
+$color-border          : $gray;
+$color-border--light   : $gray--light;
+$color-border--lighten : $gray--lighten;
+$color-border--lightest: $gray--lightest;
 
 $border-radius           :2px;
 

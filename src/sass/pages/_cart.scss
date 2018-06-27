@@ -179,7 +179,11 @@
                 margin: 0 0 $gutter * 2 0;
             }
         }
-    } //.cart__form
+	} //.cart__form
+
+	&__policy {
+		margin-bottom: $gutter;
+	}//.cart__policy
 } //.cart
 
 .cart-success {

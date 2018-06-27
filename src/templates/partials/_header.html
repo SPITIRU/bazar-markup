@@ -1,38 +1,40 @@
 <!-- begin header -->
 <header class="header {{headerClass}}" itemscope itemtype="http://schema.org/WPHeader">
+
 	<!-- begin header__top-line -->
 	<div class="header__top-line">
 		<div class="header__in">
+
 			<!-- begin city -->
 			<div class="city header__city">
 				<span class="city__text">Ваш город:</span>
 				<a href="#change-city" data-toggle="modal" class="city__link">Саратов</a>
-			</div>
-			<!-- end city -->
+			</div><!-- end city -->
+
 			<!-- begin conditions -->
 			<div class="conditions header__conditions">
 				<ul class="conditions__list">
 					<li class="conditions__item"><a href="#" class="conditions__link">Условия доставки</a></li>
 					<li class="conditions__item"><a href="#" class="conditions__link">Условия оплаты</a></li>
 				</ul>
-			</div>
-			<!-- end conditions -->
+			</div><!-- end conditions -->
+
 			<a href="tel:8 800 707-86-30" class="phone header__phone" itemprop="telephone">8 800 707-86-30</a>
 		</div>
-	</div>
-	<!-- end header__top-line -->
+	</div><!-- end header__top-line -->
 
 	<div class="header-main">
+
 		<!-- begin header__bottom -->
 		<div class="header__bottom">
 			<div class="header__in">
+
 				<!-- begin logo -->
 				<div class="logo header__logo">
 					<a href="home.html" class="logo__link">
 						<img src="img/general/logo.svg" alt="Bazar-TEX Ткани и фурнитура">
 					</a>
-				</div>
-				<!-- end logo -->
+				</div><!-- end logo -->
 
 				<!-- begin search -->
 				<div class="search header__search js-search">
@@ -66,17 +68,28 @@
 								</div>
 							</div>
 					</form>
-				</div>
-				<!-- end search -->
+				</div><!-- end search -->
 
 				<!-- begin user-nav -->
 				<div class="user-nav header__user-nav">
 					<ul class="user-nav__list">
-						<li class="user-nav__item">
+						<li class="user-nav__item" style="display: none;">
 							<a href="#auth-form" data-toggle="modal" class="user-nav__link sm-hide">
 								<i class="fal fa-user user-nav__icon"></i>
 								<span class="user-nav__text">Войти</span>
 							</a>
+						</li>
+						<li class="user-nav__item dropdown center js-dropdown">
+							<a href="javascript:void(0)" data-toggle="modal" class="user-nav__link sm-hide">
+								<i class="fal fa-user user-nav__icon"></i>
+								<span class="user-nav__text">Александр Марабаев</span>
+							</a>
+							<ul class="user-nav__dropdown dropdown__list">
+								<li><a href="#">Заказы</a></li>
+								<li><a href="#">Избранное</a></li>
+								<li><a href="#">Личные данные</a></li>
+								<li><a href="#">Выход</a></li>
+							</ul>
 						</li>
 						<li class="user-nav__item sm-only">
 							<a href="javascript:void(0);" class="user-nav__link js-mobile-search--show">
@@ -97,14 +110,12 @@
 							</a>
 						</li>
 					</ul>
-				</div>
-				<!-- end user-nav -->
+				</div><!-- end user-nav -->
+
 			</div>
-		</div>
-		<!-- end header__bottom -->
+		</div><!-- end header__bottom -->
 
 		{% include "partials/_nav-main.html" %}
 	</div>
 
-</header>
-<!-- end header -->
+</header><!-- end header -->

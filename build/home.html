@@ -101,11 +101,31 @@
               <!-- begin user-nav -->
               <div class="user-nav header__user-nav">
                 <ul class="user-nav__list">
-                  <li class="user-nav__item">
+                  <li class="user-nav__item" style="display: none;">
                     <a href="#auth-form" data-toggle="modal" class="user-nav__link sm-hide">
                       <i class="fal fa-user user-nav__icon"></i>
                       <span class="user-nav__text">Войти</span>
                     </a>
+                  </li>
+                  <li class="user-nav__item dropdown center js-dropdown">
+                    <a href="javascript:void(0)" data-toggle="modal" class="user-nav__link sm-hide">
+                      <i class="fal fa-user user-nav__icon"></i>
+                      <span class="user-nav__text">Александр Марабаев</span>
+                    </a>
+                    <ul class="user-nav__dropdown dropdown__list">
+                      <li>
+                        <a href="#">Заказы</a>
+                      </li>
+                      <li>
+                        <a href="#">Избранное</a>
+                      </li>
+                      <li>
+                        <a href="#">Личные данные</a>
+                      </li>
+                      <li>
+                        <a href="#">Выход</a>
+                      </li>
+                    </ul>
                   </li>
                   <li class="user-nav__item sm-only">
                     <a href="javascript:void(0);" class="user-nav__link js-mobile-search--show">
@@ -1602,25 +1622,32 @@
               <div class="bz-slider__slides js-bz-slider--promo">
                 <div class="promo-gallery__item">
                   <div class="promo-gallery__img">
-                    <picture>
-                      <source media="(max-width: 480px)" srcset="img/promo/mobile/1.jpg">
-                      <img src="img/promo/desktop/1.jpg" alt="alt"> </picture>
+                    <a class="promo-gallery__link" href="#">
+                      <picture>
+                        <source media="(max-width: 480px)" srcset="img/promo/mobile/1.jpg">
+                        <img src="img/promo/desktop/1.jpg" alt="alt"> </picture>
+                    </a>
                   </div>
                 </div>
                 <div class="promo-gallery__item">
                   <div class="promo-gallery__img">
-                    <picture>
-                      <source media="(max-width: 480px)" srcset="img/promo/mobile/2.jpg">
-                      <img src="img/promo/desktop/2.jpg" alt="alt"> </picture>
+                    <a class="promo-gallery__link" href="#">
+                      <picture>
+                        <source media="(max-width: 480px)" srcset="img/promo/mobile/2.jpg">
+                        <img src="img/promo/desktop/2.jpg" alt="alt"> </picture>
+                    </a>
                   </div>
                 </div>
                 <div class="promo-gallery__item">
                   <div class="promo-gallery__img">
-                    <picture>
-                      <source media="(max-width: 480px)" srcset="img/promo/mobile/3.jpg">
-                      <img src="img/promo/desktop/3.jpg" alt="alt"> </picture>
+                    <a class="promo-gallery__link" href="#">
+                      <picture>
+                        <source media="(max-width: 480px)" srcset="img/promo/mobile/3.jpg">
+                        <img src="img/promo/desktop/3.jpg" alt="alt"> </picture>
+                    </a>
                   </div>
-                </div> ﻿ </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -1718,7 +1745,8 @@
                       <i class="rub">руб.</i>
                     </div>
                   </div>
-                </a> ﻿ </div>
+                </a>
+              </div>
             </div>
             <div class="bz-grid">
               <div class="bz-grid-in">
@@ -1850,7 +1878,8 @@
                     <span>руб</span>
                   </span>
                 </div>
-              </div> ﻿ </div>
+              </div>
+            </div>
           </div>
         </section>
         <!-- end advantages -->

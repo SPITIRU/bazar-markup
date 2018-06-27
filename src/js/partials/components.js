@@ -55,6 +55,7 @@ $(document).on('click', '.js-checkbox', function() {
     }
 });
 
+//checkbox--pseudo
 $(document).on('click', '.js-checkbox--pseudo', function() {
     if ($(this).hasClass('is-checked')) {
         $(this).removeClass('is-checked');
@@ -62,3 +63,20 @@ $(document).on('click', '.js-checkbox--pseudo', function() {
         $(this).addClass('is-checked');
     }
 });
+
+//dropdown
+if($('.js-dropdown').length > 0) {
+    $(document).on('click', '.js-dropdown', function() {
+        if($(this).hasClass('is-active')) {
+            $(this).removeClass('is-active');
+        }else{
+            $('.js-dropdown').removeClass('is-active');
+            $(this).addClass('is-active');
+        }
+    });
+    $(document).on('click', function(e) {
+        if ($(e.target).closest('.js-dropdown').length) return;
+        $('.js-dropdown').removeClass('is-active');
+        e.stopPropagation();
+    });
+}
