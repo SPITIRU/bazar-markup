@@ -43,7 +43,7 @@
 		position: relative;
 		@include respond-to(sm) {
 			width: 100%;
-		}		
+		}
 	}//.catalog__content
 
 	&__top-line{
@@ -60,12 +60,18 @@
 
 	&__title{
 		@extend %flexCenter;
+		@include respond-to(xs) {
+			text-align: center;
+		}
 		.h1{
 			margin-right: 15px;
 			font-family: $f2;
 			font-size: 20px;
 			text-transform: uppercase;
 			letter-spacing: 0.35px;
+			@include respond-to(xs) {
+				margin: 0 auto;
+			}
 		}
 	}//.catalog__title
 
@@ -229,7 +235,7 @@
 	&__color{
 		width: 15px;
 		height: 15px;
-		margin-right: 10px;	
+		margin-right: 10px;
 		@include respond-to(sm) {
 			display: none;
 		}
@@ -303,7 +309,7 @@
 			font-size: 13px;
 			color: $color-text;
 		}
-		i{			
+		i{
 			font-size: 13px;
 			color: $gray--light;
 		}
@@ -416,7 +422,7 @@
 			.changer{
 				&__link{
 					color: #fff;
-					background-color: $color-bg--dark;					
+					background-color: $color-bg--dark;
 				}
 				&__reset{display: block;}
 			}
@@ -455,7 +461,7 @@
 	}//.changer__counter
 }//.changer
 
-.sorting{	
+.sorting{
 	width: auto;
 	@extend %flexCenter;
 
@@ -484,7 +490,7 @@
 			.product-item{
 				&__img{border-color: transparent;}
 				&__more{display: block;}
-			}			
+			}
 		}
 	}
 
@@ -494,12 +500,12 @@
 			@include col();
 			@include size(4);
 			@include size-xs(6);
-			@include size-i7(12);
+			// @include size-i7(12);
 
 			&--small{
 				@include col();
-				@include size(1.5);		
-				@include size-sm(2);	
+				@include size(1.5);
+				@include size-sm(2);
 				@include size-xs(4);
 				@include size-i7(4);
 				@include size-i5(6);
@@ -790,7 +796,7 @@
 	padding-left: 20px;
 	font-size: 12px;
 	position: relative;
-	
+
 	&::before{
 		content: '';
 		display: block;
