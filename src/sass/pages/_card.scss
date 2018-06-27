@@ -21,7 +21,7 @@ $card-indent: $gutter*2;
 	&__wrap{
 		margin-bottom: $card-indent*2;
 		display: flex;
-		
+
 		@include respond-to(xs) {
 			margin-bottom: $card-indent*1.5;
 			flex-wrap: wrap;
@@ -45,7 +45,7 @@ $card-indent: $gutter*2;
 	}//.card__image
 
 	&__slider{
-		.slick-slide{margin: 0;}	
+		.slick-slide{margin: 0;}
 
 		.slick-dots {
 		    bottom: -20px;
@@ -54,7 +54,7 @@ $card-indent: $gutter*2;
 		            margin: 0 2px;
 		            width: 6px;
 		            height: 6px;
-		            padding: 0;   
+		            padding: 0;
 		            background-color: lighten($gray, 15%);
 		            border-radius: 50%;
 
@@ -110,7 +110,7 @@ $card-indent: $gutter*2;
 		@include respond-to(xs) {
 			width: 100%;
 		}
-	}//.card__desc	
+	}//.card__desc
 
 	&__title{
 		display: block;
@@ -128,11 +128,11 @@ $card-indent: $gutter*2;
 	}//.card__title
 
 	&__item-select{
-		margin: $gutter*1.5 0;	
+		margin: $gutter*1.5 0;
 
 		@include respond-to(xs) {
-			margin: 0 0 $gutter*1.5;	
-		}	
+			margin: 0 0 $gutter*1.5;
+		}
 	}//.card__item-select
 
 	&__price{
@@ -144,7 +144,14 @@ $card-indent: $gutter*2;
 		}
 		span{
 			font-family: $f;
-			font-size: 18px;
+			font-size: 15px;
+		}
+		small {
+			margin-left: 5px;
+			font-size: 15px;
+			color: $color-danger;
+			// position: relative;
+			// top: -8px;
 		}
 	}//.card__price
 
@@ -163,7 +170,7 @@ $card-indent: $gutter*2;
 			&::before, &::after{
 				content: "";
 				position: absolute;
-				top: 50%;				
+				top: 50%;
 			}
 
 			&::before{
@@ -245,23 +252,23 @@ $card-indent: $gutter*2;
 					&::before{
 						content: '\f218';
 						left: -100px;
-					}			
-				}		
+					}
+				}
 				&:last-child {
 					display: none;
 					&::after{
 						content: '\f2ed';
 						right: 14px;
 					}
-								
-				}	
+
+				}
 			}
 			&:hover{
 				span{
 					&:first-child {
 						&::after{right: -100px;}
 						&::before{left: 12px;}
-					}			
+					}
 				}
 			}
 			&.is-checked {
@@ -315,7 +322,7 @@ $card-indent: $gutter*2;
 		@extend %flexCenter;
 		flex-wrap: wrap;
 
-		@include respond-to(xs) {			
+		@include respond-to(xs) {
 			.button--yellow{width: 90%;}
 		}
 
@@ -375,7 +382,7 @@ $card-indent: $gutter*2;
 
 			&__content{padding: 35px;}
 
-			&__link{		
+			&__link{
 				display: inline-flex;
 				flex-direction: column;
 				align-items: center;
@@ -466,7 +473,7 @@ $card-indent: $gutter*2;
 		display: block;
 		text-align: center;
 		font-size: 12px;
-	}//.related__price	
+	}//.related__price
 }//.related
 
 .item-select{
@@ -487,7 +494,7 @@ $card-indent: $gutter*2;
 			&__value{
 				color: $color-text;
 			}
-		}		
+		}
 	}
 
 	&.is-active{
@@ -504,7 +511,7 @@ $card-indent: $gutter*2;
 	&.is-error {
 		.item-select__error{display: block;}
 	}
-	
+
 	&.is-close{
 		.item-select{
 			&__control{
@@ -514,10 +521,10 @@ $card-indent: $gutter*2;
 					border-color: $color-accent;
 					&::before{
 						content: '\f00d';
-					}					
+					}
 				}
 			}
-		}			
+		}
 	}
 
 	&__error {
@@ -546,7 +553,7 @@ $card-indent: $gutter*2;
 				position: relative;
 			}
 			& + .item-select{
-				margin-left: 10px;				
+				margin-left: 10px;
 				@include respond-to(i5) {
 					margin-left: 0;
 				}
@@ -586,7 +593,7 @@ $card-indent: $gutter*2;
 		font-size: 14px;
 		text-align: center;
 		border-top: 1px solid $color-border;
-		border-bottom: 1px solid $color-border;	
+		border-bottom: 1px solid $color-border;
 		border-left-color: transparent;
 		border-right-color: transparent;
 		&:focus{
@@ -624,7 +631,7 @@ $card-indent: $gutter*2;
 
 	&__subtitle{
 		font-family: $f;
-		font-size: 13px;		
+		font-size: 13px;
 
 		&.stock{
 			font-family: $f-light;
@@ -655,7 +662,7 @@ $card-indent: $gutter*2;
 			width: auto;
 			right: -1px;
 		}
-	}//.item-select__list	
+	}//.item-select__list
 
 	&__item{
 		padding: 0 15px 0 30px;
@@ -726,7 +733,7 @@ $card-indent: $gutter*2;
 		}
 		&--plus{
 			border-radius: 0 $border-radius $border-radius 0;
-			right: 0;		
+			right: 0;
 			&::before{
 				content: '\f067';
 			}
@@ -752,7 +759,7 @@ $card-indent: $gutter*2;
 				.item-select__title{
 					padding: 0 10px;
 					border-top: 1px solid $color-border;
-					border-bottom: 1px solid $color-border;					
+					border-bottom: 1px solid $color-border;
 				}
 			}
 			&__title{
@@ -791,7 +798,7 @@ $card-indent: $gutter*2;
 	}//.item-select--count
 }//.item-select
 
-.bz-table{	
+.bz-table{
 
 	&__list{@extend %flexColumn;}//bz-table__list
 
@@ -830,7 +837,7 @@ $card-indent: $gutter*2;
 					background-image: url(../img/general/dot.png);
 					background-position: 0px 14px;
 					background-repeat: repeat-x;
-				}				
+				}
 			}
 		}
 	}//bz-table--dot
@@ -848,7 +855,7 @@ $card-indent: $gutter*2;
 			&__subitem{
 				&:first-child{
 					margin-bottom: 10px;
-				}				
+				}
 			}
 		}
 	}//bz-table--column

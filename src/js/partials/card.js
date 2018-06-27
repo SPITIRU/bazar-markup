@@ -75,7 +75,7 @@ if ($(window).width() <= 480) {
 }
 
 if ($('.js-item-select').length > 0) {
-    $('.js-item-select').on('click', function() {
+    $('.js-item-select').not('.js-item-select-control--plus').not('.js-item-select-control--minus').on('click', function() {
         if ($(this).hasClass('is-active')) {
             $('.js-item-select').removeClass('is-active');
             $(this).removeClass('is-active');
