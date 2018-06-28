@@ -12,10 +12,6 @@
     "lint-staged": {
         "src/templates/**/*.html": [
             "htmlhint --config .htmlhintrc"
-        ],
-        "{*js, src/js/main.js, src/js/app.js, src/js/del.js, src/js/partials/*.js}": [
-            "eslint --fix",
-            "git add"
         ]
     },
     "authors": "Anton Ustinov anthonyustinoff@gmail.com",
