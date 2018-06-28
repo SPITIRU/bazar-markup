@@ -98,8 +98,12 @@
 		justify-content: center;
 
 		&.is-active{
-			.nav-main__dropdown{
-				@include trfX(0);
+			.nav-main{
+				&__dropdown{
+					@include trfX(0);
+				}
+				&__text{color: $color-accent;}
+				&__icon{fill: $color-accent;}
 			}
 		}
 

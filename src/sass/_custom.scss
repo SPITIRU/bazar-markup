@@ -25,17 +25,6 @@
 	cursor: pointer;
 	outline: none;
 	&::after{
-		// width: 24px;
-		// height: 24px;
-		// border-radius: 50%;
-		// background-color: rgba($color-main, .5);
-		// @include vcenter;
-		// @include tr(.5s);
-		// @include max-screen(480) {
-		// 	width: 28px;
-		// 	height: 28px;
-		// }
-		// Style for "knob"
 		width: 22px;
 		height: 22px;
 		box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
@@ -82,7 +71,9 @@
 	outline: none;
 }
 
-.select2-container--default .select2-selection--single .select2-selection__rendered{line-height: 38px;}
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+	line-height: 38px;
+}
 
 .select2-container--default .select2-selection--single .select2-selection__arrow{
 	height: auto;
@@ -113,7 +104,11 @@
 		content: '\f106';
 	}
 }
-.select2-container--open .select2-dropdown--below{z-index: 1001;}
+.select2-container--open .select2-dropdown--below{
+	border: 0;
+	box-shadow: 0 7px 12px 0 rgba(0,0,0,.2);
+	z-index: 98;
+}
 
 .select2-results{
 	&__option{
@@ -145,24 +140,31 @@
 	font-size: 14px;
 }
 .select2-container--default .select2-results__option--highlighted[aria-selected]{
-	color: #fff;
-	background-color: $color-bg--dark;
+	color: #000;
+	background-color: $color-bg--light;
 }
 .select2-container--default .select2-results__option[aria-selected=true]{
-	color: #fff;
-	background-color: $color-bg--dark;
+	color: $color-accent;
+	background-color: transparent;
 }
 
-.select2-container--default .select2-selection--multiple, .select2-container--default .select2-selection--single{height: 40px; border-color: $gray--lighten;}
-.select2-container--default.select2-container--focus .select2-selection--multiple{border-color: $gray--lighten;}
-
-.select2-container--default .select2-selection--multiple{	
-	height: auto;		
-	line-height: 1;		
-	border-radius: $border-radius;	
+.select2-container--default .select2-selection--multiple, .select2-container--default .select2-selection--single{
+	height: 40px;
+	border-color: $gray--lighten;
+}
+.select2-container--default.select2-container--focus .select2-selection--multiple{
+	border-color: $gray--lighten;
 }
 
-.select2-selection__rendered{height: 100%;}
+.select2-container--default .select2-selection--multiple{
+	height: auto;
+	line-height: 1;
+	border-radius: $border-radius;
+}
+
+.select2-selection__rendered{
+	height: 100%;
+}
 
 .select2-container--default .select2-selection--multiple .select2-selection__rendered{
 	height: auto;
@@ -198,9 +200,9 @@
 	right: 5px;
 }
 
-.select2-selection .select2-selection--multiple{			
+.select2-selection .select2-selection--multiple{
 	height: 32px;
-	line-height: 32px;			
+	line-height: 32px;
 }
 
 //Mas Gray

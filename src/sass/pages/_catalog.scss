@@ -242,10 +242,13 @@
 	}//.catalog-filter__subtitle
 
 	&__btn{
+		display: inline-block;
 		width: 50%;
 		height: 40px;
+		line-height: 39px;
 		font-family: $f-light;
 		font-size: 15px;
+		text-align: center;
 		text-transform: uppercase;
 		letter-spacing: 0.5px;
 		border: 0;
@@ -255,13 +258,20 @@
 		&--aply{
 			color: #fff;
 			background-color: $color-main;
+			&:hover, &:focus {
+				color: #fff;
+			}
 		}
 
 		&--close{
 			border-top: 1px solid $color-border--light;
+			&:hover, &:focus {
+				color: $color-text;
+			}
 		}
 
 		&--show{
+			display: inline-flex;
 			width: 52px;
 			height: 52px;
 			border-radius: 50%;
@@ -282,7 +292,7 @@
 				display: none;
 			}
 		}
-	}
+	}//.catalog-filter__btn
 }//.catalog-filter
 
 .range{

@@ -5,21 +5,21 @@
 			<a href="#change-city" data-toggle="modal" class="city__link">Санкт-Петербург</a>
 		</div>
 
-		<a href="tel:8 800 707-86-30" class="phone nav-main__phone" itemprop="telephone">8 800 707-86-30</a>	
+		<a href="tel:8 800 707-86-30" class="phone nav-main__phone" itemprop="telephone">8 800 707-86-30</a>
 	</div>
 
 	<!-- begin hamburger -->
-	<div class="nav-main__btn--close"><button class="hamburger js-hamburger"><span></span></button></div><!-- end hamburger -->		
+	<div class="nav-main__btn--close"><button class="hamburger js-hamburger"><span></span></button></div><!-- end hamburger -->
 
-	<ul class="nav-main__list">		
+	<ul class="nav-main__list">
 
 		<li class="nav-main__item nav-main__item--lk xs-only" style="display: none;">
 			<a href="#auth-form" data-toggle="modal" class="nav-main__link">
 				<i class="fal fa-user nav-main__icon"></i>
 				<span class="nav-main__text">Войти / Зарегистрироваться</span>
 			</a>
-		</li>		
-		
+		</li>
+
 		<li class="nav-main__item nav-main__item--lk xs-only">
 			<a href="#" class="nav-main__link js-main-nav-link--forward">
 				<i class="fal fa-user nav-main__icon"></i>
@@ -49,9 +49,9 @@
 			</ul>
 		</li>
 
-		{% import "data/data.html" as mainMain %}		
-		{% for item in mainMain.mainMenu %}				
-		<li class="nav-main__item {{ item.class }}">
+		{% import "data/data.html" as mainMain %}
+		{% for item in mainMain.mainMenu %}
+		<li class="nav-main__item {{ item.class }}{{ item.active }}">
 			<a href="#" class="nav-main__link js-main-nav-link--forward">
 				<svg class="icon icon-{{ item.icon }} nav-main__icon">
 					<use xlink:href="img/sprite.svg#{{ item.icon }}"></use>
@@ -84,7 +84,7 @@
 				</div>
 			</ul>
 		</li>
-		{% endfor %}	
+		{% endfor %}
 	</ul>
 
 	<ul class="nav-main__list nav-main__list--sub">

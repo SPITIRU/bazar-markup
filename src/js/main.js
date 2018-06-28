@@ -87,10 +87,7 @@ $(document).ready(function() {
     //Footer media <= 480 transform accordeon
     if ($(window).width() <= 480) {
         let footer = $('.js-footer');
-        footer
-            .find('.footer-item')
-            .addClass('accordeon__item')
-            .wrapAll('<div class="accordeon js-accordeon">');
+        footer.find('.footer-item').addClass('accordeon__item').wrapAll('<div class="accordeon js-accordeon">');
         footer
             .find('.footer-item__content')
             .addClass('accordeon__content')
