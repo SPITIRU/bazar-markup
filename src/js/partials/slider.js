@@ -54,7 +54,7 @@ if ($('.js-bz-slider--new').length > 0) {
 //Slider Card
 if (
     $('.js-bz-slider--card').length > 0 &&
-  $('.js-bz-slider--card-nav').length > 0
+    $('.js-bz-slider--card-nav').length > 0
 ) {
     $('.js-bz-slider--card').slick({
         slidesToShow: 1,

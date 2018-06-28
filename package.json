@@ -13,7 +13,7 @@
         "src/templates/**/*.html": [
             "htmlhint --config .htmlhintrc"
         ],
-        "{src/js/main.js, src/js/app.js, src/js/del.js, src/js/partials/*.js}": [
+        "{*js, src/js/main.js, src/js/app.js, src/js/del.js, src/js/partials/*.js}": [
             "eslint --fix",
             "git add"
         ]
