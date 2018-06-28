@@ -6,6 +6,6 @@
 	"css.lint.zeroUnits": "warning",
 	"scss.lint.zeroUnits": "warning",
 	"files.trimTrailingWhitespace": true,
-	"html.format.wrapAttributes": "force-aligned",
-	
+	// "html.format.wrapAttributes": "force-aligned",
+	// "html.format.contentUnformatted": "pre,code,textarea, ---",
 }

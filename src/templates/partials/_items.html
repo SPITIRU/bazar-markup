@@ -1,6 +1,6 @@
 {% import "partials/assets/_mixins.html" as mixin %}
 
-<!-- 
+<!--
 <div class="dropdown js-dropdown">
 	наведи сюда
 	<div class="dropdown__list">это появится</div>
@@ -9,11 +9,15 @@
 
 {% macro btn(title, class) %}
 <button class="button {{ class }}">{{ title }}</button>
-{% endmacro %} {% macro btnLink(title, class, href="#") %}
+{% endmacro %}
+
+{% macro btnLink(title, class, href="#") %}
 <a {{ href }} class="button {{ class }}">{{ title }}</a>
-{% endmacro %} {% macro checkbox(title, class) %}
+{% endmacro %}
+
+{% macro checkbox(title, class, checked) %}
 <label class="checkbox {{class}}">
-	<input type="checkbox">
+	<input type="checkbox" {{checked}}>
 	<span class="checkbox__box"></span>
 	<span class="checkbox__title">{{title}}</span>
 </label>
@@ -42,23 +46,23 @@
 	Заполняя форму, Вы соглашаетесь на обработку персональных данных в соответствии с
 	<a href="#" target="_blank">Условиями пользовательского соглашения</a>.
 </div>
-{% endmacro %} 
+{% endmacro %}
 
 {% macro social(class) %}
 <div class="social {{ class }}">
 	<ul class="social__list">
-		<li class="social__item">
+		<li class="social__item" tooltip="мы в vkontakte">
 			<a href="#" class="social__link social__link--vk"></a>
 		</li>
-		<li class="social__item">
+		<li class="social__item" tooltip="мы в odnoklasniki">
 			<a href="#" class="social__link social__link--ok"></a>
 		</li>
-		<li class="social__item">
+		<li class="social__item" tooltip="мы в instagram">
 			<a href="#" class="social__link social__link--inst"></a>
 		</li>
 	</ul>
 </div>
-{% endmacro %} 
+{% endmacro %}
 
 {% macro starRating() %}
 <div class="star-rating">
@@ -75,7 +79,7 @@
 		<label class="star-rating__ico fa fa-star-o fa-lg" for="star-rating-1" title="1 из 5"></label>
 	</div>
 </div>
-{% endmacro %} 
+{% endmacro %}
 
 {% macro productItem(class) %}
 <a href="#" class="product-item js-product-item" itemscope itemtype="http://schema.org/Product">
@@ -123,7 +127,7 @@
 		</div>
 	</div>
 </a>
-{% endmacro %} 
+{% endmacro %}
 
 {% macro productItemSmall(class) %}
 <a href="#" class="product-item product-item--small" itemscope itemtype="http://schema.org/Product">
@@ -141,7 +145,7 @@
 		</div>
 	</div>
 </a>
-{% endmacro %} 
+{% endmacro %}
 
 {% macro productItemColor(class) %}
 <a href="#" class="product-item product-item--small product-item--color" itemscope itemtype="http://schema.org/Product">

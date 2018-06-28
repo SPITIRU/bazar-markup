@@ -41,10 +41,15 @@ PageList:
   ready: 50
   desc : ЛК личные данные
 
-  #404
+  #Востановление пароля
 - file: password-recowery.html
   ready: 50
   desc : Востановление пароля
+
+  #Востановление пароля подтверждение нового пароля
+- file: password-confirm.html
+  ready: 50
+  desc : Подтверждение нового пароля
 
   #404
 - file: 404.html
