@@ -150,8 +150,6 @@ $card-indent: $gutter*2;
 			margin-left: 5px;
 			font-size: 15px;
 			color: $color-danger;
-			// position: relative;
-			// top: -8px;
 		}
 	}//.card__price
 
@@ -193,15 +191,16 @@ $card-indent: $gutter*2;
 				width: 5px;
 			}
 
-			&.button--link{
+			&.button--accent{
 				@include respond-to(xs) {
 					display: none;
 				}
 			}
 
-			&.button--info{
+			&.button--accent{
 				display: inline-block;
 				margin: 15px auto;
+				color: $color-accent;
 
 				@include respond-to(xs) {
 					margin: $card-indent/2 auto 0;
@@ -209,7 +208,7 @@ $card-indent: $gutter*2;
 
 				&::before, &::after{
 					margin-left: 15px;
-					border-color: darken($color-info, 15%);
+					border-color: $color-accent;
 					@include tr;
 				}
 				&:hover{
@@ -605,6 +604,7 @@ $card-indent: $gutter*2;
 		display: block;
 		width: 15px;
 		height: 15px;
+		border-radius: 50%;
 		@include vy;
 		left: 8px;
 	}//.item-select__color

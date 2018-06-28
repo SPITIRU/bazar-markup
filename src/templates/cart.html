@@ -2,9 +2,8 @@
 title: Корзина
 wrapperClass: page-cart
 ---
-{% extends "layouts/_layout.html" %}
 
-{% block content %}
+{% extends "layouts/_layout.html" %} {% block content %}
 
 <!-- begin home cart -->
 <main class="main cart">
@@ -27,14 +26,20 @@ wrapperClass: page-cart
 					<div class="product-item__desc">
 						<div class="product-item__title_wrap">
 							<h5 class="h5 product-item__title" itemprop="name">
-								<a href="#">Атлас дюпон <span>white</span></a>
+								<a href="#">Атлас дюпон
+									<span>white</span>
+								</a>
 							</h5>
-							<span class="product-item__articul">ткани / <span>ac06</span></span>
+							<span class="product-item__articul">ткани /
+								<span>ac06</span>
+							</span>
 						</div>
 						<div class="product-item__box">
 
 							<div class="product-item__price product-item__price--current">
-								340 <span>руб./м</span>
+								340
+								<span>руб./м</span>
+								<small>-15%</small>
 							</div>
 
 							<!-- begin item-select -->
@@ -61,17 +66,16 @@ wrapperClass: page-cart
 									</div>
 								</div>
 								<span class="item-select__error">Кол-во не выбрано!</span>
-							</div>
-							<!-- end item-select -->
+							</div><!-- end item-select -->
 
 							<div class="product-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 								<meta itemprop="price" content="300.00">
-								<meta itemprop="priceCurrency" content="RUB" />
-								29306,25 <span>руб.</span>
+								<meta itemprop="priceCurrency" content="RUB" /> 29306,25
+								<span>руб.</span>
 							</div>
 
 							<button class="product-item__del" tooltip="Удалить">{{ mixin.icon('trash') }}</button>
-							
+
 
 						</div>
 					</div>
@@ -81,107 +85,92 @@ wrapperClass: page-cart
 
 			<div class="cart__box">
 				<div class="cart__sum">
-					<div class="cart__sum_sale xs-only">В корзине: <span>2</span> <small>товара</small></div>
-					<div class="cart__sum_sale">Сумма скидки: <span>10533,75 </span>  <small>руб.</small></div>
-					<div class="cart__sum_current">Итого к оплате: <span>33641,25</span>   <small>руб.</small></div>
+					<div class="cart__sum_sale xs-only">В корзине:
+						<span>2</span>
+						<small>товара</small>
+					</div>
+					<div class="cart__sum_sale">Сумма скидки:
+						<span>10533,75 </span>
+						<small>руб.</small>
+					</div>
+					<div class="cart__sum_current">Итого к оплате:
+						<span>33641,25</span>
+						<small>руб.</small>
+					</div>
 				</div>
-			</div>		
+			</div>
 
-			<!-- begin cart__form --> 
+			<!-- begin cart__form -->
 			<div class="cart__form">
-	
+
 				<div class="section-header">
 					<h2 class="h1">Оформление заказа</h2>
 				</div>
-				
-					<form class="form">
-						<div class="form__inner">
-							
-								<div class="input form__input">
-									<input 
-									type='text'
-									class="input__field"
-									placeholder="Имя">
-									<span class="input__error">*Какая-то ошибочка вышла</span>
-								</div>
-	
-								<div class="input form__input">
-									<input 
-									type='text'
-									class="input__field"
-									placeholder="Фамилия">
-									<span class="input__error">*Какая-то ошибочка вышла</span>
-								</div>
-							
-								<div class="input form__input">
-									<input 
-									type='tel'
-									class="input__field js-phone-mask"
-									placeholder="Телефон">
-									<span class="input__error">*Какая-то ошибочка вышла</span>
-								</div>
-	
-								<div class="input form__input">
-									<input 
-									type='email'
-									class="input__field"
-									placeholder="E-mail"
-									pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
-									<span class="input__error">*Какая-то ошибочка вышла</span>
-								</div>
-							
-								<div class="form__box">
-									<div class="input form__input">
-										<input 
-										type='text'
-										class="input__field"
-										placeholder="Город">
-										<span class="input__error">*Какая-то ошибочка вышла</span>
-									</div>
-									<div class="input form__input">
-										<input 
-										type='number'
-										class="input__field"
-										placeholder="Индекс">
-										<span class="input__error">*Какая-то ошибочка вышла</span>
-									</div>
-								</div>
-								
-								<div class="form__box">
-									<div class="input form__input">
-										<input 
-										type='text'
-										class="input__field"
-										placeholder="Улица">
-										<span class="input__error">*Какая-то ошибочка вышла</span>
-									</div>
-									<div class="input form__input">
-										<input 
-										type='text'
-										class="input__field"
-										placeholder="Дом/корпус">
-										<span class="input__error">*Какая-то ошибочка вышла</span>
-									</div>
-								</div>
-	
-								<div class="policy cart__policy">
-									{{ item.checkbox('Я принимаю условия', 'form__checkbox') }} <a href="#" target="_blank">политики конфиденциальности</a>.
-								</div>	
-			
-								<div class="cart__box">
-									<button class="button button--default cart__btn">Продолжить</button>
-								</div>
-	
-						</div>					
-					</form>
+
+				<form class="form">
+					<div class="form__inner">
+
+						<div class="input form__input">
+							<input type='text' class="input__field" placeholder="Имя">
+							<span class="input__error">*Какая-то ошибочка вышла</span>
+						</div>
+
+						<div class="input form__input">
+							<input type='text' class="input__field" placeholder="Фамилия">
+							<span class="input__error">*Какая-то ошибочка вышла</span>
+						</div>
+
+						<div class="input form__input">
+							<input type='tel' class="input__field js-phone-mask" placeholder="Телефон">
+							<span class="input__error">*Какая-то ошибочка вышла</span>
+						</div>
+
+						<div class="input form__input">
+							<input type='email' class="input__field" placeholder="E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+							<span class="input__error">*Какая-то ошибочка вышла</span>
+						</div>
+
+						<div class="form__box">
+							<div class="input form__input">
+								<input type='text' class="input__field" placeholder="Город">
+								<span class="input__error">*Какая-то ошибочка вышла</span>
+							</div>
+							<div class="input form__input">
+								<input type='number' class="input__field" placeholder="Индекс">
+								<span class="input__error">*Какая-то ошибочка вышла</span>
+							</div>
+						</div>
+
+						<div class="form__box">
+							<div class="input form__input">
+								<input type='text' class="input__field" placeholder="Улица">
+								<span class="input__error">*Какая-то ошибочка вышла</span>
+							</div>
+							<div class="input form__input">
+								<input type='text' class="input__field" placeholder="Дом/корпус">
+								<span class="input__error">*Какая-то ошибочка вышла</span>
+							</div>
+						</div>
+
+						<div class="policy cart__policy">
+							{{ item.checkbox('Я принимаю условия', 'form__checkbox') }}
+							<a href="#" target="_blank">политики конфиденциальности</a>.
+						</div>
+
+						<div class="cart__box">
+							<button class="button button--default cart__btn">Продолжить</button>
+						</div>
+
+					</div>
+				</form>
 			</div><!-- end cart__form -->
 
 		</div><!-- end cart__wrap -->
 
 		<!-- begin empty -->
-		<div class="empty"  style="display: none;">
+		<div class="empty" style="display: none;">
 			<p>Ваша корзина пуста.</p>
-			<a href="#" class="button button--transparent button--info card__btn--back">Вернуться к покупкам</a>
+			<a href="#" class="button button--transparent button--accent card__btn--back">Вернуться к покупкам</a>
 		</div><!-- end empty -->
 
 	</div>

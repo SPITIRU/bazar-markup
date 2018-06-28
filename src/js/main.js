@@ -87,14 +87,22 @@ $(document).ready(function() {
     //Footer media <= 480 transform accordeon
     if ($(window).width() <= 480) {
         let footer = $('.js-footer');
-        footer.find('.footer-item').addClass('accordeon__item').wrapAll('<div class="accordeon js-accordeon">');
-        footer.find('.footer-item').first().addClass('is-open');
+        footer
+            .find('.footer-item')
+            .addClass('accordeon__item')
+            .wrapAll('<div class="accordeon js-accordeon">');
+        footer
+            .find('.footer-item')
+            .first()
+            .addClass('is-open');
         footer
             .find('.footer-item__content')
             .addClass('accordeon__content')
             .css('display', 'none');
-        // footer.find('.accordeon__item').firs().addClass('is-open');
-        footer.find('.accordeon__content').first().removeAttr('style');
+        footer
+            .find('.accordeon__content')
+            .first()
+            .removeAttr('style');
         footer.find('.footer-item__title').addClass('accordeon__title');
     }
 
@@ -104,7 +112,7 @@ $(document).ready(function() {
         $('.js-nav-main').toggleClass('is-open');
         $('.js-overlay').toggleClass('is-active');
         document.documentElement.style.overflow =
-      document.documentElement.style.overflow === '' ? 'hidden' : '';
+            document.documentElement.style.overflow === '' ? 'hidden' : '';
         return false;
     });
     //When click outside
@@ -123,7 +131,7 @@ $(document).ready(function() {
     });
 
     if ($(window).width() <= 768) {
-    //Mobile Nav
+        //Mobile Nav
         $('.js-nav-main').prependTo('.wrapper ');
         $('.js-main-nav-link--forward').on('click', function(e) {
             e.preventDefault();
@@ -139,7 +147,7 @@ $(document).ready(function() {
 
             if (
                 !navItem.hasClass('is-active') &&
-        !$(this).hasClass('nav-dropdown__title--link')
+                !$(this).hasClass('nav-dropdown__title--link')
             ) {
                 navItem.addClass('is-active');
                 block
@@ -147,27 +155,27 @@ $(document).ready(function() {
                     .text(title);
             } else if (
                 navItem.hasClass('is-active') &&
-        !navItemDropdown.hasClass('is-active') &&
-        !(
-            $(this).hasClass('nav-dropdown__title--link') ||
-          $(this).hasClass('nav-dropdown__title--back')
-        )
+                !navItemDropdown.hasClass('is-active') &&
+                !(
+                    $(this).hasClass('nav-dropdown__title--link') ||
+                    $(this).hasClass('nav-dropdown__title--back')
+                )
             ) {
                 navItemDropdown.addClass('is-active');
                 mainDropdown.css('overflow', 'hidden');
             } else if (
                 navItem.hasClass('is-active') &&
-        !navItemDropdown2.hasClass('is-active') &&
-        ($(this).hasClass('nav-dropdown__title--link') ||
-          $(this).hasClass('nav-dropdown__title--back'))
+                !navItemDropdown2.hasClass('is-active') &&
+                ($(this).hasClass('nav-dropdown__title--link') ||
+                    $(this).hasClass('nav-dropdown__title--back'))
             ) {
                 navItem.removeClass('is-active');
                 navItemDropdown.find('.nav-dropdown__title--temp').remove();
             } else if (
                 navItem.hasClass('is-active') &&
-        navItemDropdown2.hasClass('is-active') &&
-        ($(this).hasClass('nav-dropdown__title--link') ||
-          $(this).hasClass('nav-dropdown__title--back'))
+                navItemDropdown2.hasClass('is-active') &&
+                ($(this).hasClass('nav-dropdown__title--link') ||
+                    $(this).hasClass('nav-dropdown__title--back'))
             ) {
                 navItemDropdown2.removeClass('is-active');
                 mainDropdown.removeAttr('style');
@@ -190,7 +198,10 @@ $(document).ready(function() {
 
         //Mobile Search when click outside
         $(document).click(function(event) {
-            if ($(event.target).closest('.js-mobile-search--show, .js-search').length)
+            if (
+                $(event.target).closest('.js-mobile-search--show, .js-search')
+                    .length
+            )
                 return;
             search.removeClass('is-visible');
             search.find('.js-search-input').val('');
@@ -264,6 +275,12 @@ $(document).ready(function() {
     */
 
     //=include partials/card.js
+
+    /*
+    * Contacts.js
+    */
+
+    //=include partials/contacts.js
 
     /*
     * Components.js

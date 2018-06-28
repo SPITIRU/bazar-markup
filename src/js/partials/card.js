@@ -46,25 +46,21 @@ function tabTransform() {
         .unwrap()
         .addClass('accordeon accordeon--other js-accordeon')
         .removeClass('tab__titles');
-    tab
-        .find('.tab__title')
+    tab.find('.tab__title')
         .addClass('accordeon__title')
         .removeClass('tab__title is-active')
         .wrap('<div class="accordeon__item">');
 
-    tab
-        .find('[data-tab-content="0"]')
+    tab.find('[data-tab-content="0"]')
         .removeAttr('style')
         .insertAfter('[data-tab="0"]')
         .parent()
         .addClass('is-open');
-    tab
-        .find('[data-tab-content="1"]')
+    tab.find('[data-tab-content="1"]')
         .css('display', 'none')
         .insertAfter('[data-tab="1"]');
 
-    tab
-        .find('.tab__content')
+    tab.find('.tab__content')
         .addClass('accordeon__content')
         .removeClass('tab__content tab__content--product');
     tab.find('.tab__contentes').remove();
@@ -75,15 +71,18 @@ if ($(window).width() <= 480) {
 }
 
 if ($('.js-item-select').length > 0) {
-    $('.js-item-select').not('.js-item-select-control--plus').not('.js-item-select-control--minus').on('click', function() {
-        if ($(this).hasClass('is-active')) {
-            $('.js-item-select').removeClass('is-active');
-            $(this).removeClass('is-active');
-        } else {
-            $('.js-item-select').removeClass('is-active');
-            $(this).addClass('is-active');
-        }
-    });
+    $('.js-item-select')
+        .not('.js-item-select-control--plus')
+        .not('.js-item-select-control--minus')
+        .on('click', function() {
+            if ($(this).hasClass('is-active')) {
+                $('.js-item-select').removeClass('is-active');
+                $(this).removeClass('is-active');
+            } else {
+                $('.js-item-select').removeClass('is-active');
+                $(this).addClass('is-active');
+            }
+        });
 
     $(document).on('click', function(e) {
         if ($(e.target).closest('.js-item-select').length) return;
@@ -121,7 +120,9 @@ if ($('.js-item-select').length > 0) {
             let input = select.find('.item-select__input');
 
             input.val(text);
-            value.children('.item-select__color').data('item-select-color', color);
+            value
+                .children('.item-select__color')
+                .data('item-select-color', color);
             changeColor();
 
             if (select.hasClass('item-select--count')) {
@@ -133,7 +134,9 @@ if ($('.js-item-select').length > 0) {
                     input.css('display', 'none');
                 } else {
                     input.removeAttr('style');
-                    value.children('.item-select__title').css('display', 'none');
+                    value
+                        .children('.item-select__title')
+                        .css('display', 'none');
                 }
             }
         });

@@ -1,162 +1,160 @@
 //prefix
 
 //FONT
-$f       : roboto-400, sans-serif;
-$f-light : roboto-300, sans-serif;
+$f: roboto-400, sans-serif;
+$f-light: roboto-300, sans-serif;
 $f-medium: roboto-500, sans-serif;
-$f-bold  : roboto-600, sans-serif;
+$f-bold: roboto-600, sans-serif;
 
-$f2       : robotoslab-400, sans-serif;
-$f2-light : robotoslab-300, sans-serif;
+$f2: robotoslab-400, sans-serif;
+$f2-light: robotoslab-300, sans-serif;
 $f2-medium: robotoslab-500, sans-serif;
-$f2-bold  : robotoslab-600, sans-serif;
+$f2-bold: robotoslab-600, sans-serif;
 
-$font-size-base  : 16px;
+$font-size-base: 16px;
 $font-family-base: $f;
 $line-height-base: 1.5;
 $font-weight-base: 400;
 
 //Отступы
-$base-indent    : 20px;
-$half-indent    : $base-indent / 2;
-$section-indent : 50px;
+$base-indent: 20px;
+$half-indent: $base-indent / 2;
+$section-indent: 50px;
 
-$gutter         : $base-indent;
+$gutter: $base-indent;
 
 //Base Variebles
 $color-accent: #a3467d;
-$color-main  : #95d6c9;
-$color-third : #ffe51c;
+$color-main: #95d6c9;
+$color-third: #ffe51c;
 
 //gray
 // $gray--darkest          :;
-$gray--darken  : #565656;
-$gray--dark    : #808080;
-$gray          : #aeaeae;
-$gray--light   : #e1e1e1;
-$gray--lighten : #e6e6e6;
+$gray--darken: #565656;
+$gray--dark: #808080;
+$gray: #aeaeae;
+$gray--light: #e1e1e1;
+$gray--lighten: #e6e6e6;
 $gray--lightest: #f6f6f6;
 
 //clolors
-$color-muted  : #d6d6d6;
+$color-muted: #d6d6d6;
 $color-primary: $color-main;
 $color-success: #8cc152;
-$color-info   : #2386dc;
-$color-danger : #ff0600;
+$color-info: #2386dc;
+$color-danger: #ff0600;
 
-$color-link             :$color-info;
+$color-link: $color-info;
 
 //text
-$color-text       : $gray--darken;
+$color-text: $gray--darken;
 $color-text--light: $gray--dark;
 
 //bg
 // $color-bg--darkest       :;
 // $color-bg--darken        :;
-$color-bg--dark   : $gray--darken;
-$color-bg--light  : $gray--lighten;
+$color-bg--dark: $gray--darken;
+$color-bg--light: $gray--lighten;
 $color-bg--lighten: $gray--lightest;
 // $color-bg--lightest      :;
 
 //Icon
-$color-icon         :$gray--dark;
-$color-icon--light  :#a2a2a2;
+$color-icon: $gray--dark;
+$color-icon--light: #a2a2a2;
 
 //border
 // $color-border--darkest   :;
 // $color-border--darken    :;
-$color-border--dark    : $gray--dark;
-$color-border          : $gray;
-$color-border--light   : $gray--light;
-$color-border--lighten : $gray--lighten;
+$color-border--dark: $gray--dark;
+$color-border: $gray;
+$color-border--light: $gray--light;
+$color-border--lighten: $gray--lighten;
 $color-border--lightest: $gray--lightest;
 
-$border-radius           :2px;
+$border-radius: 2px;
 
-
-$color-placeholder       :$gray;
+$color-placeholder: $gray;
 
 //Тень
-$bxs: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
-$bxs-hover: 1px 1px 10px rgba($color-main ,0.6);
-$bxs-i: inset 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+$bxs: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+$bxs-hover: 1px 1px 10px rgba($color-main, 0.6);
+$bxs-i: inset 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+	0 3px 1px -2px rgba(0, 0, 0, 0.2);
 
 //button colors
 $button-colors: (
-	accent : $color-accent,
+	accent: $color-accent,
 	default: $color-main,
-	yellow : $color-third,
+	yellow: $color-third,
 	success: $color-success,
-	error  : $color-danger,
-	info   : $color-info,
-	muted  : $gray--darken
+	error: $color-danger,
+	info: $color-info,
+	muted: $gray--darken
 );
 
 //z-index
 $z-index: (
-	bottom       : -9999,
-	down         : -1,
-	default      : 1,
-	absolute     : 50,
-	fixed        : 99,
-	dropdown     : 333,
-	lk           : 500,
-	overlay      : 900,
-	mobileMenu   : 901,
+	bottom: -9999,
+	down: -1,
+	default: 1,
+	absolute: 50,
+	fixed: 99,
+	dropdown: 333,
+	lk: 500,
+	overlay: 900,
+	mobileMenu: 901,
 	modal-overlay: 1000,
-	modal        : 1001
+	modal: 1001
 );
 
 //Icons
-$icon-vk   : '\f189';
-$icon-odnk : '\f263';
-$icon-inst : '\f16d';
-$icon-order: '\f07a';
-$icon-fav  : '\f004';
-$icon-data : '\f044';
-$icon-exit : '\f08b';
+$icon-vk: "\f189";
+$icon-odnk: "\f263";
+$icon-inst: "\f16d";
+$icon-order: "\f07a";
+$icon-fav: "\f004";
+$icon-data: "\f044";
+$icon-exit: "\f08b";
 
 $soc-icons: (
-	vk  : $icon-vk,
-	ok  : $icon-odnk,
+	vk: $icon-vk,
+	ok: $icon-odnk,
 	inst: $icon-inst
 );
 
 $nav-lk-icons: (
-	order       : $icon-order,
-	fav         : $icon-fav,
-	data        : $icon-data,
-	exit        : $icon-exit
+	order: $icon-order,
+	fav: $icon-fav,
+	data: $icon-data,
+	exit: $icon-exit
 );
 
-
 $breakpoints: (
-  i5: 320px,
-  i7: 375px,
-  i8: 414px,
-  xs: 480px,
-  sm: 768px,
-  md: 1024px,
-  lg: 1200px
+	i5: 320px,
+	i7: 375px,
+	i8: 414px,
+	xs: 480px,
+	sm: 768px,
+	md: 1024px,
+	lg: 1200px
 );
 
 //Modal Variebles
 $modal-border-width: 1px;
 $modal-border-color: $color-border--light;
-$border-radius     : $border-radius;
+$border-radius: $border-radius;
 
-$modal-box-shadow: 0 .25rem .5rem rgba(#000, .5) !default;
+$modal-box-shadow: 0 0.25rem 0.5rem rgba(#000, 0.5) !default;
 
-$modal-backdrop-bg     : #000 !default;
-$modal-content-bg      : #fff !default;
-$modal-backdrop-opacity: .4 !default;
-$modal-header-padding  : 1rem !default;
-$modal-inner-padding   : 1rem !default;
-
+$modal-backdrop-bg: #000 !default;
+$modal-content-bg: #fff !default;
+$modal-backdrop-opacity: 0.4 !default;
+$modal-header-padding: 1rem !default;
+$modal-inner-padding: 1rem !default;
 
 $modal-md: 500px !default;
 $modal-sm: 300px !default;
 $modal-lg: 800px !default;
 
-$transition-collapse: height .35s ease !default;
-$transition-fade    : opacity .15s linear !default;
+$transition-collapse: height 0.35s ease !default;
+$transition-fade: opacity 0.15s linear !default;
