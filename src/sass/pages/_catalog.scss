@@ -345,6 +345,16 @@
 			font-size: 13px;
 			color: $gray--light;
 		}
+		input{
+			display: inline-block;
+			padding: 2px 10px 4px;
+			vertical-align: middle;
+			font-size: 14px;
+			font-family: $f;
+			border: 0;
+			// background-color: $color-bg--lighten;
+			// position: relative;
+		}
 	} //range__from
 
 	&__to {
@@ -369,7 +379,7 @@
 		font-family: $f2-bold;
 		font-size: 16px;
 		text-transform: uppercase;
-		font-weight: 700;
+		font-weight: 500;
 	} //.cloth__title
 
 	&__item {
@@ -386,7 +396,7 @@
 		font-family: $f2-bold;
 		text-transform: uppercase;
 		font-size: 14px;
-		font-weight: 700;
+		font-weight: 500;
 	} //.cloth__subtitle
 
 	&__count {
@@ -639,7 +649,7 @@
 		margin-bottom: 0;
 		font-family: $f2-bold;
 		font-size: 12px;
-		font-weight: 600;
+		font-weight: 500;
 		letter-spacing: 0.24px;
 		text-transform: uppercase;
 
@@ -865,7 +875,7 @@
 				text-align: right;
 				letter-spacing: 0.5px;
 				font-family: $f2-bold;
-				font-weight: 700;
+				font-weight: 500;
 				@include respond-to(xs) {
 					margin-bottom: $gutter;
 					font-size: 16px;
