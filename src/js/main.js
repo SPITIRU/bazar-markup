@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
     $(window).on('load', function() {
         $('body').removeClass('loading');
 
@@ -30,9 +29,34 @@ $(document).ready(function() {
             placeholder: $(this).data('placeholder')
         });
 
+        $('.js-select.select-with-icon').select2({
+            templateResult: addUserPic,
+            minimumResultsForSearch: -1
+        });
+
         $('.js-select.no-search').select2({
             minimumResultsForSearch: -1
         });
+
+        function addUserPic(opt) {
+            console.log('image select');
+            if (!opt.id) {
+                return opt.text;
+            }
+            var optimage = $(opt.element).data('image');
+            if (!optimage) {
+                return opt.text;
+            } else {
+                var $opt = $(
+                    '<span class="sorting-icon sorting-icon--' +
+                        optimage +
+                        '">' +
+                        $(opt.element).text() +
+                        '</span>'
+                );
+                return $opt;
+            }
+        }
     }
 
     // //Masked inputmask https://github.com/RobinHerbots/Inputmask

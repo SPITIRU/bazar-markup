@@ -195,6 +195,9 @@
 		display: block;
 		font-size: 12px;
 		text-transform: uppercase;
+		position: relative;
+		top: 0;
+		transition: top .35s linear;
 
 		@include respond-to(sm) {
 			text-transform: initial;
@@ -209,7 +212,7 @@
 		width: 45px;
 		height: 45px;
 		margin-bottom: 5px;
-		transition: fill .35s ease, opacity .35s linear, visibility .35s linear;
+		transition: fill .35s ease, opacity .2s linear, visibility .2s linear;
 
 		@include respond-to(sm) {
 			width: 30px;
@@ -253,7 +256,7 @@
 			line-height: 50px;
 			border: 0;
 			background-color: $gray--lightest;
-			position: fixed;
+			position: absolute;
 			top: 0;
 			right: -50px;
 			display: flex;

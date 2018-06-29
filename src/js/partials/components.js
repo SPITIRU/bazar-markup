@@ -2,30 +2,36 @@
 if ($('.js-accordeon').length > 0) {
     let accorderon = $('.js-accordeon');
 
-    accorderon.find('.accordeon__item').not(':first').find('.accordeon__content').slideUp();
-    accorderon.find('.accordeon__item:first').addClass('is-open').find('.accordeon__content').slideDown();
-
     accorderon
-        .find('.accordeon__title')
-        .on('click', function() {
-            if (
-                $(this)
-                    .parent()
-                    .hasClass('is-open')
-            ) {
-                $(this)
-                    .parent()
-                    .removeClass('is-open')
-                    .find('.accordeon__content')
-                    .slideUp();
-            } else {
-                $(this)
-                    .parent()
-                    .addClass('is-open')
-                    .find('.accordeon__content')
-                    .slideDown();
-            }
-        });
+        .find('.accordeon__item')
+        .not(':first')
+        .find('.accordeon__content')
+        .slideUp();
+    accorderon
+        .find('.accordeon__item:first')
+        .addClass('is-open')
+        .find('.accordeon__content')
+        .slideDown();
+
+    accorderon.find('.accordeon__title').on('click', function() {
+        if (
+            $(this)
+                .parent()
+                .hasClass('is-open')
+        ) {
+            $(this)
+                .parent()
+                .removeClass('is-open')
+                .find('.accordeon__content')
+                .slideUp();
+        } else {
+            $(this)
+                .parent()
+                .addClass('is-open')
+                .find('.accordeon__content')
+                .slideDown();
+        }
+    });
     if (accorderon.hasClass('lk__accordeon')) {
         $(this)
             .find('.accordeon__title')

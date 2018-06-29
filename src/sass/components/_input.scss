@@ -1,34 +1,38 @@
-.input{
+.input {
 	display: inline-block;
 	position: relative;
 
-	&::before{
+	&::before {
 		font-family: fontawesome;
 		color: $color-icon--light;
 		line-height: 1;
 		@include vy;
 	}
 
-	&.is-invalid{
-		.input{
-			&__field{
-				border: 1px solid $color-danger;
+	&.is-invalid {
+		.input {
+			&__field {
+				border: 1px solid $color-danger !important;
 			}
-			&__error{
+			&__error {
 				display: block;
 			}
 		}
 	}
 
-	&--title{margin-top: 25px;}//input--title
+	&--title {
+		margin-top: 25px;
+	} //input--title
 
-	&__wrapper{@extend %flex;}
+	&__wrapper {
+		@extend %flex;
+	}
 
-	&__wrap{
+	&__wrap {
 		position: relative;
-		&_inline{
+		&_inline {
 			display: inline-block;
-			& + &{
+			& + & {
 				margin-left: 30px;
 				@include max-screen(480) {
 					margin-left: 0;
@@ -37,24 +41,24 @@
 		}
 	}
 
-	&__title{
+	&__title {
 		margin-top: 0;
 		font-size: 13px;
 		position: absolute;
 		top: -25px;
 		left: 0;
-		span{
+		span {
 			display: inline-block;
 			margin-left: 5px;
 			color: $color-danger;
 		}
-	}//input__title
+	} //input__title
 
-	&__field{
+	&__field {
 		@extend %styleInput;
-	}//input__field
+	} //input__field
 
-	&__box{
+	&__box {
 		display: inline-block;
 		margin-right: 30px;
 		position: relative;
@@ -62,15 +66,15 @@
 			margin-right: 0;
 		}
 		@include max-screen(320) {
-			span.js-remove-period{
+			span.js-remove-period {
 				position: absolute;
 				right: -30px;
 				top: 46%;
 			}
-		}		
-	}//input__box
+		}
+	} //input__box
 
-	&__remove{
+	&__remove {
 		width: 16px;
 		height: 16px;
 		margin-left: 15px;
@@ -79,7 +83,8 @@
 		top: 2px;
 		cursor: pointer;
 		@include tr;
-		&:hover, &:focus{
+		&:hover,
+		&:focus {
 			fill: $gray;
 		}
 		@include max-screen(480) {
@@ -88,9 +93,9 @@
 			margin-left: 0;
 			margin-right: 5px;
 		}
-	}//input__remove
+	} //input__remove
 
-	&__error{
+	&__error {
 		display: none;
 		font-family: $f-light;
 		font-size: 13px;
@@ -101,134 +106,136 @@
 		left: 0;
 		bottom: -15px;
 		width: 100%;
-	}//input__error
+	} //input__error
 
-	&--user{
-		&::before{
-			content: '\f007';
+	&--user {
+		&::before {
+			content: "\f007";
 			right: 12.5px;
-		}		
-	}//input--user
+		}
+	} //input--user
 
-	&--price{
+	&--price {
 		width: 110px;
 		@include max-screen(320) {
 			width: 100px;
 		}
-		&::before{
-			content: '\f158';
+		&::before {
+			content: "\f158";
 			right: 0;
 		}
-		.input{
-			&__field{
+		.input {
+			&__field {
 				padding-right: 0;
 				width: 100%;
 			}
 		}
-	}//input--price
+	} //input--price
 
-	&--time{
-		&::before{
-			content: '\f017';
+	&--time {
+		&::before {
+			content: "\f017";
 			right: 10px;
 		}
-		.input{
-			&__field{
-				padding-right: 30px;				
+		.input {
+			&__field {
+				padding-right: 30px;
 			}
 		}
-	}//input--time
+	} //input--time
 
-	&--email{
-		&::before{
-			content: '\f0e0';
+	&--email {
+		&::before {
+			content: "\f0e0";
 			right: 10px;
-		}		
-	}//input--email
+		}
+	} //input--email
 
-	&--phone{
-		&::before{
-			content: '\f10b';
+	&--phone {
+		&::before {
+			content: "\f10b";
 			font-size: 23px;
 			right: 13.5px;
 		}
-		.input{
-			&__field{				
+		.input {
+			&__field {
 				font-family: oswald-500, sans-serif;
 			}
 		}
-	}//input--phone
+	} //input--phone
 
-	&--password{
-	}//input--password
+	&--password {
+	} //input--password
 
-	&--confirm{
-		.input{
-			&__error{
+	&--confirm {
+		.input {
+			&__error {
 				white-space: nowrap;
 			}
-			&__field{
+			&__field {
 				padding: 5px;
 				font-size: 16px;
 			}
 		}
-	}//input--confirm
+	} //input--confirm
 
-	&__icon{
+	&__icon {
 		color: $color-icon;
 		@include vy;
 		right: 10px;
 		cursor: pointer;
-	}//input__icon
+	} //input__icon
 
-	.selectize-control{
+	.selectize-control {
 		min-width: 70px;
 	}
 
 	.select2-container .select2-selection--single .select2-selection__rendered,
-	.select2-results__option{font-size: 16px;}
-}//input
+	.select2-results__option {
+		font-size: 16px;
+	}
+} //input
 
-.date{
+.date {
 	display: inline-block;
 	width: 105px;
 	position: relative;
-	&.is-invalid{
-		.date{
+	&.is-invalid {
+		.date {
 			margin-bottom: 10px;
-			&__wrap{
+			&__wrap {
 				border: 1px solid $color-danger;
-				.date__field{
+				.date__field {
 					border-color: transparent;
 				}
 			}
-			&__field{
+			&__field {
 				border: 1px solid $color-danger;
 			}
-			&__error{
+			&__error {
 				display: block;
 			}
 		}
 	}
-	&__wrap{		
+	&__wrap {
 		display: flex;
 		flex-wrap: wrap;
 		border-radius: $border-radius;
-	}//date__wrap
-	&__title{
+	} //date__wrap
+	&__title {
 		margin-top: 0;
 		font-size: 13px;
 		position: absolute;
 		top: -25px;
 		left: 0;
-	}//date__title
-	&__field{
+	} //date__title
+	&__field {
 		@extend %styleInput;
 		padding-right: 30px;
 		width: 100%;
 		font-family: oswald-500, sans-serif;
-	}//date__field
-	&__error{
+	} //date__field
+	&__error {
 		display: none;
 		font-family: $f-light;
 		font-size: 13px;
@@ -238,8 +245,8 @@
 		left: 0;
 		bottom: -15px;
 		width: 100%;
-	}//input__invalid
-	&--title{
+	} //input__invalid
+	&--title {
 		margin-top: 25px;
 	}
-}//date-date
+} //date-date

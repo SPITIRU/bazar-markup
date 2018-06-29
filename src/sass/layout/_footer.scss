@@ -6,7 +6,7 @@
 	@include respond-to(xs) {
 		padding: 5px 0;
 	}
-	
+
 	&__in{
 		@include row-flex;
 	}//.footer__in
@@ -19,9 +19,15 @@
 .footer-item{
 	@include col;
 	@include size(3);
+	@include size-sm(6);
 	@include size-xs(12);
 
+	@include respond-to(sm) {
+		margin-bottom: $gutter;
+	}
+
 	@include respond-to(xs) {
+		margin-bottom: 0;
 		& + &{
 			margin-top: 0;
 			border-top: 1px solid #d9d9d9;
@@ -34,7 +40,7 @@
 			text-transform: uppercase;
 		}
 	}
-	
+
 	&__title{}//.footer-item__title
 
 	&__content{
@@ -47,7 +53,7 @@
 
 	&__el{
 		font-size: 14px;
-		color: $color-text;		
+		color: $color-text;
 		letter-spacing: 0.5px;
 		@extend %flexCenter;
 		& + &{
@@ -57,7 +63,7 @@
 
 	&__link{
 		font-size: 14px;
-		color: $color-text;		
+		color: $color-text;
 		letter-spacing: 0.5px;
 		&:hover{
 			color: $color-accent;

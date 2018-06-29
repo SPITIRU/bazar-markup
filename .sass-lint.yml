@@ -23,5 +23,5 @@ rules:
     - 2
     - max-depth: 4
   indentation:
-    - 1
+    - 2
     - size: tab

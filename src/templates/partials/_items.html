@@ -83,10 +83,44 @@
 
 {% macro productItem(class) %}
 <a href="#" class="product-item js-product-item" itemscope itemtype="http://schema.org/Product">
+
+	<span class="product-item__badge sale">-32%</span>
+	<span class="product-item__badge new">New</span>
+	<span class="product-item__badge hit">Хит</span>
+
 	<div class="product-item__img">
 		<img class="product-item__image" src="img/products/atlas/1.png" alt="Атлас дюпон" itemprop="image">
 		<button class="button-icon button-icon--fav js-button-icon--fav product-item__fav"></button>
 	</div>
+
+	<div class="product-slider js-product-slider">
+		<ul class="product-slider__list js-product-slider-list">
+
+			<li class="product-slider__item js-product-slider-item ">
+			   <div class="product-slider__image" style="background-image: url('img/products/atlas/1.png');"></div>
+			</li>
+
+			<li class="product-slider__item js-product-slider-item ">
+			   <div class="product-slider__image" style="background-image: url('img/products/atlas/2.png');"></div>
+			</li>
+
+			<li class="product-slider__item js-product-slider-item ">
+			   <div class="product-slider__image" data-srcpath="" style="background-image: url('img/products/atlas/3.png');"></div>
+			</li>
+
+			<li class="product-slider__item js-product-slider-item ">
+			   <div class="product-slider__image" data-srcpath="" style="background-image: url('img/products/atlas/4.png');"></div>
+			</li>
+
+			<li class="product-slider__item product-slider__item--last js-product-slider-item js-product-slider-item--last">
+				<div class="product-slider__image" data-srcpath="" style="background-image: url('img/products/atlas/3.png');"></div>
+				<div class="product-slider__more js-product-slider-more">
+					Ещё<br>5 цветов
+				</div>
+			</li>
+		</ul>
+	</div>
+
 	<div class="product-item__desc">
 		<div class="product-item__box">
 			<h5 class="h5 product-item__title" itemprop="name">Атлас дюпон
@@ -105,16 +139,16 @@
 		<div class="product-item__more">
 			<div class="product-item__color color">
 				<ul class="color__list">
-					<li class="color__item" data-color="img/products/atlas/1.png">
+					<li class="color__item js-color-item" data-color="img/products/atlas/1.png">
 						<img class="color__img" src="img/products/atlas/colors/1.png" alt="alt">
 					</li>
-					<li class="color__item" data-color="img/products/atlas/2.png">
+					<li class="color__item js-color-item" data-color="img/products/atlas/2.png">
 						<img class="color__img" src="img/products/atlas/colors/2.png" alt="alt">
 					</li>
-					<li class="color__item" data-color="img/products/atlas/3.png">
+					<li class="color__item js-color-item" data-color="img/products/atlas/3.png">
 						<img class="color__img" src="img/products/atlas/colors/3.png" alt="alt">
 					</li>
-					<li class="color__item" data-color="img/products/atlas/4.png">
+					<li class="color__item js-color-item" data-color="img/products/atlas/4.png">
 						<img class="color__img" src="img/products/atlas/colors/4.png" alt="alt">
 					</li>
 				</ul>
