@@ -35,7 +35,7 @@ changer:
 				<!-- begin catalog__top-line -->
 				<div class="catalog__top-line">
 					 <div class="catalog__title">
-					 	<a href="#" class="catalog__back"><i class="far fa-angle-left"></i></a>
+					 	<a class="catalog__back" href="#"><i class="far fa-angle-left"></i></a>
 					 	<h1 class="h1" itemprop="headline">Атлас</h1>
 					 	<span class="catalog__count">350 товаров на складе</span>
 					 </div>
@@ -55,7 +55,7 @@ changer:
 					<ul class="changer__list js-changer">
 						{% for item in changer %}
 						<li class="changer__item {{ item.class }}">
-							<a href="#" class="changer__link">
+							<a class="changer__link" href="#">
 								{{ item.title }}
 								<span class="changer__counter">{{ item.counter }}</span>
 								<div class="changer__reset"><i class="fal fa-times"></i></div>
@@ -85,21 +85,21 @@ changer:
 				<div class="pagination">
 					<ul class="pagination__list">
 						<li class="pagination__item">
-							<a href="#" class="pagination__link">
+							<a class="pagination__link" href="#">
 								<i class="fal fa-angle-left pagination__icon"></i>
 							</a>
 						</li>
 						<li class="pagination__item">
-							<a href="#" class="pagination__link">1</a>
+							<a class="pagination__link" href="#">1</a>
 						</li>
 						<li class="pagination__item is-active">
-							<a href="#" class="pagination__link">2</a>
+							<a class="pagination__link" href="#">2</a>
 						</li>
 						<li class="pagination__item">
-							<a href="#" class="pagination__link">3</a>
+							<a class="pagination__link" href="#">3</a>
 						</li>
 						<li class="pagination__item">
-							<a href="#" class="pagination__link">
+							<a class="pagination__link" href="#">
 								<i class="fal fa-angle-right pagination__icon"></i>
 							</a>
 						</li>

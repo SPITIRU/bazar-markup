@@ -1,6 +1,11 @@
 //Accordeon
 if ($('.js-accordeon').length > 0) {
-    $('.js-accordeon')
+    let accorderon = $('.js-accordeon');
+
+    accorderon.find('.accordeon__item').not(':first').find('.accordeon__content').slideUp();
+    accorderon.find('.accordeon__item:first').addClass('is-open').find('.accordeon__content').slideDown();
+
+    accorderon
         .find('.accordeon__title')
         .on('click', function() {
             if (
@@ -12,16 +17,16 @@ if ($('.js-accordeon').length > 0) {
                     .parent()
                     .removeClass('is-open')
                     .find('.accordeon__content')
-                    .css('display', 'none');
+                    .slideUp();
             } else {
                 $(this)
                     .parent()
                     .addClass('is-open')
                     .find('.accordeon__content')
-                    .removeAttr('style');
+                    .slideDown();
             }
         });
-    if ($('.js-accordeon').hasClass('lk__accordeon')) {
+    if (accorderon.hasClass('lk__accordeon')) {
         $(this)
             .find('.accordeon__title')
             .on('click', function() {

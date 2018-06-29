@@ -8,5 +8,6 @@
     "scss.lint.emptyRules": "ignore",
     "css.lint.zeroUnits": "warning",
     "scss.lint.zeroUnits": "warning",
-    "files.trimTrailingWhitespace": true
+    "files.trimTrailingWhitespace": true,
+    "html.format.wrapAttributes": "force-aligned"
 }

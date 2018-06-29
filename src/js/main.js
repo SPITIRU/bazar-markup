@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
     $(window).on('load', function() {
         $('body').removeClass('loading');
 
@@ -91,19 +92,8 @@ $(document).ready(function() {
             .find('.footer-item')
             .addClass('accordeon__item')
             .wrapAll('<div class="accordeon js-accordeon">');
-        footer
-            .find('.footer-item')
-            .first()
-            .addClass('is-open');
-        footer
-            .find('.footer-item__content')
-            .addClass('accordeon__content')
-            .css('display', 'none');
-        footer
-            .find('.accordeon__content')
-            .first()
-            .removeAttr('style');
         footer.find('.footer-item__title').addClass('accordeon__title');
+        footer.find('.footer-item__content').addClass('accordeon__content');
     }
 
     //Hamburger btn
