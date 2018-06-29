@@ -452,8 +452,9 @@
 
 .hamburger{
 	display: none;
-	width: 42px;
+	width: 32px;
 	height: 28px;
+	padding: 0;
 	background-color: $gray--lightest;
 	border: 0;
 	outline: none;
