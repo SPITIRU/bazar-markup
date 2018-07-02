@@ -90,7 +90,9 @@
 	<div class="modal-dialog modal-dialog--lg">
 		<div class="modal-content">
 			<div class="modal-body">
-				<button class="close modal__btn modal__btn--close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<button class="close modal__btn modal__btn--close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
 
 				<div class="preview__wrap">
 					<div class="preview__arrow preview__arrow--prev"></div>
@@ -117,7 +119,8 @@
 									{% endfor %}
 								</div>
 							</div>
-						</div><!-- end card__image -->
+						</div>
+						<!-- end card__image -->
 
 						<!-- begin card__desc -->
 						<div class="card__desc">
@@ -125,7 +128,10 @@
 								<span>white</span>
 							</h1>
 
-							<div class="card__price">340,00 <span>руб/м</span><small>-15%</small></div>
+							<div class="card__price">340,00
+								<span>руб/м</span>
+								<small>-15%</small>
+							</div>
 
 							<!-- begin item-select -->
 							<div class="item-select__group card__item-select">
@@ -190,7 +196,8 @@
 										</div>
 									</div>
 								</div>
-							</div><!-- end item-select -->
+							</div>
+							<!-- end item-select -->
 
 							<div class="button-box">
 								<button class="button button--yellow card__btn card__btn--cart" onclick="pushUp();">
@@ -224,13 +231,14 @@
 
 												<div class="bz-table bz-table--dot">
 													<ul class="bz-table__list">
-														{% import "data/data.html" as productDesc %}
-															{% for item in productDesc.productDesc %}
-															<li class="bz-table__item">
-																<span class="bz-table__subitem"><span>{{ item.title }}</span></span>
-																<a href="#" class="bz-table__subitem">{{ item.desc }}</a>
-															</li>
-															{% endfor %}
+														{% import "data/data.html" as productDesc %} {% for item in productDesc.productDesc %}
+														<li class="bz-table__item">
+															<span class="bz-table__subitem">
+																<span>{{ item.title }}</span>
+															</span>
+															<a href="#" class="bz-table__subitem">{{ item.desc }}</a>
+														</li>
+														{% endfor %}
 													</ul>
 												</div>
 
@@ -247,10 +255,13 @@
 									</div>
 								</div>
 
-							</div><!-- end card__info -->
+							</div>
+							<!-- end card__info -->
 
-						</div><!-- end card__desc -->
-					</div><!-- end card__wrap -->
+						</div>
+						<!-- end card__desc -->
+					</div>
+					<!-- end card__wrap -->
 
 					<!-- begin card__colors -->
 					<div class="card__colors">
@@ -258,16 +269,15 @@
 						<h2 class="h2 page-title">Другие цвета</h2>
 
 						<div class="product-item__wrap">
-							{% for i in range(0, 4) %}
-								{{ item.productItemColor() }}
-							{% endfor %}
+							{% for i in range(0, 4) %} {% include "partials/product/_product-color.html" %} {% endfor %}
 						</div>
 
-					</div><!-- end card__colors -->
-
+					</div>
+					<!-- end card__colors -->
 				</div>
 
 			</div>
 		</div>
 	</div>
-</div><!-- end preview -->
+</div>
+<!-- end preview -->

@@ -281,7 +281,7 @@ title: Атлас дюпон «izumrud»
 
 			<div class="product-item__wrap">
 				{% for i in range(0, 4) %}
-					{{ item.productItemColor() }}
+					{% include "partials/product/_product-color.html" %}
 				{% endfor %}
 			</div>
 

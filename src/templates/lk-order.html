@@ -16,11 +16,11 @@ wrapperClass: page-lk
 
 		<div class="lk__wrap">
 
-			{{ item.lkSidebar() }}
+			{% include "partials/lk/_lk-sidebar.html" %}
 
 			<!-- begin lk__content -->
 			<div class="lk__content stiky-content">
-				
+
 				<div class="user-order">
 					<div class="accordeon lk__accordeon js-accordeon">
 						{% for i in range(0, 3) %}
@@ -38,12 +38,12 @@ wrapperClass: page-lk
 							</div>
 							<div class="accordeon__content user-order__content" style="display: none;">
 
-								<div class="user-order-item">									
+								<div class="user-order-item">
 									<div class="user-order-item__img">
 										<img src="img/products/atlas/small/1.png" alt="Атлас дюпон">
 									</div>
 									<div class="user-order-item__desc">
-										<div class="user-order-item__left">										
+										<div class="user-order-item__left">
 											<div class="user-order-item__title_wrap">
 												<h5 class="h5 user-order-item__title product-item__title">
 													<a href="#">Атлас дюпон <span>white</span></a>
@@ -66,12 +66,12 @@ wrapperClass: page-lk
 									</div>
 								</div>
 
-								<div class="user-order-item">									
+								<div class="user-order-item">
 									<div class="user-order-item__img">
 										<img src="img/products/atlas/small/1.png" alt="Атлас дюпон">
 									</div>
 									<div class="user-order-item__desc">
-										<div class="user-order-item__left">										
+										<div class="user-order-item__left">
 											<div class="user-order-item__title_wrap">
 												<h5 class="h5 user-order-item__title product-item__title">
 													<a href="#">Атлас дюпон <span>white</span></a>
@@ -95,7 +95,7 @@ wrapperClass: page-lk
 								</div>
 
 							</div>
-						</div>	
+						</div>
 						{% endfor %}
 					</div>
 				</div>
@@ -106,14 +106,14 @@ wrapperClass: page-lk
                     <a href="#" class="button button--transparent button--info card__btn--back">Вернуться в каталог</a>
                 </div>
                 <!-- end empty -->
-				
+
 			</div>
 			<!-- end lk__content -->
 
 		</div>
 
 	</div>
-</main>	
+</main>
 <!-- end home lk -->
 
 {% endblock %}

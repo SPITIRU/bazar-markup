@@ -16,7 +16,7 @@ wrapperClass: page-lk
 
 		<div class="lk__wrap">
 
-			{{ item.lkSidebar() }}
+			{% include "partials/lk/_lk-sidebar.html" %}
 
 			<!-- begin lk__content -->
 			<div class="lk__content stiky-content">
@@ -24,17 +24,17 @@ wrapperClass: page-lk
                 <div class="form lk__form">
                     <form class="lk-form">
                         <div class="form__inner">
-    
+
                             <div class="form__box form__box--wide">
                                 <div class="input form__input">
-                                    <input 
+                                    <input
                                     type='text'
                                     class="input__field"
                                     placeholder="Имя">
                                     <span class="input__error">*Какая-то ошибочка вышла</span>
                                 </div>
                                 <div class="input form__input">
-                                    <input 
+                                    <input
                                     type='text'
                                     class="input__field"
                                     placeholder="Фамилия">
@@ -42,24 +42,24 @@ wrapperClass: page-lk
                                 </div>
                                 </div>
                                 <div class="input form__input">
-                                    <input 
+                                    <input
                                     type='num'
                                     class="input__field js-born-mask"
                                     placeholder="Дата рождения /  дд.мм.гг">
                                     <span class="input__error">*Какая-то ошибочка вышла</span>
                                 </div>
                             </div>
-    
+
                             <div class="form__box form__box--wide">
                                 <div class="input form__input">
-                                    <input 
+                                    <input
                                     type='tel'
                                     class="input__field js-phone-mask"
                                     placeholder="Телефон">
                                     <span class="input__error">*Какая-то ошибочка вышла</span>
                                 </div>
                                 <div class="input form__input">
-                                    <input 
+                                    <input
                                     type='email'
                                     class="input__field"
                                     placeholder="E-mail"
@@ -67,11 +67,11 @@ wrapperClass: page-lk
                                     <span class="input__error">*Какая-то ошибочка вышла</span>
                                 </div>
                             </div>
-    
+
                             <div class="form__box form__box--wide">
                                 <div class="form__box">
                                     <div class="input form__input">
-                                        <input 
+                                        <input
                                         type='text'
                                         class="input__field"
                                         placeholder="Страна">
@@ -79,7 +79,7 @@ wrapperClass: page-lk
                                     </div>
                                 <div class="form__box">
                                     <div class="input form__input">
-                                        <input 
+                                        <input
                                         type='text'
                                         class="input__field"
                                         placeholder="Город">
@@ -87,17 +87,17 @@ wrapperClass: page-lk
                                     </div>
                                 <div class="form__box">
                                     <div class="input form__input">
-                                        <input 
+                                        <input
                                         type='text'
                                         class="input__field"
                                         placeholder="Улица">
                                         <span class="input__error">*Какая-то ошибочка вышла</span>
                                     </div>
                                 </div>
-                                
+
                                 <div class="form__box">
                                     <div class="input form__input">
-                                        <input 
+                                        <input
                                         type='text'
                                         class="input__field"
                                         placeholder="Дом/корпус">
@@ -105,7 +105,7 @@ wrapperClass: page-lk
                                     </div>
                                 </div>
                                 </div>
-                                
+
                                 <div class="form__box">
                                     <div class="input input--password form__input">
                                         <input
@@ -118,34 +118,34 @@ wrapperClass: page-lk
                                     </div>
                                 </div>
                             </div>
-    
-                        </div>						
-    
+
+                        </div>
+
                         <div class="form-success">
                             <div class="form-success__center">
                                 <h3 class="form-success__title">Спасибо за регистрацию!</h3>
                             </div>
                         </div>
-    
+
                         <div class="policy cart__policy">
                             {{ item.checkbox('Я соглалашаюсь', 'form__checkbox') }}
                             на обработку персональных данных в соответствии с <a href="#" target="_blank">Условиями пользовательского соглашения</a>.
-                        </div>	
-    
+                        </div>
+
                         <div class="form__box">
                             <button class="button button--default form__btn">Сохранить</button>
                         </div>
-    
+
                     </form>
                 </div>
-				
+
 			</div>
 			<!-- end lk__content -->
 
 		</div>
 
 	</div>
-</main>	
+</main>
 <!-- end home lk -->
 
 {% endblock %}

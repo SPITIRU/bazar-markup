@@ -62,7 +62,7 @@ advantages:
 				<div class="bz-slider__arrow bz-slider__arrow--next"></div>
 				<div class="bz-slider__slides js-bz-slider--new">
 					{% for i in range(0, 6) %}
-						{{ item.productItemSmall() }}
+						{% include "partials/product/_product-small.html" %}
 					{% endfor %}
 				</div>
 			</div>
