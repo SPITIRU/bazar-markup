@@ -395,10 +395,28 @@ body{
 }//.tab
 
 .seoblock {
-	&__text {
-		margin: $gutter*2.5 0;
-	}//.seoblock__text
+	margin: $gutter*2.5 0;
+	&__title{
+		font-size: 16px;
+	}
+	&__text{
+		font-family: $f-light;
+		color: $gray--darken;
+	}
 }//.seoblock
+
+.list-dash{
+	&__title{
+		display: block;
+		margin-bottom: 10px;
+		font-size: 16px;
+		font-family: $f-light;
+		color: $gray--darken;
+	}
+	&__item{
+		@include listIcon($color-accent);
+	}//.list-dash__item
+}//.list-dash
 
 .star-rating {
 	font-size: 0;
@@ -454,6 +472,7 @@ body{
 	@extend %flexCenter;
 	justify-content: center;
 	@include tr;
+
 	&::before{
 		content: '\f106';
 		font-family: fal;

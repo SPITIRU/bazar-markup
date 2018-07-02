@@ -24,7 +24,7 @@
 	}
 }
 
-@mixin badge{	
+@mixin badge{
 	min-width: 20px;
 	height: 20px;
 	color: $color-text;
@@ -38,26 +38,6 @@
 	align-items: center;
 }
 
-%flex{
-	display: flex;
-	justify-content: space-between;
-}
-
-%flexCenter{
-	display: flex;
-	align-items: center;
-}
-
-%flexColumn{
-	display: flex;
-	flex-direction: column;
-}
-
-%box{
-	border-radius: $border-radius;
-	background-color: #fff;
-	box-shadow: 0 2px 4px 0 rgba(0,0,0,.1), 0 0 4px 0 rgba(0,0,0,.1);
-}
 
 @mixin trans($what: all, $time: .35s){
 	transition: $what $time cubic-bezier(.38,.22,.21,.95);
@@ -80,10 +60,32 @@
 	}
 }
 
-@mixin borderTop{
-	border-top: 1px solid $color-border--lightest;
+@mixin listIcon($color){
+	padding-left: 15px;
+	position: relative;
+	&::before{
+		content: '';
+		display: block;
+		width: 8px;
+		height: 2px;
+		background-color: $color;
+		position: absolute;
+		top: 12px;
+		left: 0;
+	}
+}//ul li &::before (-)
+
+@mixin bdt($color){
+	border-top: 1px solid $color;
 	&:first-child{
 		border-top: none;
+	}
+}
+
+@mixin bdb($color){
+	border-bottom: 1px solid $color;
+	&:last-child{
+		border-bottom: none;
 	}
 }
 
@@ -111,4 +113,25 @@
 	&:focus{
 		border-color: $color-border;
 	}
+}
+
+%flex{
+	display: flex;
+	justify-content: space-between;
+}
+
+%flexCenter{
+	display: flex;
+	align-items: center;
+}
+
+%flexColumn{
+	display: flex;
+	flex-direction: column;
+}
+
+%box{
+	border-radius: $border-radius;
+	background-color: #fff;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,.1), 0 0 4px 0 rgba(0,0,0,.1);
 }

@@ -23,7 +23,7 @@ changer:
 		<!-- begin catalog__wrap -->
 		<div class="catalog__wrap">
 
-			{% include "partials/components/_catalog-filter.html" %}
+			{% include "partials/_catalog-filter.html" %}
 
 			<!-- begin catalog-content -->
 			<div class="catalog-content catalog__content stiky-content">
@@ -69,6 +69,39 @@ changer:
 					{% endfor %}
 				</div><!-- end product-item -->
 
+				<!-- begin catalog-filter__btn -->
+				<button class="catalog-filter__btn catalog-filter__btn--show js-catalog-filter--show">
+					{{mixin.icon('filter-btn')}}
+				</button><!-- end catalog-filter__btn -->
+
+				<!-- begin catalog-content__btn -->
+				<button class="button button--transparent button--accent catalog-content__btn">Показать еще</button><!-- end catalog-content__btn -->
+
+				<!-- begin pagination -->
+				<div class="pagination">
+					<ul class="pagination__list">
+						<li class="pagination__item">
+							<a class="pagination__link" href="#">
+								<i class="fal fa-angle-left pagination__icon"></i>
+							</a>
+						</li>
+						<li class="pagination__item">
+							<a class="pagination__link" href="#">1</a>
+						</li>
+						<li class="pagination__item is-active">
+							<a class="pagination__link" href="#">2</a>
+						</li>
+						<li class="pagination__item">
+							<a class="pagination__link" href="#">3</a>
+						</li>
+						<li class="pagination__item">
+							<a class="pagination__link" href="#">
+								<i class="fal fa-angle-right pagination__icon"></i>
+							</a>
+						</li>
+					</ul>
+				</div><!-- end pagination -->
+
 				<!-- begin catalog-content__empty -->
 				<div class="catalog-content__empty" style="display: none;">
 					<p>По вашим поисковым параметрам ничего не найдено</p>
@@ -83,43 +116,20 @@ changer:
 
 		</div><!-- end catalog__wrap -->
 
-		<!-- begin catalog-filter__btn -->
-		<button class="catalog-filter__btn catalog-filter__btn--show js-catalog-filter--show">
-			{{mixin.icon('filter-btn')}}
-		</button><!-- end catalog-filter__btn -->
-
-		<!-- begin catalog-content__btn -->
-		<button class="button button--transparent button--accent catalog-content__btn">Показать еще</button><!-- end catalog-content__btn -->
-
-		<!-- begin pagination -->
-		<div class="pagination">
-			<ul class="pagination__list">
-				<li class="pagination__item">
-					<a class="pagination__link" href="#">
-						<i class="fal fa-angle-left pagination__icon"></i>
-					</a>
-				</li>
-				<li class="pagination__item">
-					<a class="pagination__link" href="#">1</a>
-				</li>
-				<li class="pagination__item is-active">
-					<a class="pagination__link" href="#">2</a>
-				</li>
-				<li class="pagination__item">
-					<a class="pagination__link" href="#">3</a>
-				</li>
-				<li class="pagination__item">
-					<a class="pagination__link" href="#">
-						<i class="fal fa-angle-right pagination__icon"></i>
-					</a>
-				</li>
-			</ul>
-		</div><!-- end pagination -->
-
 		<!-- begin seoblock -->
-		<section class="seoblock">
+		<section class="seoblock catalog__seoblock">
 			<div class="container">
+				<h4 class="h4 seoblock__title">BAAZAR-TEX - Lorem ipsum dolor sit amet.</h4>
 				<p class="seoblock__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, reprehenderit earum. Molestiae tenetur pariatur, sequi quo id quisquam dolorum non fuga incidunt maiores suscipit repudiandae repellat corporis, cumque a placeat maxime quaerat quidem in ullam totam. Ratione quo quam esse asperiores corrupti consequuntur maiores? Accusantium, saepe est illum placeat aliquid omnis consequuntur, neque tempora itaque optio debitis veritatis, molestias magnam ad aperiam explicabo perspiciatis atque ullam nihil vel assumenda. Cum!</p>
+				<div class="list-dash__wrap">
+					<span class="list-dash__title">Lorem ipsum:</span>
+					<ul class="list-dash">
+						<li class="list-dash__item">Lorem ipsum dolor sit amet.</li>
+						<li class="list-dash__item">Lorem ipsum dolor sit amet.</li>
+						<li class="list-dash__item">Lorem ipsum dolor sit amet.</li>
+						<li class="list-dash__item">Lorem ipsum dolor sit amet.</li>
+					</ul>
+				</div>
 			</div>
 		</section> <!-- end seoblock -->
 

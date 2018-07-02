@@ -41,7 +41,10 @@
 		}
 	}
 
-	&__title{}//.footer-item__title
+	&__title{
+		font-family: $f2-bold;
+		font-weight: 500;
+	}//.footer-item__title
 
 	&__content{
 		@include respond-to(xs) {
