@@ -1,46 +1,29 @@
 //card tabs
 $('.js-card-tab-related').tabs();
-$('.js-card-tab-related')
-    .find('.tab__title')
-    .on('click', function() {
-        $(this)
-            .closest('.js-card-tab-related')
-            .find('.js-bz-slider--related')
-            .slick('setPosition');
-    });
 
-if ($('.js-tab').length > 0 && $(window).width() > 480) {
-    document.addEventListener('click', function(e) {
-        if (e.target && e.target.className == 'js-tab') {
-            tabs;
-        }
-    });
+$(document).on('click', '.js-related-tab', function() {
+    $(this)
+        .closest('.js-card-tab-related')
+        .find('.js-bz-slider--related')
+        .slick('setPosition');
+});
+
+// $('.js-card-tab-related')
+//     .find('.tab__title')
+//     .on('click', function() {
+//         $(this)
+//             .closest('.js-card-tab-related')
+//             .find('.js-bz-slider--related')
+//             .slick('setPosition');
+//     });
+
+if ($(window).width() > 480) {
+    $(document).on('click', '.js-tab', tabs);
 }
 
 $('#preview').on('shown.bs.modal', function(e) {
     $('.js-bz-slider--card').resize();
 });
-
-//Табы
-function tabs(e) {
-    var target = e.target;
-    if (target.className === 'tab__title') {
-        var dataTab = target.getAttribute('data-tab');
-        var tabContent = document.querySelectorAll('.tab__content');
-        var tabTitle = document.querySelectorAll('.tab__title');
-        for (var i = 0; i < tabTitle.length; i++) {
-            tabTitle[i].classList.remove('is-active');
-        }
-        target.classList.add('is-active');
-        for (var i = 0; i < tabContent.length; i++) {
-            if (dataTab == i) {
-                tabContent[i].style.display = 'block';
-            } else {
-                tabContent[i].style.display = 'none';
-            }
-        }
-    }
-}
 
 //tabs ---> accordeon
 function tabTransform() {
@@ -75,20 +58,28 @@ if ($(window).width() <= 480) {
 }
 
 if ($('.js-item-select').length > 0) {
-    let itemSelect = $(document).find('.js-item-select');
+    // itemSelect
+    //     .not('.js-item-select-control--plus')
+    //     .not('.js-item-select-control--minus')
+    //     .on('click', function() {
+    //         if ($(this).hasClass('is-active')) {
+    //             $('.js-item-select').removeClass('is-active');
+    //             $(this).removeClass('is-active');
+    //         } else {
+    //             $('.js-item-select').removeClass('is-active');
+    //             $(this).addClass('is-active');
+    //         }
+    //     });
 
-    itemSelect
-        .not('.js-item-select-control--plus')
-        .not('.js-item-select-control--minus')
-        .on('click', function() {
-            if ($(this).hasClass('is-active')) {
-                $('.js-item-select').removeClass('is-active');
-                $(this).removeClass('is-active');
-            } else {
-                $('.js-item-select').removeClass('is-active');
-                $(this).addClass('is-active');
-            }
-        });
+    $(document).on('click', '.js-item-select', function() {
+        if ($(this).hasClass('is-active')) {
+            $('.js-item-select').removeClass('is-active');
+            $(this).removeClass('is-active');
+        } else {
+            $('.js-item-select').removeClass('is-active');
+            $(this).addClass('is-active');
+        }
+    });
 
     $(document).on('click', function(e) {
         if ($(e.target).closest('.js-item-select').length) return;
@@ -97,8 +88,7 @@ if ($('.js-item-select').length > 0) {
     });
 
     function changeColor() {
-        $(document)
-            .find('.js-item-select')
+        $('.js-item-select')
             .each(function() {
                 var colorBox = $(this).find('.item-select__color');
                 var color = colorBox.data('item-select-color');
@@ -113,7 +103,7 @@ if ($('.js-item-select').length > 0) {
     }
     changeColor();
 
-    itemSelect.find('.item-select__item').on('click', function() {
+    $(document).on('click', '.js-item-select-item', function() {
         let select = $(this).closest('.js-item-select');
         let text = $(this)
             .find('.item-select__title')
