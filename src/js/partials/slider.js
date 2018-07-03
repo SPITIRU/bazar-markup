@@ -77,40 +77,5 @@ if ($('.js-bz-slider--promo').length > 0) {
 
 //Slider Related
 if ($('.js-bz-slider--related').length > 0) {
-    $('.js-bz-slider--related').slick({
-        arrows: true,
-        infinite: true,
-        slidesToShow: 8,
-        slidesToScroll: 1,
-        speed: 500,
-        autoplaySpeed: 5000,
-        autoplay: true,
-        dots: false,
-        responsive: [
-            {
-                breakpoint: 1025,
-                settings: {
-                    slidesToShow: 6
-                }
-            },
-            {
-                breakpoint: 769,
-                settings: {
-                    slidesToShow: 5
-                }
-            },
-            {
-                breakpoint: 481,
-                settings: {
-                    slidesToShow: 3
-                }
-            },
-            {
-                breakpoint: 376,
-                settings: {
-                    slidesToShow: 2
-                }
-            }
-        ]
-    });
+    sliderRelated();
 }

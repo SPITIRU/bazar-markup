@@ -260,6 +260,17 @@
 			}
 		}
 
+		&__related{
+			.tab{
+				&__content{
+					padding-left: 0;
+					padding-right: 0;
+					padding-bottom: 0;
+					margin-left: -7.5px;
+				}
+			}
+		}
+
 		&__title {font-size: 28px;}
 
 		&__price {margin-bottom: 0;}
