@@ -262,11 +262,10 @@
 
 		&__related{
 			.tab{
-				&__content{
+				&__contentes{
 					padding-left: 0;
 					padding-right: 0;
 					padding-bottom: 0;
-					margin-left: -7.5px;
 				}
 			}
 		}
@@ -286,6 +285,17 @@
 			font-family: $f;
 			@include respond-to(md) {
 				width: 85%;
+			}
+		}
+	}
+
+	.bz-slider {
+		.slick-arrow{
+			&.slick-next{
+				right: -20px;
+			}
+			&.slick-prev{
+				left: -20px;
 			}
 		}
 	}

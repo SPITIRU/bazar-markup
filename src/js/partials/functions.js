@@ -138,3 +138,19 @@ function sliderRelated() {
         ]
     });
 }
+
+//Select Item changeColor
+function changeColor() {
+    $('.js-item-select')
+        .each(function() {
+            var colorBox = $(this).find('.item-select__color');
+            var color = colorBox.data('item-select-color');
+            colorBox.css('background-color', color);
+        })
+        .find('.item-select__item')
+        .each(function() {
+            var colorBox = $(this).find('.item-select__color');
+            var color = colorBox.data('item-select-color');
+            colorBox.css('background-color', color);
+        });
+}
