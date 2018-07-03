@@ -152,15 +152,20 @@ wrapperClass: page-cart
 							</div>
 						</div>
 
-						<div class="policy cart__policy">
-							{{ item.checkbox('Я принимаю условия', 'form__checkbox') }}
-							<a href="#" target="_blank">политики конфиденциальности</a>.
+						<div class="cart__policy">
+							{% include "partials/components/_policy.html" %}
 						</div>
 
 						<div class="cart__box">
 							<button class="button button--default cart__btn">Продолжить</button>
 						</div>
 
+					</div>
+
+					<div class="form-success">
+						<div class="form-success__center">
+							<h3 class="form-success__title">Спасибо за регистрацию!</h3>
+						</div>
 					</div>
 				</form>
 			</div><!-- end cart__form -->

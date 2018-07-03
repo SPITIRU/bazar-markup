@@ -1,9 +1,9 @@
 //PushUp
 function pushUp(text) {
     var text = text || 'Товар добавлен в корзину';
-    var pushContainer = $('<div>').addClass('bz-pushUp');
+    var pushContainer = $('<div>').addClass('pushUp');
     var pushUpClose = $('<i class="fal fa-times"></i>').addClass(
-        'bz-pushUp__close js-pushUp--close'
+        'pushUp__close js-pushUp--close'
     );
     pushContainer.appendTo($('body'));
     pushContainer.text(text);

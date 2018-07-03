@@ -10,7 +10,11 @@ $('.js-card-tab-related')
     });
 
 if ($('.js-tab').length > 0 && $(window).width() > 480) {
-    document.querySelector('.js-tab').addEventListener('click', tabs);
+    document.addEventListener('click', function(e) {
+        if (e.target && e.target.className == 'js-tab') {
+            tabs;
+        }
+    });
 }
 
 $('#preview').on('shown.bs.modal', function(e) {
@@ -71,7 +75,9 @@ if ($(window).width() <= 480) {
 }
 
 if ($('.js-item-select').length > 0) {
-    $('.js-item-select')
+    let itemSelect = $(document).find('.js-item-select');
+
+    itemSelect
         .not('.js-item-select-control--plus')
         .not('.js-item-select-control--minus')
         .on('click', function() {
@@ -91,7 +97,8 @@ if ($('.js-item-select').length > 0) {
     });
 
     function changeColor() {
-        $('.js-item-select')
+        $(document)
+            .find('.js-item-select')
             .each(function() {
                 var colorBox = $(this).find('.item-select__color');
                 var color = colorBox.data('item-select-color');
@@ -106,38 +113,32 @@ if ($('.js-item-select').length > 0) {
     }
     changeColor();
 
-    $('.js-item-select')
-        .find('.item-select__item')
-        .on('click', function() {
-            let select = $(this).closest('.js-item-select');
-            let text = $(this)
-                .find('.item-select__title')
-                .text();
-            let color = $(this)
-                .find('.item-select__color')
-                .data('item-select-color');
-            let value = select.find('.item-select__value');
-            let input = select.find('.item-select__input');
+    itemSelect.find('.item-select__item').on('click', function() {
+        let select = $(this).closest('.js-item-select');
+        let text = $(this)
+            .find('.item-select__title')
+            .text();
+        let color = $(this)
+            .find('.item-select__color')
+            .data('item-select-color');
+        let value = select.find('.item-select__value');
+        let input = select.find('.item-select__input');
 
-            input.val(text);
-            value
-                .children('.item-select__color')
-                .data('item-select-color', color);
-            changeColor();
+        input.val(text);
+        value.children('.item-select__color').data('item-select-color', color);
+        changeColor();
 
-            if (select.hasClass('item-select--count')) {
-                if ($(this).hasClass('item-select__item--header')) {
-                    value
-                        .children('.item-select__title')
-                        .removeAttr('style')
-                        .text('Выбрать');
-                    input.css('display', 'none');
-                } else {
-                    input.removeAttr('style');
-                    value
-                        .children('.item-select__title')
-                        .css('display', 'none');
-                }
+        if (select.hasClass('item-select--count')) {
+            if ($(this).hasClass('item-select__item--header')) {
+                value
+                    .children('.item-select__title')
+                    .removeAttr('style')
+                    .text('Выбрать');
+                input.css('display', 'none');
+            } else {
+                input.removeAttr('style');
+                value.children('.item-select__title').css('display', 'none');
             }
-        });
+        }
+    });
 }

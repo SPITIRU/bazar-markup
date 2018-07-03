@@ -1796,15 +1796,27 @@
                       <span class="input__error">*Какая-то ошибочка вышла</span>
                     </div>
                   </div>
-                  <div class="policy cart__policy">
-                    <label class="checkbox form__checkbox">
-                      <input type="checkbox">
-                      <span class="checkbox__box"></span>
-                      <span class="checkbox__title">Я принимаю условия</span>
-                    </label>
-                    <a href="#" target="_blank">политики конфиденциальности</a>. </div>
+                  <div class="cart__policy">
+                    <!-- begin policy -->
+                    <div class="policy">
+                      <div class="policy__text">
+                        <label class="checkbox form__checkbox">
+                          <input type="checkbox">
+                          <span class="checkbox__box"></span>
+                          <span class="checkbox__title">Я соглалашаюсь</span>
+                        </label> на обработку персональных данных в соответствии с
+                        <a href="#" target="_blank">Условиями пользовательского соглашения</a>. </div>
+                      <span class="policy__error is-hidden">Пожалуйста, подтвердите, что Вы ознакомились и согласны с Пользовательским соглашением</span>
+                    </div>
+                    <!-- end policy -->
+                  </div>
                   <div class="cart__box">
                     <button class="button button--default cart__btn">Продолжить</button>
+                  </div>
+                </div>
+                <div class="form-success">
+                  <div class="form-success__center">
+                    <h3 class="form-success__title">Спасибо за регистрацию!</h3>
                   </div>
                 </div>
               </form>

@@ -127,10 +127,9 @@ wrapperClass: page-lk
                             </div>
                         </div>
 
-                        <div class="policy cart__policy">
-                            {{ item.checkbox('Я соглалашаюсь', 'form__checkbox') }}
-                            на обработку персональных данных в соответствии с <a href="#" target="_blank">Условиями пользовательского соглашения</a>.
-                        </div>
+						<div class="cart__policy">
+							{% include "partials/components/_policy.html" %}
+						</div>
 
                         <div class="form__box">
                             <button class="button button--default form__btn">Сохранить</button>
