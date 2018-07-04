@@ -4,6 +4,9 @@ body{
 	}
 	&.modal-open{
 		padding-right: 0 !important;
+		// padding-right: 5px !important;
+		position: fixed;
+		width: 100%;
 	}
 }
 

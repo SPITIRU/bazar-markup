@@ -273,28 +273,10 @@ $(document).ready(function() {
     });
 
     /*
-    * Slider.js
-    */
-
-    //=include partials/slider.js
-
-    /*
     * Catalog.js
     */
 
     //=include partials/catalog.js
-
-    /*
-    * Card.js
-    */
-
-    //=include partials/card.js
-
-    /*
-    * Contacts.js
-    */
-
-    //=include partials/contacts.js
 
     /*
     * Components.js
@@ -310,7 +292,19 @@ $(document).ready(function() {
 });
 
 /*
-    * Functions.js
-    */
+* Slider.js
+*/
+
+//=include partials/slider.js
+
+/*
+* Card.js
+*/
+
+//=include partials/card.js
+
+/*
+* Functions.js
+*/
 
 //=include partials/functions.js

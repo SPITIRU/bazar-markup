@@ -102,7 +102,7 @@ tbody {
   pointer-events: auto;
   background-color: $modal-content-bg;
   background-clip: padding-box;
-  border: $modal-border-width solid $modal-border-color;
+//   border: $modal-border-width solid $modal-border-color;
   @include border-radius($border-radius);
   box-shadow: $modal-box-shadow;
   // Remove focus outline from opened modal

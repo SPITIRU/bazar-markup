@@ -1,4 +1,6 @@
-.modal-open .modal{padding-right: 0 !important;}
+.modal-open .modal{
+	@include bz-scroll;
+}
 .modal{
 
 	&-dialog{

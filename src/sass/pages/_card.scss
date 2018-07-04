@@ -638,7 +638,8 @@ $card-indent: $gutter*2;
 
 		&.ends{
 			font-family: $f-light;
-			color: #f60;
+			// color: #f60;
+			color: $color-danger;
 		}
 	}//.item-select__title
 
@@ -673,6 +674,7 @@ $card-indent: $gutter*2;
 		}
 
 		&:hover{
+			color: $color-text;
 			background-color: $color-bg--lighten;
 		}
 

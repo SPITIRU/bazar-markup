@@ -51,39 +51,6 @@ if ($(window).width() <= 480) {
         .resize();
 }
 
-if ($('.js-catalog-filter-item-price').length > 0) {
-    var slider = document.getElementById('js-catalog-filter-slider');
-    var allPriceStart = $('#js-catalog-filter-slider').data('start');
-    var allPriceEnd = $('#js-catalog-filter-slider').data('end');
-    var spans = [$('#jsPriceStart'), $('#jsPriceEnd')];
-    var startPrice;
-    var endPrice;
-
-    if (spans[0].text() == '') {
-        startPrice = allPriceStart;
-    } else {
-        startPrice = parseInt(spans[0].text());
-    }
-
-    if (spans[1].text() == '') {
-        endPrice = allPriceEnd;
-    } else {
-        endPrice = parseInt(spans[1].text());
-    }
-
-    noUiSlider.create(slider, {
-        start: [startPrice, endPrice],
-        connect: true,
-        range: {
-            min: allPriceStart,
-            max: allPriceEnd
-        }
-    });
-    slider.noUiSlider.on('update', function(values, handle) {
-        spans[handle].text(values[handle]);
-    });
-}
-
 //Catalog Filter Action
 $('.js-catalog-filter--show').on('click', function() {
     $('.js-catalog-filter').addClass('is-visible');
