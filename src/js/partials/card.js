@@ -1,8 +1,12 @@
 $(document).ready(function() {
     //card properties tabs
-    $('.js-card-tab-related').tabs();
+    $('.js-card-tab-related, .js-card-tab-related--modal').tabs();
 
     $(document).on('click', '.js-related-tab', function() {
+        $(this)
+            .closest('.js-card-tab-related--modal')
+            .find('.js-bz-slider--related-modal')
+            .slick('setPosition');
         $(this)
             .closest('.js-card-tab-related')
             .find('.js-bz-slider--related')
@@ -14,7 +18,8 @@ $(document).ready(function() {
     }
 
     $('#preview').on('shown.bs.modal', function(e) {
-        $('.js-bz-slider--card').resize();
+        $('.js-bz-slider--card-modal').resize();
+        $('.js-bz-slider--related-modal').resize();
     });
 
     //tabs ---> accordeon
