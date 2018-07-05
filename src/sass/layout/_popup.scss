@@ -172,6 +172,17 @@
 		.modal-dialog--lg {width: 825px;}
 	}
 
+	.modal-dialog--lg{
+		@include screenSize;
+	}
+
+	.modal-body{
+		overflow: hidden;
+		@include respond-to(xs) {
+			padding: 35px 10px 30px;
+		}
+	}
+
 	&.show {
 		.preview__arrow {
 			transform: translateX(0);
@@ -260,6 +271,10 @@
 			@include respond-to(md) {
 				width: 45%;
 			}
+			@include respond-to(xs) {
+				width: 100%;
+				margin-right: 0;
+			}
 		}
 
 		&__related{
@@ -269,6 +284,11 @@
 					padding-right: 0;
 					padding-bottom: 0;
 				}
+				&__titles{
+					@include respond-to(sm) {
+						width: 100%;
+					}
+				}
 			}
 		}
 
@@ -277,6 +297,11 @@
 		&__price {margin-bottom: 0;}
 
 		&__item-select {margin-top: $gutter;}
+
+		&__info{
+			max-width: 100%;
+			margin-right: 0;
+		}
 	}
 
 	.button-box {
@@ -288,11 +313,23 @@
 			@include respond-to(md) {
 				width: 85%;
 			}
+			@include respond-to(xs) {
+				width: 83%;
+			}
+			@include respond-to(i7) {
+				width: 80%;
+			}
+			@include respond-to(i5) {
+				width: 79%;
+			}
 		}
 	}
 
 	.bz-slider {
 		.slick-arrow{
+			@include respond-to(xs) {
+				display: none !important;
+			}
 			&.slick-next{
 				right: -20px;
 			}

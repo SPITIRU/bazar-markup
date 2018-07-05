@@ -13,7 +13,7 @@ if ($('.js-accordeon').length > 0) {
         .find('.accordeon__content')
         .slideDown();
 
-    accorderon.find('.accordeon__title').on('click', function() {
+    $(document).on('click', '.accordeon__title', function() {
         if (
             $(this)
                 .parent()

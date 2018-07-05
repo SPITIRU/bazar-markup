@@ -15,18 +15,20 @@ $(document).ready(function() {
 
     if ($(window).width() > 480) {
         $(document).on('click', '.js-tab', tabs);
+        $(document).on('click', '.js-tab-modal', tabs);
     }
 
     $('#preview').on('shown.bs.modal', function(e) {
         $('.js-bz-slider--card-modal').resize();
         $('.js-bz-slider--related-modal').resize();
+        tabTransform();
     });
 
     //tabs ---> accordeon
     function tabTransform() {
         var tab = $('.js-tab--transform');
 
-        $('.js-tab')
+        $('.js-tab, .js-tab-modal')
             .unwrap()
             .addClass('accordeon accordeon--other js-accordeon')
             .removeClass('tab__titles');
@@ -125,8 +127,12 @@ function tabs(e) {
     var target = e.target;
     if (target.className == 'tab__title') {
         var dataTab = target.getAttribute('data-tab');
-        var tabContent = document.querySelectorAll('.tab__content');
-        var tabTitle = document.querySelectorAll('.tab__title');
+        var tabContent = $(this)
+            .parent()
+            .find('.tab__content');
+        var tabTitle = $(this)
+            .parent()
+            .find('.tab__title');
         for (var i = 0; i < tabTitle.length; i++) {
             tabTitle[i].classList.remove('is-active');
         }

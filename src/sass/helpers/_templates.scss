@@ -89,6 +89,25 @@
 	}
 }
 
+@mixin screenSize{
+	@include respond-to(sm) {
+		max-width: 748px;
+		width: 100%;
+	}
+	@include respond-to(xs) {
+		max-width: 480px;
+	}
+	@include respond-to(i8) {
+		max-width: 414px;
+	}
+	@include respond-to(i7) {
+		max-width: 375px;
+	}
+	@include respond-to(i5) {
+		max-width: 320px;
+	}
+}
+
 %img {
 	display: block;
 	width: 100%;
