@@ -399,7 +399,7 @@
 		margin-top: 10px;
 	}
 
-	&__wrap{
+	&__wrap {
 		@extend %flexColumn;
 	}
 
@@ -438,6 +438,7 @@
 		min-height: 293px;
 	}
 	@include respond-to(xs) {
+		display: none;
 		min-height: 237px;
 	}
 
