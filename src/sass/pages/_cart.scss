@@ -184,6 +184,15 @@
 	&__policy {
 		margin-bottom: $gutter;
 	}//.cart__policy
+
+	.form-success{
+		@include respond-to(xs) {
+			align-items: flex-start;
+			&__center{
+				margin-top: 30px;
+			}
+		}
+	}
 } //.cart
 
 .cart-success {

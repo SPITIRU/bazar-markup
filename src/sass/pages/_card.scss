@@ -131,6 +131,7 @@ $card-indent: $gutter*2;
 		margin: $gutter*1.5 0;
 
 		@include respond-to(xs) {
+			max-width: 100%;
 			margin: 0 0 $gutter*1.5;
 		}
 	}//.card__item-select
@@ -165,6 +166,10 @@ $card-indent: $gutter*2;
 			font-size: 14px;
 			color: $color-text;
 
+			@include respond-to(xs) {
+				display: none;
+			}
+
 			&::before, &::after{
 				content: "";
 				position: absolute;
@@ -192,9 +197,6 @@ $card-indent: $gutter*2;
 			}
 
 			&.button--accent{
-				@include respond-to(xs) {
-					display: none;
-				}
 			}
 
 			&.button--accent{
@@ -319,8 +321,16 @@ $card-indent: $gutter*2;
 		@extend %flexCenter;
 		flex-wrap: wrap;
 
-		@include respond-to(xs) {
-			.button--yellow{width: 90%;}
+		.button--yellow{
+			@include respond-to(xs) {
+				width: 85%;
+			}
+			@include respond-to(i7) {
+				width: 83%;
+			}
+			@include respond-to(i5) {
+				width: 80%;
+			}
 		}
 
 		div{
@@ -345,6 +355,9 @@ $card-indent: $gutter*2;
 
 	&__info{
 		max-width: 375px;
+		@include respond-to(xs) {
+			max-width: 100%;
+		}
 		.tab{
 			&__titles{display: flex;}
 		}

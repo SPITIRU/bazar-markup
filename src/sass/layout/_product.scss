@@ -276,7 +276,9 @@
 			&__title {
 				font-size: 15px;
 				@include respond-to(xs) {
+					margin-right: 23px;
 					margin-bottom: 10px;
+					text-align: left;
 				}
 			}
 
@@ -300,7 +302,7 @@
 				font-family: $f2-bold;
 				font-weight: 500;
 				@include respond-to(xs) {
-					margin-bottom: $gutter;
+					margin-bottom: 10px;
 					font-size: 16px;
 					text-align: left;
 					order: 2;
@@ -336,6 +338,9 @@
 				position: absolute;
 				top: 15px;
 				right: 0;
+				@include respond-to(xs) {
+					right: -7px;
+				}
 			}
 		}
 
