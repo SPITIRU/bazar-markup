@@ -21,7 +21,10 @@ $(document).ready(function() {
     $('#preview').on('shown.bs.modal', function(e) {
         $('.js-bz-slider--card-modal').resize();
         $('.js-bz-slider--related-modal').resize();
-        tabTransform();
+
+        if ($(window).width() <= 480) {
+            tabTransform();
+        }
     });
 
     //tabs ---> accordeon
