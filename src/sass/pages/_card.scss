@@ -124,6 +124,7 @@ $card-indent: $gutter*2;
 		@include respond-to(xs) {
 			margin: $gutter/2 0;
 			font-size: 23px;
+			text-align: left;
 		}
 	}//.card__title
 
@@ -495,7 +496,7 @@ $card-indent: $gutter*2;
 	cursor: pointer;
 	outline: none;
 
-	@include respond-to(i5) {
+	@include respond-to(i7) {
 		margin-top: 30px;
 	}
 
@@ -553,18 +554,18 @@ $card-indent: $gutter*2;
 		max-width: 375px;
 		position: relative;
 		@extend %flexCenter;
-		@include respond-to(i5) {
+		@include respond-to(i7) {
 			flex-wrap: wrap;
 		}
 		.item-select{
 			width: 50%;
-			@include respond-to(i5) {
+			@include respond-to(i7) {
 				width: 100%;
 				position: relative;
 			}
 			& + .item-select{
 				margin-left: 10px;
-				@include respond-to(i5) {
+				@include respond-to(i7) {
 					margin-left: 0;
 				}
 			}
@@ -577,7 +578,7 @@ $card-indent: $gutter*2;
 		font-size: 13px;
 		position: absolute;
 		top: -10px;
-		@include respond-to(i5) {
+		@include respond-to(i7) {
 			top: -30px;
 		}
 	}//.item-select__caption

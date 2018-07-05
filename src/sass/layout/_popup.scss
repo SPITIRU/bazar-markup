@@ -292,11 +292,21 @@
 			}
 		}
 
-		&__title {font-size: 28px;}
+		&__title {
+			font-size: 28px;
+			@include respond-to(xs) {
+				font-size: 23px;
+			}
+		}
 
 		&__price {margin-bottom: 0;}
 
-		&__item-select {margin-top: $gutter;}
+		&__item-select {
+			margin-top: $gutter;
+			@include respond-to(i7) {
+				margin-top: 0;
+			}
+		}
 
 		&__info{
 			max-width: 100%;
