@@ -431,7 +431,6 @@
 			@include respond-to(sm) {
 				display: block;
 				margin-bottom: 0;
-				padding: 15px;
 				font-family: $f;
 				font-size: 15px;
 				text-align: center;
@@ -445,6 +444,12 @@
 					@include vy;
 					right: 10px;
 				}
+			}
+		}
+		a{
+			@include respond-to(sm) {
+				display: block;
+				padding: 15px;
 			}
 		}
 	}

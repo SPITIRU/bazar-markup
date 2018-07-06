@@ -34,6 +34,12 @@ if ($('.js-accordeon').length > 0) {
     });
     if (accorderon.hasClass('lk__accordeon')) {
         $(this)
+            .find('.accordeon__item')
+            .filter(':first')
+            .removeClass('is-open')
+            .find('.accordeon__content')
+            .slideUp();
+        $(this)
             .find('.accordeon__title')
             .on('click', function() {
                 if (
@@ -43,11 +49,11 @@ if ($('.js-accordeon').length > 0) {
                 ) {
                     $(this)
                         .find('.user-order__info')
-                        .text('скрыть');
+                        .text('подробнее');
                 } else {
                     $(this)
                         .find('.user-order__info')
-                        .text('подробнее');
+                        .text('скрыть');
                 }
             });
     }

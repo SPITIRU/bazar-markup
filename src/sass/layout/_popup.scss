@@ -1,12 +1,10 @@
-.modal-open .modal{
+.modal-open .modal {
 	@include bz-scroll;
 }
-.modal{
-
-	&-dialog{
-
+.modal {
+	&-dialog {
 		@include respond-to(xs) {
-			margin-top: $base-indent*3;
+			margin-top: $base-indent * 3;
 		}
 
 		&--lg {
@@ -14,28 +12,27 @@
 			margin: $base-indent auto;
 		}
 
-		&--md{
+		&--md {
 			max-width: 768px;
 			margin: $base-indent auto;
 		}
 
-		&--sm{
+		&--sm {
 			max-width: 425px;
 			margin: $base-indent auto;
 		}
-
 	}
 
-	&-header{
+	&-header {
 		position: relative;
 
-		.modal__btn--close{
+		.modal__btn--close {
 			top: 8px;
 			right: 5px;
 		}
 	}
 
-	&-title{
+	&-title {
 		margin: auto 0;
 		font-family: $f-medium;
 		font-weight: 500;
@@ -45,7 +42,7 @@
 		line-height: 1;
 	}
 
-	&__btn{
+	&__btn {
 		min-width: auto;
 		height: 32px;
 		line-height: 31px;
@@ -53,7 +50,7 @@
 		outline: none;
 		cursor: pointer;
 
-		&--close{
+		&--close {
 			height: auto;
 			line-height: auto;
 			padding: 5px 10px;
@@ -63,7 +60,7 @@
 			color: #000;
 			text-shadow: 0 1px 0 #fff;
 			background-color: transparent;
-			opacity: .3;
+			opacity: 0.3;
 			position: absolute;
 			top: 3px;
 			right: 5px;
@@ -71,7 +68,7 @@
 
 			&:hover {
 				text-decoration: none;
-				opacity: .75;
+				opacity: 0.75;
 			}
 
 			&:not(:disabled):not(.disabled) {
@@ -87,23 +84,22 @@
 			padding: 0 15px;
 		}
 	}
-}//.modal
+} //.modal
 
-.change-city{
-
-	&__title{
+.change-city {
+	&__title {
 		display: block;
 		margin-bottom: 10px;
 		font-family: $f-bold;
 		font-size: 20px;
-	}//.change-city__title
+	} //.change-city__title
 
-	&__in{
+	&__in {
 		@extend %flex;
 		flex-wrap: wrap;
-	}//.change-city__in
+	} //.change-city__in
 
-	&__list{
+	&__list {
 		columns: auto 4;
 
 		@include respond-to(sm) {
@@ -116,7 +112,7 @@
 			margin-bottom: 0px;
 		}
 
-		&_country{
+		&_country {
 			display: inline-block;
 			columns: auto;
 			padding-top: $base-indent;
@@ -124,9 +120,9 @@
 			margin-top: $base-indent;
 			border-top: 1px solid $color-border--light;
 		}
-	}//.change-city__list
+	} //.change-city__list
 
-	&__item{
+	&__item {
 		margin-left: 15px;
 		font-size: 14px;
 		cursor: pointer;
@@ -137,46 +133,47 @@
 			width: 45%;
 		}
 
-		& + &{
+		& + & {
 			margin-top: 5px;
 		}
 
-		&::before{
-			content: '';
+		&::before {
+			content: "";
 			display: block;
 			@include vy;
 			left: 0;
 		}
 
-		@each $item in belarus ukraine kaz{
-			&--#{$item}{
+		@each $item in belarus ukraine kaz {
+			&--#{$item} {
 				padding-left: 34px;
 				font-size: 15px;
-				&::before{
+				&::before {
 					@include sprite(flag--#{$item});
 				}
 			}
 		}
-	}//.change-city__item
-}//.change-city
+	} //.change-city__item
+} //.change-city
 
 .logout {
 	&__question {
 		padding: $gutter 0;
-	}//.logout__question
-}//.logout
+	} //.logout__question
+} //.logout
 
 .preview {
-
 	@include respond-to(md) {
-		.modal-dialog--lg {width: 825px;}
+		.modal-dialog--lg {
+			width: 825px;
+		}
 	}
 
-	.modal-dialog--lg{
+	.modal-dialog--lg {
 		@include screenSize;
 	}
 
-	.modal-body{
+	.modal-body {
 		overflow: hidden;
 		@include respond-to(xs) {
 			padding: 35px 10px 30px;
@@ -194,7 +191,7 @@
 		display: block;
 		width: 60px;
 		height: 60px;
-		background-color: rgba(#000, .3);
+		background-color: rgba(#000, 0.3);
 		cursor: pointer;
 		border-radius: 50%;
 		position: fixed;
@@ -204,12 +201,14 @@
 		z-index: -1;
 
 		&:hover {
-			background-color: rgba(#000, .6);
-			&::before{opacity: 1;}
+			background-color: rgba(#000, 0.6);
+			&::before {
+				opacity: 1;
+			}
 		}
 
 		&::before {
-			content: ' ';
+			content: " ";
 			display: block;
 			opacity: 0.6;
 			position: absolute;
@@ -223,7 +222,7 @@
 			transform: translateX(100%);
 			&::before {
 				left: 10px;
-				@include sprite('angel-white--left');
+				@include sprite("angel-white--left");
 			}
 		}
 		&--next {
@@ -231,29 +230,18 @@
 			transform: translateX(-100%);
 			&::before {
 				left: 18px;
-				@include sprite('angel-white--right');
+				@include sprite("angel-white--right");
 			}
 		}
-	}//.preview__arrow
+	} //.preview__arrow
 
 	.card {
-		&__wrap, &__title {margin-bottom: $gutter;}
+		&__wrap,
+		&__title {
+			margin-bottom: $gutter;
+		}
 
 		&__wrap {
-			.button-box {
-				margin-bottom: $gutter;
-				text-align: left;
-				@extend %flexCenter;
-				flex-wrap: wrap;
-
-				div[tooltip] {
-					display: inline-flex;
-					margin-left: 15px;
-					@include respond-to(md) {
-						margin-top: $gutter;
-					}
-				}
-			}
 			.button {
 				@include respond-to(md) {
 					width: 100%;
@@ -277,14 +265,14 @@
 			}
 		}
 
-		&__related{
-			.tab{
-				&__contentes{
+		&__related {
+			.tab {
+				&__contentes {
 					padding-left: 0;
 					padding-right: 0;
 					padding-bottom: 0;
 				}
-				&__titles{
+				&__titles {
 					@include respond-to(sm) {
 						width: 100%;
 					}
@@ -299,16 +287,19 @@
 			}
 		}
 
-		&__price {margin-bottom: 0;}
+		&__price {
+			margin-bottom: 0;
+		}
 
 		&__item-select {
 			margin-top: $gutter;
 			@include respond-to(i7) {
 				margin-top: 0;
+				margin-bottom: $gutter*1.5;
 			}
 		}
 
-		&__info{
+		&__info {
 			margin-right: 0;
 			@include respond-to(xs) {
 				max-width: 100%;
@@ -316,38 +307,60 @@
 		}
 	}
 
-	.button-box {
-		text-align: center;
-		.button--default{
-			@include btnBig;
-			margin-left: $gutter;
-			font-family: $f;
-			@include respond-to(md) {
-				width: 85%;
+	.accordeon {
+		&__item {
+			border-top: 1px solid $color-border;
+			&:last-child {
+				border-bottom: 1px solid $color-border;
 			}
-			@include respond-to(xs) {
-				width: 83%;
-			}
-			@include respond-to(i7) {
-				width: 80%;
-			}
-			@include respond-to(i5) {
-				width: 79%;
+		}
+		&__title {
+			padding: 12px 0 12px 10px;
+		}
+		&__content {
+			padding: 0 10px 10px;
+			p {
+				margin: 0;
 			}
 		}
 	}
 
+	.button-box {
+		margin-bottom: $gutter;
+		text-align: center;
+		&__in {
+			@extend %flexCenter;
+		}
+		div[tooltip] {
+			width: 45px;
+			height: 45px;
+			margin-left: $gutter;
+		}
+		.card__order-info {
+			display: block;
+			text-align: left;
+		}
+	}
+
+	.button--default {
+		// @include btnBig;
+		display: block;
+		max-width: 200px;
+		margin: $gutter auto;
+		font-family: $f;
+	}
+
 	.bz-slider {
-		.slick-arrow{
+		.slick-arrow {
 			@include respond-to(xs) {
 				display: none !important;
 			}
-			&.slick-next{
+			&.slick-next {
 				right: -20px;
 			}
-			&.slick-prev{
+			&.slick-prev {
 				left: -20px;
 			}
 		}
 	}
-}//.preview
+} //.preview
