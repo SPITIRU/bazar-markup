@@ -1,30 +1,44 @@
 //Custom Webkit Scroll
 @mixin bz-scroll {
 	@include scroll;
-	@include scrollbar {width: 5px;}
-	@include scrollbar-track {width: 5px;}
-	@include scrollbar-thumb {background-color: $color-bg--dark; border-radius: 100px;}
+	@include scrollbar {
+		width: 5px;
+	}
+	@include scrollbar-track {
+		width: 5px;
+	}
+	@include scrollbar-thumb {
+		background-color: $color-bg--dark;
+		border-radius: 100px;
+	}
 }
 
 //Custom Webkit Scroll
 @mixin bz-scroll--light {
 	@include scroll;
-	@include scrollbar {width: 5px;}
-	@include scrollbar-track {width: 5px;}
-	@include scrollbar-thumb {background-color: $color-bg--light; border-radius: 100px;}
+	@include scrollbar {
+		width: 5px;
+	}
+	@include scrollbar-track {
+		width: 5px;
+	}
+	@include scrollbar-thumb {
+		background-color: $color-bg--light;
+		border-radius: 100px;
+	}
 }
 
-@mixin container{
+@mixin container {
 	max-width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
-	@include max-screen(1200){
+	@include max-screen(1200) {
 		padding-left: 10px;
 		padding-right: 10px;
 	}
 }
 
-@mixin badge{
+@mixin badge {
 	min-width: 20px;
 	height: 20px;
 	color: $color-text;
@@ -38,33 +52,32 @@
 	align-items: center;
 }
 
-
-@mixin trans($what: all, $time: .35s){
-	transition: $what $time cubic-bezier(.38,.22,.21,.95);
+@mixin trans($what: all, $time: 0.35s) {
+	transition: $what $time cubic-bezier(0.38, 0.22, 0.21, 0.95);
 }
 
-@mixin overlay{
+@mixin overlay {
 	position: relative;
-	&::before{
+	&::before {
 		display: block;
-		content: '';
-		background-color: rgba(#000, .45);
+		content: "";
+		background-color: rgba(#000, 0.45);
 		@include tr;
 		@include coverdiv;
 	}
 	& > * {
 		z-index: z(default);
 	}
-	.container{
+	.container {
 		position: relative;
 	}
 }
 
-@mixin listIcon($color){
+@mixin listIcon($color) {
 	padding-left: 15px;
 	position: relative;
-	&::before{
-		content: '';
+	&::before {
+		content: "";
 		display: block;
 		width: 8px;
 		height: 2px;
@@ -73,23 +86,23 @@
 		top: 12px;
 		left: 0;
 	}
-}//ul li &::before (-)
+} //ul li &::before (-)
 
-@mixin bdt($color){
+@mixin bdt($color) {
 	border-top: 1px solid $color;
-	&:first-child{
+	&:first-child {
 		border-top: none;
 	}
 }
 
-@mixin bdb($color){
+@mixin bdb($color) {
 	border-bottom: 1px solid $color;
-	&:last-child{
+	&:last-child {
 		border-bottom: none;
 	}
 }
 
-@mixin screenSize{
+@mixin screenSize {
 	@include respond-to(sm) {
 		max-width: 748px;
 		width: 100%;
@@ -114,7 +127,7 @@
 	margin: 0;
 }
 
-%textLight{
+%textLight {
 	font-family: $f-light;
 	font-weight: 300;
 }
@@ -129,28 +142,28 @@
 	color: $color-text;
 	border: 1px solid #d9d9d9;
 	border-radius: $border-radius;
-	&:focus{
+	&:focus {
 		border-color: $color-border;
 	}
 }
 
-%flex{
+%flex {
 	display: flex;
 	justify-content: space-between;
 }
 
-%flexCenter{
+%flexCenter {
 	display: flex;
 	align-items: center;
 }
 
-%flexColumn{
+%flexColumn {
 	display: flex;
 	flex-direction: column;
 }
 
-%box{
+%box {
 	border-radius: $border-radius;
 	background-color: #fff;
-	box-shadow: 0 2px 4px 0 rgba(0,0,0,.1), 0 0 4px 0 rgba(0,0,0,.1);
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 0 4px 0 rgba(0, 0, 0, 0.1);
 }

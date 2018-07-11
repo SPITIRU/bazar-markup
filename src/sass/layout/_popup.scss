@@ -295,7 +295,7 @@
 			margin-top: $gutter;
 			@include respond-to(i7) {
 				margin-top: 0;
-				margin-bottom: $gutter*1.5;
+				margin-bottom: $gutter * 1.5;
 			}
 		}
 
@@ -343,7 +343,6 @@
 	}
 
 	.button--default {
-		// @include btnBig;
 		display: block;
 		max-width: 200px;
 		margin: $gutter auto;

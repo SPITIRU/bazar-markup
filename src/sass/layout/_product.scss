@@ -59,7 +59,7 @@
 	} //.product-item__img
 
 	&__fav {
-		color: #fff;
+		color: #000;
 		position: absolute;
 		top: 12px;
 		right: 15px;
@@ -422,6 +422,7 @@
 	right: 1px;
 	bottom: 0;
 	overflow: hidden;
+	cursor: pointer;
 	opacity: 0;
 	visibility: hidden;
 

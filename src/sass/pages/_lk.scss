@@ -1,12 +1,11 @@
 .lk {
-
 	&__wrap {
-		margin: $gutter*2.5 0;
+		margin: $gutter * 2.5 0;
 		@extend %flex;
 		@include respond-to(sm) {
 			margin: 30px 0;
 		}
-	}//.lk__wrap
+	} //.lk__wrap
 
 	&__sidebar {
 		width: 300px;
@@ -17,9 +16,11 @@
 		@include respond-to(sm) {
 			display: none;
 		}
-	}//.lk__sidebar
+	} //.lk__sidebar
 
-	&__content {flex: 1;}//.lk__content
+	&__content {
+		flex: 1;
+	} //.lk__content
 
 	&__empty {
 		margin-left: -330px;
@@ -30,7 +31,7 @@
 			padding: 0;
 			margin-left: 0;
 		}
-	}//.lk__empty
+	} //.lk__empty
 
 	&__form {
 		max-width: 425px;
@@ -46,112 +47,125 @@
 				width: 100%;
 				margin-bottom: 0;
 				flex-direction: column;
-				& + & {margin-top: 20px;}
+				& + & {
+					margin-top: 20px;
+				}
 			}
-			&__input {width: 100%;}
-			&__btn{
+			&__input {
+				width: 100%;
+			}
+			&__btn {
 				height: 43px;
 				line-height: 42px;
 				font-size: 16px;
 			}
 		}
-	}//.lk__form
-}//.lk
+	} //.lk__form
+} //.lk
 
-.lk-nav{
+.lk-nav {
+	&__item {
+		margin-bottom: $gutter;
+	} //.lk-nav__item
 
-	&__item{margin-bottom: $gutter;}//.lk-nav__item
-
-	&__link{
+	&__link {
 		padding-left: 30px;
 		font-size: 13px;
 		text-transform: uppercase;
 		position: relative;
 
-		&::before{
+		&::before {
 			font-family: fal;
 			font-size: 16px;
 			@include vy;
 			left: 0;
 		}
 
-		@each $theme, $icon in $nav-lk-icons{
-			&--#{$theme}{
-				&::before{
+		@each $theme, $icon in $nav-lk-icons {
+			&--#{$theme} {
+				&::before {
 					content: $icon;
 				}
 			}
 		}
 
-		&--order{
-			&::before{
+		&--order {
+			&::before {
 				left: -3px;
 			}
 		}
-		&--fav{
-			&::before{
+		&--fav {
+			&::before {
 				left: -1px;
 			}
 		}
-	}//.lk-nav__link
+	} //.lk-nav__link
 
-	&__icon{
+	&__icon {
 		font-size: 16px;
 		@include vy;
 		left: 0;
-	}//.lk-nav__icon
-}//.lk-nav
+	} //.lk-nav__icon
+} //.lk-nav
 
-.user-order{
-
-	&__item{
-		& + & {margin-top: $gutter/2;}
-		&:hover, &.is-open{
-			.user-order{
-				&__title{
+.user-order {
+	&__item {
+		& + & {
+			margin-top: $gutter/2;
+		}
+		&:hover,
+		&.is-open {
+			.user-order {
+				&__title {
 					border-left-color: $color-accent;
 				}
 			}
 		}
-	}//.user-order__item
+	} //.user-order__item
 
-	&__title{
+	&__title {
 		padding: 7px 15px;
 		border: 1px solid $color-border--light;
 		border-left: 5px solid $gray--darken;
-		border-radius: $border-radius*2;
+		border-radius: $border-radius * 2;
 		@extend %flex;
 
-		&::before{display: none;}
-	}//.user-order__title
+		&::before {
+			display: none;
+		}
+	} //.user-order__title
 
-	&__box{
+	&__box {
 		@extend %flexColumn;
 
-		&--last{text-align: right;}
-	}//.user-order__box
+		&--last {
+			text-align: right;
+		}
+	} //.user-order__box
 
-	&__num{
+	&__num {
 		margin-bottom: 5px;
-		span{
+		span {
 			font-family: $f2-bold;
 			color: $color-text;
 		}
-	}//.user-order__num
+	} //.user-order__num
 
-	&__date{font-size: 14px;}//.user-order__date
+	&__date {
+		font-size: 14px;
+	} //.user-order__date
 
-	&__sum{
+	&__sum {
 		font-family: $f2-bold;
 		color: $color-text;
-		&_title{
+		&_title {
 			margin-bottom: 5px;
 			font-family: $f-light;
 			font-size: 14px;
 		}
-	}//.user-order__sum
+	} //.user-order__sum
 
-	&__info{
+	&__info {
 		font-size: 13px;
 		color: $color-text--light;
 		@include vx;
@@ -159,21 +173,23 @@
 		@include respond-to(i5) {
 			display: none;
 		}
-	}//.user-order__info
+	} //.user-order__info
 
-	&__content{
+	&__content {
 		padding: 0 15px;
 		border-left: 5px solid $color-accent;
-		border-radius: $border-radius*2;
+		border-radius: $border-radius * 2;
 		box-shadow: 0 3px 6px rgba(86, 86, 86, 0.2);
-	}//.user-order__content
-}//.user-order
+	} //.user-order__content
+} //.user-order
 
 .user-order-item {
 	padding: 12px 0 10px;
 	@extend %flexCenter;
 
-	& + & {border-top: 1px solid $color-border--light;}
+	& + & {
+		border-top: 1px solid $color-border--light;
+	}
 
 	&__desc {
 		@extend %flexCenter;
@@ -182,7 +198,7 @@
 		@include respond-to(xs) {
 			flex-direction: column;
 		}
-	}//.user-order-item__desc
+	} //.user-order-item__desc
 
 	&__left {
 		width: 50%;
@@ -192,7 +208,7 @@
 		@include respond-to(xs) {
 			width: 100%;
 		}
-	}//.user-order-item__left
+	} //.user-order-item__left
 
 	&__right {
 		width: 50%;
@@ -210,13 +226,13 @@
 		@include respond-to(i7) {
 			flex-direction: column;
 		}
-	}//.user-order-item__right
+	} //.user-order-item__right
 
 	&__box {
 		position: relative;
 		@include respond-to(i7) {
 			width: 100%;
-			&:last-child{
+			&:last-child {
 				margin-top: 10px;
 				text-align: right;
 			}
@@ -229,8 +245,8 @@
 			@include respond-to(i7) {
 				margin-left: 0;
 			}
-			&::before{
-				content: '';
+			&::before {
+				content: "";
 				display: block;
 				width: 1px;
 				height: 23px;
@@ -245,7 +261,7 @@
 				}
 			}
 		}
-	}//.user-order-item__box
+	} //.user-order-item__box
 
 	&__img {
 		width: 60px;
@@ -253,7 +269,7 @@
 		@include respond-to(xs) {
 			width: 40px;
 		}
-	}//.user-order-item__img
+	} //.user-order-item__img
 
 	&__title {
 		font-size: 14px;
@@ -261,7 +277,7 @@
 		@include respond-to(xs) {
 			text-align: left;
 		}
-	}//.user-order-item__title
+	} //.user-order-item__title
 
 	&__type {
 		display: block;
@@ -269,43 +285,43 @@
 		font-size: 14px;
 		@include respond-to(xs) {
 			display: inline-block;
-			&::after{
-				content: '/';
+			&::after {
+				content: "/";
 				padding-left: 5px;
 			}
 		}
-	}//.user-order-item__type
+	} //.user-order-item__type
 
-	&__articul{
+	&__articul {
 		font-size: 14px;
 		text-transform: uppercase;
 		@include respond-to(xs) {
 			display: inline-block;
 			font-family: $f-bold;
 		}
-	}//.user-order-item__articul
+	} //.user-order-item__articul
 
-	&__price{
+	&__price {
 		font-family: $f2-bold;
 		font-size: 15px;
-		span:not(.user-order-item__count){
+		span:not(.user-order-item__count) {
 			font-family: $f;
 		}
-	}//.user-order-item__price
+	} //.user-order-item__price
 
-	&__count{
+	&__count {
 		font-family: $f2-bold;
-		span{
+		span {
 			font-family: $f;
 		}
-	}//.user-order-item__count
+	} //.user-order-item__count
 
-	&__sum{
+	&__sum {
 		font-family: $f2-bold;
 		font-size: 15px;
-		span{
+		span {
 			font-family: $f;
 			font-size: 14px;
 		}
-	}//.user-order-item__sum
-}//.user-order-item
+	} //.user-order-item__sum
+} //.user-order-item

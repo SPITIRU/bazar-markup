@@ -1,7 +1,16 @@
+$(window).on('load', function() {
+    if (
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)
+    ) {
+        $('body').addClass('ios');
+    } else {
+        $('body').addClass('web');
+    }
+    $('body').removeClass('loading');
+});
+
 $(document).ready(function() {
     $(window).on('load', function() {
-        $('body').removeClass('loading');
-
         //GetNiceScroll https://github.com/inuyaksa/jquery.nicescroll
         let scrollBar = $('.js-scroll');
         if (scrollBar.length > 0) {

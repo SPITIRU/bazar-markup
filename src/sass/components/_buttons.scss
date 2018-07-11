@@ -106,13 +106,13 @@
 		}
 		&:hover{
 			&::before{
-				color: $color-third;
+				color: $color-accent;
 			}
 		}
 		&.is-checked{
 			&::before{
 				font-family: faS;
-				color: $color-third;
+				color: $color-accent;
 			}
 		}
 	}

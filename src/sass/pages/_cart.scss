@@ -1,194 +1,194 @@
 .cart {
-    padding-bottom: $gutter * 2;
-    border-top: 1px solid $color-border--light;
+	padding-bottom: $gutter * 2;
+	border-top: 1px solid $color-border--light;
 
-    &__wrap {
-        @extend %flexColumn;
-    } //.cart__wrap
+	&__wrap {
+		@extend %flexColumn;
+	} //.cart__wrap
 
-    &__title,
-    &__item {
-        border-bottom: 1px dashed $color-border;
-    } //.cart__item
+	&__title,
+	&__item {
+		border-bottom: 1px dashed $color-border;
+	} //.cart__item
 
-    &__items {
-        @extend %flexColumn;
-        @include respond-to(xs) {
-            order: 3;
-        }
-    } //.cart__items
+	&__items {
+		@extend %flexColumn;
+		@include respond-to(xs) {
+			order: 3;
+		}
+	} //.cart__items
 
-    &__item {
-        margin-bottom: 0;
-        padding: $gutter 0 $gutter 10px;
-        @include respond-to(xs) {
-            padding: $gutter 0;
-            margin-bottom: 0;
-        }
-        &:last-child {
-            margin-bottom: 0;
-        }
-    } //.cart__item
+	&__item {
+		margin-bottom: 0;
+		padding: $gutter 0 $gutter 10px;
+		@include respond-to(xs) {
+			padding: $gutter 0;
+			margin-bottom: 0;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	} //.cart__item
 
-    &__btn {
-        font-size: 15px;
+	&__btn {
+		font-size: 15px;
 
-        @include respond-to(xs) {
-            width: 100%;
-            height: 45px;
-            line-height: 44px;
-            font-size: 16px;
-        }
-    } //.cart__btn
+		@include respond-to(xs) {
+			width: 100%;
+			height: 45px;
+			line-height: 44px;
+			font-size: 16px;
+		}
+	} //.cart__btn
 
-    &__box {
-        padding: $gutter 0;
-        @extend %flexCenter;
-        justify-content: space-between;
-        @include respond-to(xs) {
-            flex-wrap: wrap;
-            order: 1;
-        }
-    } //.cart__box
+	&__box {
+		padding: $gutter 0;
+		@extend %flexCenter;
+		justify-content: space-between;
+		@include respond-to(xs) {
+			flex-wrap: wrap;
+			order: 1;
+		}
+	} //.cart__box
 
-    &__sum {
-        margin-left: auto;
-        font-family: $f-bold;
-        font-size: 14px;
-        text-align: right;
+	&__sum {
+		margin-left: auto;
+		font-family: $f-bold;
+		font-size: 14px;
+		text-align: right;
 
-        @include respond-to(xs) {
-            width: 100%;
-            margin-bottom: 0;
-            text-align: left;
-        }
+		@include respond-to(xs) {
+			width: 100%;
+			margin-bottom: 0;
+			text-align: left;
+		}
 
-        &_sale {
-            @include respond-to(xs) {
-                display: flex;
-                align-items: center;
-                span {
-                    margin-left: auto;
-                }
-            }
-            span {
-                font-family: $f2-bold;
-                font-size: 18px;
-                color: $color-accent;
-            }
-            small {
-                font-family: $f;
-                font-size: 14px;
-                @include respond-to(xs) {
-                    margin-left: 5px;
-                }
-            }
-        }
+		&_sale {
+			@include respond-to(xs) {
+				display: flex;
+				align-items: center;
+				span {
+					margin-left: auto;
+				}
+			}
+			span {
+				font-family: $f2-bold;
+				font-size: 18px;
+				color: $color-accent;
+			}
+			small {
+				font-family: $f;
+				font-size: 14px;
+				@include respond-to(xs) {
+					margin-left: 5px;
+				}
+			}
+		}
 
-        &_current {
-            font-size: 17px;
-            @extend .cart__sum_sale;
-            span {
-                font-size: 20px;
-            }
-        }
-    } //.cart__sum
+		&_current {
+			font-size: 17px;
+			@extend .cart__sum_sale;
+			span {
+				font-size: 20px;
+			}
+		}
+	} //.cart__sum
 
-    &__form {
-        max-width: 425px;
-        margin: $gutter * 2.5 auto 0;
+	&__form {
+		max-width: 425px;
+		margin: $gutter * 2.5 auto 0;
 
-        @include respond-to(xs) {
-            max-width: 100%;
-            width: 100%;
-            margin: $gutter auto;
-            order: 2;
-        }
+		@include respond-to(xs) {
+			max-width: 100%;
+			width: 100%;
+			margin: $gutter auto;
+			order: 2;
+		}
 
-        .form {
-            &__inner {
-                flex-direction: column;
-                & > .form__box {
-                    &:last-child {
-                        @include size-sm(12);
-                    }
-                }
-            }
+		.form {
+			&__inner {
+				flex-direction: column;
+				& > .form__box {
+					&:last-child {
+						@include size-sm(12);
+					}
+				}
+			}
 
-            &__box {
-                margin-bottom: 0;
-                @include respond-to(xs) {
-                    flex-direction: column;
-                }
+			&__box {
+				margin-bottom: 0;
+				@include respond-to(xs) {
+					flex-direction: column;
+				}
 
-                &--wide {
-                    flex-direction: column;
+				&--wide {
+					flex-direction: column;
 
-                    .form__input {
-                        width: 100%;
-                    }
-                }
+					.form__input {
+						width: 100%;
+					}
+				}
 
-                .form__box {
-                    width: 100%;
-                    margin-bottom: 0;
-                    .form__input {
-                        &:last-child {
-                            width: 50%;
-                            @include respond-to(xs) {
-                                width: 55%;
-                            }
-                        }
-                        & + .form__input {
-                            margin-left: $gutter;
-                            @include respond-to(xs) {
-                                margin-left: $gutter/2;
-                            }
-                        }
-                    }
-                }
+				.form__box {
+					width: 100%;
+					margin-bottom: 0;
+					.form__input {
+						&:last-child {
+							width: 50%;
+							@include respond-to(xs) {
+								width: 55%;
+							}
+						}
+						& + .form__input {
+							margin-left: $gutter;
+							@include respond-to(xs) {
+								margin-left: $gutter/2;
+							}
+						}
+					}
+				}
 
-                .form__input {
-                    &:first-child {
-                        flex: 1;
-                        @include respond-to(xs) {
-                            width: 100%;
-                        }
-                    }
-                    &:last-child {
-                        width: 30%;
-                        margin-left: $gutter;
-                        @include respond-to(xs) {
-                            width: 100%;
-                            margin-left: 0;
-                        }
-                    }
-                }
-            }
-        }
+				.form__input {
+					&:first-child {
+						flex: 1;
+						@include respond-to(xs) {
+							width: 100%;
+						}
+					}
+					&:last-child {
+						width: 30%;
+						margin-left: $gutter;
+						@include respond-to(xs) {
+							width: 100%;
+							margin-left: 0;
+						}
+					}
+				}
+			}
+		}
 
-        .cart__btn {
-            width: 100%;
-            height: 43px;
-            line-height: 42px;
-            font-size: 16px;
-        }
+		.cart__btn {
+			width: 100%;
+			height: 43px;
+			line-height: 42px;
+			font-size: 16px;
+		}
 
-        .section-header {
-            .h1 {
-                margin: 0 0 $gutter * 2 0;
-            }
-        }
+		.section-header {
+			.h1 {
+				margin: 0 0 $gutter * 2 0;
+			}
+		}
 	} //.cart__form
 
 	&__policy {
 		margin-bottom: $gutter;
-	}//.cart__policy
+	} //.cart__policy
 
-	.form-success{
+	.form-success {
 		@include respond-to(xs) {
 			align-items: flex-start;
-			&__center{
+			&__center {
 				margin-top: 30px;
 			}
 		}
@@ -196,33 +196,33 @@
 } //.cart
 
 .cart-success {
-    padding: 50px 0;
-    text-align: center;
+	padding: 50px 0;
+	text-align: center;
 
-    &__title {
-        margin-bottom: $gutter;
-        font-family: $f-bold;
-        font-size: 23px;
-    } //.cart-success__title
+	&__title {
+		margin-bottom: $gutter;
+		font-family: $f-bold;
+		font-size: 23px;
+	} //.cart-success__title
 
-    &__subtitle {
-        margin-bottom: $gutter;
-        span {
-            font-family: $f2-bold;
-            font-size: 18px;
-        }
-    } //.cart-success__subtitle
+	&__subtitle {
+		margin-bottom: $gutter;
+		span {
+			font-family: $f2-bold;
+			font-size: 18px;
+		}
+	} //.cart-success__subtitle
 
-    &__text {
-        margin-bottom: $gutter * 2;
-    } //.cart-success__text
+	&__text {
+		margin-bottom: $gutter * 2;
+	} //.cart-success__text
 } //.cart-success
 
 .empty {
-    padding: 50px 0;
-    text-align: center;
-    p {
-        font-size: 20px;
-        text-transform: uppercase;
-    }
+	padding: 50px 0;
+	text-align: center;
+	p {
+		font-size: 20px;
+		text-transform: uppercase;
+	}
 } //empty
