@@ -55,7 +55,7 @@ $(document).ready(function () {
                     var allPrice = arrData.count * arrData.price;
 
 
-                    if(typeProduct == 1){
+                    if(typeProduct == 1 || typeProduct == 2 || typeProduct ==3 || typeProduct == 5 || typeProduct ==7){
                         var orderText = "В корзине <span>" + arrData.count + "</span> метров — <span>" + number_format(allPrice, 2, '.', ' ') + "</span> руб.";
                         currentCountBlock.show().val(arrData.count + ' м');
                         var priceText = number_format(arrData.price, 2, '.', ' ') + " <span>руб/м</span>";
@@ -91,7 +91,7 @@ $(document).ready(function () {
             var m = '';
             var newValue = 0;
 
-            if(typeProduct == 1){
+            if(typeProduct == 1 || typeProduct == 2 || typeProduct ==3 || typeProduct == 5 || typeProduct ==7){
                 m = ' м';
             }else{
                 m = ' шт';
@@ -135,7 +135,7 @@ $(document).ready(function () {
             var m = '';
             var newValue = 0;
 
-            if(typeProduct == 1){
+            if(typeProduct == 1 || typeProduct == 2 || typeProduct ==3 || typeProduct == 5 || typeProduct ==7){
                 m = ' м';
             }else{
                 m = ' шт';
@@ -355,7 +355,7 @@ function updateOrderInfo(newValue, prices, data, productID, _this) {
         var minCount = JSON.parse(prices.val())[0]['count'];
         var typeProduct = $('.js-type-product').val();
 
-        if(typeProduct == 1){
+        if(typeProduct == 1 || typeProduct == 2 || typeProduct ==3 || typeProduct == 5 || typeProduct ==7){
             if (newValue >= minCount) {
                 var orderText = "В корзине <span>" + newValue + "</span> метров — <span>" + number_format(allPrice, 2, '.', ' ') + "</span> руб.";
                 orderInfoBlock.html(orderText);
@@ -369,7 +369,7 @@ function updateOrderInfo(newValue, prices, data, productID, _this) {
 
 
     }
-    if(typeProduct == 1){
+    if(typeProduct == 1 || typeProduct == 2 || typeProduct ==3 || typeProduct == 5 || typeProduct ==7){
         // Update price info
         var priceText = number_format(curPrice, 2, '.', ' ') + " <span>руб/м</span>";
     }else{
@@ -429,7 +429,7 @@ function changeInput(entity) {
     var m = '';
     var newValue = 0;
 
-    if(typeProduct == 1){
+    if(typeProduct == 1 || typeProduct == 2 || typeProduct ==3 || typeProduct == 5 || typeProduct ==7){
         m = ' м';
     }else{
         m = ' шт';

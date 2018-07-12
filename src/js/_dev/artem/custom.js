@@ -146,4 +146,19 @@ $(document).ready(function () {
 
         e.preventDefault();
     });
+
+    if ($('.catalog-filter__cloth').length > 0) {
+        var cloth__item = $(document).find('.cloth__item');
+        var valueCount = 0;
+        cloth__item.each(function( index){
+            var cloth__child = cloth__item[index].getElementsByTagName('li');
+                var arr = [];
+                [].push.apply(arr, cloth__child);
+                $.each(arr,function(index,value){
+                    valueCount = +valueCount + +value.dataset.count;
+                });
+            cloth__item[index].getElementsByClassName('cloth__count')[0].innerHTML = +valueCount + +cloth__item[index].dataset.count;
+            valueCount = 0;
+        });
+    }
 });

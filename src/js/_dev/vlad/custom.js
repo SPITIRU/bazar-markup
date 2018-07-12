@@ -98,9 +98,6 @@ $(document).ready(function () {
                         }
                     }).done(function (response) {
                         if (response.success === true) {
-                            // authBlock.addClass('is-confirm');
-                            // $('.js-phone-confirm-text').text(response.phone);
-                            // $('.js-header-profile-block').html(response.html);
                             $('.js-header-profile-block').html(response.html);
                             $('.js-header-profile-block-favorite').html(response.favorite);
                             $('.modal__btn--close').trigger('click');
