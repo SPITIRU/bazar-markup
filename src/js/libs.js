@@ -5,6 +5,7 @@
 //=include ../libs/jquery.inputmask.bundle.js
 //=include ../libs/nouislider/nouislider.js
 //=include ../libs/select2/select2.js
+//=include ../libs/okzoom.js
 
 //=include ../libs/stickyBlock/stickyBlockResize.js
 //=include ../libs/stickyBlock/stickyBlock.js

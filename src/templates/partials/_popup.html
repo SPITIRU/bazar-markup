@@ -14,12 +14,12 @@
 					<div class="form__inner">
 						<form class="auth-form">
 							<div class="input input--email form__input">
-								<input type='email' class="input__field" placeholder="Введите e-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+								<input class="input__field" type="email" placeholder="Введите e-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
 								<span class="input__error">*Какая-то ошибочка вышла</span>
 							</div>
 
 							<div class="input input--password form__input">
-								<input type='password' class="input__field" placeholder="Введите пароль">
+								<input class="input__field" type="password" placeholder="Введите пароль">
 								<i class="input__icon fal fa-eye-slash js-input-password--show"></i>
 								<i class="input__icon fal fa-eye js-input-password--hide" style="display: none;"></i>
 								<span class="input__error">*Какая-то ошибочка вышла</span>
@@ -27,7 +27,7 @@
 
 							<div class="form__box">
 								{{item.checkbox('Запомнить меня' ,'auth-form__rememberme')}}
-								<a href="recover-password.html" class="form__link form__link--recover">Забыли пароль?</a>
+								<a class="form__link form__link--recover" href="recover-password.html">Забыли пароль?</a>
 							</div>
 
 							<div class="form__buttons">
@@ -114,7 +114,7 @@
 								<div class="bz-slider__slides js-bz-slider--card">
 									{% for i in range(0, 4) %}
 									<div itemscope itemtype="https://schema.org/ImageObject">
-										<img itemprop="url contentUrl" src="img/products/atlas/big/{{i+1}}.png" alt="Атлас дюпон «izumrud»">
+										<img class="js-zoom" src="img/products/atlas/big/{{i+1}}.png" alt="Атлас дюпон «izumrud»" itemprop="url contentUrl">
 										<meta itemprop="name" content="здесь полное описание вплоть до артикула">
 									</div>
 									{% endfor %}
@@ -172,7 +172,7 @@
 									<div class="item-select__value">
 										<div class="item-select__control item-select__control--minus js-item-select-control--minus"></div>
 										<span class="item-select__title">Выбрать</span>
-										<input type="text" class="item-select__input" style="display: none;" spellcheck="false">
+										<input class="item-select__input" type="text" style="display: none;" spellcheck="false">
 										<div class="item-select__control item-select__control--plus js-item-select-control--plus"></div>
 									</div>
 									<div class="item-select__list">
@@ -235,7 +235,7 @@
 											<div class="tab__title" data-tab="1">Описание</div>
 										</div>
 										<div class="tab__contentes">
-											<div class="tab__content" style="display: block;" data-tab-content="0">
+											<div class="tab__content" data-tab-content="0" style="display: block;">
 
 												<div class="bz-table bz-table--dot">
 													<ul class="bz-table__list">
@@ -244,7 +244,7 @@
 															<span class="bz-table__subitem">
 																<span>{{ item.title }}</span>
 															</span>
-															<a href="#" class="bz-table__subitem">{{ item.desc }}</a>
+															<a class="bz-table__subitem" href="#">{{ item.desc }}</a>
 														</li>
 														{% endfor %}
 													</ul>
@@ -395,7 +395,7 @@
 
 					</div><!-- end card__colors -->
 
-					<a href="#" class="button button--default">Подробнее</a>
+					<a class="button button--default" href="#">Подробнее</a>
 				</div>
 
 			</div>

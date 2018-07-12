@@ -14,13 +14,13 @@ title: Атлас дюпон «izumrud»
 		<div class="card__top-line">
 			{% include "partials/components/_breadcrumbs.html" %}
 
-			<a href="#" class="button button--link card__btn card__btn--back">Вернуться в каталог</a>
+			<a class="button button--link card__btn card__btn--back" href="#">Вернуться в каталог</a>
 
-			<a href="#" class="card__back">Атлас</a>
+			<a class="card__back" href="#">Атлас</a>
 		</div><!-- end card__top-line -->
 
 		<!-- begin card__wrap -->
-		<div class="card__wrap"  itemscope itemtype="http://schema.org/Product">
+		<div class="card__wrap" itemscope itemtype="http://schema.org/Product">
 			<!-- begin card__image -->
 			<div class="card__image">
 
@@ -35,7 +35,7 @@ title: Атлас дюпон «izumrud»
 					<div class="bz-slider__slides js-bz-slider--card">
 						{% for i in range(0, 4) %}
 						<div itemscope itemtype="https://schema.org/ImageObject">
-							<img itemprop="url contentUrl" src="img/products/atlas/big/{{i+1}}.png" alt="Атлас дюпон «izumrud»">
+							<img class="js-zoom" src="img/products/atlas/big/{{i+1}}.png" alt="Атлас дюпон «izumrud»" itemprop="url contentUrl">
 							<meta itemprop="name" content="здесь полное описание вплоть до артикула">
 						</div>
 						{% endfor %}
@@ -85,7 +85,7 @@ title: Атлас дюпон «izumrud»
 						<div class="item-select__value">
 							<div class="item-select__control item-select__control--minus js-item-select-control--minus"></div>
 							<span class="item-select__title">Выбрать</span>
-							<input type="text" class="item-select__input" style="display: none;" spellcheck="false">
+							<input class="item-select__input" type="text" style="display: none;" spellcheck="false">
 							<div class="item-select__control item-select__control--plus js-item-select-control--plus"></div>
 						</div>
 						<div class="item-select__list">
@@ -116,7 +116,7 @@ title: Атлас дюпон «izumrud»
 				</div><!-- end item-select -->
 
 				<div class="button-box">
-					<button class="button button--yellow card__btn card__btn--cart is-checked" onclick= "pushUp();">
+					<button class="button button--yellow card__btn card__btn--cart is-checked" onclick="pushUp();">
 						Добавить в корзину
 						<span></span>
 						<span title="убрать из корзины"></span>
@@ -139,7 +139,7 @@ title: Атлас дюпон «izumrud»
 								<div class="tab__title" data-tab="1">Описание</div>
 							</div>
 							<div class="tab__contentes">
-								<div class="tab__content" style="display: block;" data-tab-content="0">
+								<div class="tab__content" data-tab-content="0" style="display: block;">
 
 									<div class="bz-table bz-table--dot">
 										<ul class="bz-table__list">
@@ -147,7 +147,7 @@ title: Атлас дюпон «izumrud»
 											  {% for item in productDesc.productDesc %}
 											  <li class="bz-table__item">
 												  <span class="bz-table__subitem"><span>{{ item.title }}</span></span>
-												  <a href="#" class="bz-table__subitem">{{ item.desc }}</a>
+												  <a class="bz-table__subitem" href="#">{{ item.desc }}</a>
 											  </li>
 											  {% endfor %}
 										</ul>
@@ -296,7 +296,7 @@ title: Атлас дюпон «izumrud»
 		</div><!-- end card__colors -->
 
 		<div class="button-box">
-			<a href="#" class="button button--transparent button--accent card__btn--back">Вернуться в каталог</a>
+			<a class="button button--transparent button--accent card__btn--back" href="#">Вернуться в каталог</a>
 		</div>
 
 	</div>
