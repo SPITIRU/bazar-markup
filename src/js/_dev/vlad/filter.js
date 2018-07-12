@@ -164,6 +164,33 @@ $(document).ready(function () {
 
         /*
         *************************
+        * Select cloths
+        *************************
+         */
+        $(document).on('change', '.js-filter-width', function () {
+            var widthID = $(this).data('width');
+            var sUrl;
+            var arrParams;
+
+            if ($(this).hasClass('is-checked')) {
+                arrParams = updateUrlArray(globalParams, 'width', widthID, 'add');
+            } else {
+                arrParams = updateUrlArray(globalParams, 'width', widthID, 'delete');
+            }
+
+            globalParams = arrParams;
+
+            sUrl = generateStingFromArray(arrParams);
+            window.history.replaceState('url', '', sUrl);
+
+            if($(window).width() > 768) {
+                sendAjax();
+            }
+
+        });
+
+        /*
+        *************************
         * Remove metro select element from filter
         *************************
          */

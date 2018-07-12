@@ -24,6 +24,7 @@ $(document).on('click', '.js-ajax-open-preview', function (e) {
             modalSlider();
             sliderRelatedModal();
             changeColor();
+            zoom();
             $('.js-card-tab-related--modal').tabs();
         }
     });
@@ -58,6 +59,7 @@ $(document).on('click', '.js-ajax-open-preview-in-mobile', function (e) {
             modalSlider();
             sliderRelatedModal();
             changeColor();
+            zoom();
             $('.js-card-tab-related--modal').tabs();
         }
     });
@@ -91,6 +93,7 @@ $(document).on('click', '.js-ajax-open-preview-button', function (e) {
             modalSlider();
             sliderRelatedModal();
             changeColor();
+            zoom();
             $('.js-card-tab-related--modal').tabs();
         }
     });
@@ -123,6 +126,7 @@ $(document).on('click', '.js-ajax-open-preview-in-preview', function (e) {
             modalSlider();
             sliderRelatedModal();
             changeColor();
+            zoom();
             $('.js-card-tab-related--modal').tabs();
         }
     });
