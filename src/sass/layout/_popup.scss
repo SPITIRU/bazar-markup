@@ -1,6 +1,7 @@
 .modal-open .modal {
 	@include bz-scroll;
 }
+
 .modal {
 	&-dialog {
 		@include respond-to(xs) {
@@ -85,6 +86,10 @@
 		}
 	}
 } //.modal
+
+#auth-form {
+	z-index: 1002;
+}
 
 .change-city {
 	&__title {

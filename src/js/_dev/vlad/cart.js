@@ -268,6 +268,27 @@ $(document).ready(function () {
                 errors ++;
             }
 
+            // Validate email
+            if (email.val() === '') {
+                email.parent().addClass('is-invalid');
+                errors ++;
+            }
+
+
+            if(email.val() != '') {
+                var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
+                if(pattern.test(email.val())){
+                    email.next().css('display','none');
+                    email.css({'border' : '1px solid #d9d9d9'});
+                } else {
+                    email.css({'border' : '1px solid #ff0000'});
+                    email.next().css('display','block');
+                    email.next().text('Введите правильный email');
+                    errors ++;
+                }
+            }
+
+
             // Validate city
             if (city.val() === '') {
                 city.parent().addClass('is-invalid');

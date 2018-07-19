@@ -79,10 +79,11 @@ $(document).ready(function () {
                         $('.js-header-profile-block-favorite').html(response.favorite);
                         $('.modal__btn--close').trigger('click');
 
-                        if (response.addFavoriteFirstAuth  === true) {
-                            var user = response.user;
-                            addFavorite(user);
+                        if(response.addFavoriteFirstAuth){
+                            userID = response.user;
+                            addFavorite(response.user, response.addFavoriteFirstAuth);
                         }
+
                         return false;
                     }
 
@@ -693,14 +694,12 @@ function phoneConfirmTimer() {
     tim();
 }
 
-function addFavorite(user) {
-    var favorite = localStorage.getItem('favorite');
-    var userID = user;
+function addFavorite(userID, favoriteID) {
     $.ajax({
         method: 'POST',
         url: '/ajaxAddFavorite',
         data: {
-            favorite: favorite,
+            favorite: favoriteID,
             userID: userID,
             _token: token
         }

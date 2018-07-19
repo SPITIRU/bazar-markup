@@ -282,14 +282,14 @@ function initCardMap() {
 
     balloon = {
         iconLayout: 'default#image',
-        iconImageHref: '/templates/beauty/index/img/general/map-pin.svg',
+        iconImageHref: '/templates/bazar/index/img/general/map-pin.svg',
         iconImageSize: [30, 42],
         iconImageOffset: [-3, -42]
     };
 
     myPlaceMark = new ymaps.Placemark([coordX, coordY], {}, balloon);
 
-    myMap.controls.remove('typeSelector');
+    myMap.controls.add('typeSelector');
     myMap.geoObjects.add(myPlaceMark);
 
 }
