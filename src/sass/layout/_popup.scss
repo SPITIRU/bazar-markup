@@ -89,6 +89,28 @@
 
 #auth-form {
 	z-index: 1002;
+
+	.form {
+		&__inner {
+			margin-top: $gutter;
+		}
+		&__title {
+			color: $gray;
+			cursor: pointer;
+
+			&:hover, &.is-active {
+				color: $color-text;
+			}
+
+			&.is-active {
+				border-bottom: 2px solid $color-accent;
+			}
+
+			& + .form__title {
+				margin-left: 15px;
+			}
+		}
+	}
 }
 
 .change-city {

@@ -32,7 +32,7 @@ $(document).ready(function() {
         }
     });
 
-    // //Custom Select https://select2.org/
+    //Custom Select https://select2.org/
     if ($('.js-select').length > 0) {
         $('.js-select').select2({
             placeholder: $(this).data('placeholder')
@@ -68,7 +68,7 @@ $(document).ready(function() {
         }
     }
 
-    // //Masked inputmask https://github.com/RobinHerbots/Inputmask
+    //Masked inputmask https://github.com/RobinHerbots/Inputmask
     if ($('.js-phone-mask').length > 0 || $('.js-born-mask').length > 0) {
         $('.js-phone-mask').inputmask({
             mask: '+7 (999) 999-99-99',
@@ -79,6 +79,18 @@ $(document).ready(function() {
             clearIncomplete: true
         });
     }
+
+    //Change form title
+    $(document).on('click', '.js-form-title', function() {
+        var text = $(this).data('title');
+
+        $('.js-form-title').removeClass('is-active');
+        $(this).addClass('is-active');
+        $(this)
+            .closest('.form')
+            .find('.form__btn')
+            .text(text);
+    });
 
     function mainOffset() {
         $('.main').css('padding-top', $('.header').outerHeight());

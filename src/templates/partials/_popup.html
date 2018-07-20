@@ -8,7 +8,8 @@
 			<div class="modal-body">
 				<div class="form">
 					<div class="form__header">
-						<div class="form__title">Вход или регистрация</div>
+						<span class="form__title js-form-title is-active" data-title="Войти">Вход</span>
+						<span class="form__title js-form-title" data-title="Зарегистрироваться">Регистрация</span>
 					</div>
 
 					<div class="form__inner">
@@ -108,7 +109,8 @@
 								<span class="badge sale">-32%</span>
 								<span class="badge new">New</span>
 								<span class="badge hit">Хит</span>
-							</div><!-- end badge -->
+							</div>
+							<!-- end badge -->
 
 							<div class="bz-slider bz-slider--card card__slider">
 								<div class="bz-slider__slides js-bz-slider--card">
@@ -254,9 +256,7 @@
 
 											<div class="tab__content" data-tab-content="1">
 
-												<p>Плотная ткань с гладкокрашенной отделкой. Лицевая сторона гладкая, с мягким атласным блеском. Изнаночная - матовая,
-													с зернистой поверхностью. Материал прочный, эластичный, хорошо драпирующийся. Атлас широко применяется для изготовления
-													праздничных и концертных нарядов, свадебных платьев.</p>
+												<p>Плотная ткань с гладкокрашенной отделкой. Лицевая сторона гладкая, с мягким атласным блеском. Изнаночная - матовая, с зернистой поверхностью. Материал прочный, эластичный, хорошо драпирующийся. Атлас широко применяется для изготовления праздничных и концертных нарядов, свадебных платьев.</p>
 
 											</div>
 										</div>
@@ -297,7 +297,8 @@
 								<li class="tab__title js-related-tab">
 									<a class="tab__link" href="#related-tabs-3">
 										<span class="tab__icon_wrap">{{mixin.icon('button', 'tab__icon')}}</span>
-										<span class="tab__text">Пуговицы <br>и кнопки</span>
+										<span class="tab__text">Пуговицы
+											<br>и кнопки</span>
 									</a>
 								</li>
 								<li class="tab__title js-related-tab">
@@ -317,7 +318,8 @@
 								<li class="tab__title js-related-tab">
 									<a class="tab__link" href="#related-tabs-6">
 										<span class="tab__icon_wrap">{{mixin.icon('tapes', 'tab__icon')}}</span>
-										<span class="tab__text">Ленты <br> отделочные</span>
+										<span class="tab__text">Ленты
+											<br> отделочные</span>
 									</a>
 								</li>
 							</ul>
@@ -332,7 +334,9 @@
 													<img src="http://via.placeholder.com/150x150" alt="Атлас дюпон «izumrud»">
 												</div>
 												<div class="related__desc">
-													<span class="related__title">Нитки <span>dor tak 40/2</span></span>
+													<span class="related__title">Нитки
+														<span>dor tak 40/2</span>
+													</span>
 													<span class="related__price">12,80 руб</span>
 												</div>
 											</a>
@@ -351,7 +355,9 @@
 													<img src="img/products/thread/{{i+1}}.png" alt="Атлас дюпон «izumrud»">
 												</div>
 												<div class="related__desc">
-													<span class="related__title">Нитки <span>dor tak 40/2</span></span>
+													<span class="related__title">Нитки
+														<span>dor tak 40/2</span>
+													</span>
 													<span class="related__price">12,80 руб</span>
 												</div>
 											</a>
@@ -370,7 +376,9 @@
 													<img src="img/products/thread/{{i+1}}.png" alt="Атлас дюпон «izumrud»">
 												</div>
 												<div class="related__desc">
-													<span class="related__title">Нитки <span>dor tak 40/2</span></span>
+													<span class="related__title">Нитки
+														<span>dor tak 40/2</span>
+													</span>
 													<span class="related__price">12,80 руб</span>
 												</div>
 											</a>
@@ -382,7 +390,8 @@
 							</div>
 						</div>
 
-					</div><!-- end card__related -->
+					</div>
+					<!-- end card__related -->
 
 					<!-- begin card__colors -->
 					<div class="card__colors">
@@ -393,7 +402,8 @@
 							{% for i in range(0, 4) %} {% include "partials/product/_product-color.html" %} {% endfor %}
 						</div>
 
-					</div><!-- end card__colors -->
+					</div>
+					<!-- end card__colors -->
 
 					<a class="button button--default" href="#">Подробнее</a>
 				</div>
