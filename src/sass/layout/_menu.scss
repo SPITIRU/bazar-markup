@@ -155,6 +155,13 @@
 
 		&--lk {
 			background-color: $color-accent;
+
+			&.is-active {
+				.nav-main__text{
+					color: #fff;
+				}
+			}
+
 			.nav-main {
 				&__icon {
 					fill: #fff;
@@ -359,6 +366,12 @@
 			display: block;
 			padding: 0;
 		}
+
+		&--back {
+			@include min-screen(481) {
+				display: none;
+			}
+		}
 	} //.nav-main-dropdown__item
 
 	&__title {
@@ -452,7 +465,7 @@
 
 		li {
 			min-width: 120px;
-			font-size: 13px;
+			font-size: 14px;
 
 			@include respond-to(sm) {
 				display: block;

@@ -324,10 +324,14 @@
 			margin-left: 20px;
 		}
 
-		&--cart {
+		&.badge {
+
+		}
+
+		&--cart, &--fav {
 			position: relative;
 			&::before {
-				content: attr(data-cart-counter);
+				content: attr(data-count);
 				@include badge;
 				@include tr;
 				position: absolute;
@@ -336,6 +340,12 @@
 				@include respond-to(sm) {
 					right: -10px;
 				}
+			}
+		}
+
+		&--fav {
+			&::before {
+				right: 8px;
 			}
 		}
 	} //.user-nav__item

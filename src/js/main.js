@@ -168,7 +168,7 @@ $(document).ready(function() {
     if ($(window).width() <= 768) {
         //Mobile Nav
         $('.js-nav-main').prependTo('.wrapper ');
-        $('.js-main-nav-link--forward').on('click', function(e) {
+        $(document).on('click', '.js-main-nav-link--forward', function(e) {
             e.preventDefault();
             let navItem = $(this).closest('.nav-main__item');
             let navItemDropdown = $(this).closest('.nav-dropdown__item');

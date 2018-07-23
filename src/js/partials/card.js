@@ -18,8 +18,6 @@ $(document).ready(function() {
         $(document).on('click', '.js-tab-modal', tabs);
     }
 
-    zoom();
-
     $('#preview').on('shown.bs.modal', function(e) {
         $('.js-bz-slider--card-modal').resize();
         $('.js-bz-slider--related-modal').resize();
@@ -149,21 +147,5 @@ function tabs(e) {
                 tabContent[i].style.display = 'none';
             }
         }
-    }
-}
-
-//Zoom
-function zoom() {
-    if ($(window).width() > 480) {
-        $('.js-zoom').okzoom({
-            width: 200,
-            height: 200,
-            round: true,
-            background: '#fff',
-            // backgroundRepeat: 'repeat',
-            scaleWidth: 700,
-            shadow: '0 0 5px #000',
-            border: '1px solid black'
-        });
     }
 }
