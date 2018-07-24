@@ -10,8 +10,13 @@
 //=include ../libs/stickyBlock/stickyBlock.js
 
 //=include ../libs/slick/slick.js
+
 //=include ../libs/modal/util.js
 //=include ../libs/modal/modal.js
+//=include ../libs/modal/ekko-lightbox.js
+
+//=include ../libs/fancybox/jquery.fancybox.js
+
 //=include ../libs/tabs/tabs.ui.min.js
 
 //=include assets/svg-sprite.js

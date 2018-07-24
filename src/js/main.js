@@ -7,29 +7,33 @@ $(window).on('load', function() {
         $('body').addClass('web');
     }
     $('body').removeClass('loading');
+
+    //GetNiceScroll https://github.com/inuyaksa/jquery.nicescroll
+    let scrollBar = $('.js-scroll');
+    if (scrollBar.length > 0) {
+        scrollBar.niceScroll({
+            cursorcolor: '#2c2b2b',
+            horizrailenabled: false,
+            // autohidemode: false,
+            boxzoom: false,
+            verge: 500,
+            cursorwidth: '4px',
+            cursorborder: 'none',
+            cursorborderradius: '0'
+        });
+        scrollBar.mouseover(function() {
+            $(this)
+                .getNiceScroll()
+                .resize();
+        });
+    }
 });
 
 $(document).ready(function() {
-    $(window).on('load', function() {
-        //GetNiceScroll https://github.com/inuyaksa/jquery.nicescroll
-        let scrollBar = $('.js-scroll');
-        if (scrollBar.length > 0) {
-            scrollBar.niceScroll({
-                cursorcolor: '#2c2b2b',
-                horizrailenabled: false,
-                // autohidemode: false,
-                boxzoom: false,
-                verge: 500,
-                cursorwidth: '4px',
-                cursorborder: 'none',
-                cursorborderradius: '0'
-            });
-            scrollBar.mouseover(function() {
-                $(this)
-                    .getNiceScroll()
-                    .resize();
-            });
-        }
+    //Bootsstrap lightbox gallary
+    $(document).on('click', '[data-toggle="lightbox"]', function(e) {
+        e.preventDefault();
+        $(this).ekkoLightbox();
     });
 
     //Custom Select https://select2.org/

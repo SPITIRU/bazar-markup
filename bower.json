@@ -17,5 +17,8 @@
   ],
   "devDependencies": {
     "OKZoom": "okzoom#*"
+  },
+  "dependencies": {
+    "ekko-lightbox": "^5.3.0"
   }
 }
