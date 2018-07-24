@@ -76,6 +76,7 @@ $(document).ready(function () {
                     // USER IS LOGGED IN (CLOSE POPUP IN SAME PAGE)
                     if (response.userExist === true ) {
                         $('.js-header-profile-block').html(response.html);
+                        $('.js-header-profileMobile-block').html(response.profileMobile);
                         $('.js-header-profile-block-favorite').html(response.favorite);
                         $('.modal__btn--close').trigger('click');
 
@@ -100,6 +101,7 @@ $(document).ready(function () {
                     }).done(function (response) {
                         if (response.success === true) {
                             $('.js-header-profile-block').html(response.html);
+                            $('.js-header-profileMobile-block').html(response.profileMobile);
                             $('.js-header-profile-block-favorite').html(response.favorite);
                             $('.modal__btn--close').trigger('click');
                         }

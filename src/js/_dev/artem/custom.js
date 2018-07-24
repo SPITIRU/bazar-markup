@@ -140,6 +140,8 @@ $(document).ready(function () {
                 item.find('.js-btn-fav').remove();
                 img.html(response.html);
                 item.find('.js-ajax-favorite').append(response.favoriteBtn);
+                item.find('.js-title').text(response.title);
+                item.find('.js-articul').text(response.artColor);
             }
         });
 

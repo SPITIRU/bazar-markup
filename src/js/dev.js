@@ -4,6 +4,7 @@
 //=include _dev/vasily/cabinet.js
 //=include _dev/vasily/preview.js
 
+//=include _dev/vlad/cabinet.js
 //=include _dev/vlad/card.js
 //=include _dev/vlad/cart.js
 //=include _dev/vlad/custom.js

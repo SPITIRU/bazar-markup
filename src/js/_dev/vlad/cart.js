@@ -15,7 +15,7 @@ $(document).ready(function () {
                 }
             }).done(function (response) {
                 if (response.success === true) {
-                    $('.js-user-nav__item--cart').attr('data-cart-counter', response.productCount);
+                    $('.js-user-nav__item--cart').attr('data-count', response.productCount);
                     pushUp();
                     _this.hide();
                     _this.next().removeClass('is-hidden');
@@ -41,7 +41,7 @@ $(document).ready(function () {
                 }
             }).done(function (response) {
                 if (response.success === true) {
-                    $('.js-user-nav__item--cart').attr('data-cart-counter', response.productCount);
+                    $('.js-user-nav__item--cart').attr('data-count', response.productCount);
                     pushUp();
                     _this.addClass('is-hidden');
                     _this.next().removeClass('is-hidden');
@@ -201,7 +201,7 @@ $(document).ready(function () {
                     _this.parent().addClass('is-hidden');
                     $('.js-product-add-to-cart-more').removeClass('is-hidden');
 
-                    $('.js-user-nav__item--cart').attr('data-cart-counter', response.productCount);
+                    $('.js-user-nav__item--cart').attr('data-count', response.productCount);
                     $('.js-item-count-cart').text(response.productCount);
                 }
             });
@@ -226,7 +226,7 @@ $(document).ready(function () {
                 if (response.success === true) {
                     pushUp('Товар удален из корзины');
                     _this.closest('.product-item').remove();
-                    $('.js-user-nav__item--cart').attr('data-cart-counter', response.productCount);
+                    $('.js-user-nav__item--cart').attr('data-count', response.productCount);
                     $('.js-item-count-cart').text(response.productCount);
                     getAllProductsSum();
                 }
@@ -343,7 +343,7 @@ $(document).ready(function () {
                     $('.js-cart-title').remove();
                     $('.js-cart-items').remove();
                     $('.js-cart-items__info').remove();
-                    $('.js-user-nav__item--cart').attr('data-cart-counter', 0);
+                    $('.js-user-nav__item--cart').attr('data-count', 0);
                 }
             });
 
