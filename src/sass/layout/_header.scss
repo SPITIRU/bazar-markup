@@ -325,10 +325,9 @@
 		}
 
 		&.badge {
-
 		}
 
-		&--cart, &--fav {
+		&--cart {
 			position: relative;
 			&::before {
 				content: attr(data-count);
@@ -344,9 +343,22 @@
 		}
 
 		&--fav {
+			position: relative;
 			&::before {
 				right: 8px;
 			}
+			&.is-checked {
+				.fas {
+					display: block;
+				}
+				.fal {
+					display: none;
+				}
+			}
+		}
+		.fas {
+			display: none;
+			color: $color-accent;
 		}
 	} //.user-nav__item
 

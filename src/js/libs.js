@@ -13,7 +13,6 @@
 
 //=include ../libs/modal/util.js
 //=include ../libs/modal/modal.js
-//=include ../libs/modal/ekko-lightbox.js
 
 //=include ../libs/fancybox/jquery.fancybox.js
 
