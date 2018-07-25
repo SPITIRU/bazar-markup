@@ -60,6 +60,9 @@ body{
 
 .main {
 	flex: 1;
+	&::-moz-document {
+		flex: 1;
+	}
 	&.rules {
 		.h1{
 			margin: 40px 0;
@@ -262,6 +265,9 @@ body{
 	&__text{
 		font-family: $f-light;
 		color: $gray--darken;
+	}
+	li {
+		@include listIcon($color-accent);
 	}
 }//.seoblock
 

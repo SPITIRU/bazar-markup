@@ -128,6 +128,7 @@
 	&__seoblock {
 		margin-left: 280px;
 		@include respond-to(sm) {
+			margin-left: 0;
 		}
 	} //.catalog__seoblock
 } //.catalog
