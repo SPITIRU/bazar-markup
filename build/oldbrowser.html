@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="ru">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+    <title>Вы используете устаревший браузер/</title>
+    <style>
+      html,
+      body,
+      div,
+      img {
+        margin: 0;
+        padding: 0;
+        border: 0;
+      }
+
+      html,
+      body {
+        height: 100%;
+      }
+
+      .page {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background: #343434;
+        font-family: Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      .page__table {
+        width: 100%;
+        height: 100%;
+      }
+
+      .page__content {}
+
+      .page__title {
+        margin-right: 44px;
+        font-family: 'SuisseCond', 'Arial narrow', 'Arial';
+        font-weight: 400;
+        color: #FDD14A;
+      }
+
+      .page__text {
+        margin: 13px 0 26px;
+        color: #e6e6e6;
+        font-size: 16px;
+      }
+
+      .page__browser {
+        position: relative;
+        display: block;
+        width: 60px;
+        height: 60px;
+        float: left;
+        margin-right: 44px;
+        color: #fff;
+        background-image: url('img/browser.jpg');
+        background-repeat: no-repeat;
+      }
+
+      .page__browser:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url('img/browser.jpg');
+        background-repeat: no-repeat;
+      }
+
+      .page__chrome,
+      .page__chrome:before {
+        background-position: 0 0;
+      }
+
+      .page__chrome:hover,
+      .page__chrome:hover:before {
+        background-position: 0 -60px;
+      }
+
+      .page__firefox,
+      .page__firefox:before {
+        background-position: -60px 0;
+      }
+
+      .page__firefox:hover,
+      .page__firefox:hover:before {
+        background-position: -60px -60px;
+      }
+
+      .page__opera {
+        width: 56px;
+      }
+
+      .page__opera,
+      .page__opera:before {
+        background-position: -120px 0;
+      }
+
+      .page__opera:hover,
+      .page__opera:hover:before {
+        background-position: -120px -60px;
+      }
+
+      .page__safari {
+        width: 56px;
+        background-position: -176px 0;
+      }
+
+      .page__safari:before {
+        background-position: -176px 0;
+      }
+
+      .page__safari:hover,
+      .page__safari:hover:before {
+        background-position: -176px -60px;
+      }
+
+      .page__ie,
+      .page__ie:before {
+        background-position: -232px 0;
+      }
+
+      .page__ie:hover,
+      .page__ie:hover:before {
+        background-position: -232px -60px;
+      }
+
+      .page__ie {
+        margin-right: 0;
+      }
+
+      .page__image {
+        display: block;
+      }
+
+    </style>
+    <!--[if IE 11]>
+    <style>
+        .page__browser:before {
+            content: none;
+        }
+    </style>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="page" bgcolor="#333333">
+      <table class="page__table" cellpadding="0" cellspacing="0" width="100%" height="100%">
+        <tr>
+          <td>
+            <div class="spacer"></div>
+          </td>
+          <td>
+            <div class="spacer"></div>
+          </td>
+          <td>
+            <div class="spacer"></div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="spacer"></div>
+          </td>
+          <td valign="middle" width="480" class="page__content">
+            <div>
+              <h1 class="page__title">Ваш браузер устарел!</h1>
+              <p class="page__text">Чтобы воспользоваться данным сайтом, обновите браузер до последней версии или установите любой другой из предложенных вариантов:</p>
+              <a class="page__browser page__chrome" target="_blank" href="http://www.google.ru/intl/ru/chrome/" title="Загрузить Google Chrome с официального сайта">
+              </a>
+              <a class="page__browser page__firefox" target="_blank" href="http://www.mozilla.org/ru/firefox/new/" title="Загрузить FireFox с официального сайта"> </a>
+              <a class="page__browser page__opera" target="_blank" href="http://www.opera.com/ru" title="Загрузить Opera с официального сайта"> </a>
+              <a class="page__browser page__safari" target="_blank" href="http://www.apple.com/safari/" title="Загрузить Safari с официального сайта"> </a>
+              <a class="page__browser page__ie" target="_blank" href="http://windows.microsoft.com/ru-ru/internet-explorer/download-ie" title="Загрузить Internet Explorer с официального сайта"> </a>
+            </div>
+          </td>
+          <td>
+            <div class="spacer"></div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="spacer"></div>
+          </td>
+          <td>
+            <div class="spacer"></div>
+          </td>
+          <td>
+            <div class="spacer"></div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
