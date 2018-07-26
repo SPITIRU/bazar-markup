@@ -137,7 +137,11 @@ $(document).ready(function () {
                 }
             }).done(function (response) {
                 if (response.success == true) {
-                    console.log('Удален из избранного');
+                    if (response.countFav < 1){
+                        $(document).find('.js-favoriteY').remove();
+                        $(document).find('.js-favoriteContent').prepend('<i class="fal fa-heart user-nav__icon js-favoriteN"></i>');
+                    }
+                    // console.log('Удален из избранного');
                 }
             });
             return false;
@@ -160,7 +164,14 @@ $(document).ready(function () {
                 }
 
                 if (response.success == true) {
-                    console.log('Добавлен в изранное');
+                    if (response.countFav > 0){
+                        $(document).find('.js-favoriteN').remove();
+                        // console.log($(document).find('.js-favoriteN').length);
+                        if ($(document).find('.js-favoriteY').length < 1) {
+                            $(document).find('.js-favoriteContent').prepend('<i class="fas fa-heart user-nav__icon js-favoriteY"></i>');
+                        }
+                    }
+                    // console.log('Добавлен в изранное');
                 }
             });
             return false;

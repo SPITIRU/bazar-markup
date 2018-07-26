@@ -98,17 +98,32 @@
 	position: relative;
 
 	&--fav{
-		&::before{
+
+		&::before, &::after {
 			content: '\f004';
+			@include vcenter;
+
+		}
+
+		&::before{
 			font-family: faL;
 			font-size: 25px;
-			@include vcenter;
+			z-index: 1;
+			color: #000;
 		}
+
+		&::after {
+			font-family: faS;
+			font-size: 22px;
+			color: #fff;
+		}
+
 		&:hover{
 			&::before{
 				color: $color-accent;
 			}
 		}
+
 		&.is-checked{
 			&::before{
 				font-family: faS;
@@ -117,3 +132,12 @@
 		}
 	}
 }//.button-icon
+
+.button-fav {
+	border: 0;
+	background-color: transparent;
+
+	.icon-heart {
+
+	}
+}
