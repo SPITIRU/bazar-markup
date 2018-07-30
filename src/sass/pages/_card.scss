@@ -738,7 +738,7 @@ $card-indent: $gutter * 2;
 		top: 99%;
 		left: 0;
 		width: 100%;
-		z-index: z(default);
+		z-index: 10;
 		@include bz-scroll;
 
 		@include respond-to(i5) {

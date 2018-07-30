@@ -338,8 +338,9 @@
 	} //.nav-main-dropdown__items
 
 	&__columns {
-		columns: auto 5;
-		display: block;
+		// columns: auto 5;
+		// display: block;
+		@include row-flex;
 
 		@include respond-to(sm) {
 			columns: auto 4;
@@ -352,9 +353,11 @@
 	} //.nav-main-dropdown__columns
 
 	&__item {
-		display: inline-block;
-		vertical-align: top;
+		// display: inline-block;
+		// vertical-align: top;
 		padding: 0 0 15px 0;
+		@include col;
+		@include size(2);
 
 		&.is-active {
 			.nav-dropdown--sub {
