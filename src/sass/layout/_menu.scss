@@ -358,6 +358,8 @@
 		padding: 0 0 15px 0;
 		@include col;
 		@include size(2);
+		@include size-md(3);
+		@include size-xs(12);
 
 		&.is-active {
 			.nav-dropdown--sub {
