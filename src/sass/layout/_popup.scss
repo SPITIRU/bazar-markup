@@ -343,6 +343,23 @@
 				max-width: 100%;
 			}
 		}
+
+		&__info-block {
+
+			.info-block__dropdown {
+				left: auto;
+				right: 0;
+
+				@include respond-to(xs) {
+					right: -42px;
+				}
+
+				@include respond-to(i7) {
+					right: 0;
+				}
+			}
+
+		}
 	}
 
 	.accordeon {
