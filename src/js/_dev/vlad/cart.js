@@ -53,6 +53,12 @@ $(document).ready(function () {
                     var typeProduct = _this.parent().parent().prev().find('.js-type-product').val();
                     var priceInfoBlock = $('.js-card__price');
                     var allPrice = arrData.count * arrData.price;
+                    console.log(typeProduct);
+
+                    // console.log(typeProduct);
+                    var htmlbuttonInfo = '<div class="info-block card__info-block">';
+                    htmlbuttonInfo += '<div class="info-block__dropdown">Цена зависит от кол-ва товара в заказе</div>';
+                    htmlbuttonInfo += '</div>';
 
 
                     if(typeProduct == 1 || typeProduct == 2 || typeProduct ==3 || typeProduct == 5 || typeProduct ==7){
@@ -182,6 +188,9 @@ $(document).ready(function () {
 
             var _this = $(this);
             var productID = $(this).data('id');
+            var priceMin = $(this).parent().parent().find('.priceAll').data('pricemin');
+            var priceMax = $(this).parent().parent().find('.priceAll').data('pricemax');
+            var priceOne = $(this).parent().parent().find('.priceOne').data('priceone');
 
             $.ajax({
                 method: 'POST',
@@ -196,6 +205,31 @@ $(document).ready(function () {
                     var currentCountBlock = $('.js-cart-count');
                     currentCountBlock.prev().show();
                     currentCountBlock.hide().val('');
+
+                    var typeProduct = _this.parent().parent().parent().prev().find('.js-type-product').val();
+                    // console.log(typeProduct);
+
+                    var htmlbuttonInfo = '<div class="info-block card__info-block">';
+                    htmlbuttonInfo += '<div class="info-block__dropdown">Цена зависит от кол-ва товара в заказе</div>';
+                    htmlbuttonInfo += '</div>';
+
+
+
+                    if(priceOne === 0){
+                        if(typeProduct == 1 || typeProduct == 2 || typeProduct ==3 || typeProduct == 5 || typeProduct ==7){
+                            var priceText =  number_format(priceMin, 2, '.', ' ') + ' - ' + number_format(priceMax, 2, '.', ' ') + " <span>руб/м</span>" + htmlbuttonInfo;
+                        }else{
+                            var priceText =  number_format(priceMin, 2, '.', ' ') + ' - ' + number_format(priceMax, 2, '.', ' ') + " <span>руб/шт</span>"  + htmlbuttonInfo;
+                        }
+                    }else{
+                        if(typeProduct == 1 || typeProduct == 2 || typeProduct ==3 || typeProduct == 5 || typeProduct ==7){
+                            var priceText =  number_format(priceOne, 2, '.', ' ') + " <span>руб/м</span>";
+                        }else{
+                            var priceText =  number_format(priceOne, 2, '.', ' ') + " <span>руб/шт</span>";
+                        }
+                    }
+                    var priceInfoBlock = $('.js-card__price');
+                    priceInfoBlock.html(priceText);
 
                     pushUp('Товар удален из корзины');
                     _this.parent().addClass('is-hidden');
@@ -364,6 +398,7 @@ function updateOrderInfo(newValue, prices, data, productID, _this) {
         var typeProduct = _this.parent().find('.js-type-product').val();
         var currentPriceInput = _this.parent().find('.js-current-price-int');
         var orderText = number_format(allPrice, 2, '.', ' ') + "<span>  руб.</span>";
+        console.log(typeProduct);
 
         orderInfoBlock.html(orderText);
         currentPriceInput.val(allPrice);
@@ -375,6 +410,7 @@ function updateOrderInfo(newValue, prices, data, productID, _this) {
         var dataFinalBlock = $('.js-arr-final-data');
         var minCount = JSON.parse(prices.val())[0]['count'];
         var typeProduct = $('.js-type-product').val();
+        // console.log('Здесь');
 
         if(typeProduct == 1 || typeProduct == 2 || typeProduct ==3 || typeProduct == 5 || typeProduct ==7){
             if (newValue >= minCount) {

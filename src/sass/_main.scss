@@ -366,7 +366,7 @@ body{
 		border-radius: $border-radius;
 		background-color: #ffebb7;
 		position: absolute;
-		left: 0;
+		right: 0;
 		top: 115%;
 		width: 100%;
 		z-index: 10;
@@ -379,11 +379,8 @@ body{
             left: 14px;
         }
         @include max-screen(425) {
-            min-width: 375px;
-        }
-        @include max-screen(375) {
-            min-width: 320px;
-            left: -10px;
+			min-width: 270px;
+			width: auto;
         }
     } //.info-block__dropdown
 } //.info-block

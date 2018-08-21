@@ -757,8 +757,9 @@ function sendAjax() {
 function checkVisibility(el){
     var dTop = $(window).scrollTop(),
         dBot = dTop + $(window).height(),
-        elTop = $(el).offset().top,
+        elTop = $(el).offset().top - 250,
         elBot = elTop + $(el).height();
+    // console.log(elTop);
     return ((elTop <= dBot) && (elTop >= dTop));
 }
 

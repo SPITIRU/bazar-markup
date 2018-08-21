@@ -345,13 +345,15 @@
 		}
 
 		&__info-block {
+			position: static;
 
 			.info-block__dropdown {
 				left: auto;
 				right: 0;
 
 				@include respond-to(xs) {
-					right: -42px;
+					right: -5px;
+					top: 100%;
 				}
 
 				@include respond-to(i7) {
@@ -359,6 +361,12 @@
 				}
 			}
 
+		}
+	}
+
+	.price {
+		&__wrap {
+			position: relative;
 		}
 	}
 

@@ -185,11 +185,11 @@ $card-indent: $gutter * 2;
 
 		@include respond-to(xs) {
 			margin-top: 7px;
+			position: static;
 
 			.info-block__dropdown {
-				left: auto;
 				right: 0;
-				top: 140%;
+				top: 100%;
 			}
 		}
 	} //.card__info-block
@@ -522,6 +522,14 @@ $card-indent: $gutter * 2;
 			padding: 0 10px 10px;
 			p {
 				font-size: 15px;
+			}
+		}
+	}
+
+	.price {
+		&__wrap {
+			@include respond-to(xs) {
+				position: relative;
 			}
 		}
 	}
