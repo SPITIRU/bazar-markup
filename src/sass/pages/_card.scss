@@ -9,57 +9,57 @@ $card-indent: $gutter * 2;
 
 	&__top-line {
 		margin-bottom: $gutter;
-		padding-top: 20px;
+		padding-top  : 20px;
 		@extend %flexCenter;
 
 		@include respond-to(xs) {
-			margin: $gutter/2 0;
+			margin     : $gutter/2 0;
 			padding-top: 0;
 		}
 	} //.card__top-line
 
 	&__wrap {
 		margin-bottom: $card-indent * 2;
-		display: flex;
+		display      : flex;
 
 		@include respond-to(xs) {
 			margin-bottom: $card-indent * 1.5;
-			flex-wrap: wrap;
+			flex-wrap    : wrap;
 		}
 	} //.card__wrap
 
 	&__image {
-		width: 40%;
+		width       : 40%;
 		margin-right: $gutter * 3;
-		position: relative;
+		position    : relative;
 
 		@include respond-to(sm) {
-			width: calc(50% - 40px);
+			width       : calc(50% - 40px);
 			margin-right: $gutter * 2;
 		}
 
 		@include respond-to(xs) {
-			width: 100%;
-			margin-right: 0;
+			width        : 100%;
+			margin-right : 0;
 			margin-bottom: $card-indent/2;
 		}
 	} //.card__image
 
 	&__badge {
 		position: absolute;
-		top: 16px;
-		right: -16px;
-		z-index: 2;
+		top     : 16px;
+		right   : -16px;
+		z-index : 2;
 		@include respond-to(xs) {
-			top: auto;
+			top   : auto;
 			bottom: -4px;
-			left: 50%;
-			right: auto;
+			left  : 50%;
+			right : auto;
 			@include trfX(-50%);
 			flex-direction: row;
 			.badge {
 				& + .badge {
-					margin-top: 0;
+					margin-top : 0;
 					margin-left: 10px;
 				}
 			}
@@ -67,6 +67,7 @@ $card-indent: $gutter * 2;
 	} //.card__badge
 
 	&__slider {
+
 		.slick-slide {
 			margin: 0;
 		}
@@ -75,26 +76,26 @@ $card-indent: $gutter * 2;
 			bottom: -20px;
 			li {
 				button {
-					margin: 0 2px;
-					width: 6px;
-					height: 6px;
-					padding: 0;
+					margin          : 0 2px;
+					width           : 6px;
+					height          : 6px;
+					padding         : 0;
 					background-color: lighten($gray, 15%);
-					border-radius: 50%;
+					border-radius   : 50%;
 
 					&::before {
 						display: none;
 					}
 
 					&:hover {
-						width: 8px;
-						height: 8px;
+						width     : 8px;
+						height    : 8px;
 						background: $color-accent;
 					}
 				}
 				&.slick-active button {
-					width: 8px;
-					height: 8px;
+					width     : 8px;
+					height    : 8px;
 					background: $color-accent;
 					transition: initial;
 				}
@@ -106,15 +107,15 @@ $card-indent: $gutter * 2;
 				display: none;
 			}
 			.slick-slide {
-				margin: 0 3px;
-				cursor: pointer;
-				outline: none;
+				margin  : 0 3px;
+				cursor  : pointer;
+				outline : none;
 				position: relative;
-				&::after {
-					content: "";
-					display: none;
-					width: 100%;
-					height: 2px;
+				&:after {
+					content         : "";
+					display         : none;
+					width           : 100%;
+					height          : 2px;
 					background-color: $color-accent;
 				}
 				&.slick-current {
@@ -139,8 +140,8 @@ $card-indent: $gutter * 2;
 	} //.card__desc
 
 	&__title {
-		display: block;
-		margin: $gutter * 1.5 0;
+		display  : block;
+		margin   : $gutter * 1.5 0;
 		font-size: 30px;
 
 		@include respond-to(sm) {
@@ -148,8 +149,8 @@ $card-indent: $gutter * 2;
 		}
 
 		@include respond-to(xs) {
-			margin: $gutter/2 0;
-			font-size: 23px;
+			margin    : $gutter/2 0;
+			font-size : 23px;
 			text-align: left;
 		}
 	} //.card__title
@@ -159,82 +160,82 @@ $card-indent: $gutter * 2;
 
 		@include respond-to(xs) {
 			max-width: 100%;
-			margin: 0 0 $gutter * 1.5;
+			margin   : 0 0 $gutter * 1.5;
 		}
 	} //.card__item-select
 
 	&__price {
 		font-family: $f2-bold;
-		font-size: 23px;
+		font-size  : 23px;
 
 		span {
 			font-family: $f-light;
-			font-size: 15px;
+			font-size  : 15px;
 		}
 
 		small {
 			margin-left: 5px;
-			font-size: 15px;
-			color: $color-danger;
+			font-size  : 15px;
+			color      : $color-danger;
 		}
 	} //.card__price
 
 	&__info-block {
 		margin-left: 10px;
-		margin-top: 10px;
+		margin-top : 10px;
 
 		@include respond-to(xs) {
 			margin-top: 7px;
-			position: static;
+			position  : static;
 
 			.info-block__dropdown {
 				right: 0;
-				top: 100%;
+				top  : 100%;
 			}
 		}
 	} //.card__info-block
 
 	&__btn {
 		font-size: 16px;
-		position: relative;
+		position : relative;
 
 		&--back {
 			margin-bottom: 0;
-			margin-left: auto;
-			padding-left: 15px;
-			font-family: $f-light;
-			font-size: 14px;
-			color: $color-text;
+			margin-left  : auto;
+			padding-left : 15px;
+			font-family  : $f-light;
+			font-size    : 14px;
+			color        : $color-text;
 
 			@include respond-to(xs) {
 				display: none;
 			}
 
-			&::before,
-			&::after {
-				content: "";
+			&:before,
+			&:after {
+				content : "";
 				position: absolute;
-				top: 50%;
+				top     : 50%;
 			}
 
 			&::before {
-				border: 1px solid #b7b7b8;
-				border-left: 0 none;
-				border-radius: 0 5px 5px 0;
+				border         : 1px solid #b7b7b8;
+				border-left    : 0 none;
+				border-radius  : 0 5px 5px 0;
 				background-clip: padding-box;
-				height: 8px;
-				left: 0;
-				margin: -4px 0 0;
-				width: 10px;
+				height         : 8px;
+				left           : 0;
+				margin         : -4px 0 0;
+				width          : 10px;
 			}
 			&::after {
-				transform: rotate(45deg);
+				transform    : rotate(45deg);
 				border-bottom: 1px solid #b7b7b8;
-				border-left: 1px solid #b7b7b8;
-				height: 5px;
-				left: 1px;
-				margin: -6px 0 0;
-				width: 5px;
+				border-left  : 1px solid #b7b7b8;
+				height       : 5px;
+				left         : 1px;
+				margin       : -6px 0 0;
+				width        : 5px;
 			}
 
 			&.button--accent {
@@ -242,22 +243,22 @@ $card-indent: $gutter * 2;
 
 			&.button--accent {
 				display: inline-block;
-				margin: 15px auto;
-				color: $color-accent;
+				margin : 15px auto;
+				color  : $color-accent;
 
 				@include respond-to(xs) {
 					margin: $card-indent/2 auto 0;
 				}
 
-				&::before,
-				&::after {
-					margin-left: 15px;
+				&:before,
+				&:after {
+					margin-left : 15px;
 					border-color: $color-accent;
 					@include tr;
 				}
 				&:hover {
-					&::before,
-					&::after {
+					&:before,
+					&:after {
 						border-color: #fff;
 					}
 				}
@@ -266,25 +267,25 @@ $card-indent: $gutter * 2;
 
 		&--cart {
 			padding-right: 60px;
-			padding-left: 20px;
+			padding-left : 20px;
 			@include btnBig;
 
 			span {
-				overflow: hidden;
+				overflow        : hidden;
 				background-color: $gray--darken;
-				border-radius: 0 $border-radius $border-radius 0;
-				position: absolute;
-				top: 0;
-				right: 0;
-				display: block;
-				width: 45px;
-				height: 45px;
+				border-radius   : 0 $border-radius $border-radius 0;
+				position        : absolute;
+				top             : 0;
+				right           : 0;
+				display         : block;
+				width           : 45px;
+				height          : 45px;
 
-				&::after,
-				&::before {
+				&:after,
+				&:before {
 					font-family: fal;
-					font-size: 18px;
-					color: #fff;
+					font-size  : 18px;
+					color      : #fff;
 					@include vy;
 					@include tr();
 				}
@@ -292,18 +293,18 @@ $card-indent: $gutter * 2;
 				&:first-child {
 					&::after {
 						content: "\f07a";
-						right: 13px;
+						right  : 13px;
 					}
 					&::before {
 						content: "\f218";
-						left: -100px;
+						left   : -100px;
 					}
 				}
 				&:last-child {
 					display: none;
-					&::after {
+					&:after {
 						content: "\f2ed";
-						right: 14px;
+						right  : 14px;
 					}
 				}
 			}
@@ -320,7 +321,7 @@ $card-indent: $gutter * 2;
 				}
 			}
 			&.is-checked {
-				color: #fff;
+				color           : #fff;
 				background-color: $color-main;
 				span {
 					&:first-child {
@@ -334,29 +335,29 @@ $card-indent: $gutter * 2;
 		} //.card__btn--cart
 
 		&--fav {
-			width: 45px;
-			height: 45px;
-			border: 1px solid $color-border--light;
+			width        : 45px;
+			height       : 45px;
+			border       : 1px solid $color-border--light;
 			border-radius: 50%;
-			&::before {
+			&:before {
 				font-size: 21px;
 			}
 		} //.card__btn--fav
 	} //.card__btn
 
 	&__back {
-		display: block;
-		width: 100%;
-		padding: 5px 0;
+		display       : block;
+		width         : 100%;
+		padding       : 5px 0;
 		text-transform: uppercase;
-		font-family: $f2-bold;
-		font-size: 16px;
-		text-align: center;
-		position: relative;
-		&::before {
-			content: "\f104";
+		font-family   : $f2-bold;
+		font-size     : 16px;
+		text-align    : center;
+		position      : relative;
+		&:before {
+			content    : "\f104";
 			font-family: far;
-			font-size: 20px;
+			font-size  : 20px;
 			@include vy;
 			left: 0;
 		}
@@ -383,8 +384,8 @@ $card-indent: $gutter * 2;
 		}
 
 		div {
-			width: 45px;
-			height: 45px;
+			width      : 45px;
+			height     : 45px;
 			margin-left: 30px;
 
 			@include respond-to(xs) {
@@ -394,9 +395,9 @@ $card-indent: $gutter * 2;
 	}
 
 	&__order-info {
-		width: 100%;
+		width     : 100%;
 		margin-top: 5px;
-		font-size: 13px;
+		font-size : 13px;
 		span {
 			font-family: $f2-bold;
 		}
@@ -427,7 +428,7 @@ $card-indent: $gutter * 2;
 		.tab {
 			&__titles {
 				padding-bottom: 1px;
-				overflow-x: auto;
+				overflow-x    : auto;
 
 				@include respond-to(xs) {
 					width: 100%;
@@ -453,18 +454,18 @@ $card-indent: $gutter * 2;
 			}
 
 			&__link {
-				display: inline-flex;
-				flex-direction: column;
-				align-items: center;
+				display        : inline-flex;
+				flex-direction : column;
+				align-items    : center;
 				justify-content: center;
 			}
 		}
 
 		.bz-slider {
 			&__arrow {
-				height: 27px;
+				height     : 27px;
 				line-height: 1;
-				top: 50px;
+				top        : 50px;
 
 				@include respond-to(md) {
 					top: 58px;
@@ -513,8 +514,8 @@ $card-indent: $gutter * 2;
 		}
 
 		&__title {
-			padding: 12px 0 12px 10px;
-			font-family: $f;
+			padding       : 12px 0 12px 10px;
+			font-family   : $f;
 			text-transform: uppercase;
 		}
 
@@ -541,21 +542,21 @@ $card-indent: $gutter * 2;
 	} //.related__img
 
 	&__title {
-		display: block;
-		font-family: $f2-bold;
-		font-weight: 500;
-		text-align: center;
+		display       : block;
+		font-family   : $f2-bold;
+		font-weight   : 500;
+		text-align    : center;
 		text-transform: uppercase;
-		font-size: 12px;
+		font-size     : 12px;
 		span {
 			display: block;
 		}
 	} //.related__title
 
 	&__price {
-		display: block;
+		display   : block;
 		text-align: center;
-		font-size: 12px;
+		font-size : 12px;
 	} //.related__price
 
 	.tab {
@@ -563,15 +564,15 @@ $card-indent: $gutter * 2;
 			&:not(:last-child) {
 				.tab__icon_wrap {
 					position: relative;
-					&::after {
-						content: "";
-						display: block;
-						width: 100%;
-						height: 1px;
+					&:after {
+						content         : "";
+						display         : block;
+						width           : 100%;
+						height          : 1px;
 						background-color: $gray--dark;
-						position: absolute;
-						top: 30px;
-						right: -58px;
+						position        : absolute;
+						top             : 30px;
+						right           : -58px;
 					}
 				}
 			}
@@ -580,13 +581,13 @@ $card-indent: $gutter * 2;
 } //.related
 
 .item-select {
-	height: 36px;
-	line-height: 34px;
-	margin-top: 20px;
-	border: 1px solid $color-border;
+	height       : 36px;
+	line-height  : 34px;
+	margin-top   : 20px;
+	border       : 1px solid $color-border;
 	border-radius: $border-radius;
-	cursor: pointer;
-	outline: none;
+	cursor       : pointer;
+	outline      : none;
 
 	@include respond-to(i7) {
 		margin-top: 30px;
@@ -623,10 +624,10 @@ $card-indent: $gutter * 2;
 		.item-select {
 			&__control {
 				&--minus {
-					color: #fff;
+					color           : #fff;
 					background-color: $color-accent;
-					border-color: $color-accent;
-					&::before {
+					border-color    : $color-accent;
+					&:before {
 						content: "\f00d";
 					}
 				}
@@ -635,20 +636,20 @@ $card-indent: $gutter * 2;
 	}
 
 	&__error {
-		display: none;
-		font-size: 13px;
+		display    : none;
+		font-size  : 13px;
 		line-height: 1;
-		text-align: center;
-		color: $gray;
-		position: absolute;
-		bottom: -17px;
-		left: 0;
-		right: 0;
+		text-align : center;
+		color      : $gray;
+		position   : absolute;
+		bottom     : -17px;
+		left       : 0;
+		right      : 0;
 	} //.item-select__error
 
 	&__group {
 		max-width: 375px;
-		position: relative;
+		position : relative;
 		@extend %flexCenter;
 		@include respond-to(i7) {
 			flex-wrap: wrap;
@@ -656,7 +657,7 @@ $card-indent: $gutter * 2;
 		.item-select {
 			width: 50%;
 			@include respond-to(i7) {
-				width: 100%;
+				width   : 100%;
 				position: relative;
 			}
 			& + .item-select {
@@ -670,24 +671,24 @@ $card-indent: $gutter * 2;
 
 	&__caption {
 		font-family: $f;
-		color: $gray--dark;
-		font-size: 13px;
-		position: absolute;
-		top: -10px;
+		color      : $gray--dark;
+		font-size  : 13px;
+		position   : absolute;
+		top        : -10px;
 		@include respond-to(i7) {
 			top: -30px;
 		}
 	} //.item-select__caption
 
 	&__value {
-		height: 100%;
-		padding: 0 30px;
+		height  : 100%;
+		padding : 0 30px;
 		position: relative;
-		&::after {
-			content: "\f107";
+		&:after {
+			content    : "\f107";
 			font-family: fal;
-			font-size: 18px;
-			color: $gray;
+			font-size  : 18px;
+			color      : $gray;
 			@include vy;
 			right: 8px;
 			@include tr;
@@ -695,35 +696,35 @@ $card-indent: $gutter * 2;
 	} //.item-select__value
 
 	&__input {
-		height: 36px;
-		padding: 0 10px;
-		font-size: 14px;
-		text-align: center;
-		border-top: 1px solid $color-border;
-		border-bottom: 1px solid $color-border;
-		border-left-color: transparent;
+		height            : 36px;
+		padding           : 0 10px;
+		font-size         : 14px;
+		text-align        : center;
+		border-top        : 1px solid $color-border;
+		border-bottom     : 1px solid $color-border;
+		border-left-color : transparent;
 		border-right-color: transparent;
 		&:focus {
-			font-size: 14px;
-			border-left-color: transparent;
+			font-size         : 14px;
+			border-left-color : transparent;
 			border-right-color: transparent;
 		}
 	} //.item-select__input
 
 	&__color {
-		display: block;
-		width: 15px;
-		height: 15px;
+		display      : block;
+		width        : 15px;
+		height       : 15px;
 		border-radius: 50%;
 		@include vy;
 		left: 8px;
 	} //.item-select__color
 
 	&__title {
-		display: block;
-		width: 100%;
+		display    : block;
+		width      : 100%;
 		font-family: $f;
-		font-size: 14px;
+		font-size  : 14px;
 		@include text-overflow;
 
 		&_wrap {
@@ -733,17 +734,17 @@ $card-indent: $gutter * 2;
 
 		&_desc {
 			font-family: $f;
-			font-size: 13px;
+			font-size  : 13px;
 		}
 	} //.item-select__title
 
 	&__subtitle {
 		font-family: $f;
-		font-size: 13px;
+		font-size  : 13px;
 
 		&.stock {
 			font-family: $f-light;
-			color: #20a837;
+			color      : #20a837;
 		}
 
 		&.ends {
@@ -754,29 +755,29 @@ $card-indent: $gutter * 2;
 	} //.item-select__title
 
 	&__list {
-		display: none;
-		max-height: 211px;
+		display         : none;
+		max-height      : 211px;
 		background-color: #fff;
-		border: 1px solid $color-border;
-		border-radius: 0 0 $border-radius $border-radius;
-		position: absolute;
-		top: 99%;
-		left: 0;
-		width: 100%;
-		z-index: 10;
+		border          : 1px solid $color-border;
+		border-radius   : 0 0 $border-radius $border-radius;
+		position        : absolute;
+		top             : 99%;
+		left            : 0;
+		width           : 100%;
+		z-index         : 10;
 		@include bz-scroll;
 
 		@include respond-to(i5) {
-			left: -1px;
+			left : -1px;
 			width: auto;
 			right: -1px;
 		}
 	} //.item-select__list
 
 	&__item {
-		padding: 0 15px 0 30px;
+		padding      : 0 15px 0 30px;
 		border-bottom: 1px solid $color-border--light;
-		position: relative;
+		position     : relative;
 		@extend %flexCenter;
 
 		&:last-child {
@@ -784,7 +785,7 @@ $card-indent: $gutter * 2;
 		}
 
 		&:hover {
-			color: $color-text;
+			color           : $color-text;
 			background-color: $color-bg--lighten;
 		}
 
@@ -799,7 +800,7 @@ $card-indent: $gutter * 2;
 					@include nosel;
 				}
 				&__subtitle {
-					width: 170px;
+					width    : 170px;
 					font-size: 14px;
 				}
 			}
@@ -808,7 +809,7 @@ $card-indent: $gutter * 2;
 		.item-select {
 			&__title {
 				width: auto;
-				flex: 1;
+				flex : 1;
 
 				&_wrap {
 					.item-select__title {
@@ -820,33 +821,33 @@ $card-indent: $gutter * 2;
 	} //.item-select__item
 
 	&__control {
-		display: inline-block;
-		width: 36px;
-		height: 36px;
+		display   : inline-block;
+		width     : 36px;
+		height    : 36px;
 		text-align: center;
-		border: 1px solid $color-border;
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		&::before {
+		border    : 1px solid $color-border;
+		position  : absolute;
+		top       : 0;
+		bottom    : 0;
+		&:before {
 			font-family: fal;
 		}
 		&:hover {
-			color: #fff;
+			color           : #fff;
 			background-color: $color-accent;
-			border-color: $color-accent;
+			border-color    : $color-accent;
 		}
 		&--minus {
 			border-radius: $border-radius 0 0 $border-radius;
-			left: 0;
-			&::before {
+			left         : 0;
+			&:before {
 				content: "\f068";
 			}
 		}
 		&--plus {
 			border-radius: 0 $border-radius $border-radius 0;
-			right: 0;
-			&::before {
+			right        : 0;
+			&:before {
 				content: "\f067";
 			}
 		}
@@ -857,35 +858,35 @@ $card-indent: $gutter * 2;
 		.item-select {
 			&__list {
 				@include respond-to(i5) {
-					left: 0;
+					left : 0;
 					right: 0;
-					top: 97%;
+					top  : 97%;
 				}
 			}
 			&__value {
-				padding: 0 33px;
+				padding   : 0 33px;
 				text-align: center;
-				&::after {
+				&:after {
 					right: 45px;
 				}
 				.item-select__title {
-					padding: 0 10px;
-					border-top: 1px solid $color-border;
+					padding      : 0 10px;
+					border-top   : 1px solid $color-border;
 					border-bottom: 1px solid $color-border;
 				}
 			}
 			&__title {
-				padding: 0 7px;
+				padding    : 0 7px;
 				font-family: $f;
 				span {
 					font-size: 12px;
 				}
 			}
 			&__subtitle {
-				width: 170px;
+				width      : 170px;
 				font-family: $f2-bold;
-				font-size: 14px;
-				position: relative;
+				font-size  : 14px;
+				position   : relative;
 
 				@include respond-to(i5) {
 					width: 130px;
@@ -893,9 +894,9 @@ $card-indent: $gutter * 2;
 
 				span {
 					font-size: 13px;
-					color: $color-danger;
-					position: relative;
-					top: -8px;
+					color    : $color-danger;
+					position : relative;
+					top      : -8px;
 				}
 			}
 			&__item {
@@ -917,14 +918,14 @@ $card-indent: $gutter * 2;
 
 	&__item {
 		margin-bottom: 4px;
-		display: flex;
+		display      : flex;
 	} //.bz-table__item
 
 	&__subitem {
 		min-width: 285px;
-		width: 215px;
+		width    : 215px;
 		font-size: 15px;
-		color: $color-text;
+		color    : $color-text;
 		@include text-overflow;
 
 		@include respond-to(md) {
@@ -939,8 +940,8 @@ $card-indent: $gutter * 2;
 		}
 
 		span {
-			font-family: $f-bold;
-			margin-right: 5px;
+			font-family     : $f-bold;
+			margin-right    : 5px;
 			background-color: #fff;
 		}
 	} //.bz-table__subitem
@@ -949,9 +950,9 @@ $card-indent: $gutter * 2;
 		.bz-table {
 			&__subitem {
 				&:first-child {
-					background-image: url(../img/general/dot.png);
+					background-image   : url(../img/general/dot.png);
 					background-position: 0px 14px;
-					background-repeat: repeat-x;
+					background-repeat  : repeat-x;
 				}
 			}
 		}
@@ -963,8 +964,8 @@ $card-indent: $gutter * 2;
 				flex-direction: row;
 			}
 			&__item {
-				min-width: 215px;
-				width: 215px;
+				min-width     : 215px;
+				width         : 215px;
 				flex-direction: column;
 			}
 			&__subitem {
@@ -975,3 +976,15 @@ $card-indent: $gutter * 2;
 		}
 	} //.bz-table--column
 } //.bz-table
+
+.zoom-in {
+	&:hover {
+		cursor: url(../../icons/png/search-plus-light--white.png), zoom-in;
+	}
+}
+
+.zoom-out {
+	&:hover {
+		cursor: url(../../icons/png/search-minus-light--white.png), zoom-out;
+	}
+}

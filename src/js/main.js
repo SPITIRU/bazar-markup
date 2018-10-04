@@ -1,4 +1,4 @@
-$(window).on('load', function() {
+$(window).on('load', function () {
     if (
         /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)
     ) {
@@ -21,7 +21,7 @@ $(window).on('load', function() {
             cursorborder: 'none',
             cursorborderradius: '0'
         });
-        scrollBar.mouseover(function() {
+        scrollBar.mouseover(function () {
             $(this)
                 .getNiceScroll()
                 .resize();
@@ -29,9 +29,9 @@ $(window).on('load', function() {
     }
 });
 
-$(document).ready(function() {
+$(document).ready(function () {
     //Bootsstrap lightbox gallary
-    $(document).on('click', '[data-toggle="lightbox"]', function(e) {
+    $(document).on('click', '[data-toggle="lightbox"]', function (e) {
         e.preventDefault();
         $(this).ekkoLightbox();
     });
@@ -62,10 +62,10 @@ $(document).ready(function() {
             } else {
                 var $opt = $(
                     '<span class="sorting-icon sorting-icon--' +
-                        optimage +
-                        '">' +
-                        $(opt.element).text() +
-                        '</span>'
+                    optimage +
+                    '">' +
+                    $(opt.element).text() +
+                    '</span>'
                 );
                 return $opt;
             }
@@ -85,7 +85,7 @@ $(document).ready(function() {
     }
 
     //Change form title
-    $(document).on('click', '.js-form-title', function() {
+    $(document).on('click', '.js-form-title', function () {
         var text = $(this).data('title');
 
         $('.js-form-title').removeClass('is-active');
@@ -103,19 +103,23 @@ $(document).ready(function() {
     $(window).resize(mainOffset);
 
     //Click event to scroll to top
-    $('.js-go-top').on('click', function(e) {
+    $('.js-go-top').on('click', function (e) {
         e.preventDefault();
-        $('html, body').animate({ scrollTop: 0 }, 800);
+        $('html, body').animate({
+            scrollTop: 0
+        }, 800);
     });
 
     //Click event to scroll to section whith id like href
-    $('.js-goto').click(function() {
+    $('.js-goto').click(function () {
         var elementClick = $(this).attr('href');
         var destination = $(elementClick).offset().top;
-        $('html, body').animate({ scrollTop: destination - 90 + 'px' }, 300);
+        $('html, body').animate({
+            scrollTop: destination - 90 + 'px'
+        }, 300);
         return false;
     });
-    $(window).scroll(function() {
+    $(window).scroll(function () {
         if ($(this).scrollTop() > $(this).height()) {
             $('.js-go-top').addClass('is-visible');
             if ($('.main').hasClass('catalog') && $(window).width() <= 768) {
@@ -130,7 +134,7 @@ $(document).ready(function() {
     });
 
     //Stop drag
-    $('img').on('dragstart', function(event) {
+    $('img').on('dragstart', function (event) {
         event.preventDefault();
     });
 
@@ -146,7 +150,7 @@ $(document).ready(function() {
     }
 
     //Hamburger btn
-    $('.js-hamburger').on('click', function() {
+    $('.js-hamburger').on('click', function () {
         $(this).toggleClass('on');
         $('.js-nav-main').toggleClass('is-open');
         $('.js-overlay').toggleClass('is-active');
@@ -155,7 +159,7 @@ $(document).ready(function() {
         return false;
     });
     //When click outside
-    $(document).click(function(e) {
+    $(document).click(function (e) {
         if (
             $(e.target).closest(
                 '.js-hamburger, .js-nav-main, .js-catalog-filter--show'
@@ -172,7 +176,7 @@ $(document).ready(function() {
     if ($(window).width() <= 768) {
         //Mobile Nav
         $('.js-nav-main').prependTo('.wrapper ');
-        $(document).on('click', '.js-main-nav-link--forward', function(e) {
+        $(document).on('click', '.js-main-nav-link--forward', function (e) {
             e.preventDefault();
             let navItem = $(this).closest('.nav-main__item');
             let navItemDropdown = $(this).closest('.nav-dropdown__item');
@@ -225,7 +229,7 @@ $(document).ready(function() {
         var search = $('.js-search');
         var searchBtnShow = $('.js-mobile-search--show');
 
-        searchBtnShow.on('click', function() {
+        searchBtnShow.on('click', function () {
             if (search.hasClass('is-visible')) {
                 search.removeClass('is-visible');
                 search.find('.js-search-input').val('');
@@ -236,10 +240,10 @@ $(document).ready(function() {
         });
 
         //Mobile Search when click outside
-        $(document).click(function(event) {
+        $(document).click(function (event) {
             if (
                 $(event.target).closest('.js-mobile-search--show, .js-search')
-                    .length
+                .length
             )
                 return;
             search.removeClass('is-visible');
@@ -253,7 +257,7 @@ $(document).ready(function() {
             .css('height', 85)
             .insertAfter('.header-main')
             .hide();
-        $(window).scroll(function() {
+        $(window).scroll(function () {
             if ($(this).scrollTop() >= $('.header__top-line').outerHeight()) {
                 headerMain.addClass('header--fixed');
                 headerMainClone.show();
@@ -265,7 +269,7 @@ $(document).ready(function() {
     }
 
     //Show Password
-    $('.js-input-password--show').on('click', function() {
+    $('.js-input-password--show').on('click', function () {
         $(this).css('display', 'none');
         $(this)
             .next()
@@ -276,7 +280,7 @@ $(document).ready(function() {
             .attr('type', 'text');
     });
     //Hide Password
-    $('.js-input-password--hide').on('click', function() {
+    $('.js-input-password--hide').on('click', function () {
         $(this).css('display', 'none');
         $(this)
             .prev()
@@ -288,7 +292,7 @@ $(document).ready(function() {
     });
 
     //btn favorite
-    $('.js-button-icon--fav').on('click', function(e) {
+    $('.js-button-icon--fav').on('click', function (e) {
         if (!$(this).hasClass('is-checked')) {
             $(this).addClass('is-checked');
         } else {
@@ -298,38 +302,38 @@ $(document).ready(function() {
     });
 
     /*
-    * Catalog.js
-    */
+     * Catalog.js
+     */
 
     //=include partials/catalog.js
 
     /*
-    * Components.js
-    */
+     * Components.js
+     */
 
     //=include partials/components.js
 
     /*
-    *Lk.js
-    */
+     *Lk.js
+     */
 
     //=include partials/lk.js
 });
 
 /*
-* Slider.js
-*/
+ * Slider.js
+ */
 
 //=include partials/slider.js
 
 /*
-* Card.js
-*/
+ * Card.js
+ */
 
 //=include partials/card.js
 
 /*
-* Functions.js
-*/
+ * Functions.js
+ */
 
 //=include partials/functions.js

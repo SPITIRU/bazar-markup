@@ -20,3 +20,5 @@
 
 //=include assets/svg-sprite.js
 //=include ../libs/svg4everybody.js
+
+//=include ../libs/easyZoom/easyzoom.js

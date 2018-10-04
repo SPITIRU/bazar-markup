@@ -6,37 +6,38 @@
 @import "../libs/modal/modal";
 @import "../libs/fancybox/jquery.fancybox";
 @import "../libs/smart-grid";
+@import "../libs/easyZoom/easyzoom";
 
 //noUiSlider
 .noUi-horizontal {
 	height: 4px;
 	.noUi-handle {
-		width: 8px;
-		height: 8px;
-		top: -3px;
-		left: -5px;
+		width        : 8px;
+		height       : 8px;
+		top          : -3px;
+		left         : -5px;
 		border-radius: 50%;
-		background: $color-main;
+		background   : $color-main;
 		@include max-screen(480) {
-			width: 10px;
+			width : 10px;
 			height: 10px;
 		}
 	}
 }
 
 .noUi-handle {
-	border: none;
+	border       : none;
 	border-radius: 0;
-	box-shadow: none;
-	position: relative;
-	cursor: pointer;
-	outline: none;
-	&::after {
-		width: 22px;
-		height: 22px;
-		box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-		border: 1px solid #c8c8c8;
-		border-radius: 50%;
+	box-shadow   : none;
+	position     : relative;
+	cursor       : pointer;
+	outline      : none;
+	&:after {
+		width           : 22px;
+		height          : 22px;
+		box-shadow      : 3px 3px 10px rgba(0, 0, 0, 0.2);
+		border          : 1px solid #c8c8c8;
+		border-radius   : 50%;
 		background-color: #efefef;
 		@include vcenter;
 		@include tr(0.5s);
@@ -48,10 +49,10 @@
 
 .noUi-connect,
 .noUi-target {
-	background: $color-main;
-	border: none;
+	background   : $color-main;
+	border       : none;
 	border-radius: 0;
-	box-shadow: none;
+	box-shadow   : none;
 }
 
 .noUi-base {
@@ -70,7 +71,7 @@
 
 .select2-dropdown {
 	border-radius: $border-radius;
-	z-index: 150;
+	z-index      : 150;
 
 	.select2-search__field {
 		@extend %textLight;
@@ -79,11 +80,11 @@
 }
 
 .select2-container--default .select2-selection--single {
-	height: 40px;
-	line-height: 40px;
+	height       : 40px;
+	line-height  : 40px;
 	border-radius: $border-radius;
-	border-color: $color-border--light;
-	outline: none;
+	border-color : $color-border--light;
+	outline      : none;
 }
 
 .select2-container--default
@@ -96,28 +97,28 @@
 	.select2-selection--single
 	.select2-selection__arrow {
 	height: auto;
-	width: auto;
-	right: 10px;
-	top: 0;
+	width : auto;
+	right : 10px;
+	top   : 0;
 }
 
 .select2-container--default
 	.select2-selection--single
 	.select2-selection__arrow
 	b {
-	border: 0;
+	border     : 0;
 	margin-left: auto;
-	margin-top: auto;
-	left: auto;
-	top: auto;
-	position: absolute;
-	top: -2px;
-	right: 10px;
-	&::before {
-		content: "\f107";
+	margin-top : auto;
+	left       : auto;
+	top        : auto;
+	position   : absolute;
+	top        : -2px;
+	right      : 10px;
+	&:before {
+		content    : "\f107";
 		font-family: fal;
-		font-size: 14px;
-		color: $gray--dark;
+		font-size  : 14px;
+		color      : $gray--dark;
 	}
 }
 .select2-container--default.select2-container--open
@@ -129,18 +130,18 @@
 	}
 }
 .select2-container--open .select2-dropdown--below {
-	border: 0;
+	border    : 0;
 	box-shadow: 0 7px 12px 0 rgba(0, 0, 0, 0.2);
-	z-index: 98;
+	z-index   : 98;
 }
 
 .select2-results {
 	&__option {
-		height: 32px;
-		line-height: 20px;
+		height      : 32px;
+		line-height : 20px;
 		padding-left: 10px;
-		font-family: oswald-500, sans-serif;
-		font-size: 14px;
+		font-family : oswald-500, sans-serif;
+		font-size   : 14px;
 		@include text-overflow;
 		position: relative;
 		.metro-icon {
@@ -164,23 +165,23 @@
 	border-color: $color-bg--dark;
 }
 .select2-container .select2-selection--single .select2-selection__rendered {
-	padding: 0 30px 0 10px;
+	padding    : 0 30px 0 10px;
 	font-family: oswald-500, sans-serif;
-	font-size: 14px;
+	font-size  : 14px;
 }
 .select2-container--default
 	.select2-results__option--highlighted[aria-selected] {
-	color: #000;
+	color           : #000;
 	background-color: $color-bg--light;
 }
 .select2-container--default .select2-results__option[aria-selected="true"] {
-	color: $color-accent;
+	color           : $color-accent;
 	background-color: transparent;
 }
 
 .select2-container--default .select2-selection--multiple,
 .select2-container--default .select2-selection--single {
-	height: 40px;
+	height      : 40px;
 	border-color: $gray--lighten;
 }
 .select2-container--default.select2-container--focus
@@ -189,8 +190,8 @@
 }
 
 .select2-container--default .select2-selection--multiple {
-	height: auto;
-	line-height: 1;
+	height       : auto;
+	line-height  : 1;
 	border-radius: $border-radius;
 }
 
@@ -201,47 +202,59 @@
 .select2-container--default
 	.select2-selection--multiple
 	.select2-selection__rendered {
-	height: auto;
-	max-height: 170px;
+	height     : auto;
+	max-height : 170px;
 	line-height: 1;
-	padding: 0 10px;
+	padding    : 0 10px;
 	@include bz-scroll;
 }
 
 .select2-container--default .select2-search--inline .select2-search__field {
-	height: 30px;
+	height     : 30px;
 	line-height: 30px;
-	margin-top: 1px;
-	font-size: 13px;
+	margin-top : 1px;
+	font-size  : 13px;
 }
 
 .select2-container--default
 	.select2-selection--multiple
 	.select2-selection__choice {
-	height: auto;
-	line-height: 21px;
-	margin-top: 6px;
-	padding: 0 20px 0 10px;
-	font-size: 13px;
-	color: #fff;
-	border: 0;
-	border-radius: 50px;
+	height          : auto;
+	line-height     : 21px;
+	margin-top      : 6px;
+	padding         : 0 20px 0 10px;
+	font-size       : 13px;
+	color           : #fff;
+	border          : 0;
+	border-radius   : 50px;
 	background-color: $color-accent;
-	position: relative;
+	position        : relative;
 }
 
 .select2-container--default
 	.select2-selection--multiple
 	.select2-selection__choice__remove {
-	color: #fff;
+	color   : #fff;
 	position: absolute;
-	right: 5px;
+	right   : 5px;
 }
 
 .select2-selection .select2-selection--multiple {
-	height: 32px;
+	height     : 32px;
 	line-height: 32px;
 }
+
+.easyzoom-flyout {
+
+	img {
+		width: auto;
+	}
+}
+
+.easyzoom.is-ready img {
+	cursor: url(../../icons/png/search-minus-light--white.png), zoom-out;
+}
+
 
 //Mas Gray
 // [class*="ymaps-2"][class*="-ground-pane"] {

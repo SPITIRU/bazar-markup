@@ -1,8 +1,8 @@
-$(document).ready(function() {
+$(document).ready(function () {
     //card properties tabs
     $('.js-card-tab-related, .js-card-tab-related--modal').tabs();
 
-    $(document).on('click', '.js-related-tab', function() {
+    $(document).on('click', '.js-related-tab', function () {
         $(this)
             .closest('.js-card-tab-related--modal')
             .find('.js-bz-slider--related-modal')
@@ -18,7 +18,7 @@ $(document).ready(function() {
         $(document).on('click', '.js-tab-modal', tabs);
     }
 
-    $('#preview').on('shown.bs.modal', function(e) {
+    $('#preview').on('shown.bs.modal', function (e) {
         $('.js-bz-slider--card-modal').resize();
         $('.js-bz-slider--related-modal').resize();
 
@@ -62,7 +62,7 @@ $(document).ready(function() {
     //Card Item Select
     changeColor();
 
-    $(document).on('click', '.js-item-select', function() {
+    $(document).on('click', '.js-item-select', function () {
         if ($(this).hasClass('is-active')) {
             $('.js-item-select').removeClass('is-active');
             $(this).removeClass('is-active');
@@ -72,13 +72,13 @@ $(document).ready(function() {
         }
     });
 
-    $(document).on('click', function(e) {
+    $(document).on('click', function (e) {
         if ($(e.target).closest('.js-item-select').length) return;
         $('.js-item-select').removeClass('is-active');
         e.stopPropagation();
     });
 
-    $(document).on('click', '.js-item-select-item', function() {
+    $(document).on('click', '.js-item-select-item', function () {
         let select = $(this).closest('.js-item-select');
         let text = $(this)
             .find('.item-select__title')
@@ -107,18 +107,32 @@ $(document).ready(function() {
             }
         }
     });
+
+    // Initialize/Destroy EasyZoom
+    $('.js-easy-zoom').on('click', function (e) {
+        var $easyzoom = $(this).easyZoom(),
+            api = $easyzoom.data('easyZoom');
+        e.preventDefault();
+
+        if (!$(this).hasClass('is-ready')) {
+            api._init();
+            api.show();
+        } else {
+            api.teardown();
+        };
+    });
 });
 
 //Select Item changeColor
 function changeColor() {
     $('.js-item-select')
-        .each(function() {
+        .each(function () {
             var colorBox = $(this).find('.item-select__color');
             var color = colorBox.data('item-select-color');
             colorBox.css('background-color', color);
         })
         .find('.item-select__item')
-        .each(function() {
+        .each(function () {
             var colorBox = $(this).find('.item-select__color');
             var color = colorBox.data('item-select-color');
             colorBox.css('background-color', color);

@@ -34,10 +34,9 @@ title: Атлас дюпон «izumrud»
 				<div class="bz-slider bz-slider--card card__slider">
 					<div class="bz-slider__slides js-bz-slider--card">
 						{% for i in range(0, 4) %}
-						<div itemscope itemtype="https://schema.org/ImageObject">
-							<a href="img/products/atlas/big/{{i+1}}.png" data-fancybox="images">
-								<img class="js-zoom" src="img/products/atlas/big/{{i+1}}.png" alt="Атлас дюпон «izumrud»" itemprop="url contentUrl">
-								<meta itemprop="name" content="здесь полное описание вплоть до артикула">
+						<div class="card_container easyzoom easyzoom--overlay easyzom--with-toggle js-easy-zoom">
+							<a class="zoom-in" href="img/products/atlas/zoom/{{i+1}}.png">
+								<img src="img/products/atlas/big/{{i+1}}.png" alt="Атлас дюпон «izumrud»" itemprop="url contentUrl">
 							</a>
 						</div>
 						{% endfor %}
@@ -49,6 +48,7 @@ title: Атлас дюпон «izumrud»
 					</div>
 				</div>
 			</div><!-- end card__image -->
+
 
 			<!-- begin card__desc -->
 			<div class="card__desc">

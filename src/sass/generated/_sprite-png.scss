@@ -1,10 +1,14 @@
 $icons: (0:0);
-$icons: map-merge($icons,('angel-white--left': (X: 0px, Y:0px, W: 32px, H: 32px, TW: 108px, TH: 66px, IMG: '../img/sprite.png')));
-$icons: map-merge($icons,('angel-white--right': (X: -42px, Y:0px, W: 32px, H: 32px, TW: 108px, TH: 66px, IMG: '../img/sprite.png')));
-$icons: map-merge($icons,('colors': (X: -84px, Y:-34px, W: 16px, H: 16px, TW: 108px, TH: 66px, IMG: '../img/sprite.png')));
-$icons: map-merge($icons,('flag--belarus': (X: 0px, Y:-42px, W: 24px, H: 24px, TW: 108px, TH: 66px, IMG: '../img/sprite.png')));
-$icons: map-merge($icons,('flag--kaz': (X: -34px, Y:-42px, W: 24px, H: 24px, TW: 108px, TH: 66px, IMG: '../img/sprite.png')));
-$icons: map-merge($icons,('flag--ukraine': (X: -84px, Y:0px, W: 24px, H: 24px, TW: 108px, TH: 66px, IMG: '../img/sprite.png')));
+$icons: map-merge($icons,('angel-white--left': (X: 0px, Y:0px, W: 32px, H: 32px, TW: 140px, TH: 106px, IMG: '../img/sprite.png')));
+$icons: map-merge($icons,('angel-white--right': (X: -42px, Y:0px, W: 32px, H: 32px, TW: 140px, TH: 106px, IMG: '../img/sprite.png')));
+$icons: map-merge($icons,('colors': (X: -124px, Y:0px, W: 16px, H: 16px, TW: 140px, TH: 106px, IMG: '../img/sprite.png')));
+$icons: map-merge($icons,('flag--belarus': (X: 0px, Y:-82px, W: 24px, H: 24px, TW: 140px, TH: 106px, IMG: '../img/sprite.png')));
+$icons: map-merge($icons,('flag--kaz': (X: -34px, Y:-82px, W: 24px, H: 24px, TW: 140px, TH: 106px, IMG: '../img/sprite.png')));
+$icons: map-merge($icons,('flag--ukraine': (X: -68px, Y:-82px, W: 24px, H: 24px, TW: 140px, TH: 106px, IMG: '../img/sprite.png')));
+$icons: map-merge($icons,('search-minus-light--white': (X: 0px, Y:-42px, W: 30px, H: 30px, TW: 140px, TH: 106px, IMG: '../img/sprite.png')));
+$icons: map-merge($icons,('search-minus-light': (X: -40px, Y:-42px, W: 30px, H: 30px, TW: 140px, TH: 106px, IMG: '../img/sprite.png')));
+$icons: map-merge($icons,('search-plus-light--white': (X: -84px, Y:0px, W: 30px, H: 30px, TW: 140px, TH: 106px, IMG: '../img/sprite.png')));
+$icons: map-merge($icons,('search-plus-light': (X: -84px, Y:-40px, W: 30px, H: 30px, TW: 140px, TH: 106px, IMG: '../img/sprite.png')));
 
 
 // Gets an attribute from the sass map
@@ -69,27 +73,55 @@ $icons: map-merge($icons,('flag--ukraine': (X: -84px, Y:0px, W: 24px, H: 24px, T
 	//	width: 16px
 //	height: 16px
 //	background-image: url('../img/sprite.png')
-//	background-position: -84px -34px
+//	background-position: -124px 0px
 //}
 //
 //.icon-flag--belarus{
 	//	width: 24px
 //	height: 24px
 //	background-image: url('../img/sprite.png')
-//	background-position: 0px -42px
+//	background-position: 0px -82px
 //}
 //
 //.icon-flag--kaz{
 	//	width: 24px
 //	height: 24px
 //	background-image: url('../img/sprite.png')
-//	background-position: -34px -42px
+//	background-position: -34px -82px
 //}
 //
 //.icon-flag--ukraine{
 	//	width: 24px
 //	height: 24px
 //	background-image: url('../img/sprite.png')
+//	background-position: -68px -82px
+//}
+//
+//.icon-search-minus-light--white{
+	//	width: 30px
+//	height: 30px
+//	background-image: url('../img/sprite.png')
+//	background-position: 0px -42px
+//}
+//
+//.icon-search-minus-light{
+	//	width: 30px
+//	height: 30px
+//	background-image: url('../img/sprite.png')
+//	background-position: -40px -42px
+//}
+//
+//.icon-search-plus-light--white{
+	//	width: 30px
+//	height: 30px
+//	background-image: url('../img/sprite.png')
 //	background-position: -84px 0px
+//}
+//
+//.icon-search-plus-light{
+	//	width: 30px
+//	height: 30px
+//	background-image: url('../img/sprite.png')
+//	background-position: -84px -40px
 //}
 //
