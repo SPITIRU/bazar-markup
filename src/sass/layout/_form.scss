@@ -16,6 +16,11 @@
 		margin-bottom: $base-indent;
 	} //.form__input
 
+	&__select {
+		display: block;
+		margin-bottom: $base-indent;
+	}
+
 	&__box {
 		margin-bottom: $base-indent;
 		@extend %flexCenter;

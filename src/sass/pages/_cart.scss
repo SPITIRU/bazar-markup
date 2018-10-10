@@ -129,9 +129,27 @@
 					}
 				}
 
+				&--label {
+					display: flex;
+					flex-direction: column;
+				}
+
+				&_label {
+					display: block;
+					width: 100%;
+					margin-bottom: $half-indent;
+
+					color: $color-muted;
+
+					@include respond-to(xs) {
+						font-size: 14px;
+					}
+				}
+
 				.form__box {
 					width: 100%;
 					margin-bottom: 0;
+
 					.form__input {
 						&:last-child {
 							width: 50%;
@@ -162,6 +180,15 @@
 							width: 100%;
 							margin-left: 0;
 						}
+					}
+				}
+
+				.form__select {
+					width: 100%;
+
+					.select2-container--default
+					.select2-selection--single {
+						border: 1px solid #d9d9d9;
 					}
 				}
 			}
