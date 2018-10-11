@@ -69,6 +69,22 @@ $(document).ready(function () {
                 );
                 return $opt;
             }
+        };
+    }
+
+    let $selectNative = $('.js-select-native');
+    if ($selectNative.length) {
+        if ($selectNative) {
+            if ($(window).width() >= 768) {
+                $selectNative.select2({
+                    minimumResultsForSearch: -1
+                });
+            } else {
+                $selectNative.each(function () {
+                    $(this)
+                        .wrap('<label class="bb-select">');
+                });
+            }
         }
     }
 
