@@ -109,17 +109,22 @@ $(document).ready(function () {
     });
 
     // Initialize/Destroy EasyZoom
-    $('.js-easy-zoom').on('click', function (e) {
-        var $easyzoom = $(this).easyZoom(),
-            api = $easyzoom.data('easyZoom');
-        e.preventDefault();
 
-        if (!$(this).hasClass('is-ready')) {
-            api._init();
-            api.show();
-        } else {
-            api.teardown();
+    $('.js-easy-zoom').on('click', function (e) {
+        if ($(window).width() >= 768) {
+            var $easyzoom = $(this).easyZoom(),
+                api = $easyzoom.data('easyZoom');
+            e.preventDefault();
+
+            if (!$(this).hasClass('is-ready')) {
+                api._init();
+                api.show();
+            } else {
+                api.teardown();
+            };
         };
+    }).find('a').on('click', function (e) {
+        e.preventDefault();
     });
 });
 
