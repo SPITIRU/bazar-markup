@@ -14,7 +14,7 @@
 .modal {
 	&-dialog {
 		@include respond-to(xs) {
-			margin-top: $base-indent * 3;
+			margin-top: 50px;
 		}
 
 		&--lg {
