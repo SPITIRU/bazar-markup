@@ -9,5 +9,6 @@
     "css.lint.zeroUnits": "warning",
     "scss.lint.zeroUnits": "warning",
     "files.trimTrailingWhitespace": true,
+    "window.zoomLevel": 0,
 //     "html.format.wrapAttributes": "force-expand-multiline"
 }

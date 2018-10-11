@@ -72,5 +72,9 @@
         "smart-grid": "^2.1.1",
         "through2": "^2.0.1",
         "vinyl-buffer": "^1.0.0"
+    },
+    "dependencies": {
+        "stylelint": "^9.6.0",
+        "stylelint-selector-bem-pattern": "^2.0.0"
     }
 }

@@ -1,27 +1,49 @@
 {
-  "plugins": [
-    "stylelint-selector-bem-pattern"
-  ],
-  "rules": {
-    "property-case": "lower",
-    "selector-type-case": "lower",
-    "no-unknown-animations":true,
-    "indentation": "tab",
-    "selector-max-compound-selectors": 3,
-    "no-duplicate-selectors": true,
-    "shorthand-property-no-redundant-values": true,
-    "max-nesting-depth": 2,
-    "no-descending-specificity": true,
-    "declaration-block-no-shorthand-property-overrides": true,
-    "declaration-block-no-duplicate-properties": [
-      true,
-      {
-        "ignore": ["consecutive-duplicates"]
-      }
+    "plugins": [
+        "stylelint-selector-bem-pattern"
     ],
-    "plugin/selector-bem-pattern": {
-      "componentName": "[a-zA-Z0-9]+$",
-      "componentSelectors": "^(?:\\.(?:{componentName}|is[-](?:[a-zA-Z0-9-_]*))[ ]?(?:__[a-zA-Z0-9-_]+)?(?:_[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*){0,2}[ ]?)+$"
+    "rules": {
+        "property-case": "lower",
+        "selector-type-case": "lower",
+        "rule-empty-line-before": "always",
+        "indentation": 4,
+        "selector-max-compound-selectors": 6,
+        "color-hex-case": "lower",
+        "color-hex-length": "short",
+        "selector-combinator-space-after": "always",
+        "selector-attribute-quotes": "always",
+
+        "declaration-block-trailing-semicolon": "always",
+        "declaration-colon-space-after": "always",
+
+        "property-no-vendor-prefix": true,
+        "value-no-vendor-prefix": true,
+        "at-rule-no-vendor-prefix": true,
+        "selector-no-vendor-prefix": true,
+
+        "number-leading-zero": "always",
+        "function-url-quotes": "always",
+        "comment-empty-line-before": "always",
+        "selector-pseudo-element-colon-notation": "double",
+        "media-feature-range-operator-space-before": "always",
+        "media-feature-range-operator-space-after": "always",
+        "media-feature-name-no-vendor-prefix": true,
+        "media-feature-colon-space-after": "always",
+        "no-duplicate-selectors": true,
+        "shorthand-property-no-redundant-values": true,
+        "max-nesting-depth": 7,
+        "declaration-block-no-shorthand-property-overrides": true,
+        "declaration-block-no-duplicate-properties": [
+            true,
+            {
+                "ignore": [
+                    "consecutive-duplicates"
+                ]
+            }
+        ],
+        "plugin/selector-bem-pattern": {
+            "componentName": "[a-zA-Z0-9]+$",
+            "componentSelectors": "^(?:\\.(?:{componentName}|is[-](?:[a-zA-Z0-9-_]*))[ ]?(?:__[a-zA-Z0-9-_]+)?(?:_[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*){0,2}[ ]?)+$"
+        }
     }
-  }
 }
