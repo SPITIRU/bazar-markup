@@ -24,7 +24,13 @@
 		padding: 0 30px 0 15px;
 		border: 0;
 		appearance: none;
-	}
+    }
+
+    &--native {
+        @include max-screen(320) {
+            width: 100%;
+        }
+    }
 } //bb-select
 
 .bz-select--dark {

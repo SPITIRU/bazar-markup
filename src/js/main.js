@@ -72,6 +72,7 @@ $(document).ready(function () {
         };
     }
 
+    // Native select
     let $selectNative = $('.js-select-native');
     if ($selectNative.length) {
         if ($selectNative) {
@@ -82,7 +83,7 @@ $(document).ready(function () {
             } else {
                 $selectNative.each(function () {
                     $(this)
-                        .wrap('<label class="bb-select">');
+                        .wrap('<label class="bz-select bz-select--native">');
                 });
             }
         }
