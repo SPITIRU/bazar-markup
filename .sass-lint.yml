@@ -3,25 +3,54 @@ options:
   max-warnings: 0
 # File Options
 files:
-  include: 'sass/**/*.s+(a|c)ss'
+  include: 'src/sass/**/*.s+(a|c)ss'
   ignore:
-    - 'src/sass/_libs.s+(a|c)ss'
+    - 'node_modules/**/*.*'
+    - 'bower_components/**/*.*'
+    - 'gulp/**/*.*'
+    - 'src/libs/**/*.*'
+    - 'src/sass/base/**/*.*'
     - 'src/sass/helpers/**/*.*'
     - 'src/sass/generated/**/*.*'
+    - 'src/sass/lib/**/*.*'
+    - 'src/sass/_libs.s+(a|c)ss'
+
 # Rule Configuration
 rules:
-  force-pseudo-nesting: 2
-  no-important: 2
+#   no-important: 2
   no-duplicate-properties: 2
   no-url-protocols: 2
   #no-extends: 2
   no-empty-rulesets: 2
   no-misspelled-properties: 2
   no-url-domains: 2
-  no-transition-all: 2
+  no-vendor-prefixes: 1
   nesting-depth:
     - 2
-    - max-depth: 4
-  indentation:
+    - max-depth: 5
+
+# ref: https://github.com/sasstools/sass-lint/blob/master/docs/rules/attribute-quotes.md
+  attribute-quotes: 2
+
+# ref: https://github.com/sasstools/sass-lint/blob/master/docs/rules/brace-style.md
+  brace-style: 2
+  # defaults to 1tbs
+
+# ref: https://github.com/sasstools/sass-lint/blob/master/docs/rules/declarations-before-nesting.md
+  declarations-before-nesting: 2
+
+# ref: https://github.com/sasstools/sass-lint/blob/master/docs/rules/empty-line-between-blocks.md
+  empty-line-between-blocks:
     - 2
-    - size: tab
+    - ignore-single-line-rulesets: false
+
+# ref: https://github.com/sasstools/sass-lint/blob/master/docs/rules/hex-notation.md
+  hex-notation:
+    - 2
+    - style: lowercase
+
+# ref: https://github.com/sasstools/sass-lint/blob/master/docs/rules/indentation.md
+  indentation:
+    - 4
+    -
+      size: 4

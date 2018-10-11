@@ -130,30 +130,34 @@ wrapperClass: page-cart
 							<span class="input__error">*Какая-то ошибочка вышла</span>
 						</div>
 
-						<div class="form__box">
-							<div class="input form__input">
-								<input type='text' class="input__field" placeholder="Город">
-								<span class="input__error">*Какая-то ошибочка вышла</span>
-							</div>
-							<div class="input form__input">
-								<input type='number' class="input__field" placeholder="Индекс">
-								<span class="input__error">*Какая-то ошибочка вышла</span>
+						<div class="form__box form__box--wide">
+							<div class="form__box">
+								<div class="input form__input">
+									<input type='text' class="input__field" placeholder="Город">
+									<span class="input__error">*Какая-то ошибочка вышла</span>
+								</div>
+								<div class="input form__input">
+									<input type='number' class="input__field" placeholder="Индекс">
+									<span class="input__error">*Какая-то ошибочка вышла</span>
+								</div>
 							</div>
 						</div>
 
-						<div class="form__box">
-							<div class="input form__input">
-								<input type='text' class="input__field" placeholder="Улица">
-								<span class="input__error">*Какая-то ошибочка вышла</span>
-							</div>
-							<div class="input form__input">
-								<input type='text' class="input__field" placeholder="Дом/корпус">
-								<span class="input__error">*Какая-то ошибочка вышла</span>
+						<div class="form__box form__box--wide">
+							<div class="form__box">
+								<div class="input form__input">
+									<input type='text' class="input__field" placeholder="Улица">
+									<span class="input__error">*Какая-то ошибочка вышла</span>
+								</div>
+								<div class="input form__input">
+									<input type='text' class="input__field" placeholder="Дом/корпус">
+									<span class="input__error">*Какая-то ошибочка вышла</span>
+								</div>
 							</div>
 						</div>
 
 						<div class="form__box form__box--label">
-							<span class="form__box_label">Способ оплаты (выберите сейчас, оплатите позже)</span>
+							<div class="form__box_label">Способ оплаты (выберите сейчас, оплатите позже)</div>
 							<div class="select form__select">
 								<select class="js-select no-search">
 									{% import "data/data.html" as select %}
