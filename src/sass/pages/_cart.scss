@@ -131,7 +131,6 @@
                 & > .form__box {
 
                     &:last-child {
-
                         @include respond-to(xs) {
                             width: 100%;
                         }

@@ -69,6 +69,23 @@ $(document).ready(function () {
                 );
                 return $opt;
             }
+        };
+    }
+
+    // Native select
+    let $selectNative = $('.js-select-native');
+    if ($selectNative.length) {
+        if ($selectNative) {
+            if ($(window).width() >= 768) {
+                $selectNative.select2({
+                    minimumResultsForSearch: -1
+                });
+            } else {
+                $selectNative.each(function () {
+                    $(this)
+                        .wrap('<label class="bz-select bz-select--native">');
+                });
+            }
         }
     }
 
