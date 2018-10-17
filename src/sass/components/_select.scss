@@ -15,6 +15,7 @@
         font-family: faR;
         @include vy;
         right: 13px;
+        z-index: -1;
     }
     @include max-screen(320) {
         width: 132px;
